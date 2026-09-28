@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Gift For D22</title>
+    <style>
+        :root {
+            --ink: #f4efe6;
+            --dim: rgba(244, 239, 230, 0.62);
+            --red: #e23d32;
+            --paper: #efe8dc;
+            --night: #070807;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            background: var(--night);
+            color: var(--ink);
+            font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            overflow: hidden;
+        }
+
+        button, .piece { touch-action: none; }
+
+        #backdrop {
+            position: fixed;
+            inset: 0;
+            background:
+                linear-gradient(180deg, rgba(0,0,0,0.28), rgba(0,0,0,0.72)),
+                url("d22doodle.png") center / cover no-repeat;
+            transform: scale(1.04);
+            filter: saturate(0.85);
+        }
+
+        #grain {
+            position: fixed;
+            inset: -20%;
+            pointer-events: none;
+            opacity: 0.18;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+            animation: drift 1.1s steps(2) infinite;
+        }
+
+        @keyframes drift {
+            50% { transform: translate3d(-1%, 1%, 0); }
+        }
+
+        .screen {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.55s ease;
+        }
+
+        .screen.on {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #menu {
+            align-items: flex-end;
+            padding: max(28px, env(safe-area-inset-bottom)) max(32px, 6vw) max(40px, 7vh);
+        }
+
+        .lockup { max-width: 18em; }
+
+        .eyebrow {
+            letter-spacing: 0.28em;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-family: "Arial Black", "Microsoft YaHei", sans-serif;
+            font-weight: 900;
+            font-size: clamp(42px, 7vw, 92px);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+
+        #start {
+            margin-top: 28px;
+            appearance: none;
+            border: 0;
+            background: var(--ink);
+            color: #111;
+            font: inherit;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            padding: 14px 22px;
+            cursor: pointer;
+        }
+
+        #start:hover { background: var(--red); color: white; }
+
+        #intro {
+            z-index: 2;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .script {
+            width: min(980px, 100%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px 48px;
+            min-height: 9em;
+        }
+
+        .col p {
+            font-size: clamp(18px, 2.1vw, 28px);
+            line-height: 1.45;
+            min-height: 4.4em;
+        }
+
+        .col.en p {
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            color: rgba(244, 239, 230, 0.88);
+        }
+
+        .caret::after {
+            content: "▍";
+            margin-left: 2px;
+            animation: blink 0.9s steps(1) infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .skip {
+            position: absolute;
+            right: max(20px, env(safe-area-inset-right));
+            bottom: max(18px, env(safe-area-inset-bottom));
+            z-index: 3;
+            background: none;
+            border: 0;
+            color: var(--dim);
+            font: inherit;
+            letter-spacing: 0.16em;
+            font-size: 12px;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+
+        #puzzle {
+            flex-direction: column;
+            background: rgba(8, 8, 7, 0.82);
+        }
+
+        .puzzle-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 18px 22px 0;
+            letter-spacing: 0.12em;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        #table {
+            position: relative;
+            flex: 1;
+            margin: 12px 16px 18px;
+        }
+
+        #mat {
+            position: absolute;
+            left: 50%;
+            top: 48%;
+            transform: translate(-50%, -52%);
+            height: min(74vh, 860px);
+            aspect-ratio: 1000 / 1425;
+            background:
+                linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)),
+                url("poster.webp") center / cover no-repeat;
+            opacity: 0.16;
+            box-shadow: 0 0 0 1px rgba(244, 239, 230, 0.25);
+        }
+
+        #mat.whole {
+            opacity: 1;
+            transition: opacity 0.6s ease;
+        }
+
+        .slot {
+            position: absolute;
+            border: 1px dashed rgba(244, 239, 230, 0.28);
+        }
+
+        .slot.filled { border-color: transparent; }
+
+        .piece {
+            position: absolute;
+            background-image: url("poster.webp");
+            background-repeat: no-repeat;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+            cursor: grab;
+            z-index: 2;
+        }
+
+        .piece:active { cursor: grabbing; }
+
+        .piece.locked {
+            cursor: default;
+            box-shadow: none;
+            z-index: 1;
+            transition: left 0.18s ease, top 0.18s ease, transform 0.18s ease;
+        }
+
+        #gate {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        #gate.show { opacity: 1; transition: opacity 0.7s ease; }
+
+        #gate strong {
+            font-family: "Arial Black", "Microsoft YaHei", sans-serif;
+            font-size: clamp(36px, 6vw, 72px);
+            letter-spacing: 0.08em;
+        }
+
+        #gate span {
+            letter-spacing: 0.42em;
+            font-size: 13px;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        #gate em {
+            margin-top: 22px;
+            font-style: normal;
+            letter-spacing: 0.14em;
+            font-size: 15px;
+        }
+
+        @media (max-width: 720px) {
+            .script { grid-template-columns: 1fr; gap: 18px; }
+            .col p { min-height: 3.2em; font-size: 18px; }
+            #mat { height: min(58vh, 640px); top: 42%; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #grain { animation: none; }
+            .screen, #mat.whole, #gate.show, .piece.locked { transition: none; }
+        }
+    </style>
+</head>
+<body>
+    <div id="backdrop"></div>
+    <div id="grain"></div>
+
+    <section id="menu" class="screen on">
+        <div class="lockup">
+            <div class="eyebrow">五道口 · Wudaokou</div>
+            <h1>A Gift For D22.</h1>
+            <button id="start" type="button">开始游戏</button>
+        </div>
+    </section>
+
+    <section id="intro" class="screen">
+        <div class="script">
+            <div class="col zh"><p id="zh"></p></div>
+            <div class="col en"><p id="en"></p></div>
+        </div>
+        <button id="skip" class="skip" type="button">跳过</button>
+    </section>
+
+    <section id="puzzle" class="screen">
+        <div class="puzzle-head">
+            <span>把撕开的海报拼回去</span>
+            <span id="count">0 / 6</span>
+        </div>
+        <div id="table">
+            <div id="mat"></div>
+        </div>
+    </section>
+
+    <div id="gate">
+        <strong>唱片店</strong>
+        <span>Record Shop</span>
+        <em>现在可以用 WASD 移动</em>
+    </div>
+
+    <script>
+        const BEATS = [
+            {
+                zh: "五道口。高校围着的街上，有一间叫 D-22 的房间。",
+                en: "Wudaokou. On a street ringed by colleges, a room called D-22."
+            },
+            {
+                zh: "2012 年它关了门。名字没有一起关掉，还在人嘴里走。",
+                en: "It closed in 2012. The name did not. It is still being passed around."
+            },
+            {
+                zh: "在北大教书的 Michael，看见当时北京活跃的地下乐手，觉得这座城市正在变成世界要听见的地方。",
+                en: "Michael, teaching at Peking University, saw how alive the underground was, and thought the city was turning into a place the world would have to hear."
+            },
+            {
+                zh: "他想帮那些还在象牙塔里的音乐天才。于是有了 D-22。",
+                en: "He wanted to help the talent still inside the ivory tower. So there was D-22."
+            },
+            {
+                zh: "这里很快成了高校乐队的天堂。",
+                en: "It quickly became a heaven for campus bands."
+            },
+            {
+                zh: "刺猬的子健那时还在北航。他记得演完一定喝酒，喝到天亮。他们叫这「坐穿馆」：把馆坐穿，再换个地方继续。",
+                en: "Zijian of Hedgehog was still at Beihang. After the show they drank until morning. They called it zuo chuan guan: sit the place through, then move on and keep drinking."
+            },
+            {
+                zh: "Carsick Cars、Snapline 从这里走出去。Carsick Cars 还为 Sonic Youth 暖过场。",
+                en: "Carsick Cars and Snapline came out of this room. Carsick Cars opened for Sonic Youth."
+            },
+            {
+                zh: "酒并不特别。特别的是这间紧的屋子，和它不肯过滤的声音。",
+                en: "The drinks were nothing special. The tight room was. So was the sound it refused to filter."
+            }
+        ];
+
+        const COLS = 2;
+        const ROWS = 3;
+        const PIECES = COLS * ROWS;
+
+        const menu = document.getElementById("menu");
+        const intro = document.getElementById("intro");
+        const puzzle = document.getElementById("puzzle");
+        const zhEl = document.getElementById("zh");
+        const enEl = document.getElementById("en");
+        const mat = document.getElementById("mat");
+        const table = document.getElementById("table");
+        const countEl = document.getElementById("count");
+        const gate = document.getElementById("gate");
+
+        let skipIntro = false;
+        let puzzleReady = false;
+        let finished = false;
+
+        const show = (el) => {
+            for (const screen of [menu, intro, puzzle]) screen.classList.remove("on");
+            el.classList.add("on");
+        };
+
+        const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+        async function playIntro() {
+            show(intro);
+            const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (reduce) {
+                zhEl.textContent = BEATS.map((beat) => beat.zh).join("\n\n");
+                enEl.textContent = BEATS.map((beat) => beat.en).join("\n\n");
+                await new Promise((resolve) => {
+                    document.getElementById("skip").addEventListener("click", () => resolve(), { once: true });
+                });
+                return;
+            }
+            zhEl.classList.add("caret");
+            enEl.classList.add("caret");
+            for (const beat of BEATS) {
+                if (skipIntro) break;
+                const steps = Math.max(beat.zh.length, beat.en.length);
+                for (let i = 1; i <= steps; i++) {
+                    if (skipIntro) break;
+                    zhEl.textContent = beat.zh.slice(0, Math.ceil(beat.zh.length * i / steps));
+                    enEl.textContent = beat.en.slice(0, Math.ceil(beat.en.length * i / steps));
+                    await wait(26);
+                }
+                if (!skipIntro) await wait(520);
+            }
+            zhEl.classList.remove("caret");
+            enEl.classList.remove("caret");
+            if (!skipIntro) await wait(700);
+        }
+
+        function wobbleAt(seed, t) {
+            if (t < 0.001 || t > 0.999) return 0;
+            let a = Math.imul((seed ^ Math.round(t * 8)) >>> 0, 0x9E3779B1);
+            a = Math.imul(a ^ (a >>> 16), 0x85EBCA6B);
+            const u = ((a ^ (a >>> 13)) >>> 0) / 4294967296;
+            return (u - 0.5) * 3.2;
+        }
+
+        function tearPath(col, row) {
+            const n = 4;
+            const x0 = (col / COLS) * 100;
+            const x1 = ((col + 1) / COLS) * 100;
+            const y0 = (row / ROWS) * 100;
+            const y1 = ((row + 1) / ROWS) * 100;
+            const xSpan = 100 / COLS;
+            const ySpan = 100 / ROWS;
+            const local = (gx, gy) => [((gx - x0) / xSpan) * 100, ((gy - y0) / ySpan) * 100];
+            const edge = (horizontal, from, to, seed, axis) => {
+                const pts = [];
+                for (let i = 0; i <= n; i++) {
+                    const t = i / n;
+                    const along = from + (to - from) * t;
+                    const off = seed ? wobbleAt(seed, t) : 0;
+                    const gx = horizontal ? along : axis + off;
+                    const gy = horizontal ? axis + off : along;
+                    pts.push(local(gx, gy));
+                }
+                return pts;
+            };
+            const top = edge(true, x0, x1, row > 0 ? 500 + (row - 1) * 20 + col : 0, y0);
+            const right = edge(false, y0, y1, col < COLS - 1 ? 800 + col * 20 + row : 0, x1);
+            const bottom = edge(true, x1, x0, row < ROWS - 1 ? 500 + row * 20 + col : 0, y1);
+            const left = edge(false, y1, y0, col > 0 ? 800 + (col - 1) * 20 + row : 0, x0);
+            const pts = [...top.slice(0, -1), ...right.slice(0, -1), ...bottom.slice(0, -1), ...left.slice(0, -1)];
+            return `polygon(${pts.map(([x, y]) => `${x.toFixed(1)}% ${y.toFixed(1)}%`).join(",")})`;
+        }
+
+        function layoutSlots() {
+            mat.querySelectorAll(".slot").forEach((slot, index) => {
+                const col = index % COLS;
+                const row = Math.floor(index / COLS);
+                slot.style.left = `${(col / COLS) * 100}%`;
+                slot.style.top = `${(row / ROWS) * 100}%`;
+                slot.style.width = `${100 / COLS}%`;
+                slot.style.height = `${100 / ROWS}%`;
+            });
+        }
+
+        function slotBox(index) {
+            const matBox = mat.getBoundingClientRect();
+            const tableBox = table.getBoundingClientRect();
+            const col = index % COLS;
+            const row = Math.floor(index / COLS);
+            return {
+                left: matBox.left - tableBox.left + (col / COLS) * matBox.width,
+                top: matBox.top - tableBox.top + (row / ROWS) * matBox.height,
+                width: matBox.width / COLS,
+                height: matBox.height / ROWS
+            };
+        }
+
+        function placePiece(piece, left, top, rotate) {
+            piece.style.left = `${left}px`;
+            piece.style.top = `${top}px`;
+            piece.style.transform = `rotate(${rotate}deg)`;
+        }
+
+        function scatterPiece(piece, index) {
+            const tableBox = table.getBoundingClientRect();
+            const box = slotBox(index);
+            const side = index % 2;
+            const stack = Math.floor(index / 2);
+            const gap = 14;
+            const y = 8 + stack * (box.height + gap);
+            const x = side === 0 ? 10 : tableBox.width - box.width - 10;
+            piece.dataset.rot = String((index % 2 === 0 ? -1 : 1) * (4 + (index % 3)));
+            placePiece(piece, x, y, Number(piece.dataset.rot));
+        }
+
+        function sizePiece(piece, index) {
+            const box = slotBox(index);
+            piece.style.width = `${box.width}px`;
+            piece.style.height = `${box.height}px`;
+            const col = index % COLS;
+            const row = Math.floor(index / COLS);
+            piece.style.backgroundSize = `${COLS * 100}% ${ROWS * 100}%`;
+            piece.style.backgroundPosition = `${col === 0 ? 0 : 100}% ${row === 0 ? 0 : row === 1 ? 50 : 100}%`;
+            if (piece.classList.contains("locked")) {
+                placePiece(piece, box.left, box.top, 0);
+            }
+        }
+
+        function trySnap(piece) {
+            const index = Number(piece.dataset.index);
+            const box = slotBox(index);
+            const px = piece.offsetLeft + piece.offsetWidth / 2;
+            const py = piece.offsetTop + piece.offsetHeight / 2;
+            const dist = Math.hypot(px - (box.left + box.width / 2), py - (box.top + box.height / 2));
+            if (dist > Math.min(box.width, box.height) * 0.48) return;
+            piece.classList.add("locked");
+            placePiece(piece, box.left, box.top, 0);
+            mat.children[index].classList.add("filled");
+            const done = table.querySelectorAll(".piece.locked").length;
+            countEl.textContent = `${done} / ${PIECES}`;
+            if (done === PIECES) finishPuzzle();
+        }
+
+        function bindDrag(piece) {
+            piece.addEventListener("dragstart", (event) => event.preventDefault());
+            piece.addEventListener("pointerdown", (event) => {
+                if (piece.classList.contains("locked") || finished) return;
+                event.preventDefault();
+                try { piece.setPointerCapture(event.pointerId); } catch (err) {}
+                piece.style.zIndex = "4";
+                const originX = event.clientX;
+                const originY = event.clientY;
+                const left = piece.offsetLeft;
+                const top = piece.offsetTop;
+                const move = (ev) => {
+                    placePiece(piece, left + ev.clientX - originX, top + ev.clientY - originY, Number(piece.dataset.rot));
+                };
+                const up = () => {
+                    piece.removeEventListener("pointermove", move);
+                    piece.style.zIndex = "2";
+                    trySnap(piece);
+                };
+                piece.addEventListener("pointermove", move);
+                piece.addEventListener("pointerup", up, { once: true });
+                piece.addEventListener("pointercancel", up, { once: true });
+            });
+        }
+
+        function buildPuzzle() {
+            if (puzzleReady) return;
+            puzzleReady = true;
+            for (let i = 0; i < PIECES; i++) {
+                const slot = document.createElement("div");
+                slot.className = "slot";
+                mat.appendChild(slot);
+                const piece = document.createElement("div");
+                piece.className = "piece";
+                piece.dataset.index = String(i);
+                piece.setAttribute("role", "button");
+                piece.setAttribute("aria-label", `碎片 ${i + 1}`);
+                piece.style.clipPath = tearPath(i % COLS, Math.floor(i / COLS));
+                table.appendChild(piece);
+                bindDrag(piece);
+            }
+            layoutSlots();
+            requestAnimationFrame(() => {
+                table.querySelectorAll(".piece").forEach((piece, index) => {
+                    sizePiece(piece, index);
+                    scatterPiece(piece, index);
+                });
+            });
+        }
+
+        function onResize() {
+            if (!puzzleReady) return;
+            layoutSlots();
+            table.querySelectorAll(".piece").forEach((piece, index) => sizePiece(piece, index));
+        }
+
+        async function finishPuzzle() {
+            if (finished) return;
+            finished = true;
+            await wait(280);
+            mat.classList.add("whole");
+            table.querySelectorAll(".piece").forEach((piece) => {
+                piece.style.opacity = "0";
+                piece.style.transition = "opacity 0.45s ease";
+            });
+            await wait(700);
+            gate.classList.add("show");
+            await wait(2400);
+            location.href = "scene_recordshop.html";
+        }
+
+        document.getElementById("start").addEventListener("click", async () => {
+            skipIntro = false;
+            await playIntro();
+            buildPuzzle();
+            show(puzzle);
+        });
+
+        document.getElementById("skip").addEventListener("click", () => {
+            skipIntro = true;
+        });
+
+        window.addEventListener("resize", onResize);
+    </script>
+</body>
+</html>
