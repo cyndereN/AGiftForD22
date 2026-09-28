@@ -1,0 +1,193 @@
+致敬 D22 与 No Beijing 时代
+一款结合娄烨粗粝手持摄像、相米慎二长镜头流动感与地下噪声摇滚律动的增量式声音漫游与混音解谜游戏。
+The best place for punk music in Beijing. Located in Wudaokou D22 (Chinese Name: D22酒吧) is an eclectic place with a clear mission - to bring real, raw, and unfiltered quality to its audiences whether it be in the form of punk, jazz, experimental noise metal, or weekly film screenings. Though the drinks are nothing special, D-22's tight community and commitment to local music doubtlessly are.
+The D-22 bar is a venue frequented by serious music fans of all ages. The owners have experience running clubs all over the world and are serious about music and film.
+
+
+开场
+
+五道口。高校围着的街上，有一间叫 D-22 的房间。
+Wudaokou. On a street ringed by colleges, a room called D-22.
+
+2012 年它关了门。名字没有一起关掉，还在人嘴里走。
+It closed in 2012. The name did not. It is still being passed around.
+
+在北大教书的 Michael，看见当时北京活跃的地下乐手，觉得这座城市正在变成世界要听见的地方。
+Michael, teaching at Peking University, saw how alive the underground was, and thought the city was turning into a place the world would have to hear.
+
+他想帮那些还在象牙塔里的音乐天才。于是有了 D-22。
+He wanted to help the talent still inside the ivory tower. So there was D-22.
+
+这里很快成了高校乐队的天堂。
+It quickly became a heaven for campus bands.
+
+刺猬的子健那时还在北航。他记得演完一定喝酒，喝到天亮。他们叫这「坐穿馆」：把馆坐穿，再换个地方继续。
+Zijian of Hedgehog was still at Beihang. After the show they drank until morning. They called it zuo chuan guan: sit the place through, then move on and keep drinking.
+
+Carsick Cars、Snapline 从这里走出去。Carsick Cars 还为 Sonic Youth 暖过场。
+Carsick Cars and Snapline came out of this room. Carsick Cars opened for Sonic Youth.
+
+酒并不特别。特别的是这间紧的屋子，和它不肯过滤的声音。
+The drinks were nothing special. The tight room was. So was the sound it refused to filter.
+
+唱片店
+
+唱片店
+Record Shop
+现在可以用 WASD 移动
+
+唱片店是翻音乐的房间。黑胶和 CD 立在格子里，抽出来，就能听。
+A record shop is a room for flipping through music. Vinyl and CDs stand in the bins. Pull one out, and you can listen.
+
+北京还有这样的店。独音唱片 2011 年开在鼓楼东大街，自己也做厂牌。痛仰、旅行团的片子从这里出去过。
+Beijing still has rooms like this. Duyin Records opened on Gulou East Street in 2011, and became a label. Miserable Faith and The Life Journey passed through here.
+
+福声更早。2002 年开在平安里，2018 年搬到冰窖口胡同。架子上是崔健、唐朝、黑豹，还有窦唯。
+Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves keep Cui Jian, Tang Dynasty, Black Panther, and Dou Wei.
+
+你脚下这间，也是这种店。走两步看看。
+The room under your feet is that kind of shop. Take a couple of steps.
+
+现在可以用 WASD 移动 · 点击画面转向
+点击画面转向 · WASD 自由移动
+
+老板
+
+吃了么您。着急去看演出？
+Eaten yet? Rushing off to the show?
+
+门口那帮人，演完没有不喝的。你先别走。
+The ones at the door, none of them leave a show sober. Don't go yet.
+
+身后。刚给你搁上的。走之前拿一下。
+Behind you. I just set it out. Take it before you leave.
+
+酒
+
+酒并不为了解渴。台上声音一大，人就需要一点东西把白天关掉。
+The drink is not for thirst. When the sound onstage gets big, people need something to switch the day off.
+
+尼采管这叫酒神。不是神话，是那一下边界松了，嗓子和身子一起往前冲。
+Nietzsche called it the Dionysian. Not the myth. The moment the edges loosen, and the voice and the body rush forward together.
+
+所以演出必喝酒。音量把情感放大，酒把放大按实，让它停在这间屋子里。
+So a show means drinking. Not for the crowd. The volume turns the feeling up. The drink holds it down, keeps it in the room.
+
+D-22 也是这样。演完坐穿馆，喝到天亮。酒是那场噪声还没散的时候，留下的那一口。
+D-22 was the same. After the set they sat the place through, and drank until morning. The drink is the mouthful left while the noise is still in the room.
+
+拿上。酒杯。这是你会的第二件事。
+Take the glass. This is the second thing you know.
+
+酒杯交互
+
+情感放大器。莫贪杯哦。
+Emotion amplifier. Try not to overdose.
+
+问
+
+噪声已经把情感放大了。这一口，你要它怎样？
+The noise has already turned the feeling up. This mouthful. What do you want it to do?
+
+再放大
+Turn it up again
+BGM：失真推高，鼓贴到耳朵上，旋律几乎被噪声盖住。
+相机：手持抖得明显，视野在 58 和 66 之间慢慢呼吸，转向更灵。
+后处理：光晕打开，对比拉高，颜色偏暖、偏红，边缘色散，暗角收紧。
+
+按在这间屋子里
+Hold it in this room
+BGM：同一条曲子收干，房间声大过失真，低音稳住，像人还坐在馆里。
+相机：抖动很轻，视野固定在 60，转向变慢，一句镜头拉得很长。
+后处理：略微变锐，对比和饱和都收一点，暗角宽而淡，光晕关掉。
+
+把白天关掉
+Switch the day off
+BGM：鼓退到很远，混响变大，只剩低频和电流。
+相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。
+后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。
+
+胡同口
+
+酒还在嗓子里。胡同到了。先走到那扇门前。
+The drink is still in the throat. The hutong is here. Walk to the door first.
+
+门
+
+已满。
+Full.
+
+有的 live house 会允许 jam。乐器在，空位在，谁都能坐下接一句。
+Some live houses allow a jam. The instruments are there, the empty chairs are there, anyone can sit in for a phrase.
+
+也有的在找人 gig。不是谁都能上。他们要某一件乐器的演奏者。吉他、鼓、贝斯，对上了，门才开。
+Others are looking for someone to gig. Not just anyone. They want a player of one particular instrument. Guitar, drums, bass. Match it, and the door opens.
+
+想进去，得有一点音乐素养，和一些胆量。
+To get in, you need a little musical literacy, and some balls.
+
+鸽子
+
+天上有一群。捉住一只。尾巴上绑着哨。
+A flock is overhead. Catch one. There is a whistle tied to its tail.
+
+老北京把鸽子养在房顶上。哨多半是个小葫芦，风一灌就响。
+Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind goes in, and it sounds.
+
+不是一只在叫。一群飞过，每只哨不一样，合在一起，像城里的和弦。
+It is not one bird calling. A flock passes, each whistle different, and together they are a chord over the city.
+
+这声音和叫卖是一类。胡同不靠喇叭。靠翅膀，靠嗓子。
+This sound belongs with the vendor cries still to come. A hutong does not use a loudspeaker. It uses wings, and a voice.
+
+蛐蛐
+
+翻开草堆。里面有一只蛐蛐。
+Turn the grass pile over. There is a cricket inside.
+
+秋天的胡同靠这个。砖缝里、草里，捉回去，养在罐里。
+Autumn in the hutong runs on this. In the cracks of bricks, in the grass, you catch one and keep it in a jar.
+
+斗蛐蛐不是闹着玩的名目。盆里两只，一根草棍撩一下，比的是那一口咬，还有叫。
+Cricket fighting is not a joke of a name. Two of them in a bowl, a tickle from a grass stem. What is weighed is the bite, and the song.
+
+明清的人就这么听。宫廷里听，胡同里也听。一声细，比鸽哨更近，近到耳朵边上。
+People listened this way in the Ming and the Qing. In the court, and in the hutong. One thin note, closer than the pigeon whistle, right against the ear.
+
+磨剪子磨刀
+
+胡同深处有人在喊。磨剪子嘞，戗菜刀。
+Someone is calling from deep in the hutong. Sharpen the scissors. Sharpen the knife.
+
+这是老北京的货声。人走过来，家里就把剪子和菜刀拿下去。
+This is an old Beijing vendor cry. The man comes through, and the house brings the scissors and the kitchen knife down.
+
+磨石，一点水，一下一下。喊本身就是乐器，让整条胡同知道：该磨了。
+A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole alley: time to sharpen.
+
+鸽哨在天上。蛐蛐在草里。这一声在路上。三件都是这儿的音乐。
+The pigeon whistle is in the sky. The cricket is in the grass. This cry is on the road. All three are the music of this place.
+
+问
+
+这儿有两种声音。哨和叫卖是人做的。蛐蛐那一声是它自己的。你觉得哪种更好？
+There are two kinds of sound here. The whistle and the vendor cry are made by people. The cricket's note is its own. Which do you think is better?
+
+人为
+Made by people
+BGM：鸽哨和「磨剪子」靠前，磨石的一下一下变成拍子。蛐蛐被收进这个拍子里，不再自由叫。
+相机：抖动是有意的，像有人在取景。视野收到 56，转向稳，慢慢对准门、哨、那张嘴。
+后处理：边缘更锐，对比略高，颜色偏暖。天上的鸽子带一点光晕。
+
+自然
+Natural
+BGM：翅膀扇动和蛐蛐在前，叫卖退到胡同那头。没有拍子，谁响谁算。
+相机：几乎不抖，人站着就行。视野放到 68，转向变慢，天空和草堆一起留在画面里。
+后处理：变软，饱和收一点，偏草木的绿。暗角很淡，光晕关掉。
+
+都不喜欢
+Neither
+BGM：哨、叫卖、蛐蛐一起退后。只剩墙和风，偶尔一声刺过来，马上又灭。
+相机：细碎地抖，停不住，也不往哪儿看。视野固定 60。
+后处理：颜色抽成灰，对比发硬，暗角收紧。画面清楚，但是不好看。 
+
