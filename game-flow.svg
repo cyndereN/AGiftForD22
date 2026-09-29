@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 1760" width="780" height="1760">
+  <rect width="780" height="1760" fill="#faf8f5"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#1c1c1c"/>
+    </marker>
+    <marker id="arrow-back" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#8a3a3a"/>
+    </marker>
+  </defs>
+
+  <text x="390" y="42" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="22" font-weight="600" fill="#1c1c1c">A Gift For D22</text>
+  <text x="390" y="68" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="13" fill="#5c5852">&#x6E38;&#x620F;&#x6D41;&#x7A0B;</text>
+
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="15" fill="#1c1c1c">
+    <rect x="155" y="96" width="230" height="40" rx="20" fill="#1c1c1c"/>
+    <text x="270" y="122" text-anchor="middle" fill="#faf8f5">&#x4E3B;&#x83DC;&#x5355;</text>
+
+    <rect x="155" y="164" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="190" text-anchor="middle">&#x5F00;&#x573A;</text>
+
+    <rect x="155" y="232" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="258" text-anchor="middle">&#x6D77;&#x62A5;&#x62FC;&#x56FE;</text>
+
+    <rect x="155" y="300" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="326" text-anchor="middle">&#x5531;&#x7247;&#x5E97;</text>
+
+    <rect x="155" y="368" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="394" text-anchor="middle">&#x5B66;&#x4F1A;&#x884C;&#x8D70;</text>
+
+    <rect x="155" y="436" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="462" text-anchor="middle">&#x8D70;&#x5230;&#x8001;&#x677F;</text>
+
+    <rect x="155" y="504" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="530" text-anchor="middle">&#x62FF;&#x8D77;&#x9152;</text>
+
+    <polygon points="270,580 440,616 270,652 100,616" fill="#fff8e8" stroke="#1c1c1c"/>
+    <text x="270" y="621" text-anchor="middle">&#x8FD9;&#x4E00;&#x53E3;&#xFF0C;&#x8981;&#x5B83;&#x600E;&#x6837;</text>
+
+    <rect x="155" y="688" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="714" text-anchor="middle">&#x80E1;&#x540C;&#x53E3;</text>
+
+    <rect x="155" y="756" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="782" text-anchor="middle">&#x95E8;&#xFF1A;&#x5DF2;&#x6EE1;</text>
+
+    <rect x="155" y="824" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="850" text-anchor="middle">&#x9E3D;&#x54E8;</text>
+
+    <rect x="155" y="892" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="918" text-anchor="middle">&#x86C6;&#x86C6;</text>
+
+    <rect x="155" y="960" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="986" text-anchor="middle">&#x78E8;&#x526A;&#x5B50;</text>
+
+    <polygon points="270,1036 440,1072 270,1108 100,1072" fill="#fff8e8" stroke="#1c1c1c"/>
+    <text x="270" y="1077" text-anchor="middle">&#x54EA;&#x79CD;&#x58F0;&#x97F3;&#x66F4;&#x597D;</text>
+
+    <rect x="155" y="1144" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1170" text-anchor="middle">Livehouse</text>
+
+    <rect x="155" y="1212" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1238" text-anchor="middle">&#x96C6;&#x9F50;&#x9F13;&#x3001;&#x5409;&#x4ED6;&#x3001;&#x8D1D;&#x65AF;</text>
+
+    <rect x="155" y="1280" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1306" text-anchor="middle">&#x8D70;&#x4E0A;&#x5C0F;&#x53F0;</text>
+
+    <polygon points="270,1356 450,1392 270,1428 90,1392" fill="#fff8e8" stroke="#1c1c1c"/>
+    <text x="270" y="1397" text-anchor="middle">&#x4F60;&#x7AD9;&#x4E0A;&#x6765;&#xFF0C;&#x56FE;&#x7684;&#x662F;&#x4EC0;&#x4E48;</text>
+
+    <rect x="155" y="1464" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1490" text-anchor="middle">&#x4E07;&#x4EBA;&#x73B0;&#x573A;</text>
+
+    <rect x="155" y="1532" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1558" text-anchor="middle">&#x6F14;&#x5531;</text>
+
+    <rect x="155" y="1600" width="230" height="40" rx="4" fill="#fff" stroke="#1c1c1c"/>
+    <text x="270" y="1626" text-anchor="middle">&#x706F;&#x6697;</text>
+
+    <rect x="155" y="1668" width="230" height="40" rx="20" fill="#1c1c1c"/>
+    <text x="270" y="1694" text-anchor="middle" fill="#faf8f5">&#x6EDA;&#x52A8;&#x540D;&#x5355;</text>
+
+    <rect x="520" y="504" width="110" height="40" rx="4" fill="#faf8f5" stroke="#8a3a3a" stroke-dasharray="5 4"/>
+    <text x="575" y="530" text-anchor="middle" fill="#8a3a3a">&#x91CD;&#x5F00;</text>
+  </g>
+
+  <g fill="none" stroke="#1c1c1c" stroke-width="1.5" marker-end="url(#arrow)">
+    <path d="M270 136 V164"/>
+    <path d="M270 204 V232"/>
+    <path d="M270 272 V300"/>
+    <path d="M270 340 V368"/>
+    <path d="M270 408 V436"/>
+    <path d="M270 476 V504"/>
+    <path d="M270 544 V580"/>
+    <path d="M270 652 V688"/>
+    <path d="M270 728 V756"/>
+    <path d="M270 796 V824"/>
+    <path d="M270 864 V892"/>
+    <path d="M270 932 V960"/>
+    <path d="M270 1000 V1036"/>
+    <path d="M270 1108 V1144"/>
+    <path d="M270 1184 V1212"/>
+    <path d="M270 1252 V1280"/>
+    <path d="M270 1320 V1356"/>
+    <path d="M270 1428 V1464"/>
+    <path d="M270 1504 V1532"/>
+    <path d="M270 1572 V1600"/>
+    <path d="M270 1640 V1668"/>
+  </g>
+
+  <g fill="none" stroke="#8a3a3a" stroke-width="1.5" stroke-dasharray="5 4">
+    <path d="M385 524 H520" marker-end="url(#arrow-back)"/>
+    <path d="M575 504 V116 H385" marker-end="url(#arrow-back)"/>
+  </g>
+
+  <g font-family="Microsoft YaHei, PingFang SC, Noto Sans SC, sans-serif" font-size="12" fill="#5c5852">
+    <text x="286" y="678">&#x518D;&#x653E;&#x5927; / &#x6309;&#x5728;&#x5C4B;&#x91CC; / &#x5173;&#x6389;&#x767D;&#x5929;</text>
+    <text x="286" y="1134">&#x4EBA;&#x4E3A; / &#x81EA;&#x7136; / &#x90FD;&#x4E0D;&#x559C;&#x6B22;</text>
+    <text x="286" y="1454">&#x88AB;&#x8BB0;&#x4F4F; / &#x5531;&#x5B8C; / &#x4E0D;&#x77E5;&#x9053;</text>
+    <text x="430" y="514" fill="#8a3a3a">&#x559D;&#x8FC7;&#x4E86;&#x5934;</text>
+  </g>
+</svg>
