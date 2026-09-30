@@ -124,6 +124,28 @@ const ABILITY_INTRO = {
     ]
 };
 
+const WINE_ASK = {
+    zh: "噪声已经把情感放大了。这一口，你要它怎样？",
+    en: "The noise has already turned the feeling up. This mouthful. What do you want it to do?",
+    choices: [
+        {
+            zh: "再放大",
+            en: "Turn it up again",
+            note: "BGM：失真推高，鼓贴到耳朵上，旋律几乎被噪声盖住。\n相机：手持抖得明显，视野在 58 和 66 之间慢慢呼吸，转向更灵。\n后处理：光晕打开，对比拉高，颜色偏暖、偏红，边缘色散，暗角收紧。"
+        },
+        {
+            zh: "按在这间屋子里",
+            en: "Hold it in this room",
+            note: "BGM：同一条曲子收干，房间声大过失真，低音稳住，像人还坐在馆里。\n相机：抖动很轻，视野固定在 60，转向变慢，一句镜头拉得很长。\n后处理：略微变锐，对比和饱和都收一点，暗角宽而淡，光晕关掉。"
+        },
+        {
+            zh: "把白天关掉",
+            en: "Switch the day off",
+            note: "BGM：鼓退到很远，混响变大，只剩低频和电流。\n相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。\n后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。"
+        }
+    ]
+};
+
 const PREVIEW = { x: 0, y: -120, z: 0 };
 
 (() => {
@@ -292,6 +314,29 @@ const PREVIEW = { x: 0, y: -120, z: 0 };
             letter-spacing: 0.16em;
             font-size: 12px;
             cursor: pointer;
+        }
+        #brief .choices {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        #brief .choices button {
+            flex: 1 1 200px;
+            padding: 14px 16px;
+            text-align: left;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(244, 239, 230, 0.55);
+            color: #f4efe6;
+            font: inherit;
+            cursor: pointer;
+        }
+        #brief .choices button span {
+            display: block;
+            margin-top: 6px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            color: rgba(244, 239, 230, 0.8);
         }
         #ability {
             position: fixed;
@@ -659,6 +704,34 @@ const PREVIEW = { x: 0, y: -120, z: 0 };
 
     const drinkCooling = () => performance.now() < wine.cdUntil;
 
+    const askWine = () => {
+        if (document.getElementById("brief")) return;
+        briefing = true;
+        look.dragging = false;
+        document.exitPointerLock?.();
+        const root = document.createElement("div");
+        root.id = "brief";
+        root.innerHTML = `<div class="cols"><p class="zh"></p><p class="en"></p><div class="choices"></div></div>`;
+        root.querySelector(".zh").textContent = WINE_ASK.zh;
+        root.querySelector(".en").textContent = WINE_ASK.en;
+        const choices = root.querySelector(".choices");
+        for (const choice of WINE_ASK.choices) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.append(choice.zh);
+            const en = document.createElement("span");
+            en.textContent = choice.en;
+            button.append(en);
+            button.addEventListener("click", () => {
+                console.log(choice.note);
+                alert(choice.note);
+                location.href = "scene_hutong.html";
+            });
+            choices.appendChild(button);
+        }
+        document.body.appendChild(root);
+    };
+
     const finishDrink = () => {
         wine.pouring = false;
         wine.pourT = 0;
@@ -669,7 +742,7 @@ const PREVIEW = { x: 0, y: -120, z: 0 };
         if (wine.camera) wine.camera.enabled = false;
         wine.cdUntil = performance.now() + 3000;
         if (sceneKey() === "scene_recordshop") {
-            location.href = "scene_hutong.html";
+            askWine();
             return;
         }
         wine.sips += 1;
