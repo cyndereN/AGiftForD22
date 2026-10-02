@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-01",
+  "source": "blender/source/D22_Balanced_Lighting_v18.blend",
+  "output": "blender/source/D22_Balanced_Lighting_v18.blend",
+  "scope": "Lighting adjustment and visual render review; no new geometry or generated assets.",
+  "object_count": 1791,
+  "light_count": 51,
+  "active_light_count": 47,
+  "missing_loaded_image_data": [],
+  "renderer": "CYCLES",
+  "view_transform": "AgX",
+  "exposure": 0.85,
+  "stage_power_before_w": [
+    600,
+    520,
+    420,
+    24
+  ],
+  "stage_power_after_w": [
+    300,
+    260,
+    210,
+    12
+  ],
+  "stage_spot_angle_degrees": [
+    90,
+    95,
+    90,
+    65
+  ],
+  "stage_spot_blend": 0.88,
+  "stage_source_radius_m": 0.075,
+  "diffuse_bounces": 6,
+  "max_bounces": 12,
+  "visual_checks": [
+    "Rendered before and after from the same review camera",
+    "Rendered a wider view covering the gallery, bar and stage",
+    "Inspected the live Cycles viewport",
+    "Reopened the saved file after restarting Blender"
+  ],
+  "renders": [
+    "blender/verification/before.png",
+    "blender/verification/after.png",
+    "blender/verification/overview.png"
+  ],
+  "meshy_credits_spent": 0,
+  "historical_workspace_output": "scenes/v18/D22_Balanced_Lighting_v18.blend",
+  "historical_workspace_source": "work/v18/before-lighting.blend"
+}

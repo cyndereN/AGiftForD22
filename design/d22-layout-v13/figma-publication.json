@@ -1,0 +1,16 @@
+{
+  "status": "PUBLISHED_AND_VISUALLY_VERIFIED",
+  "revision": "v14",
+  "fileKey": "LOMa9NEcogELqstS7Fsol0",
+  "fileName": "走调长镜头 · 美术方向探索 01",
+  "url": "https://www.figma.com/design/LOMa9NEcogELqstS7Fsol0?node-id=72-17",
+  "sectionId": "72:17",
+  "updatedPlanIds": ["3:90", "32:1070"],
+  "newBoardIds": ["72:708", "72:840", "72:848"],
+  "embeddedImageNodeIds": ["72:844", "72:845", "72:852", "72:854", "72:856"],
+  "verification": {
+    "allPlansUpdated": true,
+    "allImagesPresent": true,
+    "screenshotsReviewed": ["3:90", "32:1070", "72:708", "72:840", "72:848"]
+  }
+}

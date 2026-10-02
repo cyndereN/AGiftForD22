@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "generated_by": "python3 scripts/assets/catalog.py",
+  "glb_count": 36,
+  "meshy_glb_count": 27,
+  "note": "Archive includes rejected iterations. Authoritative placement is the v18 Blender source; this catalog does not imply final game-asset acceptance.",
+  "assets": [
+    {
+      "path": "assets/d22/architecture/E01_Floor_1m.glb",
+      "origin": "modular_architecture",
+      "bytes": 52636,
+      "sha256": "f98afcfd0d302aa8bde572175b8646b8341f0fbc6ff0738fc1fc1c125e6fe74e",
+      "mesh_count": 10,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E02_RedWall_1p2m.glb",
+      "origin": "modular_architecture",
+      "bytes": 63960,
+      "sha256": "3a8a1210f0fdacde80fdd5c563fe576dd8298b2b1c25117f87da6faa1ab66ff3",
+      "mesh_count": 13,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E03_BlackBeam_4m.glb",
+      "origin": "modular_architecture",
+      "bytes": 51336,
+      "sha256": "0e49f35f3c789766efd60661eb212bbb49ee102de6fc02b03bda236403473a52",
+      "mesh_count": 10,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E04_Stage_2x1m.glb",
+      "origin": "modular_architecture",
+      "bytes": 82924,
+      "sha256": "a0bc32168d2684f7d2f6c260df70ef75009b141b5858afe5525dbf639d740377",
+      "mesh_count": 17,
+      "material_count": 6,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E06_PracticalLight.glb",
+      "origin": "modular_architecture",
+      "bytes": 59028,
+      "sha256": "b05822edb077772dc952e44b8d297181798dbd9e378d143762dfca6f5bd9e5a8",
+      "mesh_count": 11,
+      "material_count": 6,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E08_Cable.glb",
+      "origin": "modular_architecture",
+      "bytes": 48632,
+      "sha256": "9d81919b748dad393e729d12dffba8bb406c826818162432f977e7a3fdafed42",
+      "mesh_count": 10,
+      "material_count": 4,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "origin": "modular_architecture",
+      "bytes": 141576,
+      "sha256": "bf60395e5e9c2e6d4a684361e61ddc8767d643b54bfbc07d168fd5d7c781cc59",
+      "mesh_count": 16,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E13_Rail_2m.glb",
+      "origin": "modular_architecture",
+      "bytes": 51792,
+      "sha256": "b9c3c2e58f0a6e5c2f467e99ec1dd071934aa5d1d8dfaa94b929f62d449b5e80",
+      "mesh_count": 13,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/architecture/E20_TimberDoor.glb",
+      "origin": "modular_architecture",
+      "bytes": 52032,
+      "sha256": "512bbe5b2260ff7aa8a1870ca996ad250a12c0b66ea28ac246168e376bd736b1",
+      "mesh_count": 10,
+      "material_count": 5,
+      "embedded_images": 0,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/A01-Amplifier.glb",
+      "origin": "meshy",
+      "bytes": 6032936,
+      "sha256": "73582506153039be55bfcbc685b446fa25b8beffd56540298244f7588ab3424f",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d4ad-18b8-73ec-a3cf-bd69075973cd",
+        "status": "reused_local_succeeded_model",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/A04-Recorder.glb",
+      "origin": "meshy",
+      "bytes": 6664536,
+      "sha256": "fb2de41f77ddc5c6b11a76713140427711aa2b7c70fed944ce65b6a946607c5f",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d4ad-2a23-77f2-ae04-9f160bca4ac7",
+        "status": "reused_local_succeeded_model",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/A05-Mixer.glb",
+      "origin": "meshy",
+      "bytes": 6139684,
+      "sha256": "b93bba8334d51861f46bbd8d47bbac00674636fec0dc5261c82ae8bd9e2b9c12",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d6c3-e7fe-7713-a952-89676b294eb4",
+        "status": "reused_local_succeeded_model",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P02-FOH.glb",
+      "origin": "meshy",
+      "bytes": 7601484,
+      "sha256": "86f06379e4ea8bfdf6a2473b02d1567b8bb7c319f9420b32acf802357a8689b3",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d723-47ae-7337-b427-477f5836289f",
+        "status": "reused_local_succeeded_model",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P04-Drums.glb",
+      "origin": "meshy",
+      "bytes": 9036540,
+      "sha256": "8292021d2120fd1a829eed0b960051388cd5175bc82d5e1850a00a02a795bb84",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d751-28d9-74c4-a5be-6df4f9029e53",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P05-PA.glb",
+      "origin": "meshy",
+      "bytes": 7303000,
+      "sha256": "87f4cec49e37de0732b972d9880fded04cfa485c19db992dcdf9b220b6edb07e",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d751-2e4b-7362-b599-580aaf0ca93e",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P06-Guitar.glb",
+      "origin": "meshy",
+      "bytes": 7312180,
+      "sha256": "d8cf8d1692b495de5e2d89981b18aeb71d40cc03601ea7f87e8f7dc951101fb3",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d751-32c2-7300-a3c2-977dfce39122",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P07-Bar.glb",
+      "origin": "meshy",
+      "bytes": 8257176,
+      "sha256": "2d4e35581e07a199e0a82160f00110df723ead6629ec1d27136902fdc49a150a",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d751-370b-72dd-b460-2fe5aafa0452",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P08-Microphone.glb",
+      "origin": "meshy",
+      "bytes": 6612468,
+      "sha256": "193e5f42b349bad2c3fe8539162dd7f90ce6c55122179abbed1858bec8ed35d9",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d759-681d-72df-b516-036aebaa0b82",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/meshy/P09-PAR.glb",
+      "origin": "meshy",
+      "bytes": 7432928,
+      "sha256": "2ec99209c8c273274a96ec52770e1f94e0ebbc17b40d27f967eb8546f67b3aae",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/generation-manifest.json",
+        "task_id": "01a0d759-6ce9-70bc-8b12-4f60b0647a24",
+        "status": "SUCCEEDED",
+        "quality_status": "layout_proxy_rebuild_required"
+      }
+    },
+    {
+      "path": "assets/d22/v10/marshall-amp.glb",
+      "origin": "meshy",
+      "bytes": 15923084,
+      "sha256": "1a86bd55fd60a96fc2b85a5e301fca1364a024f7adae7560a75ba0853aa4dc7a",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v11/manifest.json",
+        "task_id": "01a0d8d7-5949-71d9-a38d-82d6c3e60f5d",
+        "status": "REJECTED: occluder reconstructed as hole in grille",
+        "quality_status": null
+      }
+    },
+    {
+      "path": "assets/d22/v10/round-hanging-sign.glb",
+      "origin": "meshy",
+      "bytes": 15398376,
+      "sha256": "6ab48c59c76f8082a10d8d577940971c04e34d6c03cd6e5ac4ab614e595995bd",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v11/manifest.json",
+        "task_id": "01a0d8d7-6384-72fd-bab1-aadffe7dfee2",
+        "status": "ACCEPTED_FOR_SCENE",
+        "quality_status": null
+      }
+    },
+    {
+      "path": "assets/d22/v11/meshy/marshall-clean.glb",
+      "origin": "meshy",
+      "bytes": 14523448,
+      "sha256": "dbed61117e2c1735a9361c8decffb0161d30cfda77fec698f8b54a07c7c57ce0",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v11/manifest.json",
+        "task_id": "01a0d92e-aeee-701d-b72c-d3d06a93fb48",
+        "status": "ACCEPTED_FOR_SCENE; fine controls remain approximate",
+        "quality_status": null
+      }
+    },
+    {
+      "path": "assets/d22/v15/meshy/B04-BackbarShelf-Retexture-v2.glb",
+      "origin": "meshy",
+      "bytes": 15028612,
+      "sha256": "4e4fa15ad5993079190cb5f28c4ab962109dba95ee7c155bea37d29c80900479",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 4,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/v16/meshy/B11-FlightCase-Retexture-v16-free-retry.glb",
+      "origin": "meshy",
+      "bytes": 16122948,
+      "sha256": "fbe414d3fc7eed33b0ab1e344c0d1fe02402363e839712726642969c69d29ceb",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/v16/meshy/B11-FlightCase-Retexture-v16-pass1.glb",
+      "origin": "meshy",
+      "bytes": 15831324,
+      "sha256": "06223edbd148ea6e9262a3f5563aec979272896b9490d00c0488dd84892a5cab",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "status": "See versioned design handoff; task record not recovered"
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B01-BlackBrick.glb",
+      "origin": "meshy",
+      "bytes": 17537040,
+      "sha256": "cb2daefe33f584daacbe16efc16458f3702ec1b6bcbafe692dd2f194d9bd49c7",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e2-ca0b-748a-b870-c8a98dd4c3b5",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "origin": "meshy",
+      "bytes": 19114364,
+      "sha256": "9f10c1325f9cc8ee40cdf3ba6e7d73214a14fcecf8f4f15aaa02e1563472e8da",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e2-d404-75c6-ae55-574377635317",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B03-BarCounter.glb",
+      "origin": "meshy",
+      "bytes": 18100800,
+      "sha256": "99cfcb7e0d585d8cbdd0dadc08ddeb51ca0c62bfe2f90675e774fd876fe22dfd",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e2-d93e-720e-8ee0-7a68782f7405",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B04-BackbarShelf.glb",
+      "origin": "meshy",
+      "bytes": 14138064,
+      "sha256": "f26dcbeae3fffa5a54fa1c0f085e9bd208a9e0a6bd9b3996148572015f8da2e6",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e2-de31-706b-8c3c-98a1d33cead4",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B05-GlassRack.glb",
+      "origin": "meshy",
+      "bytes": 11277136,
+      "sha256": "9706145fc82ff884de5f0d2cb2a70494f405dda00d4c7978a19e5f734e39521f",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e4-058b-7106-80be-5414dd538591",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B06-BarStool.glb",
+      "origin": "meshy",
+      "bytes": 15676520,
+      "sha256": "62288a08b512e716d29d313b80a603ed29280f22d128faac260e2736d479b338",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e4-0a6b-709d-ad49-d238a9b70a6a",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "origin": "meshy",
+      "bytes": 9489540,
+      "sha256": "e423072fe8ebccbd7166659459e6f22b2043b003bcb2307ce70f4ebf534a653d",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e4-0e77-702f-8aa3-3977d9847562",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B08-GalleryLamp.glb",
+      "origin": "meshy",
+      "bytes": 19184812,
+      "sha256": "d5974a04f5ffbe93e599c5263cd1454bb964c5aa86cad517e55355ef1ab14af7",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7e4-11bf-75ec-a494-f2019310d2da",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B09-DrinkTray.glb",
+      "origin": "meshy",
+      "bytes": 18244932,
+      "sha256": "b7eab20009f45b6d65d9c9c31d7b032f1e653c154e47998339e90da492261908",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7fd-0462-7083-9c26-2d3b4b839f64",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B10-Zines.glb",
+      "origin": "meshy",
+      "bytes": 24531080,
+      "sha256": "50d173361878ca44e9b15d1e6cf92cab756887a47b2c037ba52c055d25c968d0",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7fd-0a5f-7490-a231-6c69394b84e7",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    },
+    {
+      "path": "assets/d22/v9/meshy/B11-FlightCase.glb",
+      "origin": "meshy",
+      "bytes": 17290524,
+      "sha256": "9387c34b6d71067f588d1db4d4848a5fdbf204b9c153dc155dfed49b2545100e",
+      "mesh_count": 1,
+      "material_count": 1,
+      "embedded_images": 3,
+      "provenance": {
+        "manifest": "assets/d22/v9/manifest.json",
+        "task_id": "01a0d7fd-0f04-7648-93bd-e3993ed65e52",
+        "status": "SUCCEEDED_DOWNLOADED",
+        "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+      }
+    }
+  ]
+}

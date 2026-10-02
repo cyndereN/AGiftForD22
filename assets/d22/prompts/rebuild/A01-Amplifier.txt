@@ -1,0 +1,4 @@
+One detailed working combo guitar amplifier for D22 circa 2007, textured black tolex, woven grille, distinct protective corners, handle and realistic control panel. Front three-quarter neutral studio reference, full object visible. Model the cabinet and six control knobs as separate usable parts; accurate circular shafts and clear sockets. Local wear at touch points. Preserve fine material detail, not pixel art or chunky low-poly. No room, no colored illumination, no baked shadow.
+
+PARTS: cabinet, grille, control panel, individual knobs, handle, feet
+REVIEW: Replace old low-poly concept; knob count is a game design choice, not proved by archive photos.

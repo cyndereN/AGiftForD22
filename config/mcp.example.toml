@@ -1,0 +1,33 @@
+# Copy selected blocks into your own ~/.codex/config.toml.
+# Prerequisites: uv, Node.js/npm; desktop Blender/Figma/Unity bridges.
+# For desktop clients, replace command with an absolute executable path if PATH is unavailable.
+
+[mcp_servers.blender]
+command = "uvx"
+args = ["mcp-for-blender==2.1.3"]
+startup_timeout_sec = 90
+tool_timeout_sec = 240
+
+[mcp_servers.unityMCP]
+command = "uvx"
+args = ["--from", "mcpforunityserver==10.2.0", "mcp-for-unity", "--transport", "stdio"]
+startup_timeout_sec = 90
+tool_timeout_sec = 240
+
+[mcp_servers.unityMCP.env]
+DISABLE_TELEMETRY = "1"
+UNITY_MCP_DISABLE_TELEMETRY = "1"
+
+[mcp_servers.figma-console]
+command = "npx"
+args = ["-y", "figma-console-mcp@1.40.6"]
+env_vars = ["FIGMA_ACCESS_TOKEN"]
+startup_timeout_sec = 90
+tool_timeout_sec = 240
+
+[mcp_servers.meshy]
+command = "npx"
+args = ["-y", "@meshy-ai/meshy-mcp-server@0.5.2"]
+env_vars = ["MESHY_API_KEY"]
+startup_timeout_sec = 90
+tool_timeout_sec = 240

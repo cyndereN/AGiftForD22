@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-25",
+  "status": "curved-gallery-correction-complete",
+  "scene_file": "scenes/v10/D22_Curved_Gallery_v10.blend",
+  "source_scene": "scenes/v9/D22_Photo_Layout_v9.blend",
+  "figma_main": "3:90",
+  "figma_detail": "32:1070",
+  "figma_archive": "32:1932",
+  "curve_source": "design/d22-layout-v10/layout.json",
+  "geometry_check": "scenes/v10/geometry-check.json",
+  "new_generation_credits": 0,
+  "reference_inventory": "references/d22-curves-20260925/inventory.json",
+  "qa_renders": [
+    "renders/v10/top-cutaway.png",
+    "renders/v10/stage-curve-draft.png",
+    "renders/v10/rear-curve-draft.png"
+  ],
+  "scope": "Curved second-floor slab, fascia, caps, joists, supports, and frame/light orientation; first-floor props retained"
+}

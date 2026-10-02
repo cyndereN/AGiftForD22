@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-03",
+  "target_project": "unity/D22Game",
+  "unity_version": "6000.6.4f1",
+  "mcp_version": "10.2.0",
+  "selected_shared_project": true,
+  "play_succeeded": true,
+  "stop_succeeded": true,
+  "console_errors": [],
+  "figma_file_key": "LOMa9NEcogELqstS7Fsol0",
+  "figma_bridge_probe_succeeded": true,
+  "loaded_scenes_response": {
+    "success": true,
+    "message": "4 scene(s) loaded.",
+    "data": {
+      "scenes": [
+        {
+          "name": "D22_Bootstrap",
+          "path": "Assets/D22/Scenes/D22_Bootstrap.unity",
+          "buildIndex": 0,
+          "isLoaded": true,
+          "isDirty": false,
+          "isActive": false,
+          "rootCount": 1
+        },
+        {
+          "name": "D22_Environment",
+          "path": "Assets/D22/Scenes/D22_Environment.unity",
+          "buildIndex": 1,
+          "isLoaded": true,
+          "isDirty": false,
+          "isActive": false,
+          "rootCount": 5
+        },
+        {
+          "name": "D22_Lighting",
+          "path": "Assets/D22/Scenes/D22_Lighting.unity",
+          "buildIndex": 2,
+          "isLoaded": true,
+          "isDirty": false,
+          "isActive": true,
+          "rootCount": 50
+        },
+        {
+          "name": "D22_Gameplay",
+          "path": "Assets/D22/Scenes/D22_Gameplay.unity",
+          "buildIndex": 3,
+          "isLoaded": true,
+          "isDirty": false,
+          "isActive": false,
+          "rootCount": 1
+        }
+      ]
+    }
+  }
+}

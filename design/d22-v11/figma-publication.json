@@ -1,0 +1,108 @@
+{
+  "fileKey": "LOMa9NEcogELqstS7Fsol0",
+  "section": "33:2184",
+  "lightingBoard": "33:2204",
+  "wideBoard": "38:2246",
+  "plans": [
+    "3:90",
+    "32:1070"
+  ],
+  "imageJobs": [
+    {
+      "file": "design/media/v11/stage-right-final.jpg",
+      "nodeIds": [
+        "38:2211"
+      ],
+      "imageHash": "0764b43b97068d011eaddd0cbabe155fb69be2bb"
+    },
+    {
+      "file": "design/media/v11/spots-on.jpg",
+      "nodeIds": [
+        "38:2214"
+      ],
+      "imageHash": "8b9049a47457f89a8be5c543ea7890ed639b0414"
+    },
+    {
+      "file": "design/media/v11/spots-off.jpg",
+      "nodeIds": [
+        "38:2215"
+      ],
+      "imageHash": "ecb6509aeb92d118a6789be3ebec586b74894c7e"
+    },
+    {
+      "file": "design/media/v11/amp-accepted.jpg",
+      "nodeIds": [
+        "33:2201"
+      ],
+      "imageHash": "7dc2c2aa093e5c93e871a2d1efabbf5ee5704f6a"
+    },
+    {
+      "file": "design/media/v11/entrance-final.jpg",
+      "nodeIds": [
+        "38:2251"
+      ],
+      "imageHash": "00998ad65a9e07ace7023e91620a929ae0a70b7f"
+    },
+    {
+      "file": "design/media/v11/rear-final.jpg",
+      "nodeIds": [
+        "38:2254"
+      ],
+      "imageHash": "a9b70197a1017f5f30dc0bcc1f35417f259f6a42"
+    },
+    {
+      "file": "design/media/v11/gallery-stage-final.jpg",
+      "nodeIds": [
+        "38:2257"
+      ],
+      "imageHash": "a88701c24619f7846195027f871028c8cb195fd8"
+    }
+  ],
+  "created": [
+    "38:2211",
+    "38:2212",
+    "38:2213",
+    "38:2214",
+    "38:2215",
+    "38:2216",
+    "38:2217",
+    "38:2218",
+    "38:2219",
+    "38:2222",
+    "38:2225",
+    "38:2229",
+    "38:2233",
+    "38:2237",
+    "38:2239",
+    "38:2240",
+    "38:2241",
+    "38:2242",
+    "38:2243",
+    "38:2247",
+    "38:2248",
+    "38:2249",
+    "38:2250",
+    "38:2251",
+    "38:2252",
+    "38:2253",
+    "38:2254",
+    "38:2255",
+    "38:2256",
+    "38:2257",
+    "38:2258",
+    "38:2259"
+  ],
+  "status": "PUBLISHED_AND_VISUALLY_REVIEWED",
+  "validation": {
+    "all_7_image_fills_present": true,
+    "four_boards_within_section": true,
+    "board_overlap": false,
+    "screenshots_reviewed": [
+      "33:2204",
+      "33:2193",
+      "38:2246",
+      "3:90"
+    ]
+  },
+  "url": "https://www.figma.com/design/LOMa9NEcogELqstS7Fsol0?node-id=33-2184"
+}

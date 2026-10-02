@@ -1,0 +1,35 @@
+.DS_Store
+.env
+.env.*
+*.blend1
+
+# Unity generated state
+unity/**/[Ll]ibrary/
+unity/**/[Tt]emp/
+unity/**/[Oo]bj/
+unity/**/[Bb]uild/
+unity/**/[Bb]uilds/
+unity/**/[Ll]ogs/
+unity/**/[Uu]ser[Ss]ettings/
+unity/**/MemoryCaptures/
+unity/**/Recordings/
+unity/**/*.csproj
+unity/**/*.sln
+unity/**/*.slnx
+unity/**/*.pidb
+unity/**/*.user
+unity/**/.vs/
+unity/**/.idea/
+unity/**/CrashReports/
+
+# Local working exports and editor logs
+work/
+*.log
+
+# Local credentials and MCP state
+.figma-console-mcp/
+.mcp.json
+**/.env
+
+__pycache__/
+*.pyc

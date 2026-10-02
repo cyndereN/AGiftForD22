@@ -1,0 +1,27 @@
+{
+  "figmaFile": {
+    "name": "走调长镜头 · 美术方向探索 01",
+    "key": "LOMa9NEcogELqstS7Fsol0",
+    "page": "1"
+  },
+  "section": {
+    "id": "100:857",
+    "name": "v15 · 楼梯井、二层右侧出口与灯光修正",
+    "boardId": "100:858",
+    "boardName": "D22 / v15 floor plan + section + lighting audit"
+  },
+  "source": "design/d22-layout-v15/floor-plan-v15.svg",
+  "verification": {
+    "screenshot": "Figma Desktop Bridge figma_capture_screenshot(nodeId=100:857, format=PNG, scale=1)",
+    "status": "verified",
+    "notes": [
+      "Level 1 D-22 is centered in a recessed, deeper stage with two front/rear bearing piers.",
+      "Level 2 follows the entrance arc, keeps a standing platform over the stage, and opens to the right-side upper exit.",
+      "The stairwell is open through the upper floor, with 15 equal treads and a flush +2.66 m landing.",
+      "Section shows exposed steel columns, beams, braces and rods; red timber is fixed-color and lighting remains separate.",
+      "Meshy Agent B04 v2 is applied to the four backbar bays; walnut/glass improved, with residual gradient and label text retained for later cleanup.",
+      "Lighting pass: three stage spots are now under the standing platform; rays to D-22 and the black-brick recess clear the upper floor, preserving a dark but readable stage.",
+      "Upper platform is intentionally empty: continuous floor and stairwell opening remain, with no furniture, wall frames, or extra lights. Two suspended PA assemblies are hidden because they obstructed the upper-gallery edge."
+    ]
+  }
+}

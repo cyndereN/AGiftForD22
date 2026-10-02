@@ -1,0 +1,51 @@
+{
+  "revision": "v11",
+  "curve_commands": [
+    [
+      "M",
+      6.4,
+      0.18
+    ],
+    [
+      "L",
+      2.5,
+      0.18
+    ],
+    [
+      "C",
+      2.29,
+      0.18,
+      2.12,
+      0.35,
+      2.12,
+      0.56
+    ],
+    [
+      "L",
+      2.12,
+      9.35
+    ],
+    [
+      "C",
+      2.12,
+      10.35,
+      2.95,
+      10.85,
+      4.0,
+      10.85
+    ],
+    [
+      "L",
+      6.4,
+      10.85
+    ]
+  ],
+  "stage_end": "Near-straight red backdrop fascia, no projecting C-shaped balcony",
+  "rear_curve": "Same control points as v10",
+  "right_column_center_m": [
+    2.86,
+    5.82,
+    2.48
+  ],
+  "dimension_status": "Working interpretation, not measured survey"
+}

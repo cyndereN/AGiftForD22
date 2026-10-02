@@ -1,0 +1,48 @@
+《走调长镜头》(Out-of-Tune Take/ A Gift for D22) GDD v2.0
+致敬 D22 与 No Beijing 时代
+一款结合娄烨粗粝手持摄像、相米慎二长镜头流动感与地下噪声摇滚律动的增量式声音漫游与混音解谜游戏。
+The best place for punk music in Beijing. Located in Wudaokou D22 (Chinese Name: D22酒吧) is an eclectic place with a clear mission - to bring real, raw, and unfiltered quality to its audiences whether it be in the form of punk, jazz, experimental noise metal, or weekly film screenings. Though the drinks are nothing special, D-22's tight community and commitment to local music doubtlessly are.
+The D-22 bar is a venue frequented by serious music fans of all ages. The owners have experience running clubs all over the world and are serious about music and film.
+1. 核心玩法重构：增量式声音收集与乐队演进 (Incremental Loop & Musical Progression)
+受极简增量游戏《walk》启发，我们将原本线性的解谜改为“点击/漫游解锁地点 -> 复杂操作 -> 解锁更多音频维度”的渐进式循环。玩家将扮演乐手，在城市深处通过收集单一音符、Riff、打击乐，最终聚合成完整的地下乐队合奏。
+1.1 增量探索演进路线 (The 4-Stage Incremental Loop)
+A地 (初始区域 / 街角或地下室): 收集单音 (Notes)
+玩法: 点击或通过长镜头视线捕捉环境中的微弱声源（水滴、电流、风铃）。
+产出: 收集基础音符（如 ），解锁基础旋律碎片。
+B地 (进阶区域 / 胡同或排练室): 收集 Riff (乐句片段)
+玩法: 聆听环境噪声（如自行车辐条、远处施工机械），通过频谱对齐解谜。
+产出: 解锁吉他/贝斯 Riff（如经典摇滚走向 ），使声音具备律动雏形。
+C地 (核心区域 / 唱片行或Livehouse后台): 解锁打击乐与音色 (Drums & Texture)
+玩法: 捕捉重低音与节奏（踩镲、底鼓、失真器杂音）。
+产出: 丰富音乐的编曲厚度，将单薄的 Riff 升级为具备后朋克/噪声摇滚气质的鼓点与贝斯铺底。
+D地 (终点站 / 大型演出现场): Recorder 与完整演出 (Full Ensemble)
+玩法: 将前面 A-C 阶段收集到的所有音元、Riff、鼓点和噪声，放入便携磁带录音机 (Recorder) 与混音台中进行终极拼合。
+产出: 成功合奏后，撕裂当前空间限制，触发长镜头动画播片。
+2. 更新后的游戏设计 (Updated Mechanics)
+2.1 增量数值与声音资产
+玩家在场景中漫游不再仅仅是“找路”，而是带着“收集进度条”。
+每收集到一个音符或 Riff，城市的背景底噪会发生微小变化——从最初的死寂机械音，逐渐加入富有生机的地下音乐和弦。
+2.2 关卡与玩法的结合
+阶段 / 关卡
+收集目标
+核心互动设备
+视听反馈
+关卡 1: Livehouse
+单音与基础音阶 ()
+电子管吉他功放
+狭窄暗室，红蓝高对比，单音回响
+关卡 2: 胡同
+律动 Riff 片段
+盘式磁带机 (Reel-to-Reel)
+铅灰色长镜头，雨水与鸽哨交织的循环 Riff
+关卡 3: 唱片行
+鼓点与节奏音色
+双黑胶唱机 (Dual Turntables)
+琥珀色胶片感，打击乐与炒豆声交融
+关卡 4: 体育场
+完整元素汇聚与总混音
+主控混音台 (Master PA)
+宽角透视畸变，万人合唱与噪声大爆发
+3. 下一步开发计划 (Next Steps)
+核心原型验证 (Prototype): 编写一个基于网格或点击漫游的极简界面，测试“单音 -> Riff -> 完整混音”的数值解锁节奏。
+音频引擎集成: 准备基础的合成音符和 No Beijing 风格的吉他 Loop，在 Godot/Unity 中实现动态叠加播放。

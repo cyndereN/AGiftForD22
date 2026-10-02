@@ -1,0 +1,578 @@
+{
+  "revision": "v9",
+  "date": "2026-09-25",
+  "venue": "D22",
+  "scope": "modular scene completion based on v8 floor plan",
+  "estimated_credits": 237,
+  "assets": {
+    "B01-BlackBrick": {
+      "prompt": "ONLY one reusable dark stage brick wall module based on the photo, 1.6m wide 2.4m tall 0.15m deep. Small irregular blackened bricks, shallow mortar, charcoal variation, subtle chipped corners. Clean straight rectangular external edges for seamless assembly. No letters, door, red wall or instruments. Full isolated module with margin on pale gray, front three-quarter. Neutral diffuse white lighting, no colored spill or baked deep shadows. Realistic fine detail, not low-poly art. No room or people.",
+      "reference": "references/d22-user-photos/IMG_5275.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d8-cb7e-747d-a856-e33ca709cfad",
+      "geometry_task_id": "01a0d7e2-ca0b-748a-b870-c8a98dd4c3b5",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "Use the dark stage brickwork in the reference to design ONLY one rectangular reusable blackened brick wall module, 1.6m wide, 2.4m tall, 0.15m deep. Thin irregular dark bricks, worn shallow mortar, charcoal soot, subtle chipped corners. Straight clean external rectangular edges for modular assembly. No letters, door, instruments or red walls; D-22 text will be a separate decal. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B01-BlackBrick.png",
+      "model_file": "assets/d22/v9/meshy/B01-BlackBrick.glb",
+      "geometry_credits": 15,
+      "sha256": "cb2daefe33f584daacbe16efc16458f3702ec1b6bcbafe692dd2f194d9bd49c7",
+      "bytes": 17537040,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B02-TileFloor": {
+      "prompt": "ONLY one flat square audience floor module based on the photo: sixteen aged beige ceramic tiles in a regular 4x4 grid, dark thin grout, subtle color variation and modest venue foot wear. 1.6m square, 0.035m thick, perfectly straight joining boundary. Top three-quarter view, entire square with margin on light gray. Neutral white light, no colored spill or baked shadows. Realistic fine surface detail. No people, stage, furniture or room.",
+      "reference": "references/d22-user-photos/IMG_5277.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d8-ce6c-76de-a24d-74e060925a96",
+      "geometry_task_id": "01a0d7e2-d404-75c6-ae55-574377635317",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "Extract the material language of ONLY the audience-area floor. One flat square 1.6m by 1.6m floor panel of sixteen beige ceramic tiles in a 4 by 4 grid, dark thin grout, subtle variations, modest wear from a working music bar. Shallow 0.035m thickness, clean straight boundary. Top three-quarter view showing the complete square. No stage, people or furniture. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B02-TileFloor.png",
+      "model_file": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "geometry_credits": 15,
+      "sha256": "9f10c1325f9cc8ee40cdf3ba6e7d73214a14fcecf8f4f15aaa02e1563472e8da",
+      "bytes": 19114364,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B03-BarCounter": {
+      "prompt": "ONLY one straight section of this D22 bar counter: 1.6m wide, 0.65m deep, 1.05m high. Dark scuffed timber worktop, worn black base with subtle dark brick lower front, credible service-side joinery, straight ends for joining modules. Empty top. No stools, bottles, glasses, shelves, flyers or zines. Whole isolated object on pale gray, front three-quarter, neutral soft white light, no colored spill or baked shadows. Real construction detail, not low-poly art. No people or room.",
+      "reference": "references/d22-user-photos/IMG_5282 2.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d8-d11f-7492-a514-355b4a02dba3",
+      "geometry_task_id": "01a0d7e2-d93e-720e-8ee0-7a68782f7405",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "Reconstruct ONLY a straight standalone section of the long D22 bar counter in this photograph, 1.6m wide, 0.65m deep, 1.05m high. Dark scuffed timber counter, flat continuous dark worktop, worn black base with subtle dark brick-faced lower front, credible work-side joinery, clean ends for joining sections. Empty top. No stools, shelving, glasses, bottles, people, walls, signs or zine rack. Front three quarter view. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B03-BarCounter.png",
+      "model_file": "assets/d22/v9/meshy/B03-BarCounter.glb",
+      "geometry_credits": 15,
+      "sha256": "99cfcb7e0d585d8cbdd0dadc08ddeb51ca0c62bfe2f90675e774fd876fe22dfd",
+      "bytes": 18100800,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B04-BackbarShelf": {
+      "prompt": "ONLY one D22 backbar shelf cabinet: 1.15m wide, 0.30m deep, 1.8m tall. Black timber frame, three open shelves holding separated amber and green bottles with muted unbranded paper labels, aged reflective rear panels. Asymmetric bottle placement, some empty gaps. Modest working wear, not luxury or ruin. No counter, stools, hanging glasses or room. Whole isolated object on pale gray, front three-quarter, neutral white light, no colored spill or baked shadows. Realistic fine detail.",
+      "reference": "references/d22-user-photos/IMG_5280.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d8-d367-70ef-8bf2-e63a39b0f7fd",
+      "geometry_task_id": "01a0d7e2-de31-706b-8c3c-98a1d33cead4",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "Design ONLY one standalone detailed D22 backbar shelving cabinet module based on this photo, 1.15m wide, 0.30m deep, 1.8m high. Black timber frame, three open shelves holding realistic separated amber and dark green bottles of mixed heights, muted paper labels with no readable branding, aged reflective rear panels. Small empty gaps and asymmetric placement; not a clean luxury bar. No counter, hanging glasses, stools or room. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B04-BackbarShelf.png",
+      "model_file": "assets/d22/v9/meshy/B04-BackbarShelf.glb",
+      "geometry_credits": 15,
+      "sha256": "f26dcbeae3fffa5a54fa1c0f085e9bd208a9e0a6bd9b3996148572015f8da2e6",
+      "bytes": 14138064,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B05-GlassRack": {
+      "prompt": "ONLY one overhead stemware rack inspired by this D22 bar. Black rectangular metal frame 0.75m wide, 0.38m deep, four parallel rails, eight inverted transparent stemmed glasses clearly separated and suspended by their feet. Small credible mounting brackets above. Complete isolated assembly on pale gray, neutral white studio light, glass contours readable, no colored spill or baked deep shadows. Fine realistic structure, not low-poly. No ceiling, room, bar, bottles or people.",
+      "reference": "references/d22-user-photos/IMG_5282 2.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d9-d8fc-775a-bdf5-a2deb62a1dd6",
+      "geometry_task_id": "01a0d7e4-058b-7106-80be-5414dd538591",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "ONLY one compact overhead stemware rack from this D22 bar photo. Black metal rectangular mounting frame 0.75m wide, 0.38m deep, shallow, with four rails and eight inverted transparent stemmed glasses visibly separated, each suspended by its foot in the rack. Credible small overhead mounting brackets, complete standalone unit. No ceiling, bottles, bar, people or lights. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B05-GlassRack.png",
+      "model_file": "assets/d22/v9/meshy/B05-GlassRack.glb",
+      "geometry_credits": 15,
+      "sha256": "9706145fc82ff884de5f0d2cb2a70494f405dda00d4c7978a19e5f734e39521f",
+      "bytes": 11277136,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B06-BarStool": {
+      "prompt": "ONLY one used D22-style tall bar stool, seat height 0.72m. Dark stained circular wooden seat, worn edge, four slender straight black steel legs, circular metal footrest, stable real connections. Functional modest wear, not ruin. Full isolated silhouette, front three-quarter, pale gray background, neutral white studio light, no colored spill or baked shadows. Crisp realistic construction detail, not miniature or low-poly art. No floor environment, bar, people or other furniture.",
+      "reference": "references/d22-user-photos/IMG_5282 2.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d9-dd7e-73e8-aacb-a240fbdd735a",
+      "geometry_task_id": "01a0d7e4-0a6b-709d-ad49-d238a9b70a6a",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "ONLY one standalone used D22-style tall bar stool, 0.72m seat height. Dark stained circular wooden seat with edge wear, four slender black steel legs, circular footrest, stable real connections. Modest use wear; functional and straight, no ruin or rusty decoration. No floor environment, no bar or other furniture. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B06-BarStool.png",
+      "model_file": "assets/d22/v9/meshy/B06-BarStool.glb",
+      "geometry_credits": 15,
+      "sha256": "62288a08b512e716d29d313b80a603ed29280f22d128faac260e2736d479b338",
+      "bytes": 15676520,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B07-GalleryFrame": {
+      "prompt": "ONLY one standalone rectangular picture frame based on the black band-photo frames on this D22 gallery. 0.42m wide, 0.58m tall, slim black wooden moulding, shallow depth, clean rectangle. Flat dark gray BLANK interior for a separate picture later. Complete near-front product view, plain light gray, neutral white studio light, no colored spill or baked shadows. Fine realistic material detail. No human image, words, wall, gallery, lamps or other objects.",
+      "reference": "references/d22-user-photos/IMG_5282 2.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d9-e19c-7351-b979-9ef47a6f9ef7",
+      "geometry_task_id": "01a0d7e4-0e77-702f-8aa3-3977d9847562",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "ONLY one standalone rectangular black framed concert photograph based on the band-photo frames along the D22 mezzanine in this reference. 0.42m wide 0.58m tall, slim black wooden border, very shallow depth, flat neutral dark gray BLANK interior for adding a separate picture later. Complete front three-quarter product view, clean rectangular edges. No human image, no printed words, no wall, no gallery, no lamps. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B07-GalleryFrame.png",
+      "model_file": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "geometry_credits": 15,
+      "sha256": "e423072fe8ebccbd7166659459e6f22b2043b003bcb2307ce70f4ebf534a653d",
+      "bytes": 9489540,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B08-GalleryLamp": {
+      "prompt": "ONLY one miniature practical spotlight like those below D22 gallery photographs. Small black angled mounting foot, short brass-black cylindrical housing, round frosted lens OFF, width 0.09m height 0.13m. Tilts upward 35 degrees. Credible mounting screw and bracket, modest wear. Complete isolated three-quarter product view on light gray, neutral white lighting. Fine real construction, no low-poly art, no glow, no light beam, no wires, wall, photos, room or people.",
+      "reference": "references/d22-user-photos/IMG_5282 2.JPG",
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7d9-e429-7317-a3d5-4745ff7e511d",
+      "geometry_task_id": "01a0d7e4-11bf-75ec-a494-f2019310d2da",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "target_polycount": 15000,
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "remove_lighting": true,
+        "target_formats": [
+          "glb"
+        ]
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass.",
+      "design_brief_original": "ONLY one standalone miniature warm practical spotlight from beneath the photograph frames on D22 mezzanine in this reference. Short black angled mounting foot, small brass/black cylindrical housing, circular frosted lens OFF, overall size around 0.09m wide and 0.13m tall. Lamp tilts upward 35 degrees. Credible bracket and screw, no glow or lighting beam, no wire tangle, no wall, no frames, no ceiling. Isolated single modular asset, complete object with margin on plain light gray. Neutral soft white studio lighting, lamps OFF, no colored spill, no baked shadows. Realistic material and construction detail, not low-poly art or miniature. No people, no room, no surrounding architecture, no extra unrelated objects.",
+      "image_credits": 6,
+      "image_file": "assets/d22/v9/inputs/B08-GalleryLamp.png",
+      "model_file": "assets/d22/v9/meshy/B08-GalleryLamp.glb",
+      "geometry_credits": 15,
+      "sha256": "d5974a04f5ffbe93e599c5263cd1454bb964c5aa86cad517e55355ef1ab14af7",
+      "bytes": 19184812,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ]
+    },
+    "B09-DrinkTray": {
+      "prompt": "One small metal bar tray with two unbranded dark green beer bottles and one clear short tumbler, used ordinary Beijing music bar circa 2007. Bottle paper labels muted cream and red, different fill levels, modest water rings on the tray. All objects separated, whole assembly visible on pale gray, front three-quarter. Neutral white product light, no colored lighting or baked strong shadows. Realistic detailed glass, no room, people, bar counter, logos or readable text.",
+      "reference": null,
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7f6-3a60-7338-8f86-9e5be977dfdd",
+      "image_type": "text-to-image",
+      "image_credits": 6,
+      "geometry_task_id": "01a0d7fd-0462-7083-9c26-2d3b4b839f64",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "target_polycount": 15000,
+        "target_formats": [
+          "glb"
+        ],
+        "remove_lighting": true
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "image_file": "assets/d22/v9/inputs/B09-DrinkTray.png",
+      "model_file": "assets/d22/v9/meshy/B09-DrinkTray.glb",
+      "geometry_credits": 15,
+      "sha256": "b7eab20009f45b6d65d9c9c31d7b032f1e653c154e47998339e90da492261908",
+      "bytes": 18244932,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ],
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+    },
+    "B10-Zines": {
+      "prompt": "One small irregular stack of five handmade music fanzines and folded photocopied gig leaflets, around A5 paper size, slightly curled corners and a staple binding, cream aged paper with black graphic concert silhouettes and one muted red cover. No legible lettering or real band imagery. Whole standalone stack on pale gray, three-quarter product view, neutral white light, no baked shadows or colored spill. Fine realistic paper edges, not a fused block or books. No table, no room, no people.",
+      "reference": null,
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7f6-3b6e-7345-948b-d3f3ae02895d",
+      "image_type": "text-to-image",
+      "image_credits": 6,
+      "geometry_task_id": "01a0d7fd-0a5f-7490-a231-6c69394b84e7",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "target_polycount": 15000,
+        "target_formats": [
+          "glb"
+        ],
+        "remove_lighting": true
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "image_file": "assets/d22/v9/inputs/B10-Zines.png",
+      "model_file": "assets/d22/v9/meshy/B10-Zines.glb",
+      "geometry_credits": 15,
+      "sha256": "50d173361878ca44e9b15d1e6cf92cab756887a47b2c037ba52c055d25c968d0",
+      "bytes": 24531080,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ],
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+    },
+    "B11-FlightCase": {
+      "prompt": "One small closed black touring flight case for a late-2000s underground livehouse, 0.65m wide, 0.40m deep, 0.40m tall. Black textured plywood, brushed aluminum edge strips, chrome ball corners, two recessed latches and side carry handle, four small rubber feet. Two old blank masking tape strips, modest corner scuffs. Full isolated object on pale gray, front three-quarter, neutral diffuse white light, high realistic detail, no colored lighting or baked deep shadows. No other objects, people or room.",
+      "reference": null,
+      "image_model": "nano-banana-2",
+      "image_task_id": "01a0d7f6-3c7b-734c-aec5-a4841f480d03",
+      "image_type": "text-to-image",
+      "image_credits": 6,
+      "geometry_task_id": "01a0d7fd-0f04-7648-93bd-e3993ed65e52",
+      "geometry_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "4k",
+        "target_polycount": 15000,
+        "target_formats": [
+          "glb"
+        ],
+        "remove_lighting": true
+      },
+      "status": "SUCCEEDED_DOWNLOADED",
+      "image_file": "assets/d22/v9/inputs/B11-FlightCase.png",
+      "model_file": "assets/d22/v9/meshy/B11-FlightCase.glb",
+      "geometry_credits": 15,
+      "sha256": "9387c34b6d71067f588d1db4d4848a5fdbf204b9c153dc155dfed49b2545100e",
+      "bytes": 17290524,
+      "embedded_images": [
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            2048,
+            2048
+          ]
+        },
+        {
+          "name": "",
+          "dimensions": [
+            4096,
+            4096
+          ]
+        }
+      ],
+      "quality_status": "Visual layout/detail iteration accepted at scene view distance; thin geometry, UV seams and close-up fidelity need a later high-detail pass."
+    }
+  },
+  "band_photo_generation": {
+    "model": "nano-banana-2",
+    "task_id": "01a0d7e5-8314-7177-936c-757f8c1de777",
+    "credits": 6,
+    "prompt": "Six separate original documentary band photographs in a strict 2 columns by 3 rows contact sheet, equal rectangular portrait cells with thin black gutters. Fictional young adult underground rock bands rehearsing in Beijing circa 2007, different ordinary musicians per cell, dark red timber room, warm tungsten practical light, cheap flash, candid group portraits, instruments. Realistic grainy analog photography, varied compositions, no celebrities, no recognizable real band, no logos, no letters, no watermark. Frame contents for a music venue, not a poster.",
+    "file": "assets/d22/v9/inputs/original-band-contact.png",
+    "status": "SUCCEEDED"
+  },
+  "consumed_credits": 237,
+  "new_meshy_assets": 11,
+  "new_reference_images": 12,
+  "scene_file": "scenes/v9/D22_Photo_Layout_v9.blend",
+  "assembled_layout": "design/d22-layout-v8/layout.json",
+  "material_adjustments": {
+    "glass_rack": "Transparent/transmission shader assigned to lower glass geometry. The geometry remains generated and not a physically hollow glass model.",
+    "brick": "Neutral darkening and roughness correction.",
+    "floor": "Beige tone and roughness correction.",
+    "photo_frames": "Independent original generated photographic inserts."
+  }
+}

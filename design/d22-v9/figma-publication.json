@@ -1,0 +1,44 @@
+{
+  "date": "2026-09-25",
+  "file_key": "LOMa9NEcogELqstS7Fsol0",
+  "section_id": "32:1904",
+  "board_ids": [
+    "32:1905",
+    "32:1914",
+    "32:1923"
+  ],
+  "source": "Actual Blender Cycles renders; JPEG previews embedded in Figma; PNG originals retained locally",
+  "verified": "All six image fills confirmed by section screenshot after publication",
+  "images": [
+    {
+      "node_id": "32:1910",
+      "png_source": "renders/v9/01-entrance-final.png",
+      "figma_image_hash": "7a92acb11f49e0333e5eebdf47926c3fabc3013b"
+    },
+    {
+      "node_id": "32:1912",
+      "png_source": "renders/v9/03-stage-reverse-final.png",
+      "figma_image_hash": "652e0f66d9ec0fe4be7073d60dab416cae515066"
+    },
+    {
+      "node_id": "32:1919",
+      "png_source": "renders/v9/02-gallery-stage-final.png",
+      "figma_image_hash": "d1f52699f0fc2388b17fbfa62727caa92b9269c6"
+    },
+    {
+      "node_id": "32:1921",
+      "png_source": "renders/v9/04-bar-study-final.png",
+      "figma_image_hash": "6a2c536515e2568e5cb37288487e03268dedb851"
+    },
+    {
+      "node_id": "32:1928",
+      "png_source": "renders/v9/05-neutral-check.png",
+      "figma_image_hash": "e97079c9c752064d5f638d2f0c20533a6528d502"
+    },
+    {
+      "node_id": "32:1930",
+      "png_source": "renders/v9/asset-contact.png",
+      "figma_image_hash": "3f7a5a1999094e06d2393ed9bfefd7c426b12f19"
+    }
+  ]
+}

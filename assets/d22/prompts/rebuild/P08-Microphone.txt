@@ -1,0 +1,4 @@
+One detailed dynamic microphone on a realistic black boom stand, separate tripod legs, telescoping tubes, locking collars, boom joint and microphone clip. Full silhouette on neutral gray, soft even white product light. Keep rods straight, round and slender, joints functional, no fused supports or extra phantom rods. Separate microphone and stand; do not generate a long cable coil with them. No pixelated or chunky low-poly style, no room, no colored light.
+
+PARTS: microphone, stand, boom, cable as independent routed asset
+REVIEW: Inspect silhouette from side and rear before accepting; real cross-section matters.

@@ -1,0 +1,40 @@
+{
+  "revision": "v10",
+  "name": "D22",
+  "lettering": "D-22",
+  "source": "GDD v2.0 and user-supplied photographs",
+  "current_figma_node": "3:90",
+  "detail_figma_node": "32:1070",
+  "evidence_node": "32:1296",
+  "orientation": "Audience faces stage at plan top; no compass orientation is asserted",
+  "working_dimensions_m": {
+    "width": 6.4,
+    "length": 13.0,
+    "status": "design assumption, not measured"
+  },
+  "ground_floor": {
+    "stage": "low timber stage at plan top; black brick backdrop and D-22 sign",
+    "bar": "long left-side bar in this working orientation; medium-confidence cross-view inference",
+    "audience": "open tiled central floor",
+    "stairs": "rear-right candidate only; location not shown in photos",
+    "entrance": "rear candidate only; exact opening not confirmed",
+    "backdrop_opening": "visible at stage right in R02; destination unknown"
+  },
+  "gallery": {
+    "side_gallery": "above the long bar; exact extent inferred",
+    "rear_link": "working L-shaped connection from R01; dimensions unconfirmed",
+    "opposite_gallery": "insufficient evidence; not added as solid floor",
+    "balustrade": "red solid timber front with framed photographs and small warm lights"
+  },
+  "rebuild_required": false,
+  "three_d_status": "v10 curved-gallery correction implemented; v8/v9 straight L-shaped upper-floor assumption archived",
+  "prompt_archive": "assets/d22/prompts/prompt-archive.json",
+  "photo_inventory": "references/d22-user-photos/inventory.json",
+  "scene_file": "scenes/v10/D22_Curved_Gallery_v10.blend",
+  "render_directory": "renders/v9",
+  "implementation_revision": "v9",
+  "figma_render_section": "32:1904",
+  "verification": "scenes/v9/verification.json",
+  "updated": "2026-09-25",
+  "curve_source": "design/d22-layout-v10/layout.json"
+}

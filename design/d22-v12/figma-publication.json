@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED_NO_DESKTOP_BRIDGE",
+  "fileKey": "LOMa9NEcogELqstS7Fsol0",
+  "plans": [
+    "3:90",
+    "32:1070"
+  ],
+  "local_plan": "design/d22-layout-v12/floor-plan-v12.svg",
+  "error": "Error: Desktop Bridge is not connected to the target file. Local plan and publication payload are ready."
+}

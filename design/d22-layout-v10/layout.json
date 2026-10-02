@@ -1,0 +1,87 @@
+{
+  "revision": "v10",
+  "date": "2026-09-25",
+  "basis": "User correction: curved second-floor fascia, supported by four supplied photos",
+  "coordinate_system": "Plan metres: x 0..6.4 left to right; y 0..13 stage to entrance. Blender x=plan_x-3.2, y=6.5-plan_y",
+  "curve_commands": [
+    [
+      "M",
+      6.4,
+      0.95
+    ],
+    [
+      "C",
+      5,
+      1,
+      3.7,
+      0.75,
+      2.35,
+      1.1
+    ],
+    [
+      "C",
+      0.75,
+      1.45,
+      0.72,
+      2.5,
+      1.38,
+      2.95
+    ],
+    [
+      "C",
+      2.02,
+      3.4,
+      2.12,
+      3.68,
+      2.12,
+      4.3
+    ],
+    [
+      "L",
+      2.12,
+      9.35
+    ],
+    [
+      "C",
+      2.12,
+      10.35,
+      2.95,
+      10.85,
+      4,
+      10.85
+    ],
+    [
+      "L",
+      6.4,
+      10.85
+    ]
+  ],
+  "observed": [
+    "Red fascia above black brick stage wall has a curved return",
+    "Gallery above bar changes direction through rounded transitions",
+    "Frames and lamps follow the gallery front"
+  ],
+  "inferred": [
+    "Exact cubic curve control points",
+    "Deck extent behind stage fascia",
+    "Continuous connection of photo views"
+  ],
+  "unknown": [
+    "Precise radii and dimensions",
+    "Entrance and stair position",
+    "Whether opposite side has a continuous gallery"
+  ],
+  "working_dimensions_m": [
+    6.4,
+    13.0
+  ],
+  "not_a_measured_survey": true,
+  "scene_file": "scenes/v10/D22_Curved_Gallery_v10.blend",
+  "figma_nodes": {
+    "main": "3:90",
+    "detail": "32:1070",
+    "upper_main": "32:2158",
+    "upper_detail": "32:2165"
+  },
+  "new_generated_assets": 0
+}

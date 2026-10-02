@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2240" height="2560" viewBox="0 0 2240 2560">
+<rect x="0" y="0" width="2240" height="2560" fill="#ece8dd"/>
+<text x="80" y="85.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#a24031">CURRENT FLOOR PLAN / D22 · v14 · REFERENCE CORRECTION</text>
+<text x="80" y="177.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="58" font-weight="700" text-anchor="start" fill="#252b28">D-22 砖墙、同弧度夹层与右侧二层出口</text>
+<text x="80" y="247.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="28" font-weight="400" text-anchor="start" fill="#737b75">舞台上方与入口侧采用同一弧度；D-22 在舞台背后黑砖墙偏左上方，二层平台可站人。</text>
+<text x="80" y="318.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#a24031">● 用户明确的空间关系</text>
+<text x="650" y="318.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#527583">● 二层流线</text>
+<text x="1090" y="318.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#aa7b35">● 尺寸 / 精确落点待核</text>
+<text x="80" y="412.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="37" font-weight="700" text-anchor="start" fill="#252b28">01 / 一层 · 两道墙垛与舞台凹槽</text>
+<text x="880" y="412.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="35" font-weight="700" text-anchor="start" fill="#252b28">02 / 二层 · 跨舞台平台与右出口</text>
+<text x="80" y="467.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#aa7b35">舞台中线纵深约 3.87 m*，墙体退后 0.62 m*。</text>
+<text x="880" y="467.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#527583">上方平台接通侧廊；右侧与二层由用户确认。</text>
+<rect x="170" y="600" width="384.0" height="780" fill="#f6f3eb" stroke="#252b28" stroke-width="3"/>
+<rect x="170" y="607.2" width="384.0" height="235.8" fill="#b7ac97"/>
+<path d="M 170 648.0 L 272.0 648.0 L 272.0 610.8 L 452.0 610.8 L 452.0 648.0 L 470.0 648.0" stroke="#343b38" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 524.6 648.0 L 554.0 648.0" stroke="#343b38" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 362.0 616.2 L 362.0 846.0" stroke="#527583" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<text x="335.0" y="634.2" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" text-anchor="middle" fill="#252b28">D-22</text>
+<circle cx="362.0" cy="673.8" r="25.8" fill="#ded8c9" stroke="#252b28" stroke-width="2"/>
+<circle cx="320.6" cy="662.4" r="15.0" fill="#d6bd87" stroke="#252b28" stroke-width="2"/>
+<circle cx="404.0" cy="662.4" r="15.0" fill="#d6bd87" stroke="#252b28" stroke-width="2"/>
+<rect x="518.6" y="703.2" width="30.0" height="27.6" fill="#a24031"/>
+<text x="530.6" y="721.2" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+<rect x="518.0" y="619.1999999999999" width="33.6" height="28.799999999999997" fill="#a24031"/>
+<text x="531.8" y="637.8" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+<rect x="482.0" y="733.2" width="45.6" height="22.8" fill="#353631" stroke="#aa7b35" stroke-width="2"/>
+<text x="186.8" y="822.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#252b28">加深后的表演区</text>
+<text x="356.0" y="865.2" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#737b75">舞台前沿</text>
+<rect x="192.8" y="888.0" width="27.0" height="342.0" fill="#b7a68b" stroke="#737b75" stroke-width="2"/>
+<rect x="221.6" y="888.0" width="34.8" height="342.0" fill="#bdae91" stroke="#527583" stroke-width="2"/>
+<circle cx="275.0" cy="912.0" r="7.800000000000001" fill="#786e5d"/>
+<circle cx="275.0" cy="963.6" r="7.800000000000001" fill="#786e5d"/>
+<circle cx="275.0" cy="1015.2" r="7.800000000000001" fill="#786e5d"/>
+<circle cx="275.0" cy="1066.8" r="7.800000000000001" fill="#786e5d"/>
+<circle cx="275.0" cy="1118.4" r="7.800000000000001" fill="#786e5d"/>
+<circle cx="275.0" cy="1170.0" r="7.800000000000001" fill="#786e5d"/>
+<text x="182.0" y="1080.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="700" text-anchor="start" fill="#252b28">吧台</text>
+<text x="317.0" y="1050.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#527583">观众区挑空</text>
+<rect x="170" y="1251.0" width="384.0" height="129.0" fill="#e4d5b5" stroke="#aa7b35" stroke-width="2" stroke-dasharray="10 7"/>
+<text x="185.0" y="1314.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#aa7b35">入口 / 楼梯：试摆</text>
+<path d="M 533.5999999999999 717.0 L 602.0 729.0" stroke="#a24031" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="578.0" y="759.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#a24031">墙垛 ①</text>
+<path d="M 534.8 633.6 L 602.0 633.6" stroke="#a24031" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="578.0" y="615.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="21" font-weight="700" text-anchor="start" fill="#a24031">墙垛 ②</text>
+<path d="M 497.0 649.2 L 602.0 669.0" stroke="#737b75" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="578.0" y="694.2" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="18" font-weight="400" text-anchor="start" fill="#737b75">原有洞口</text>
+<rect x="950" y="600" width="384.0" height="780" fill="#dce5e7"/>
+<path d="M 1334.000 600.000 L 950.000 600.000 L 950.000 1380.000 L 1334.000 1380.000 L 1334.000 1251.000 L 1329.636 1251.000 L 1325.273 1251.000 L 1320.909 1251.000 L 1316.545 1251.000 L 1312.182 1251.000 L 1307.818 1251.000 L 1303.455 1251.000 L 1299.091 1251.000 L 1294.727 1251.000 L 1290.364 1251.000 L 1286.000 1251.000 L 1281.636 1251.000 L 1277.273 1251.000 L 1272.909 1251.000 L 1268.545 1251.000 L 1264.182 1251.000 L 1259.818 1251.000 L 1255.455 1251.000 L 1251.091 1251.000 L 1246.727 1251.000 L 1242.364 1251.000 L 1238.000 1251.000 L 1233.636 1251.000 L 1229.273 1251.000 L 1224.909 1251.000 L 1220.545 1251.000 L 1216.182 1251.000 L 1211.818 1251.000 L 1207.455 1251.000 L 1203.091 1251.000 L 1198.727 1251.000 L 1194.364 1251.000 L 1190.000 1251.000 L 1187.057 1250.978 L 1184.134 1250.912 L 1181.231 1250.802 L 1178.351 1250.648 L 1175.494 1250.451 L 1172.659 1250.209 L 1169.850 1249.923 L 1167.065 1249.594 L 1164.307 1249.220 L 1161.575 1248.803 L 1158.871 1248.341 L 1156.196 1247.836 L 1153.550 1247.287 L 1150.934 1246.693 L 1148.350 1246.056 L 1145.797 1245.375 L 1143.277 1244.650 L 1140.790 1243.881 L 1138.338 1243.068 L 1135.922 1242.211 L 1133.541 1241.310 L 1131.197 1240.365 L 1128.891 1239.376 L 1126.624 1238.344 L 1124.396 1237.267 L 1122.208 1236.147 L 1120.062 1234.982 L 1117.957 1233.773 L 1115.895 1232.521 L 1113.877 1231.225 L 1111.903 1229.884 L 1109.975 1228.500 L 1108.093 1227.072 L 1106.257 1225.600 L 1104.470 1224.084 L 1102.731 1222.523 L 1101.042 1220.919 L 1099.403 1219.272 L 1097.815 1217.580 L 1096.279 1215.844 L 1094.796 1214.064 L 1093.367 1212.240 L 1091.992 1210.373 L 1090.673 1208.461 L 1089.410 1206.505 L 1088.204 1204.506 L 1087.055 1202.462 L 1085.966 1200.375 L 1084.936 1198.244 L 1083.966 1196.068 L 1083.057 1193.849 L 1082.211 1191.586 L 1081.428 1189.279 L 1080.708 1186.928 L 1080.053 1184.533 L 1079.463 1182.094 L 1078.939 1179.611 L 1078.483 1177.084 L 1078.094 1174.513 L 1077.775 1171.899 L 1077.524 1169.240 L 1077.345 1166.537 L 1077.236 1163.791 L 1077.200 1161.000 L 1077.200 1156.558 L 1077.200 1152.117 L 1077.200 1147.675 L 1077.200 1143.234 L 1077.200 1138.792 L 1077.200 1134.351 L 1077.200 1129.909 L 1077.200 1125.468 L 1077.200 1121.026 L 1077.200 1116.584 L 1077.200 1112.143 L 1077.200 1107.701 L 1077.200 1103.260 L 1077.200 1098.818 L 1077.200 1094.377 L 1077.200 1089.935 L 1077.200 1085.494 L 1077.200 1081.052 L 1077.200 1076.610 L 1077.200 1072.169 L 1077.200 1067.727 L 1077.200 1063.286 L 1077.200 1058.844 L 1077.200 1054.403 L 1077.200 1049.961 L 1077.200 1045.519 L 1077.200 1041.078 L 1077.200 1036.636 L 1077.200 1032.195 L 1077.200 1027.753 L 1077.200 1023.312 L 1077.200 1018.870 L 1077.200 1014.429 L 1077.200 1009.987 L 1077.200 1005.545 L 1077.200 1001.104 L 1077.200 996.662 L 1077.200 992.221 L 1077.200 987.779 L 1077.200 983.338 L 1077.200 978.896 L 1077.200 974.455 L 1077.200 970.013 L 1077.200 965.571 L 1077.200 961.130 L 1077.200 956.688 L 1077.200 952.247 L 1077.200 947.805 L 1077.200 943.364 L 1077.200 938.922 L 1077.200 934.481 L 1077.200 930.039 L 1077.200 925.597 L 1077.200 921.156 L 1077.200 916.714 L 1077.200 912.273 L 1077.200 907.831 L 1077.200 903.390 L 1077.200 898.948 L 1077.200 894.506 L 1077.200 890.065 L 1077.200 885.623 L 1077.200 881.182 L 1077.200 876.740 L 1077.200 872.299 L 1077.200 867.857 L 1077.200 863.416 L 1077.200 858.974 L 1077.200 854.532 L 1077.200 850.091 L 1077.200 845.649 L 1077.200 841.208 L 1077.200 836.766 L 1077.200 832.325 L 1077.200 827.883 L 1077.200 823.442 L 1077.200 819.000 L 1077.236 816.209 L 1077.345 813.463 L 1077.524 810.760 L 1077.775 808.102 L 1078.094 805.487 L 1078.483 802.916 L 1078.939 800.389 L 1079.463 797.906 L 1080.053 795.467 L 1080.708 793.072 L 1081.428 790.721 L 1082.211 788.414 L 1083.057 786.151 L 1083.966 783.932 L 1084.936 781.756 L 1085.966 779.625 L 1087.055 777.538 L 1088.204 775.494 L 1089.410 773.495 L 1090.673 771.539 L 1091.992 769.627 L 1093.367 767.760 L 1094.796 765.936 L 1096.279 764.156 L 1097.815 762.420 L 1099.403 760.729 L 1101.042 759.081 L 1102.731 757.477 L 1104.470 755.917 L 1106.257 754.400 L 1108.093 752.928 L 1109.975 751.500 L 1111.903 750.116 L 1113.877 748.775 L 1115.895 747.479 L 1117.957 746.227 L 1120.062 745.018 L 1122.208 743.853 L 1124.396 742.733 L 1126.624 741.656 L 1128.891 740.624 L 1131.197 739.635 L 1133.541 738.690 L 1135.922 737.789 L 1138.338 736.932 L 1140.790 736.119 L 1143.277 735.350 L 1145.797 734.625 L 1148.350 733.944 L 1150.934 733.307 L 1153.550 732.713 L 1156.196 732.164 L 1158.871 731.659 L 1161.575 731.197 L 1164.307 730.780 L 1167.065 730.406 L 1169.850 730.077 L 1172.659 729.791 L 1175.494 729.549 L 1178.351 729.352 L 1181.231 729.198 L 1184.134 729.088 L 1187.057 729.022 L 1190.000 729.000 L 1194.364 729.000 L 1198.727 729.000 L 1203.091 729.000 L 1207.455 729.000 L 1211.818 729.000 L 1216.182 729.000 L 1220.545 729.000 L 1224.909 729.000 L 1229.273 729.000 L 1233.636 729.000 L 1238.000 729.000 L 1242.364 729.000 L 1246.727 729.000 L 1251.091 729.000 L 1255.455 729.000 L 1259.818 729.000 L 1264.182 729.000 L 1268.545 729.000 L 1272.909 729.000 L 1277.273 729.000 L 1281.636 729.000 L 1286.000 729.000 L 1290.364 729.000 L 1294.727 729.000 L 1299.091 729.000 L 1303.455 729.000 L 1307.818 729.000 L 1312.182 729.000 L 1316.545 729.000 L 1320.909 729.000 L 1325.273 729.000 L 1329.636 729.000 L 1334.000 729.000 Z" stroke="#737b75" stroke-width="1" fill="#c7c4b7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1334.000 729.000 L 1190.000 729.000 C 1127.000 729.000 1077.200 759.000 1077.200 819.000 L 1077.200 1161.000 C 1077.200 1221.000 1127.000 1251.000 1190.000 1251.000 L 1334.000 1251.000" stroke="#a24031" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 950 600 L 1238.0 600 M 1298.0 600 L 1334.0 600 L 1334.0 1380 L 950 1380 L 950 600" stroke="#252b28" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1229.0" y="537.0" width="78.0" height="63.0" fill="#e4d5b5" stroke="#aa7b35" stroke-width="2" stroke-dasharray="8 5"/>
+<path d="M 1010.0 771.0 L 1010.0 648.0 L 1268.0 648.0 L 1268.0 549.0" stroke="#527583" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1258.4 564.0 L 1268.0 549.0 L 1277.6 564.0" stroke="#527583" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1070.0" y="511.8" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#527583">右侧二层出口 / +2.66 m*</text>
+<text x="1136.0" y="628.8" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="19" font-weight="700" text-anchor="middle" fill="#252b28">可站人的连续平台</text>
+<text x="1088.0" y="786.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#737b75">下方舞台</text>
+<path d="M 1154.0 700.2 L 1196.0 726.0" stroke="#a24031" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1142.0" y="750.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20" font-weight="400" text-anchor="start" fill="#a24031">连续弧形前沿</text>
+<text x="966.8" y="972.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#252b28">侧廊</text>
+<text x="957.8" y="1008.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="19" font-weight="400" text-anchor="start" fill="#737b75">吧台上方</text>
+<text x="1142.0" y="1032.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="28" font-weight="700" text-anchor="start" fill="#527583">挑空</text>
+<text x="981.2" y="1308.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="22" font-weight="400" text-anchor="start" fill="#527583">后侧弧线保留</text>
+<text x="170" y="1440.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#252b28">↑ 舞台方向 / 两张平面同向</text>
+<text x="950" y="1440.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#527583">舞台端与入口端弧线采用同一曲率；灰色为可站人楼板</text>
+<circle cx="1628" cy="586" r="9" fill="#527583"/>
+<text x="1660" y="594.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#252b28">1 / 右侧二层出口</text>
+<text x="1660" y="642.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">右侧与楼层已由用户确认。</text>
+<text x="1660" y="676.04" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">上方平台连到真实门洞；</text>
+<text x="1660" y="710.08" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">一层照片洞口单独保留。</text>
+<circle cx="1628" cy="801" r="9" fill="#a24031"/>
+<text x="1660" y="809.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#252b28">2 / 连续弧形平台</text>
+<text x="1660" y="857.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">舞台正上方补齐站人楼板。</text>
+<text x="1660" y="891.04" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">弧形前沿独立于背景墙凹槽；</text>
+<text x="1660" y="925.08" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">圆滑转入侧廊。</text>
+<circle cx="1628" cy="1016" r="9" fill="#a24031"/>
+<text x="1660" y="1024.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#252b28">3 / 双墙垛与深舞台</text>
+<text x="1660" y="1072.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">右侧前后两道红色墙垛。</text>
+<text x="1660" y="1106.04" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">舞台前移、鼓组后退，</text>
+<text x="1660" y="1140.08" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">D-22 朝向中线的凹槽。</text>
+<circle cx="1628" cy="1231" r="9" fill="#527583"/>
+<text x="1660" y="1239.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#252b28">4 / 裸露钢支撑</text>
+<text x="1660" y="1287.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">独立圆钢柱、工字形横梁、</text>
+<text x="1660" y="1321.04" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">横向搁栅、膝撑及斜拉杆。</text>
+<text x="1660" y="1355.08" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#737b75">钢材保留金属反光与磨损。</text>
+<path d="M 80 1510 L 2160 1510" stroke="#bbc0b7" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="80" y="1592.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="37" font-weight="700" text-anchor="start" fill="#252b28">03 / 舞台放大 · 中线与凹槽</text>
+<text x="1220" y="1592.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="37" font-weight="700" text-anchor="start" fill="#252b28">04 / 楼层与裸露支撑示意</text>
+<rect x="100" y="1650" width="928.0" height="613.35" fill="#f6f3eb" stroke="#252b28" stroke-width="3"/>
+<rect x="100" y="1667.4" width="928.0" height="569.85" fill="#b7ac97"/>
+<path d="M 100 1766.0 L 346.5 1766.0 L 346.5 1676.1 L 781.5 1676.1 L 781.5 1766.0 L 825.0 1766.0" stroke="#343b38" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 956.95 1766.0 L 1028.0 1766.0" stroke="#343b38" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 564.0 1689.15 L 564.0 2244.5" stroke="#527583" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<text x="498.75" y="1732.65" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="29.0" font-weight="700" text-anchor="middle" fill="#252b28">D-22</text>
+<circle cx="564.0" cy="1828.35" r="62.35" fill="#ded8c9" stroke="#252b28" stroke-width="2"/>
+<circle cx="463.95" cy="1800.8" r="36.25" fill="#d6bd87" stroke="#252b28" stroke-width="2"/>
+<circle cx="665.5" cy="1800.8" r="36.25" fill="#d6bd87" stroke="#252b28" stroke-width="2"/>
+<rect x="942.45" y="1899.4" width="72.5" height="66.7" fill="#a24031"/>
+<text x="971.45" y="1942.9" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20.3" font-weight="700" text-anchor="middle" fill="#ffffff">1</text>
+<rect x="941.0" y="1696.3999999999999" width="81.2" height="69.6" fill="#a24031"/>
+<text x="974.35" y="1741.35" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="20.3" font-weight="700" text-anchor="middle" fill="#ffffff">2</text>
+<rect x="854.0" y="1971.9" width="110.2" height="55.1" fill="#353631" stroke="#aa7b35" stroke-width="2"/>
+<text x="474.1" y="1983.5" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#527583">舞台中线</text>
+<text x="136.25" y="2208.25" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#252b28">前排表演区 / 舞台前沿</text>
+<path d="M 121.75 1679.0 L 121.75 2237.25" stroke="#527583" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 107.25 1679.0 L 136.25 1679.0 M 107.25 2237.25 L 136.25 2237.25" stroke="#527583" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150.75" y="2056.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#527583">中线纵深</text>
+<text x="150.75" y="2093.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="25" font-weight="700" text-anchor="start" fill="#527583">3.87 m*</text>
+<text x="740.9" y="2114.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="700" text-anchor="start" fill="#a24031">右侧两道墙垛</text>
+<path d="M 972.9 1932.75 L 926.5 2070.5" stroke="#a24031" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1250 2185 L 2130 2185" stroke="#737b75" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1300" y="1892.4" width="490" height="25" fill="#9c8b70"/>
+<rect x="1790" y="1892.4" width="24" height="292.5999999999999" fill="#a24031"/>
+<rect x="1790" y="1651.5" width="24" height="26.40000000000009" fill="#a24031"/>
+<rect x="1814" y="1892.4" width="250" height="25" fill="#c4ad7b" stroke="#aa7b35" stroke-width="2" stroke-dasharray="7 5"/>
+<path d="M 1450 1822.4 L 1980 1822.4" stroke="#527583" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1950 1805.4 L 1980 1822.4 L 1950 1839.4" stroke="#527583" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1310" y="1762.4" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="30" font-weight="700" text-anchor="start" fill="#527583">可站人的二层平台</text>
+<text x="1855" y="1762.9" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="27" font-weight="700" text-anchor="start" fill="#527583">右侧二层出口</text>
+<text x="1300" y="1965.4" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#527583">+2.66 m*</text>
+<text x="1850" y="1964.4" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="23" font-weight="400" text-anchor="start" fill="#aa7b35">去向 / 外接平台待核</text>
+<path d="M 1360 1922.4 L 1730 1922.4" stroke="#252b28" stroke-width="13" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1410 2185 L 1410 1917.4 M 1700 2185 L 1700 1917.4" stroke="#252b28" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1410 1997.4 L 1495 1925.4 M 1700 1997.4 L 1620 1925.4" stroke="#252b28" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 1415 1952.4 L 1695 2072.4" stroke="#737b75" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1450" y="2147.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="21" font-weight="400" text-anchor="start" fill="#737b75">裸露圆钢柱 / 梁 / 斜撑</text>
+<text x="1300" y="2237.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#737b75">一层 ±0.00 / 舞台背后原有洞口另行表达</text>
+<text x="80" y="2325.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#aa7b35">* 工作尺寸与明确关系分别记录</text>
+<text x="80" y="2375.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#737b75">明确：二层右出口、舞台上方站人平台、连续弧形、双墙垛与裸钢结构。门洞位置、曲率及构件规格按照片估计。</text>
+<text x="80" y="2450.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="24" font-weight="400" text-anchor="start" fill="#737b75">Blender 与平面共享 design/d22-layout-v13/layout.json；不代表已完成建筑实测、结构安全或游戏碰撞验收。</text>
+<text x="80" y="2515.0" font-family="Noto Sans SC, PingFang SC, sans-serif" font-size="26" font-weight="700" text-anchor="start" fill="#a24031">v14 / 2026-09-28 / 对照原照修正字样、黑砖和夹层弧线；保留独立真实灯光</text>
+</svg>

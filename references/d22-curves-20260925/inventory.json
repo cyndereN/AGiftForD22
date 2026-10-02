@@ -1,0 +1,26 @@
+[
+  {
+    "id": "U01",
+    "original_path": "/Users/yadongliu/Downloads/IMG_5275.JPG",
+    "path": "references/d22-curves-20260925/U01.jpg",
+    "sha256": "74a7723921116c9868e3ff4e715b297d5f64b5667d640afaa9ac84b10ca645ff"
+  },
+  {
+    "id": "U02",
+    "original_path": "/var/folders/hj/3fjyhjt93m7c5t7sztk1h8200000gn/T/codex-clipboard-9ec5358c-c9ab-4758-a6ea-a27a36c46a29.png",
+    "path": "references/d22-curves-20260925/U02.png",
+    "sha256": "57a105c1f2378476ab19a9f2ecdeb9adc353782fed4a48302c955a73cff89b0f"
+  },
+  {
+    "id": "U03",
+    "original_path": "/var/folders/hj/3fjyhjt93m7c5t7sztk1h8200000gn/T/codex-clipboard-2dd3c884-2b05-40c8-9009-962e49313ec4.png",
+    "path": "references/d22-curves-20260925/U03.png",
+    "sha256": "35e687a30bf49ecb15c7afc7ca83c9d7729c749a6223d8ed648bd0ad9704c121"
+  },
+  {
+    "id": "U04",
+    "original_path": "/var/folders/hj/3fjyhjt93m7c5t7sztk1h8200000gn/T/codex-clipboard-89929288-1891-480f-81a2-e5f7bb4d9122.png",
+    "path": "references/d22-curves-20260925/U04.png",
+    "sha256": "c83ffd27c254e08659e13f44b5e992b4db391e8a70ccbdf285c898cb2bc97ed0"
+  }
+]

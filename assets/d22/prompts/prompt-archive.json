@@ -1,0 +1,685 @@
+{
+  "project": "Out-of-Tune Take / A Gift for D22",
+  "date": "2026-09-25",
+  "venue_name": "D22",
+  "stage_wall_lettering": "D-22",
+  "naming_correction": "ROOM 22 was an assistant-invented erroneous alias. It is not the GDD venue name.",
+  "source_docx": "references/Out-of-Tune Take.docx",
+  "reference_inventory": "references/d22-user-photos/inventory.json",
+  "archive_policy": "Historical prompts are preserved verbatim; revisions live in a separate directory. Unrecorded API parameters remain unknown.",
+  "no_generation_submitted_this_revision": true,
+  "assets": [
+    {
+      "asset": "P04-Drums",
+      "original_prompt_file": "assets/d22/prompts/original/P04-Drums.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P04-Drums.txt",
+      "task_id": "01a0d751-28d9-74c4-a5be-6df4f9029e53",
+      "source_image": "assets/d22/inputs/P04-Drums.png",
+      "old_geometry": "assets/d22/meshy/P04-Drums.glb",
+      "sha256": "8292021d2120fd1a829eed0b960051388cd5175bc82d5e1850a00a02a795bb84",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 15000,
+        "remove_lighting": true,
+        "topology": "triangle",
+        "should_texture": true
+      },
+      "rebuild_parts": "kick, rack tom, floor tom, snare, hi-hat, cymbal and stand, throne",
+      "review_note": "Run once per named component. High geometry must preserve roundness and actual support, not only texture detail.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P04 / Drum kit / audience-facing",
+          "bounds_min_m": [
+            -0.4500000476837158,
+            3.208026885986328,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            1.4500000476837158,
+            4.851973533630371,
+            1.7259374856948853
+          ],
+          "axis_aligned_dimensions_m": [
+            1.9,
+            1.6439,
+            1.3359
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P05-PA",
+      "original_prompt_file": "assets/d22/prompts/original/P05-PA.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P05-PA.txt",
+      "task_id": "01a0d751-2e4b-7362-b599-580aaf0ca93e",
+      "source_image": "assets/d22/inputs/P05-PA.png",
+      "old_geometry": "assets/d22/meshy/P05-PA.glb",
+      "sha256": "87f4cec49e37de0732b972d9880fded04cfa485c19db992dcdf9b220b6edb07e",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 8000,
+        "remove_lighting": true,
+        "topology": "triangle",
+        "should_texture": true
+      },
+      "rebuild_parts": "cabinet, grille, handle recesses, rigging bracket",
+      "review_note": "Resolve floor versus hanging PA variants from R01/R04; choose final dimensions after plan validation.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P05 / Floor PA",
+          "bounds_min_m": [
+            -3.1913533210754395,
+            2.6527552604675293,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            -2.668646812438965,
+            3.1272449493408203,
+            1.2599999904632568
+          ],
+          "axis_aligned_dimensions_m": [
+            0.5227,
+            0.4745,
+            0.87
+          ]
+        },
+        {
+          "name": "P05 / Overhead PA",
+          "bounds_min_m": [
+            -3.1690597534179688,
+            3.331718921661377,
+            3.059999942779541
+          ],
+          "bounds_max_m": [
+            -2.6909403800964355,
+            3.7682809829711914,
+            3.8399999141693115
+          ],
+          "axis_aligned_dimensions_m": [
+            0.4781,
+            0.4366,
+            0.78
+          ]
+        },
+        {
+          "name": "P05 / Floor PA.001",
+          "bounds_min_m": [
+            2.6533565521240234,
+            2.6465327739715576,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            3.186643600463867,
+            3.133467435836792,
+            1.2599999904632568
+          ],
+          "axis_aligned_dimensions_m": [
+            0.5333,
+            0.4869,
+            0.87
+          ]
+        },
+        {
+          "name": "P05 / Overhead PA.001",
+          "bounds_min_m": [
+            2.6809403896331787,
+            3.331718921661377,
+            3.059999942779541
+          ],
+          "bounds_max_m": [
+            3.159059762954712,
+            3.7682809829711914,
+            3.8399999141693115
+          ],
+          "axis_aligned_dimensions_m": [
+            0.4781,
+            0.4366,
+            0.78
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P06-Guitar",
+      "original_prompt_file": "assets/d22/prompts/original/P06-Guitar.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P06-Guitar.txt",
+      "task_id": "01a0d751-32c2-7300-a3c2-977dfce39122",
+      "source_image": "assets/d22/inputs/P06-Guitar.png",
+      "old_geometry": "assets/d22/meshy/P06-Guitar.glb",
+      "sha256": "d8cf8d1692b495de5e2d89981b18aeb71d40cc03601ea7f87e8f7dc951101fb3",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 15000,
+        "remove_lighting": true,
+        "topology": "triangle",
+        "should_texture": true
+      },
+      "rebuild_parts": "guitar body/neck, strings/hardware, separate floor stand",
+      "review_note": "Gameplay guitar design, not a claim of a particular pictured musician's exact instrument.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P06 / Guitar and stand",
+          "bounds_min_m": [
+            -2.4879815578460693,
+            2.914665699005127,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            -2.0720183849334717,
+            3.2853341102600098,
+            1.5199999809265137
+          ],
+          "axis_aligned_dimensions_m": [
+            0.416,
+            0.3707,
+            1.13
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P07-Bar",
+      "original_prompt_file": "assets/d22/prompts/original/P07-Bar.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P07-Bar.txt",
+      "task_id": "01a0d751-370b-72dd-b460-2fe5aafa0452",
+      "source_image": "assets/d22/inputs/P07-Bar.png",
+      "old_geometry": "assets/d22/meshy/P07-Bar.glb",
+      "sha256": "2d4e35581e07a199e0a82160f00110df723ead6629ec1d27136902fdc49a150a",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 15000,
+        "remove_lighting": true,
+        "topology": "triangle",
+        "should_texture": true
+      },
+      "rebuild_parts": "counter straight section, end section, backbar shelves, glass rack, stool, bottles/cups, paper stack",
+      "review_note": "Replace short red-front all-in-one bar with photo-informed continuous bar system R03/R06/R07/R08.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P07 / Zine exchange bar",
+          "bounds_min_m": [
+            1.4771491289138794,
+            -1.4250000715255737,
+            0.0
+          ],
+          "bounds_max_m": [
+            2.8228511810302734,
+            1.225000023841858,
+            1.4854495525360107
+          ],
+          "axis_aligned_dimensions_m": [
+            1.3457,
+            2.65,
+            1.4854
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P08-Microphone",
+      "original_prompt_file": "assets/d22/prompts/original/P08-Microphone.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P08-Microphone.txt",
+      "task_id": "01a0d759-681d-72df-b516-036aebaa0b82",
+      "source_image": "assets/d22/inputs/P08-Microphone.png",
+      "old_geometry": "assets/d22/meshy/P08-Microphone.glb",
+      "sha256": "193e5f42b349bad2c3fe8539162dd7f90ce6c55122179abbed1858bec8ed35d9",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 15000,
+        "remove_lighting": true
+      },
+      "rebuild_parts": "microphone, stand, boom, cable as independent routed asset",
+      "review_note": "Inspect silhouette from side and rear before accepting; real cross-section matters.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P08 / Microphone 1",
+          "bounds_min_m": [
+            -1.282464623451233,
+            2.3944852352142334,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            -0.11753535270690918,
+            3.465514898300171,
+            1.9399999380111694
+          ],
+          "axis_aligned_dimensions_m": [
+            1.1649,
+            1.071,
+            1.55
+          ]
+        },
+        {
+          "name": "P08 / Microphone 2",
+          "bounds_min_m": [
+            1.085968017578125,
+            2.4874143600463867,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            2.3740320205688477,
+            3.7325854301452637,
+            2.009999990463257
+          ],
+          "axis_aligned_dimensions_m": [
+            1.2881,
+            1.2452,
+            1.62
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P09-PAR",
+      "original_prompt_file": "assets/d22/prompts/original/P09-PAR.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P09-PAR.txt",
+      "task_id": "01a0d759-6ce9-70bc-8b12-4f60b0647a24",
+      "source_image": "assets/d22/inputs/P09-PAR.png",
+      "old_geometry": "assets/d22/meshy/P09-PAR.glb",
+      "sha256": "2ec99209c8c273274a96ec52770e1f94e0ebbc17b40d27f967eb8546f67b3aae",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "target_polycount": 10000,
+        "remove_lighting": true
+      },
+      "rebuild_parts": "body, lens, yoke, clamp, separate power cable",
+      "review_note": "Assign actual light source and lens response in Blender, not colored texture.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "Stage PAR / -1.7 / Meshy PAR housing",
+          "bounds_min_m": [
+            -1.9010934829711914,
+            2.2221689224243164,
+            3.4549338817596436
+          ],
+          "bounds_max_m": [
+            -1.4961506128311157,
+            2.88620662689209,
+            4.049783706665039
+          ],
+          "axis_aligned_dimensions_m": [
+            0.4049,
+            0.664,
+            0.5948
+          ]
+        },
+        {
+          "name": "Stage PAR / 0.3 / Meshy PAR housing",
+          "bounds_min_m": [
+            0.17178849875926971,
+            2.236692428588867,
+            3.4573259353637695
+          ],
+          "bounds_max_m": [
+            0.4276949167251587,
+            2.872204065322876,
+            4.047210693359375
+          ],
+          "axis_aligned_dimensions_m": [
+            0.2559,
+            0.6355,
+            0.5899
+          ]
+        },
+        {
+          "name": "Stage PAR / 2.0 / Meshy PAR housing",
+          "bounds_min_m": [
+            1.78249192237854,
+            2.221707344055176,
+            3.4540622234344482
+          ],
+          "bounds_max_m": [
+            2.214338541030884,
+            2.886481285095215,
+            4.050723075866699
+          ],
+          "axis_aligned_dimensions_m": [
+            0.4318,
+            0.6648,
+            0.5967
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "A01-Amplifier",
+      "original_prompt_file": "assets/d22/prompts/original/A01-Amplifier.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/A01-Amplifier.txt",
+      "task_id": "01a0d4ad-18b8-73ec-a3cf-bd69075973cd",
+      "source_image": "assets/d22/inputs/A01-Amplifier.png",
+      "old_geometry": "assets/d22/meshy/A01-Amplifier.glb",
+      "sha256": "73582506153039be55bfcbc685b446fa25b8beffd56540298244f7588ab3424f",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "unrecorded_options": "Exact original option set was not fully recovered; no values invented."
+      },
+      "rebuild_parts": "cabinet, grille, control panel, individual knobs, handle, feet",
+      "review_note": "Replace old low-poly concept; knob count is a game design choice, not proved by archive photos.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "A01 / Hero tube amplifier",
+          "bounds_min_m": [
+            -1.9680540561676025,
+            3.0994324684143066,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            -1.311945915222168,
+            3.5005674362182617,
+            0.9793945550918579
+          ],
+          "axis_aligned_dimensions_m": [
+            0.6561,
+            0.4011,
+            0.5894
+          ]
+        },
+        {
+          "name": "A01 / Backline second amplifier",
+          "bounds_min_m": [
+            1.5274841785430908,
+            4.173805236816406,
+            0.38999998569488525
+          ],
+          "bounds_max_m": [
+            2.2525157928466797,
+            4.626194953918457,
+            1.0355274677276611
+          ],
+          "axis_aligned_dimensions_m": [
+            0.725,
+            0.4524,
+            0.6455
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "A04-Recorder",
+      "original_prompt_file": "assets/d22/prompts/original/A04-Recorder.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/A04-Recorder.txt",
+      "task_id": "01a0d4ad-2a23-77f2-ae04-9f160bca4ac7",
+      "source_image": "assets/d22/inputs/A04-Recorder.png",
+      "old_geometry": "assets/d22/meshy/A04-Recorder.glb",
+      "sha256": "fb2de41f77ddc5c6b11a76713140427711aa2b7c70fed944ce65b6a946607c5f",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "unrecorded_options": "Exact original option set was not fully recovered; no values invented."
+      },
+      "rebuild_parts": "case, cassette door, keys, volume wheel, carrying handle",
+      "review_note": "GDD hero device; exact model not identified in supplied photos.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "A04 / Portable recorder / hero",
+          "bounds_min_m": [
+            -1.7663549184799194,
+            3.2293636798858643,
+            0.9399999976158142
+          ],
+          "bounds_max_m": [
+            -1.573644995689392,
+            3.310636281967163,
+            1.05970299243927
+          ],
+          "axis_aligned_dimensions_m": [
+            0.1927,
+            0.0813,
+            0.1197
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "A05-Mixer",
+      "original_prompt_file": "assets/d22/prompts/original/A05-Mixer.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/A05-Mixer.txt",
+      "task_id": "01a0d6c3-e7fe-7713-a952-89676b294eb4",
+      "source_image": "assets/d22/inputs/A05-Mixer.png",
+      "old_geometry": "assets/d22/meshy/A05-Mixer.glb",
+      "sha256": "b93bba8334d51861f46bbd8d47bbac00674636fec0dc5261c82ae8bd9e2b9c12",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "unrecorded_options": "Exact original option set was not fully recovered; no values invented."
+      },
+      "rebuild_parts": "chassis, repeatable channel strip, knobs, faders, master section",
+      "review_note": "Channel count and exact historic FOH location remain design choices.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "A05 / Analog mixer",
+          "bounds_min_m": [
+            -3.0481250286102295,
+            0.5899999737739563,
+            0.7900000214576721
+          ],
+          "bounds_max_m": [
+            -2.5118749141693115,
+            1.3700000047683716,
+            1.1221100091934204
+          ],
+          "axis_aligned_dimensions_m": [
+            0.5363,
+            0.78,
+            0.3321
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "P02-FOH",
+      "original_prompt_file": "assets/d22/prompts/original/P02-FOH.txt",
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/P02-FOH.txt",
+      "task_id": "01a0d723-47ae-7337-b427-477f5836289f",
+      "source_image": "assets/d22/inputs/P02-FOH.png",
+      "old_geometry": "assets/d22/meshy/P02-FOH.glb",
+      "sha256": "86f06379e4ea8bfdf6a2473b02d1567b8bb7c319f9420b32acf802357a8689b3",
+      "historical_options": {
+        "ai_model": "meshy-t2",
+        "model_type": "smart-topology",
+        "enable_pbr": true,
+        "texture_resolution": "2k",
+        "target_formats": [
+          "glb"
+        ],
+        "unrecorded_options": "Exact original option set was not fully recovered; no values invented."
+      },
+      "rebuild_parts": "worktable, flight case, rack unit, task light, paper setlist",
+      "review_note": "FOH location in current plan remains unconfirmed; table is a gameplay provision.",
+      "target_status": "not_submitted",
+      "high_detail_brief": {
+        "geometry": "preserve high-detail source; independently constructed thin parts and interaction parts; generate game LODs after validation",
+        "textures": "4K material target where it improves close viewing; no mere upscaling of blurry old maps",
+        "generation_model": null,
+        "model_selection": "To be selected for quality trial when regeneration is requested; do not reuse T2 budget silently."
+      },
+      "v7_scene_instances": [
+        {
+          "name": "P02 / Sound desk under gallery",
+          "bounds_min_m": [
+            -3.188281297683716,
+            0.28999999165534973,
+            0.0
+          ],
+          "bounds_max_m": [
+            -2.4117186069488525,
+            1.7100000381469727,
+            1.1038284301757812
+          ],
+          "axis_aligned_dimensions_m": [
+            0.7766,
+            1.42,
+            1.1038
+          ]
+        }
+      ],
+      "scale_note": "V7 assembly dimensions for traceability only; review against v8 plan before regeneration."
+    },
+    {
+      "asset": "E02-BlackBrickBackdrop",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E02-BlackBrickBackdrop.txt",
+      "evidence": "R02,R04,R05",
+      "target_status": "new_photo_informed_module_not_submitted"
+    },
+    {
+      "asset": "E01-TiledAudienceFloor",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E01-TiledAudienceFloor.txt",
+      "evidence": "R04,R06",
+      "target_status": "new_photo_informed_module_not_submitted"
+    },
+    {
+      "asset": "E13-SolidGalleryFront",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E13-SolidGalleryFront.txt",
+      "evidence": "R01,R03,R08",
+      "target_status": "new_photo_informed_module_not_submitted"
+    },
+    {
+      "asset": "E50-BackbarShelf",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E50-BackbarShelf.txt",
+      "evidence": "R03,R06,R07,R08",
+      "target_status": "new_photo_informed_module_not_submitted"
+    },
+    {
+      "asset": "E51-OverheadGlassRack",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E51-OverheadGlassRack.txt",
+      "evidence": "R03,R08",
+      "target_status": "new_photo_informed_module_not_submitted"
+    },
+    {
+      "asset": "E52-GalleryPhotoFrame",
+      "original_prompt_file": null,
+      "rebuild_prompt_file": "assets/d22/prompts/rebuild/E52-GalleryPhotoFrame.txt",
+      "evidence": "R01,R03,R08",
+      "target_status": "new_photo_informed_module_not_submitted"
+    }
+  ]
+}

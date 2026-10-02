@@ -1,0 +1,39 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace D22
+{
+    [RequireComponent(typeof(CharacterController))]
+    public sealed class D22Walkthrough : MonoBehaviour
+    {
+        [SerializeField] private Transform view;
+        [SerializeField] private float speed = 2.4f;
+        private float pitch;
+        private float verticalSpeed;
+        public void SetView(Transform cameraTransform) => view = cameraTransform;
+
+        private void Update()
+        {
+            var keyboard = Keyboard.current;
+            var mouse = Mouse.current;
+            if (keyboard == null || mouse == null || view == null) return;
+            if (mouse.rightButton.isPressed)
+            {
+                Vector2 delta = mouse.delta.ReadValue() * .09f;
+                transform.Rotate(0, delta.x, 0);
+                pitch = Mathf.Clamp(pitch - delta.y, -80, 80);
+                view.localRotation = Quaternion.Euler(pitch, 0, 0);
+            }
+            float x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);
+            float z = (keyboard.wKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed ? 1 : 0);
+            var controller = GetComponent<CharacterController>();
+            if (controller.isGrounded && verticalSpeed < 0) verticalSpeed = -2;
+            if (controller.isGrounded && keyboard.spaceKey.wasPressedThisFrame) verticalSpeed = 3.2f;
+            verticalSpeed += Physics.gravity.y * Time.deltaTime;
+            Vector3 motion = transform.TransformDirection(Vector3.ClampMagnitude(new Vector3(x, 0, z), 1));
+            motion *= speed * (keyboard.leftShiftKey.isPressed ? 1.6f : 1);
+            motion.y = verticalSpeed;
+            controller.Move(motion * Time.deltaTime);
+        }
+    }
+}

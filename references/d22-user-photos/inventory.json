@@ -1,0 +1,83 @@
+[
+  {
+    "filename": "IMG_5274 2.JPG",
+    "image_id": "R01",
+    "dimensions": [
+      1000,
+      668
+    ],
+    "sha256": "b74fdaeda6423bf926b69ec6ec1c36c7e1b28af3026f818cdb4fc912ea344845"
+  },
+  {
+    "filename": "IMG_5275.JPG",
+    "image_id": "R02",
+    "dimensions": [
+      1342,
+      2000
+    ],
+    "sha256": "74a7723921116c9868e3ff4e715b297d5f64b5667d640afaa9ac84b10ca645ff"
+  },
+  {
+    "filename": "IMG_5276.JPG",
+    "image_id": "R03",
+    "dimensions": [
+      1440,
+      966
+    ],
+    "sha256": "f674fcea565b4112750e0ab7af9f22c19ec0706eff32b52ca991a6277e91f6f6"
+  },
+  {
+    "filename": "IMG_5277.JPG",
+    "image_id": "R04",
+    "dimensions": [
+      1300,
+      1938
+    ],
+    "sha256": "5224b1319a2c5b8aaefc28746ef69c676a5227888c88108e6032addbfbddbede"
+  },
+  {
+    "filename": "IMG_5278.JPG",
+    "image_id": "R05",
+    "dimensions": [
+      1400,
+      2086
+    ],
+    "sha256": "b2c8b14576e02734ec557bd0bd329eb64d73857b19909447d3f42abe4ae54780"
+  },
+  {
+    "filename": "IMG_5279.JPG",
+    "image_id": "R06",
+    "dimensions": [
+      1440,
+      966
+    ],
+    "sha256": "d5aacc580347e31e6516b8c2edfe83312aa50e661066ffe51fad1c99d7083d63"
+  },
+  {
+    "filename": "IMG_5280.JPG",
+    "image_id": "R07",
+    "dimensions": [
+      1440,
+      966
+    ],
+    "sha256": "dd29863c2a6ba9ed3a00c1fc8653649fc9e72841c454b7cd0e7e2c98594b7435"
+  },
+  {
+    "filename": "IMG_5282 2.JPG",
+    "image_id": "R08",
+    "dimensions": [
+      2000,
+      1342
+    ],
+    "sha256": "d9c6943be575419b370ed5882cd427ff55ee7cb3bb81e0df754828737fbaf34c"
+  },
+  {
+    "filename": "IMG_5282.JPG",
+    "image_id": "R09",
+    "dimensions": [
+      2000,
+      1342
+    ],
+    "sha256": "d9c6943be575419b370ed5882cd427ff55ee7cb3bb81e0df754828737fbaf34c"
+  }
+]
