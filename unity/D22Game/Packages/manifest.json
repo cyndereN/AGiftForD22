@@ -8,6 +8,8 @@
     "com.unity.test-framework": "1.8.0",
     "com.unity.timeline": "6.6.0",
     "com.unity.ugui": "2.6.0",
-    "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.2.0"
+    "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.2.0",
+    "org.nesnausk.gaussian-splatting": "file:org.nesnausk.gaussian-splatting",
+    "com.unity.modules.xr": "1.0.0"
   }
 }

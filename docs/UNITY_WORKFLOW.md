@@ -10,12 +10,14 @@
 
 ## 所有权和场景拆分
 
-场景菜单 `D22 > Open Collaborative Workspace` 一起打开四个场景：
+游戏入口是 `D22_Menu`，菜单 `D22 > Game > Open Main Menu` 打开后进入 Play Mode。四个扫描场景各自独立；`D22GameFlow` 保存跨场景的本次会话状态，`D22GameUI` 展示剧情和交互。
+
+美术场景菜单 `D22 > Open Collaborative Workspace` 一起打开以下四个 Blender 协作场景：
 
 1. `D22_Bootstrap`：加载入口，只负责按需加载后续场景。
 2. `D22_Environment`：建筑、舞台道具、吧台与调音台、画廊装饰和灯具五组 Prefab。由美术发布脚本生成。
 3. `D22_Lighting`：Unity 灯光、反射探针、光照探针、色调和烘焙设置。由指定的灯光负责人编辑。
-4. `D22_Gameplay`：摄像机、测试行走控制器，以后放触发器、交互、剧情与音频事件。朋友可独立维护；美术重新发布不会覆盖此场景。
+4. `D22_Gameplay`：摄像机、有碰撞的行走控制器与后续可独立编写的交互挂点。朋友可独立维护；美术重新发布不会覆盖此场景。
 
 每次改动前在聊天中确认谁负责哪个场景/Prefab。不要两个人同时修改同一个 `.unity` 或同一个大 Prefab；拆场景降低冲突概率，不能替代沟通。
 
@@ -25,25 +27,27 @@
 2. 从稳定分支开一个短期任务分支。例：`feature/interaction-door`、`art/stage-update`。
 3. 只改分配给自己的场景、脚本和资源。在 Unity 内移动/重命名 Assets，保留 `.meta` GUID。
 4. `.blend`、FBX、PSD 是二进制资源。远端支持 Git LFS locks 时，编辑前锁定：`git lfs lock blender/source/D22_Balanced_Lighting_v18.blend`。初次提交前先确保文件已被 Git/LFS 跟踪。
-5. 保存、运行 `D22 > Validate Published Scene`，进 Play Mode 检查，再提交一项完整的小改动。模型和 `.meta`、材质和贴图、场景与引用需要一起提交。
+5. 保存；美术变更在协作工作区运行 `D22 > Validate Published Scene`，玩法变更从主菜单进 Play Mode 检查，再提交一项完整的小改动。模型和 `.meta`、材质和贴图、场景与引用需要一起提交。
 6. 通过 Pull Request 互相看改动与一张运行截图；通过后合并，释放二进制锁。
 
 不要提交 `Library/`、`Temp/`、`Logs/`、`UserSettings/`、`.env` 或个人 MCP 凭证。已提供 `.gitignore`、LFS 属性、Unity 文本序列化和 SmartMerge 设置。光照贴图及其 `.meta` 应一起提交，否则朋友机器上只有模型而没有烘焙照明。
 
 共享仓库已保留网页原型，并将 Unity、Blender、Meshy 和 Figma 资料放在各自目录。历史 v9–v17 Blender 场景不作为当前 Unity 源文件；需要考古时从原始工作区恢复。
 
-首次入库集合是 `.gitignore`、`.gitattributes`、`unity/D22Game`、`scripts/unity`、`blender/source`、`assets/d22`、`design` 和本说明。朋友克隆后先运行 `python scripts/unity/setup_collaboration.py` 配置本机 LFS/SmartMerge，再用 Hub 打开项目。
+首次入库集合是 `.gitignore`、`.gitattributes`、`unity/D22Game`、`scripts/unity`、`blender/source`、`assets/d22`、`design` 和本说明。朋友在 Windows 用 `scripts/unity/setup_collaboration.ps1`，你在 Mac 用 `scripts/unity/setup_collaboration.sh` 配置本机 LFS/SmartMerge；然后用 Hub 打开 `unity/D22Game`。无需为正常运行安装 Python。
 
 ## Blender → Unity 发布
 
 Blender 负责几何、UV、贴图源和艺术布局；Unity 负责运行时材质、碰撞、灯光烘焙、相机与玩法。
 
 1. 保存并锁定本次 `.blend` 源文件。
-2. 在仓库根目录运行以下命令；Windows 将 Blender 路径替换为自己的安装路径：
+2. Mac 在仓库根目录运行以下命令：
 
 ```sh
 scripts/unity/export_d22.sh
 ```
+
+Windows PowerShell 用 `$env:BLENDER_BIN="C:\Program Files\Blender Foundation\Blender 4.5\blender.exe"` 指定 Blender，然后运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/unity/export_d22.ps1`。
 
 3. 等 Unity 导入结束。选择 `D22 > Publish > Update Art From Blender`。这个命令更新生成的模型、材质、Prefab 与 Environment；保留已有的 Lighting 和 Gameplay。首次发布才会生成灯光场景。如果确实需要从 Blender 重置灯位，先提交当前灯光，再选择 `D22 > Publish > Reset Lighting From Blender`。如果只改代码或交互，不要运行发布命令。
 4. 使用 `D22 > Bake Lighting` 生成本次场景的光照数据，然后验证 Play Mode。
@@ -65,7 +69,7 @@ Cycles 的程序化微表面凹凸不会通过 FBX 原样带入，导出报告�
 
 朋友执行 `uv tool install --python 3.11 mcpforunityserver==10.2.0`，在其自己的 MCP 客户端配置 `mcp-for-unity --transport stdio`。不要复制你的全局 config，因为它含其他服务的凭证。每人的服务只连自己本机 Unity；Git 共享项目数据，不共享正在运行的 MCP 会话。
 
-Play Mode：WASD 行走，按住鼠标右键转头，Shift 快走，Space 跳跃。这是验收控制器，后续可替换为正式角色控制系统。
+Play Mode：WASD 行走，按住鼠标右键转头，Shift 快走，Space 跳跃。这是 Blender 空间的行走控制；扫描空间沿用自由相机。游戏入口还支持 E 交互、1 喝酒、Esc 暂停。
 
 ## 参考依据
 

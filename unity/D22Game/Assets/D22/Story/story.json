@@ -1,0 +1,117 @@
+{
+  "intro": [
+    {
+      "zh": "五道口。高校围着的街上，有一间叫 D-22 的房间。",
+      "en": "Wudaokou. On a street ringed by colleges, a room called D-22."
+    },
+    {
+      "zh": "2012 年它关了门。名字没有一起关掉，还在人嘴里走。",
+      "en": "It closed in 2012. The name did not. It is still being passed around."
+    },
+    {
+      "zh": "在北大教书的 Michael，看见当时北京活跃的地下乐手，觉得这座城市正在变成世界要听见的地方。",
+      "en": "Michael, teaching at Peking University, saw how alive the underground was, and thought the city was turning into a place the world would have to hear."
+    },
+    {
+      "zh": "他想帮那些还在象牙塔里的音乐天才。于是有了 D-22。",
+      "en": "He wanted to help the talent still inside the ivory tower. So there was D-22."
+    },
+    {
+      "zh": "这里很快成了高校乐队的天堂。",
+      "en": "It quickly became a heaven for campus bands."
+    },
+    {
+      "zh": "刺猬的子健那时还在北航。他记得演完一定喝酒，喝到天亮。他们叫这「坐穿馆」：把馆坐穿，再换个地方继续。",
+      "en": "Zijian of Hedgehog was still at Beihang. After the show they drank until morning. They called it zuo chuan guan: sit the place through, then move on and keep drinking."
+    },
+    {
+      "zh": "Carsick Cars、Snapline 从这里走出去。Carsick Cars 还为 Sonic Youth 暖过场。",
+      "en": "Carsick Cars and Snapline came out of this room. Carsick Cars opened for Sonic Youth."
+    },
+    {
+      "zh": "酒并不特别。特别的是这间紧的屋子，和它不肯过滤的声音。",
+      "en": "The drinks were nothing special. The tight room was. So was the sound it refused to filter."
+    }
+  ],
+  "recordShop": [
+    {
+      "zh": "唱片店是翻音乐的房间。黑胶和 CD 立在格子里，抽出来，就能听。",
+      "en": "A record shop is a room for flipping through music. Vinyl and CDs stand in the bins. Pull one out, and you can listen."
+    },
+    {
+      "zh": "北京还有这样的店。独音唱片 2011 年开在鼓楼东大街，自己也做厂牌。痛仰、旅行团的片子从这里出去过。",
+      "en": "Beijing still has rooms like this. Duyin Records opened on Gulou East Street in 2011, and became a label. Miserable Faith and The Life Journey passed through here."
+    },
+    {
+      "zh": "福声更早。2002 年开在平安里，2018 年搬到冰窖口胡同。架子上是崔健、唐朝、黑豹，还有窦唯。",
+      "en": "Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves keep Cui Jian, Tang Dynasty, Black Panther, and Dou Wei."
+    },
+    {
+      "zh": "你脚下这间，也是这种店。走两步看看。",
+      "en": "The room under your feet is that kind of shop. Take a couple of steps."
+    }
+  ],
+  "hutong": [
+    {
+      "zh": "酒还在嗓子里。胡同到了。先走到那扇门前。",
+      "en": "The drink is still in the throat. The hutong is here. Walk to the door first."
+    }
+  ],
+  "boss": [
+    {
+      "zh": "吃了么您。着急去看演出？",
+      "en": "Eaten yet? Rushing off to the show?"
+    },
+    {
+      "zh": "门口那帮人，演完没有不喝的。你先别走。",
+      "en": "The ones at the door, none of them leave a show sober. Don't go yet."
+    },
+    {
+      "zh": "身后。刚给你搁上的。走之前拿一下。",
+      "en": "Behind you. I just set it out. Take it before you leave."
+    }
+  ],
+  "wine": [
+    {
+      "zh": "酒并不为了解渴。台上声音一大，人就需要一点东西把白天关掉。",
+      "en": "The drink is not for thirst. When the sound onstage gets big, people need something to switch the day off."
+    },
+    {
+      "zh": "尼采管这叫酒神。不是神话，是那一下边界松了，嗓子和身子一起往前冲。",
+      "en": "Nietzsche called it the Dionysian. Not the myth. The moment the edges loosen, and the voice and the body rush forward together."
+    },
+    {
+      "zh": "所以演出必喝酒。音量把情感放大，酒把放大按实，让它停在这间屋子里。",
+      "en": "So a show means drinking. Not for the crowd. The volume turns the feeling up. The drink holds it down, keeps it in the room."
+    },
+    {
+      "zh": "D-22 也是这样。演完坐穿馆，喝到天亮。酒是那场噪声还没散的时候，留下的那一口。",
+      "en": "D-22 was the same. After the set they sat the place through, and drank until morning. The drink is the mouthful left while the noise is still in the room."
+    },
+    {
+      "zh": "拿上。酒杯。这是你会的第二件事。",
+      "en": "Take the glass. This is the second thing you know."
+    }
+  ],
+  "choice": {
+    "zh": "噪声已经把情感放大了。这一口，你要它怎样？",
+    "en": "The noise has already turned the feeling up. This mouthful. What do you want it to do?",
+    "choices": [
+      {
+        "zh": "再放大",
+        "en": "Turn it up again",
+        "note": "BGM：失真推高，鼓贴到耳朵上，旋律几乎被噪声盖住。\n相机：手持抖得明显，视野在 58 和 66 之间慢慢呼吸，转向更灵。\n后处理：光晕打开，对比拉高，颜色偏暖、偏红，边缘色散，暗角收紧。"
+      },
+      {
+        "zh": "按在这间屋子里",
+        "en": "Hold it in this room",
+        "note": "BGM：同一条曲子收干，房间声大过失真，低音稳住，像人还坐在馆里。\n相机：抖动很轻，视野固定在 60，转向变慢，一句镜头拉得很长。\n后处理：略微变锐，对比和饱和都收一点，暗角宽而淡，光晕关掉。"
+      },
+      {
+        "zh": "把白天关掉",
+        "en": "Switch the day off",
+        "note": "BGM：鼓退到很远，混响变大，只剩低频和电流。\n相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。\n后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。"
+      }
+    ]
+  }
+}

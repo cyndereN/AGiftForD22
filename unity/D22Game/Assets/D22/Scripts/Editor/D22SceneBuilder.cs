@@ -55,7 +55,7 @@ namespace D22.Editor
                 new GameObject("D22 Scene Loader").AddComponent<D22Bootstrap>();
                 EditorSceneManager.SaveScene(boot, Scenes + "D22_Bootstrap.unity");
             }
-            EditorBuildSettings.scenes = SceneNames.Select(n => new EditorBuildSettingsScene(Scenes + n + ".unity", true)).ToArray();
+            D22ProjectSetup.ConfigureBuildScenes();
             AssetDatabase.SaveAssets();
             OpenWorkspace();
             Validate();

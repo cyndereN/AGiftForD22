@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-03",
+  "unity": "6000.6.4f1",
+  "platform": "StandaloneOSX",
+  "graphics_api": "Metal",
+  "result": "Succeeded",
+  "bytes": 1197860207,
+  "build_errors": 0,
+  "build_warnings": 0,
+  "artifact": "builds/macOS/A Gift for D22.app",
+  "standalone_launch": "Started successfully on Apple M1 Max; Metal initialized and menu loaded",
+  "limitations": [
+    "Windows executable and Windows GPU/input have not been tested on this Mac",
+    "Unused depth-of-field and Panini postprocess shader stripping notices appear at startup"
+  ]
+}

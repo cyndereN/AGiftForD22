@@ -8,11 +8,10 @@
 4 个 `scene_*.html` 是带嵌入式模型数据的 PlayCanvas 场景，每个约 18–22 MB。
 `Model/` 保存酒瓶模型与贴图，`Carsick Cars - Carsick Cars/` 保存音乐，
 `talks.txt` 是文字资料，`game-flow.svg` 是流程图。Windows 本地启动脚本原样保留。
-原 README 的链接和待办也已保留。
+原 README 的链接和待办存档于 `WEB_PROTOTYPE_ORIGINAL_README.md`。
 
-网页各文件之间使用根目录相对路径。为保留当前入口和协作习惯，本次继续在根目录
-运行网页，并以 `unity/D22Game` 作为独立子项目。后续要把网页收进 `web/` 时，
-应单独修改全部模型/音乐/页面引用与部署入口，不与 Unity 美术发布混在一次改动中。
+原网页已整体移到 `legacy/web/`，内部相对路径保持不变。Unity 是主项目，
+详细玩法移植与扫描转换说明见 [GAME_MIGRATION.md](GAME_MIGRATION.md)。
 
 ## 合入的数据
 
@@ -52,6 +51,5 @@ Figma 原生文档仍由 Figma 云文件管理，仓库保存交接导出，并�
 Environment、Materials 和五个 Prefab 由发布脚本生成；重新发布后需要重烘焙。
 当前美术运行基线偏暗，玻璃与反射仍使用 URP 近似；后续视觉调整在 Lighting 中进行。
 
-下一步把网页玩法逐项移到 Unity：场景流程与存档、对话、喝酒效果、音乐/演出事件。
-这些逻辑不会因合入网页文件而自动变成 Unity 玩法。建议分别在 Gameplay 场景和
-Runtime 脚本中实现，每项用独立分支和可运行的验收步骤交付。
+网页玩法的 Unity 迁移已在后续改动中进行，见 [游戏迁移说明](GAME_MIGRATION.md)。
+上述美术验收记录对应首次整合提交；后续玩法验证另存 `docs/validation/`。

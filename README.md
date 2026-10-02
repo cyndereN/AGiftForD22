@@ -1,78 +1,77 @@
 # A Gift for D22
 
-D-22 是一个围绕现场音乐空间的交互体验项目。这个仓库同时保存网页原型、Unity 桌面端项目、Blender 场景源文件、Meshy 模型和 Figma 设计交接资料。Windows/Mac 桌面端以 Unity 6 + URP 为当前开发基线。
+一个围绕 D-22、唱片店、胡同与现场音乐的桌面交互体验。**主项目是 Unity，支持 Windows 和 macOS。** 根目录的 `OpenUnity.bat` / `OpenUnity.command` 只是打开编辑器的快捷入口，不是游戏本身。
 
-## 现在可以运行什么
+## 第一次打开
 
-- **网页原型**：仓库根目录的 `index.html`，包含胡同、Live House、演出和唱片店场景。Windows 运行 `serve.bat`；Mac 在仓库根目录运行 `python3 -m http.server 8091 --bind 127.0.0.1`，访问 `http://127.0.0.1:8091/`。
-- **Unity 项目**：用 Unity Hub 打开 [`unity/D22Game`](unity/D22Game)，版本固定为 `6000.6.4f1`，URP 固定为 `17.6.0`。入口场景由四个协作场景组成：Bootstrap、Environment、Lighting、Gameplay。
-- **Blender 源文件**：[`blender/source/D22_Balanced_Lighting_v18.blend`](blender/source/D22_Balanced_Lighting_v18.blend)。这是当前布局和灯光审阅的权威源文件。
-
-## 仓库结构
-
-```text
-assets/d22/                 Meshy GLB、PBR 贴图、输入图、提示词和生成记录
-blender/source/             当前 Blender 源文件
-blender/verification/       Blender 场景审阅记录
-design/                     Figma 导出、平面图和设计 handoff
-references/                 设计稿、资产生成依赖的照片及出处
-docs/                       协作、迁移和资产说明
-scripts/unity/              Blender → Unity 发布与本机协作脚本
-unity/D22Game/              Unity 6 + URP 项目
-index.html, scene_*.html    原有网页原型
-Model/, Carsick Cars - ...  原有网页模型和音乐
-```
-
-资产目录说明见 [`docs/ASSET_CATALOG.md`](docs/ASSET_CATALOG.md)，Figma 连接说明见 [`design/figma/README.md`](design/figma/README.md)。
-
-## 两人协作规则
-
-1. 安装 Git LFS，克隆后先运行 `git lfs pull`，再运行 `python scripts/unity/setup_collaboration.py`。它只修改本仓库的 LFS 和 Unity SmartMerge 配置，不复制个人凭证。
-2. 两人使用同一个 Unity 版本和同一个 URP 包版本。每项工作从分支开始，例如 `art/stage-update` 或 `feature/interaction-door`。
-3. Blender 负责结构、布局、UV 和源材质；Unity 负责运行时材质、碰撞、灯光烘焙、相机和玩法。不要直接改 Unity 里由 Blender 发布生成的模型布局。
-4. `D22 > Publish > Update Art From Blender` 只更新 Environment 和生成资源，会保留已有的 Lighting 与 Gameplay。第一次发布或确实要覆盖灯位时才使用 `D22 > Publish > Reset Lighting From Blender`。
-5. 光照或几何改动后运行 `D22 > Bake Lighting` 和 `D22 > Validate Published Scene`。源文件、导出资源、场景、`.meta`、光照数据和验证结果一起提交。
-6. 大型二进制文件由 Git LFS 管理；编辑前锁定 `.blend` 或 PSD 源文件。生成的 FBX 保持可写，随源文件一起发布。不要提交 `Library/`、`Temp/`、`Logs/`、`UserSettings/`、`.env` 或 MCP/Figma 会话凭证。
-
-本机连接步骤和固定版本见 [`docs/MCP_SETUP.md`](docs/MCP_SETUP.md)。
-
-完整流程见 [`docs/UNITY_WORKFLOW.md`](docs/UNITY_WORKFLOW.md)。
-
-## Blender → Unity 发布
-
-在仓库根目录执行：
+两人都安装 **Unity Hub + Unity 6000.6.4f1**、Git 和 Git LFS。朋友在 Windows 安装 Windows Build Support；Mac 开发者安装 macOS Build Support。不要各自升级 Unity 或包版本。
 
 ```sh
-BLENDER_BIN=/Applications/Blender.app/Contents/MacOS/Blender \
-  scripts/unity/export_d22.sh
+git clone git@github.com:cyndereN/AGiftForD22.git
+cd AGiftForD22
+git lfs install --local
+git lfs pull
 ```
 
-导出结果写入 `unity/D22Game/Assets/D22/Art/`，随后打开 Unity 项目执行发布菜单。`Data/d22-export.json` 保存了源对象、材质、灯光和坐标转换信息。当前迁移基线包含 1,485 个模型渲染器、62 个材质和 47 个有效灯光；验证报告位于 `unity/D22Game/Assets/D22/Validation/migration-report.json`。
+首次整合尚在 `codex/integrate-unity-assets` 分支。该分支推送后、合入 main 之前，朋友需要先运行：
 
-## Figma、Blender 和 Meshy 的边界
+```sh
+git fetch origin
+git switch --track origin/codex/integrate-unity-assets
+git lfs pull
+```
 
-Figma bridge、Blender MCP、Meshy MCP 和 Unity MCP 都是每个开发者本机运行的工具。仓库只保存可审阅的设计导出、Blender 源文件、Meshy 生成资产和任务记录，不保存 MCP 配置、访问令牌或桌面桥接会话。这样朋友克隆后能复现文件和导出流程，同时各自使用自己的服务凭证。
+- **macOS**：运行 `bash scripts/unity/setup_collaboration.sh`，然后双击 `OpenUnity.command`。
+- **Windows PowerShell**：运行 `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/unity/setup_collaboration.ps1`，然后双击 `OpenUnity.bat`。无需 Python、Node、Blender 或 MCP 就能运行已有 Unity 项目。
+- 也可以在 Unity Hub 的 **Add project from disk** 中选择 **`unity/D22Game`**，不是仓库根目录。
+- 自定义编辑器安装位置时设置 `UNITY_EDITOR` 为 Unity 可执行文件的完整路径，或直接从 Hub 打开。
 
-Meshy 资产已经在 `assets/d22/meshy/` 及其版本目录中，包含 GLB、PBR 贴图、输入图和提示词；Unity 使用的 FBX/纹理是由当前 Blender 场景发布出的运行时副本。
+Unity 导入结束后，执行 **D22 → Game → Open Main Menu**，点击 Play。从主菜单开始故事，或选择空间漫游。WASD 移动、按住右键转向、E 交互、1 喝酒、Esc 打开菜单。默认开启减少镜头晃动，可在暂停菜单调整。扫描空间使用与网页一致的自由相机，Blender 重建空间使用有碰撞的行走控制。
 
-## 当前迁移状态
+## 游戏与资源在哪里
 
-已在共享仓库路径完成 Unity 编译、场景发布和灯光烘焙：1,485 个源对象全部匹配，
-缺失材质为 0，47 盏灯，3 张光照贴图。入口与舞台截图见
-[`docs/previews/`](docs/previews/)。
+```text
+unity/D22Game/                 主游戏工程：Assets + Packages + ProjectSettings
+  Assets/D22/Scenes/           主菜单、4 个扫描空间、Blender 分层场景
+  Assets/D22/Scripts/          C# 游戏流程、交互、UI、导入和构建工具
+  Assets/D22/Story/            中英剧情数据
+  Assets/D22/Scans/            Unity 原生 Gaussian Splatting 数据
+  Assets/D22/Art/              Blender 发布模型、PBR、酒瓶
+  Assets/D22/Audio/            原型音乐资源
+blender/source/               可编辑 .blend 源文件（LFS）
+assets/d22/                   Meshy 原始 GLB、贴图、生成输入与记录
+assets/scans/                 从网页恢复的原始 SOG 扫描及哈希
+design/                      Figma 导出、布局、交接资料
+references/                   设计文档、参考照片
+scripts/                      跨平台设置与资源转换工具
+docs/                         协作、资产、连接及验证说明
+legacy/web/                   保留完整相对路径的网页原型归档
+OpenUnity.bat / .command       Windows / macOS 编辑器快捷入口
+```
 
-原有 4 个 PlayCanvas 网页场景和 `player.js` 保留原路径；其中剧情、对话、喝酒和音乐
-逻辑尚未改写为 Unity C#。当前 Unity 是 Livehouse 空间与行走控制基线，URP 的玻璃、
-反射和明暗响应仍与 Cycles 不同。仓库审阅和后续模块拆分见
-[`docs/REPOSITORY_REVIEW.md`](docs/REPOSITORY_REVIEW.md)。
+Unity 的 **Assets** 是游戏使用的资源；根目录 **assets/** 与 **blender/** 是创作源文件与生成记录。源资产也要提交，但不塞进 Unity 的 Assets，以免 Unity 依赖本机 Blender 导入 `.blend`、重复导入历史模型或把参考资料打进游戏。
 
-## 网页原型待办（保留原 README）
+## 这次改动怎么 push
 
-原参考：<https://zhuanlan.zhihu.com/p/182995276>
+当前本机分支为 `codex/integrate-unity-assets`。在仓库目录执行：
 
-- [ ] BGM
-- [ ] 越喝酒越晕眩，喝多重开
-- [ ] 音效：喝啤酒、鸽哨、蛐蛐、磨剪子磨刀
-- [x] 背景随着音乐产生效果
-- [ ] 对话，以及对话对摄像机的影响
-- [x] outro
+```sh
+git status
+git push -u origin codex/integrate-unity-assets
+```
+
+Git LFS 的 pre-push hook 会上传本次提交引用的大资源，再上传 Git 提交；**不需要手动把资源另传一次**。首次上传资源较多。推送成功后在 GitHub 创建该分支到 `main` 的 Pull Request，两人确认后合并。没有执行 push 时，朋友还看不到你本机的迁移成果。
+
+日常流程：先保存 Unity 场景，`git status` 检查文件，从最新 main 创建自己的分支，例如 `feature/recordshop-dialogue`。完成后 `git add <相关文件或目录>`、`git commit -m "..."`、`git push -u origin <你的分支>`，通过 PR 合并。不要两个人同时修改同一个场景文件；Environment、Lighting、Gameplay 已拆开。
+
+提交 `.meta`、`Packages/manifest.json`、`Packages/packages-lock.json` 和 `ProjectSettings`。不要提交 `Library`、`Temp`、`Logs`、`UserSettings`、构建产物或个人服务密钥。详细操作见 [双人协作](docs/UNITY_WORKFLOW.md)。
+
+## 构建与创作
+
+- 独立游戏：Unity 菜单 **D22 → Build → macOS / Windows x64**；结果写入仓库的 `builds/`，不进 Git。玩家不需要 Unity、Blender 或 MCP。
+- Gaussian 渲染固定使用 **Mac Metal / Windows DX12**。Windows 显卡/驱动须支持 DX12；不支持 DX11。Unity 高斯插件已随工程固定版本提交，朋友不用重复安装。
+- Blender → Unity：Mac 运行 `scripts/unity/export_d22.sh`；Windows 设置 `BLENDER_BIN` 后运行 `scripts/unity/export_d22.ps1`。然后在 Unity 执行 **D22 → Publish → Update Art From Blender**。更新几何后重新烘焙灯光。
+- Figma bridge / Blender MCP / Meshy MCP / Unity MCP 是开发工具，每台电脑单独连接，不是游戏运行依赖。见 [连接说明](docs/MCP_SETUP.md)。Figma 文件引用与可审阅导出在 [design/figma](design/figma/README.md)。
+- Meshy 原模型确实已保存：36 个 GLB 中包含 27 个 Meshy 模型版本和 9 个结构模块，含输入、贴图与来源记录。见 [资产说明](docs/ASSET_CATALOG.md)。
+
+迁移范围、验证结果和剩余差异见 [游戏迁移说明](docs/GAME_MIGRATION.md)。旧网页保留在 `legacy/web`，可运行其中的 `serve.bat`，或在该目录运行 `python3 -m http.server 8091 --bind 127.0.0.1`；它不再是主入口。

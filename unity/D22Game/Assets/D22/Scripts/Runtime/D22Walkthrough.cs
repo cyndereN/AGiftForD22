@@ -14,6 +14,7 @@ namespace D22
 
         private void Update()
         {
+            if (D22GameFlow.InputBlocked) return;
             var keyboard = Keyboard.current;
             var mouse = Mouse.current;
             if (keyboard == null || mouse == null || view == null) return;

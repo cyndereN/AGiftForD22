@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/D22/Scenes/D22_Menu.unity
+    guid: 35cba1c8a355c459ea807bd3f14efe17
+  - enabled: 1
+    path: Assets/D22/Scenes/D22_RecordShop.unity
+    guid: bbc05c04ada72403f9365ffa7a6a3944
+  - enabled: 1
+    path: Assets/D22/Scenes/D22_Hutong.unity
+    guid: 766673fe161d147319d72ba75ac08ea8
+  - enabled: 1
+    path: Assets/D22/Scenes/D22_LiveScan.unity
+    guid: d2e654cf3a1224ecab1450bb4981789b
+  - enabled: 1
+    path: Assets/D22/Scenes/D22_Performance.unity
+    guid: 8485e3c691f8d40009f3e87e4850423e
+  - enabled: 1
     path: Assets/D22/Scenes/D22_Bootstrap.unity
     guid: 30bcbff6a04ca415796aeee74b092edf
   - enabled: 1
