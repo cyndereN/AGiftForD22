@@ -22,7 +22,7 @@ namespace D22
             D22Look.ApplyFree(transform, ref yaw, ref pitch, D22GameFlow.UiBlocksLook);
             Vector3 input = new Vector3((k.dKey.isPressed ? 1 : 0) - (k.aKey.isPressed ? 1 : 0), 0, (k.wKey.isPressed ? 1 : 0) - (k.sKey.isPressed ? 1 : 0));
             if (input.sqrMagnitude > .0001f) D22GameFlow.Instance?.NoteWalk();
-            var next = transform.position + transform.TransformDirection(Vector3.ClampMagnitude(input, 1)) * speed * Time.deltaTime;
+            var next = transform.position + transform.TransformDirection(Vector3.ClampMagnitude(input, 1)) * speed * 1.45f * Time.deltaTime;
             transform.position = bounds.ClosestPoint(next);
         }
     }

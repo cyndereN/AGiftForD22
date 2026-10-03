@@ -180,7 +180,7 @@ namespace D22
             hopFrom = hopTo = Bug = new Vector2(.16f, .74f);
             trap = new Vector2(.5f, .5f);
             hopT = 0;
-            hopDur = .32f;
+            hopDur = .7f;
             hopArc = .12f;
             birds.Clear();
             notes.Clear();
@@ -189,7 +189,6 @@ namespace D22
                 birds.Add(new D22Bird { pos = new Vector2(.5f, .4f), vel = Vector2.zero });
                 PlayPigeon();
             }
-            if (id == "grind") PlayGrind();
             return true;
         }
 
@@ -264,7 +263,7 @@ namespace D22
             }
             UpdateNear(camera, volume);
             UpdateFlock();
-            UpdateGrindLoop();
+            UpdateGrindLoop(camera);
             if (!Open) return;
             coverDelay = Mathf.Max(0, coverDelay - dt);
             if (Game == "cricket")
@@ -275,7 +274,7 @@ namespace D22
                     hopFrom = hopTo;
                     hopTo = new Vector2(UnityEngine.Random.Range(.14f, .86f), UnityEngine.Random.Range(.22f, .8f));
                     hopT = 0;
-                    hopDur = UnityEngine.Random.Range(.28f, .55f);
+                    hopDur = UnityEngine.Random.Range(.65f, 1.15f);
                     hopArc = UnityEngine.Random.Range(.08f, .18f);
                 }
                 float u = hopDur < .001f ? 1 : Mathf.Clamp01(hopT / hopDur);
@@ -344,6 +343,7 @@ namespace D22
                             grindHits = 0;
                             Grind++;
                             Grant("scissors");
+                            flow.Stage?.NoteGrind();
                         }
                     }
                 }
@@ -459,16 +459,34 @@ namespace D22
             oneshot.PlayOneShot(grindSfx);
         }
 
-        void UpdateGrindLoop()
+        void UpdateGrindLoop(Camera camera)
         {
-            if (!Spawned || !grindSfx)
+            if (!grindSfx)
             {
                 if (grindLoop.isPlaying) grindLoop.Stop();
                 return;
             }
             if (grindLoop.clip != grindSfx) grindLoop.clip = grindSfx;
-            grindLoop.volume = Open && Game == "grind" ? 0 : FlockVol();
-            if (!grindLoop.isPlaying) grindLoop.Play();
+            grindLoop.loop = true;
+            if (Open && Game == "grind")
+            {
+                grindLoop.volume = 1f;
+                if (!grindLoop.isPlaying) grindLoop.Play();
+                return;
+            }
+            if (!Spawned || grindMark == null || camera == null)
+            {
+                if (grindLoop.isPlaying) grindLoop.Stop();
+                return;
+            }
+            float d = Vector3.Distance(camera.transform.position, grindMark.transform.position);
+            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume);
+            grindLoop.volume = vol;
+            if (vol > .02f)
+            {
+                if (!grindLoop.isPlaying) grindLoop.Play();
+            }
+            else if (grindLoop.isPlaying) grindLoop.Stop();
         }
 
         void Grant(string abilityId)

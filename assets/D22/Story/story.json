@@ -237,6 +237,133 @@
       }
     ]
   },
+  "band": [
+    {
+      "zh": "一支乐队先有这三件。鼓、吉他、贝斯。歌手可以后上。这三件不齐，屋里就还是排练。",
+      "en": "A band starts with these three. Drums, guitar, bass. The singer can come later. Without the three, the room is still a practice."
+    }
+  ],
+  "drumTalk": [
+    {
+      "zh": "鼓是时间。一下，房间就有了现在。",
+      "en": "The drum is time. One hit, and the room has a now."
+    },
+    {
+      "zh": "它不负责旋律。它负责让所有人同时往前。胸腔先收到，耳朵后收到。",
+      "en": "It does not carry the tune. It makes everyone move forward together. The chest gets it first. The ear gets it after."
+    }
+  ],
+  "guitarTalk": [
+    {
+      "zh": "吉他是空气里的那一层。和弦、噪声、一句还没唱出来的话。",
+      "en": "The guitar is the layer in the air. Chords, noise, a sentence that has not been sung yet."
+    },
+    {
+      "zh": "在这种房间里，它常常是失真的。干净的音色留在家里。上台，就要让墙也响。",
+      "en": "In a room like this, it is usually distorted. The clean tone stays at home. Onstage, the wall has to sound too."
+    }
+  ],
+  "bassTalk": [
+    {
+      "zh": "贝斯最低，也最容易被忘掉。把它拿掉，鼓还在敲，吉他还在响，歌却站不稳。",
+      "en": "The bass is the lowest, and the easiest to forget. Take it away, and the drum still hits, the guitar still rings, and the song cannot stand."
+    },
+    {
+      "zh": "它把鼓的时间和吉他的音拴在一起。你与其说听见它，不如说脚底下突然有了地。",
+      "en": "It ties the drum's time to the guitar's notes. You do not so much hear it as feel the floor appear under your feet."
+    }
+  ],
+  "stage": [
+    {
+      "zh": "三件齐了。走上这方小台。",
+      "en": "The three are here. Step onto this small stage."
+    },
+    {
+      "zh": "灯一亮，这间屋子就不够用了。",
+      "en": "The light comes up, and this room is no longer enough."
+    }
+  ],
+  "chorus": [
+    {
+      "zh": "灯打到脸上了。下一秒是一万人。可你还是你。",
+      "en": "The light is on your face. The next second is ten thousand people. You are still you."
+    },
+    {
+      "zh": "你站上来，图的是什么？",
+      "en": "What did you step up here for?"
+    }
+  ],
+  "chorusAsk": {
+    "zh": "你站上来，图的是什么？",
+    "en": "What did you step up here for?",
+    "choices": [
+      { "zh": "被记住", "en": "To be remembered" },
+      { "zh": "把这一首唱完", "en": "To finish this song" },
+      { "zh": "不知道", "en": "I don't know" }
+    ]
+  },
+  "remembered": [
+    {
+      "zh": "名字比屋子活得长。2012 年门关了，有些名字还在人嘴里走。你要的是这个。",
+      "en": "The name outlives the room. The door shut in 2012, and some names are still being passed around. This is what you want."
+    }
+  ],
+  "finishSong": [
+    {
+      "zh": "万人也好，三十个人也好。歌有开头，就该有结尾。你只要把它唱完。",
+      "en": "Ten thousand, or thirty. A song that starts ought to end. You only want to finish it."
+    }
+  ],
+  "unsure": [
+    {
+      "zh": "很多人上台的时候并不知道。知道的是鼓已经在敲。先站着。",
+      "en": "A lot of people do not know when they step up. What they know is that the drum is already hitting. Stand here first."
+    }
+  ],
+  "aftersong": [
+    {
+      "zh": "最后一声落地。",
+      "en": "The last note lands."
+    },
+    {
+      "zh": "歌唱完了。灯可以暗了。",
+      "en": "The song is finished. The lights can go down."
+    },
+    {
+      "zh": "屋子回到原来的大小。装得下的，本来就这么多。",
+      "en": "The room goes back to its old size. It never held more than it could."
+    },
+    {
+      "zh": "2012 年它关了门。你今晚把它又开了一晚。",
+      "en": "It closed in 2012. Tonight you opened it for one more night."
+    },
+    {
+      "zh": "去喝吧。坐穿了，再换个地方继续。",
+      "en": "Go drink. Sit the place through. Then move on, and keep going."
+    }
+  ],
+  "credits": [
+    { "zh": "A Gift For D22", "en": "" },
+    { "zh": "献给", "en": "For" },
+    { "zh": "D-22", "en": "" },
+    { "zh": "五道口", "en": "Wudaokou" },
+    { "zh": "Michael", "en": "" },
+    { "zh": "把钱花在音响上的那个人", "en": "The one who put the money into the PA" },
+    { "zh": "No-Beijing", "en": "No-Beijing" },
+    { "zh": "以及所有三十块到五十块走进来的人", "en": "And everyone who walked in for thirty to fifty quid" },
+    { "zh": "乐手们", "en": "Performers" },
+    { "zh": "这一晚", "en": "Tonight" },
+    { "zh": "唱片店", "en": "The record shop" },
+    { "zh": "酒", "en": "The drink" },
+    { "zh": "胡同", "en": "The hutong" },
+    { "zh": "鸽哨", "en": "The pigeon whistle" },
+    { "zh": "蛐蛐", "en": "The cricket" },
+    { "zh": "磨剪子嘞，戗菜刀", "en": "The knife-sharpener's cry" },
+    { "zh": "鼓", "en": "Drums" },
+    { "zh": "吉他", "en": "Guitar" },
+    { "zh": "贝斯", "en": "Bass" },
+    { "zh": "你", "en": "You" }
+  ],
   "abilities": [
     { "id": "drink", "title": "喝酒", "caption": "点击倾倒", "zh": "情感放大器。莫贪杯哦。", "en": "Emotion amplifier. Try not to overdose." },
     { "id": "cricket", "title": "蛐蛐", "caption": "点击唤叫", "zh": "胡同夜里还在叫。一笼子虫，能把夏天留下来。", "en": "The hutong still sings at night. One cage can keep the summer." },

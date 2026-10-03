@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e26b71c865624a38b6bf9b640c9705d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::D22.D22Exit
-  nextScene: D22_Bootstrap
+  nextScene: D22_Performance
   label: "\u542C\u6F14\u51FA / HEAR THE SHOW"
   radius: 1.7
 --- !u!4 &367441380

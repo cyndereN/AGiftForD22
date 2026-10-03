@@ -11,7 +11,7 @@ namespace D22
     public sealed class D22GameFlow : MonoBehaviour
     {
         public static D22GameFlow Instance { get; private set; }
-        public static bool InputBlocked => Instance && (Instance.blocked || Instance.AbilityOpen || Instance.HuntOpen);
+        public static bool InputBlocked => Instance && (Instance.blocked || Instance.AbilityOpen || Instance.HuntOpen || Instance.StageOpen);
         public static bool UiBlocksLook => Instance && Instance.UI && Instance.UI.BlocksLook;
         public TextAsset storyAsset;
         public Font uiFont;
@@ -22,6 +22,8 @@ namespace D22
         public D22GameUI UI { get; private set; }
         public D22Abilities Abilities { get; private set; }
         public D22Hunt Hunt { get; private set; }
+        public D22Stage Stage { get; private set; }
+        public D22Conductor Conductor { get; private set; }
         public string Chapter { get; private set; } = "D22_Menu";
         public bool HasDrink { get; private set; }
         public int Sips { get; private set; }
@@ -35,10 +37,15 @@ namespace D22
         public bool Loading { get; private set; }
         public bool AbilityOpen => Abilities != null && Abilities.Open;
         public bool HuntOpen => Hunt != null && Hunt.Open;
+        public bool StageOpen => Stage != null && Stage.Open;
         bool blocked = true, bossMet, aimingBottle, doorHeard, hutongAsked;
         float cooldown;
         GameObject bottle;
         AudioSource audioSource;
+        AudioClip[] playlist;
+        AudioClip finaleClip;
+        int playlistIndex = -1;
+        bool onFinale, heardPlaylist, playlistHeld;
         AudioLowPassFilter lowPass;
         AudioDistortionFilter distortion;
         AudioReverbFilter reverb;
@@ -54,8 +61,9 @@ namespace D22
             story = JsonUtility.FromJson<D22Story>(storyAsset.text);
             D22Abilities.ApplyStory(story.abilities);
             audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.loop = true;
+            audioSource.loop = false;
             audioSource.volume = .35f;
+            BuildPlaylist();
             lowPass = gameObject.AddComponent<AudioLowPassFilter>();
             lowPass.cutoffFrequency = 22000;
             distortion = gameObject.AddComponent<AudioDistortionFilter>();
@@ -66,16 +74,23 @@ namespace D22
             UI.Initialize(this, uiFont, poster, cover);
             Abilities = new D22Abilities(transform, bottlePrefab, audioSource.volume);
             Hunt = new D22Hunt(this);
+            Stage = new D22Stage(this);
+            Conductor = new D22Conductor();
             BindSfx();
         }
 
         public void BindSfx()
         {
             Abilities?.SetBeer(beerClip);
+            Abilities?.SetKnife(grindClip);
             Hunt?.SetClips(cricketClip, pigeonClip, grindClip);
         }
 
-        void Start() => UI.ShowMenu();
+        void Start()
+        {
+            UI.ShowMenu();
+            EnsurePlaylist();
+        }
 
         void OnDestroy()
         {
@@ -96,7 +111,13 @@ namespace D22
             Hunt?.Reset();
             Abilities.ResetProgress();
             Dialogue(story.intro, () => UI.ShowPuzzle(() => LoadSpace("D22_RecordShop")));
-            PlayTrack(0);
+        }
+
+        void GrantSkipped(params string[] ids)
+        {
+            if (Abilities == null || UI == null) return;
+            foreach (var id in ids)
+                if (Abilities.Learn(id)) UI.PlayLearnFly(id);
         }
 
         public void LoadSpace(string scene)
@@ -104,13 +125,51 @@ namespace D22
             if (!Loading) StartCoroutine(LoadRoutine(scene));
         }
 
+        public void SkipChapter()
+        {
+            if (Loading || UI == null || !UI.OffersLevelSkip) return;
+            Conductor?.End();
+            CloseAbility();
+            CloseHunt();
+            CloseStage();
+            D22Look.Unlock();
+            switch (Chapter)
+            {
+                case "D22_RecordShop":
+                    HasDrink = true;
+                    GrantSkipped("drink");
+                    LoadSpace("D22_Hutong");
+                    break;
+                case "D22_Hutong":
+                    GrantSkipped("cricket", "pigeon", "scissors");
+                    LoadSpace("D22_LiveScan");
+                    break;
+                case "D22_LiveScan":
+                    GrantSkipped("guitar", "bass", "drums");
+                    LoadSpace("D22_Performance");
+                    break;
+                case "D22_Bootstrap":
+                    LoadSpace("D22_Performance");
+                    break;
+                case "D22_Performance":
+                    blocked = true;
+                    UI.ShowEnding("名字没有一起关掉，还在人嘴里走。", () => LoadSpace("D22_Menu"));
+                    break;
+                default:
+                    LoadSpace("D22_RecordShop");
+                    break;
+            }
+        }
+
         IEnumerator LoadRoutine(string scene)
         {
             Loading = true;
             blocked = true;
+            Conductor?.End();
             CloseAbility();
             CloseHunt();
             Hunt?.ClearMarks();
+            Stage?.Clear();
             D22Look.Unlock();
             UI.ShowLoading();
             yield return SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
@@ -127,19 +186,21 @@ namespace D22
                 exit.label = "演出开始 / HEAR THE SHOW";
             }
             yield return null;
+            if (scene == "D22_Performance") PlayFinale();
+            else if (scene == "D22_Hutong") HoldPlaylist();
+            else EnsurePlaylist();
             if (scene == "D22_Menu")
             {
-                audioSource.Stop();
                 UI.ShowMenu();
             }
             else
             {
                 SetupMood();
-                PlayTrack(scene == "D22_Performance" ? 3 : scene == "D22_RecordShop" ? 0 : 2);
                 blocked = false;
                 UI.ShowHUD();
                 if (scene == "D22_RecordShop") { bossMet = false; Dialogue(story.recordShop, Resume); }
                 else if (scene == "D22_Hutong") { doorHeard = false; hutongAsked = false; Dialogue(story.hutong, Resume); }
+                else if (scene == "D22_Performance") PlayChorus();
             }
             Loading = false;
         }
@@ -174,6 +235,21 @@ namespace D22
             if (!blocked && !Loading) UI.ShowHUD();
         }
 
+        public void ResumeStage(string id)
+        {
+            blocked = false;
+            D22Look.Unlock();
+            if (Stage != null && Stage.TryOpen(id)) UI.ShowMinigame();
+            else UI.ShowHUD();
+        }
+
+        public void CloseStage()
+        {
+            if (Stage == null || !Stage.Open) return;
+            Stage.Close();
+            if (!blocked && !Loading) UI.ShowHUD();
+        }
+
         public void Pause()
         {
             if (Loading) return;
@@ -194,9 +270,10 @@ namespace D22
         public bool ToggleAbility(string id)
         {
             if (blocked || Loading || Abilities == null) return false;
-            if (HuntOpen || AbilityOpen) return false;
-            if (id == "drink" && !HasDrink) return false;
             if (id == "cricket" || id == "pigeon" || id == "scissors") return ToggleHuntAbility(id);
+            if (id == "guitar" || id == "bass" || id == "drums") return ToggleStageAbility(id);
+            if (HuntOpen || AbilityOpen || StageOpen) return false;
+            if (id == "drink" && !HasDrink) return false;
             if (!Abilities.CanOpen(id)) return false;
             bool opened = Abilities.Toggle(id);
             D22Look.Unlock();
@@ -219,6 +296,20 @@ namespace D22
             return HuntOpen;
         }
 
+        bool ToggleStageAbility(string id)
+        {
+            if (!Abilities.Learned(id)) return false;
+            if (StageOpen)
+            {
+                if (Stage != null && Stage.Game == id) CloseStage();
+                return false;
+            }
+            if (AbilityOpen) CloseAbility();
+            if (HuntOpen) CloseHunt();
+            ResumeStage(id);
+            return StageOpen;
+        }
+
         public void CloseAbility()
         {
             if (Abilities == null || !Abilities.Open) return;
@@ -230,13 +321,14 @@ namespace D22
         {
             cooldown = Time.unscaledTime + 3;
             Sips++;
+            if (Chapter == "D22_LiveScan") Stage?.NoteDrink();
             if (Chapter == "D22_RecordShop")
             {
                 blocked = true;
                 D22Look.Unlock();
                 UI.ShowChoices(story.choice, i => { Mood = i; LoadSpace("D22_Hutong"); });
             }
-            else if (Chapter != "D22_Hutong" && Sips >= 5)
+            else if (Chapter != "D22_Hutong" && Chapter != "D22_LiveScan" && Chapter != "D22_Performance" && Sips >= 5)
             {
                 blocked = true;
                 D22Look.Unlock();
@@ -248,10 +340,26 @@ namespace D22
         void Update()
         {
             var k = Keyboard.current;
+            TickPlaylist();
             if (Abilities != null)
                 Abilities.WalkHot = !blocked && k != null && (k.wKey.isPressed || k.aKey.isPressed || k.sKey.isPressed || k.dKey.isPressed);
+            if (!Loading && UI != null && UI.OffersLevelSkip && k != null && k.rightBracketKey.wasPressedThisFrame)
+            { SkipChapter(); return; }
+            if (Conductor != null && Conductor.Running)
+            {
+                int slot = ReadPerformKey(k);
+                if (Conductor.Tick(Time.unscaledDeltaTime, slot, out int played) )
+                {
+                    if (played >= 0) Abilities?.TapSlot(played);
+                    FinishSong();
+                }
+                else if (played >= 0) Abilities?.TapSlot(played);
+                return;
+            }
+            if (UI != null && UI.InCredits) return;
             if (k != null && k.escapeKey.wasPressedThisFrame)
             {
+                if (StageOpen && !blocked) { CloseStage(); return; }
                 if (HuntOpen && !blocked) { CloseHunt(); return; }
                 if (AbilityOpen && !blocked) { CloseAbility(); return; }
                 if (!blocked) Pause();
@@ -263,7 +371,16 @@ namespace D22
                 Abilities.Tick(FinishPour);
             }
             Hunt?.Tick(Camera.main, audioSource.volume);
-            if (blocked || Loading || AbilityOpen || HuntOpen || !Camera.main) return;
+            Stage?.Tick();
+            if (!Loading && Chapter == "D22_LiveScan" && Stage != null && Stage.ShowReady)
+            {
+                CloseStage();
+                CloseAbility();
+                CloseHunt();
+                LoadSpace("D22_Performance");
+                return;
+            }
+            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
             var camera = Camera.main;
             if (Chapter == "D22_RecordShop")
             {
@@ -273,14 +390,22 @@ namespace D22
                 if (aimingBottle && k != null && k.eKey.wasPressedThisFrame) { TryInteract(); return; }
             }
             var exit = FindAnyObjectByType<D22Exit>();
-            bool atExit = exit && Vector3.Distance(camera.transform.position, exit.transform.position) < exit.radius;
+            bool atExit = Chapter != "D22_LiveScan" && exit && Vector3.Distance(camera.transform.position, exit.transform.position) < exit.radius;
+            if (Chapter == "D22_LiveScan" && Stage != null)
+            {
+                if (!Stage.IntroPlayed && Stage.NearIntro(camera)) { MeetBand(); return; }
+                if (Stage.TrioDone && !Stage.OnStagePlayed && Stage.NearStage(camera)) { StepOnStage(); return; }
+            }
             if (Chapter == "D22_Hutong" && !doorHeard && atExit)
             { MeetDoor(); return; }
             if (Chapter == "D22_Hutong" && atExit && Hunt != null && Hunt.Unlocked && Hunt.QuotaDone(Sips) && !hutongAsked)
             { AskHutong(); return; }
             string huntHint = Hunt?.AimHint(camera);
+            string stageHint = Chapter == "D22_LiveScan" ? Stage?.Hint(camera) : null;
             string hint = aimingBottle ? "E 拿酒瓶"
                 : Chapter == "D22_Hutong" && atExit && Hunt != null && Hunt.Unlocked ? Hunt.Quota(Sips)
+                : !string.IsNullOrEmpty(stageHint) ? stageHint
+                : Chapter == "D22_LiveScan" && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "已满" : "门")
                 : atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label))
@@ -319,6 +444,8 @@ namespace D22
                 return;
             }
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
+            if (Chapter == "D22_LiveScan" && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
+            if (Chapter == "D22_LiveScan") return;
             var exit = FindAnyObjectByType<D22Exit>();
             if (!exit || Vector3.Distance(camera.transform.position, exit.transform.position) >= exit.radius) return;
             if (Chapter == "D22_Hutong")
@@ -336,6 +463,70 @@ namespace D22
             if (doorHeard || story.door == null || story.door.Length == 0) return;
             doorHeard = true;
             Dialogue(story.door, () => { Hunt?.AfterDoor(); Resume(); });
+        }
+
+        void MeetBand()
+        {
+            if (Stage == null || Stage.IntroPlayed || story.band == null || story.band.Length == 0) return;
+            Stage.MarkIntro();
+            Dialogue(story.band, () => { Stage.Spawn(); Resume(); }, "三大件");
+        }
+
+        void StepOnStage()
+        {
+            if (Stage == null || Stage.OnStagePlayed || story.stage == null) return;
+            Stage.MarkOnStage();
+            Dialogue(story.stage, () => { Stage.BeginEncore(); Resume(); }, "舞台");
+        }
+
+        void PlayChorus()
+        {
+            if (story.chorus == null || story.chorusAsk == null) { BeginSong(); return; }
+            Dialogue(story.chorus, () =>
+            {
+                UI.ShowChoices(story.chorusAsk, i =>
+                {
+                    Mood = i;
+                    var follow = i == 0 ? story.remembered : i == 1 ? story.finishSong : story.unsure;
+                    Dialogue(follow, BeginSong);
+                });
+            });
+        }
+
+        void BeginSong()
+        {
+            blocked = true;
+            CloseAbility();
+            CloseHunt();
+            CloseStage();
+            D22Look.Unlock();
+            Conductor.Begin();
+            UI.ShowConduct();
+        }
+
+        void FinishSong()
+        {
+            if (story.aftersong != null && story.aftersong.Length > 0) Dialogue(story.aftersong, RollCredits, "演唱完");
+            else RollCredits();
+        }
+
+        void RollCredits()
+        {
+            blocked = true;
+            D22Look.Unlock();
+            UI.ShowCredits(story.credits, () => LoadSpace("D22_Menu"));
+        }
+
+        static int ReadPerformKey(Keyboard k)
+        {
+            if (k == null) return -1;
+            if (k.digit2Key.wasPressedThisFrame || k.numpad2Key.wasPressedThisFrame) return 1;
+            if (k.digit3Key.wasPressedThisFrame || k.numpad3Key.wasPressedThisFrame) return 2;
+            if (k.digit4Key.wasPressedThisFrame || k.numpad4Key.wasPressedThisFrame) return 3;
+            if (k.digit5Key.wasPressedThisFrame || k.numpad5Key.wasPressedThisFrame) return 4;
+            if (k.digit6Key.wasPressedThisFrame || k.numpad6Key.wasPressedThisFrame) return 5;
+            if (k.digit7Key.wasPressedThisFrame || k.numpad7Key.wasPressedThisFrame) return 6;
+            return -1;
         }
 
         void AskHutong()
@@ -367,13 +558,97 @@ namespace D22
             bottle.name = "Wine Pickup";
         }
 
-        void PlayTrack(int index)
+        void BuildPlaylist()
         {
-            if (music == null || music.Length == 0) return;
-            var clip = music[Mathf.Clamp(index, 0, music.Length - 1)];
-            if (audioSource.clip == clip && audioSource.isPlaying) return;
-            audioSource.clip = clip;
+            var songs = new System.Collections.Generic.List<AudioClip>();
+            if (music != null)
+            {
+                foreach (var clip in music)
+                {
+                    if (!clip) continue;
+                    if (IsFinale(clip)) finaleClip = clip;
+                    else songs.Add(clip);
+                }
+            }
+            playlist = songs.ToArray();
+        }
+
+        static bool IsFinale(AudioClip clip)
+        {
+            string name = clip.name;
+            return name.IndexOf("Zhong Nan Hai", StringComparison.OrdinalIgnoreCase) >= 0 || name.Contains("中南海");
+        }
+
+        void HoldPlaylist()
+        {
+            heardPlaylist = false;
+            playlistHeld = true;
+            audioSource.Pause();
+        }
+
+        void EnsurePlaylist()
+        {
+            if (playlist == null || playlist.Length == 0) return;
+            if (playlistHeld)
+            {
+                playlistHeld = false;
+                if (audioSource.clip != null && audioSource.clip != finaleClip)
+                {
+                    onFinale = false;
+                    audioSource.loop = false;
+                    audioSource.UnPause();
+                    if (!audioSource.isPlaying) audioSource.Play();
+                    return;
+                }
+            }
+            if (onFinale)
+            {
+                onFinale = false;
+                heardPlaylist = false;
+                playlistIndex = (playlistIndex + 1) % playlist.Length;
+                PlayCurrent();
+                return;
+            }
+            if (audioSource.isPlaying) return;
+            if (playlistIndex < 0) playlistIndex = 0;
+            PlayCurrent();
+        }
+
+        void PlayFinale()
+        {
+            if (!finaleClip)
+            {
+                EnsurePlaylist();
+                return;
+            }
+            heardPlaylist = false;
+            onFinale = true;
+            audioSource.loop = true;
+            if (audioSource.clip == finaleClip && audioSource.isPlaying) return;
+            audioSource.clip = finaleClip;
             audioSource.Play();
+        }
+
+        void PlayCurrent()
+        {
+            if (playlist == null || playlist.Length == 0) return;
+            playlistIndex = Mathf.Clamp(playlistIndex, 0, playlist.Length - 1);
+            onFinale = false;
+            audioSource.loop = false;
+            audioSource.clip = playlist[playlistIndex];
+            audioSource.Play();
+        }
+
+        void TickPlaylist()
+        {
+            if (onFinale || playlistHeld || playlist == null || playlist.Length == 0) return;
+            if (audioSource.isPlaying) heardPlaylist = true;
+            else if (heardPlaylist)
+            {
+                heardPlaylist = false;
+                playlistIndex = (playlistIndex + 1) % playlist.Length;
+                PlayCurrent();
+            }
         }
 
         void SetupMood()

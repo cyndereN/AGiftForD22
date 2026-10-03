@@ -8,6 +8,8 @@ namespace D22
     [Serializable] public class D22Story
     {
         public D22Line[] intro, recordShop, hutong, door, boss, wine, cricketTalk, pigeonTalk, grindTalk, livehouse;
+        public D22Line[] band, drumTalk, guitarTalk, bassTalk, stage, chorus, remembered, finishSong, unsure, aftersong, credits;
+        public D22Question chorusAsk;
         public D22Question choice, hutongAsk;
         public D22AbilityCopy[] abilities;
     }

@@ -258,7 +258,7 @@ MonoBehaviour:
   beerClip: {fileID: 0}
   cricketClip: {fileID: 0}
   pigeonClip: {fileID: 0}
-  grindClip: {fileID: 0}
+  grindClip: {fileID: 8300000, guid: 9022ec0990e1c5f49a8e4838d23acc4f, type: 3}
   bottlePrefab: {fileID: 8347389621288403890, guid: be19b32bbb037404ba8054a80067fe0f, type: 3}
 --- !u!4 &2133578839
 Transform:

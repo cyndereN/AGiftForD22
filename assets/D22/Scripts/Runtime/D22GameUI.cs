@@ -7,7 +7,7 @@ namespace D22
     // A resolution-independent prototype UI. All story text and art come from project assets.
     public sealed class D22GameUI : MonoBehaviour
     {
-        enum ScreenMode { Menu, Puzzle, Dialogue, Choices, Drink, Pause, Ending, HUD, Loading, Ability, Minigame }
+        enum ScreenMode { Menu, Puzzle, Dialogue, Choices, Drink, Pause, Ending, HUD, Loading, Ability, Minigame, Conduct, Credits }
         ScreenMode mode = ScreenMode.Menu;
         D22GameFlow flow;
         Font font;
@@ -31,9 +31,14 @@ namespace D22
         float flyT = -1;
         Vector2 flyFrom, flyTo;
         readonly Queue<string> flyQueue = new();
+        D22Line[] credits;
+        float creditY, creditHold;
+        bool creditDone;
+        public bool InCredits => mode == ScreenMode.Credits;
         const float Width = 1440, Height = 900;
         const float Slot = 72, SlotGap = 10;
         public string CurrentScreen => mode.ToString();
+        public bool OffersLevelSkip => mode != ScreenMode.Menu && mode != ScreenMode.Loading && mode != ScreenMode.Ending;
         public int PlacedPieces => placed;
         public bool BlocksLook { get; private set; }
 
@@ -76,7 +81,7 @@ namespace D22
             }
             float scale = Mathf.Min(Screen.width / Width, Screen.height / Height);
             GUI.matrix = Matrix4x4.TRS(new Vector3((Screen.width - Width * scale) / 2, (Screen.height - Height * scale) / 2, 0), Quaternion.identity, Vector3.one * scale);
-            if (mode != ScreenMode.HUD && mode != ScreenMode.Ability && mode != ScreenMode.Minigame && mode != ScreenMode.Menu)
+            if (mode != ScreenMode.HUD && mode != ScreenMode.Ability && mode != ScreenMode.Minigame && mode != ScreenMode.Menu && mode != ScreenMode.Conduct)
                 Fill(new Rect(-Width, -Height, Width * 3, Height * 3), new Color(.035f, .03f, .025f, .97f));
             switch (mode)
             {
@@ -90,8 +95,11 @@ namespace D22
                 case ScreenMode.HUD: HUD(); break;
                 case ScreenMode.Ability: Ability(); break;
                 case ScreenMode.Minigame: Minigame(); break;
+                case ScreenMode.Conduct: DrawConduct(); break;
+                case ScreenMode.Credits: DrawCredits(); break;
                 default: GUI.Label(new Rect(100, 360, 1200, 120), "…", title); break;
             }
+            if (OffersLevelSkip && Button(SkipRect(), "跳过关卡")) flow.SkipChapter();
             DrawFly();
             BlocksLook = PointerBlocks(GuiMouse());
             GUI.matrix = Matrix4x4.identity;
@@ -117,8 +125,8 @@ namespace D22
 
         void ShowGallery()
         {
-            question = new D22Question { zh = "去哪儿", en = "", choices = new[] { new D22Choice { zh = "唱片店", en = "" }, new D22Choice { zh = "胡同", en = "" }, new D22Choice { zh = "D-22", en = "" }, new D22Choice { zh = "现场扫描", en = "" }, new D22Choice { zh = "演出", en = "" } } };
-            choose = i => flow.LoadSpace(new[] { "D22_RecordShop", "D22_Hutong", "D22_Bootstrap", "D22_LiveScan", "D22_Performance" }[i]);
+            question = new D22Question { zh = "去哪儿", en = "", choices = new[] { new D22Choice { zh = "唱片店", en = "" }, new D22Choice { zh = "胡同", en = "" }, new D22Choice { zh = "D-22", en = "" }, new D22Choice { zh = "演出", en = "" } } };
+            choose = i => flow.LoadSpace(new[] { "D22_RecordShop", "D22_Hutong", "D22_LiveScan", "D22_Performance" }[i]);
             ShowChoices(question, choose);
         }
 
@@ -215,13 +223,14 @@ namespace D22
             DrawChrome();
             DrawSlots();
             DrawWorldMarks();
+            DrawStageMarks();
             Fill(new Rect(718, 448, 4, 4), new Color(1, 1, 1, .6f));
         }
 
         void Ability()
         {
             Fill(new Rect(-Width, -Height, Width * 3, Height * 3), new Color(0, 0, 0, .46f));
-            DrawChrome();
+            DrawChrome(false);
             DrawSlots();
             var book = flow.Abilities;
             var info = D22Abilities.Info(book?.OpenId);
@@ -361,12 +370,12 @@ namespace D22
                 Mathf.Clamp01((m.y - inner.y) / Mathf.Max(1, inner.height)));
         }
 
-        void DrawChrome()
+        void DrawChrome(bool showHint = true)
         {
             if (Button(new Rect(35, 28, 110, 44), "菜单")) flow.Pause();
-            if (!string.IsNullOrEmpty(hint))
+            if (showHint && !string.IsNullOrEmpty(hint))
             {
-                bool tally = hint.Contains("鸽哨");
+                bool tally = hint.Contains("鸽哨") || hint.Contains("吉他");
                 float w = tally ? 920 : 500;
                 var pill = new Rect((Width - w) / 2, tally ? 730 : 748, w, tally ? 56 : 42);
                 Fill(pill, new Color(0, 0, 0, tally ? .72f : .5f));
@@ -384,7 +393,8 @@ namespace D22
                 Rect box = SlotRect(i);
                 bool got = book != null && book.Learned(info.id);
                 bool open = (book != null && book.OpenId == info.id)
-                    || (flow.Hunt != null && flow.Hunt.Open && D22Hunt.AbilityId(flow.Hunt.Game) == info.id);
+                    || (flow.Hunt != null && flow.Hunt.Open && D22Hunt.AbilityId(flow.Hunt.Game) == info.id)
+                    || (flow.Stage != null && flow.Stage.Open && flow.Stage.Game == info.id);
                 Fill(box, open ? new Color(.42f, .36f, .28f, .9f) : got ? new Color(.07f, .08f, .07f, .82f) : new Color(.04f, .04f, .04f, .55f));
                 FrameBorder(box, got || open ? new Color(.96f, .94f, .9f, open ? 1 : .85f) : new Color(.96f, .94f, .9f, .35f));
                 if (got) GUI.Label(box, info.mark, mark);
@@ -448,13 +458,29 @@ namespace D22
             GUI.Label(box, label, mark);
         }
 
+        void DrawStageMarks()
+        {
+            var stage = flow.Stage;
+            var cam = Camera.main;
+            if (stage == null || !stage.Spawned || cam == null) return;
+            foreach (var spot in stage.Marks)
+            {
+                if (!spot) continue;
+                string label = spot.kind == D22MarkKind.Drum ? "鼓" : spot.kind == D22MarkKind.Guitar ? "吉" : "贝";
+                var tint = spot.kind == D22MarkKind.Drum ? new Color(.28f, .1f, .08f, .78f)
+                    : spot.kind == D22MarkKind.Guitar ? new Color(.28f, .18f, .08f, .78f)
+                    : new Color(.1f, .14f, .24f, .78f);
+                DrawWorldMark(cam, spot.transform.position, label, tint);
+            }
+        }
+
         void Minigame()
         {
+            if (flow.Stage != null && flow.Stage.Open) { DrawStageGame(flow.Stage); return; }
             var hunt = flow.Hunt;
             if (hunt == null || !hunt.Open) { ShowHUD(); return; }
-            if (hunt.Unlocked) hint = hunt.Quota(flow.Sips);
             Fill(new Rect(-Width, -Height, Width * 3, Height * 3), new Color(0, 0, 0, .46f));
-            DrawChrome();
+            DrawChrome(false);
             DrawSlots();
             Rect frame = AbilityFrame();
             Fill(frame, new Color(.08f, .075f, .07f, .98f));
@@ -471,6 +497,95 @@ namespace D22
             else if (hunt.Game == "pigeon") DrawPigeonGame(hunt, inner);
             else DrawGrindGame(hunt, inner);
             HandleHuntPointer(hunt, frame, inner);
+        }
+
+        void DrawStageGame(D22Stage stage)
+        {
+            Fill(new Rect(-Width, -Height, Width * 3, Height * 3), new Color(0, 0, 0, .46f));
+            DrawChrome(false);
+            DrawSlots();
+            Rect frame = AbilityFrame();
+            Fill(frame, new Color(.08f, .075f, .07f, .98f));
+            FrameBorder(frame);
+            string titleText = stage.Game == "drums" ? "鼓" : stage.Game == "guitar" ? "吉他" : "贝斯";
+            string caption = stage.Game == "drums" ? "点鼓"
+                : stage.Game == "guitar" ? "扫过六根弦"
+                : "按住走到头";
+            GUI.Label(new Rect(frame.x + 18, frame.y + 12, 280, 28), titleText, small);
+            GUI.Label(new Rect(frame.x, frame.yMax - 42, frame.width, 28), caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+            if (Button(new Rect(frame.xMax - 44, frame.y + 8, 36, 36), "×")) { flow.CloseStage(); return; }
+            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 108);
+            if (stage.Game == "drums") DrawDrumGame(stage, inner);
+            else if (stage.Game == "guitar") DrawGuitarGame(stage, inner);
+            else DrawBassGame(stage, inner);
+            HandleStagePointer(stage, frame, inner);
+        }
+
+        void DrawDrumGame(D22Stage stage, Rect inner)
+        {
+            Fill(inner, new Color(.1f, .07f, .06f));
+            Vector2 m = Event.current.mousePosition;
+            for (int i = 0; i < 3; i++)
+            {
+                Vector2 p = stage.MolePos(i);
+                float up = stage.Mole == i ? stage.MoleUp : 0;
+                var hole = new Rect(inner.x + p.x * inner.width - 28, inner.y + p.y * inner.height - 10, 56, 28);
+                Fill(hole, new Color(.05f, .04f, .04f));
+                if (up > .05f)
+                {
+                    var drum = new Rect(hole.x, hole.y - 34 * up, 56, 36);
+                    Fill(drum, new Color(.62f, .16f, .1f));
+                    FrameBorder(drum);
+                }
+            }
+            if (inner.Contains(m))
+            {
+                Fill(new Rect(m.x - 3, m.y - 46, 6, 40), new Color(.86f, .78f, .62f));
+                Fill(new Rect(m.x - 8, m.y - 54, 16, 12), new Color(.9f, .84f, .7f));
+            }
+        }
+
+        void DrawGuitarGame(D22Stage stage, Rect inner)
+        {
+            Fill(inner, new Color(.08f, .07f, .06f));
+            for (int i = 0; i < 6; i++)
+            {
+                float x = inner.x + inner.width * (i + 1) / 7f;
+                Fill(new Rect(x - 1.5f, inner.y + 16, 3, inner.height - 32), new Color(.82f, .62f, .38f));
+            }
+        }
+
+        void DrawBassGame(D22Stage stage, Rect inner)
+        {
+            Fill(inner, new Color(.06f, .07f, .1f));
+            var lane = new Rect(inner.x + 16, inner.center.y - 18, inner.width - 32, 36);
+            Fill(lane, new Color(.16f, .2f, .3f));
+            FrameBorder(lane);
+            float x = lane.x + lane.width * Mathf.Clamp01(stage.Walker);
+            Fill(new Rect(x - 10, lane.y - 8, 20, lane.height + 16), new Color(.72f, .8f, .95f));
+        }
+
+        void HandleStagePointer(D22Stage stage, Rect frame, Rect inner)
+        {
+            var ev = Event.current;
+            Vector2 n = Norm(inner, ev.mousePosition);
+            if (ev.type == EventType.MouseDown && ev.button == 0)
+            {
+                if (new Rect(frame.xMax - 44, frame.y + 8, 36, 36).Contains(ev.mousePosition)) return;
+                if (!frame.Contains(ev.mousePosition)) { flow.CloseStage(); ev.Use(); return; }
+                stage.Pointer(n, true, false, false);
+                ev.Use();
+            }
+            else if (ev.type == EventType.MouseDrag)
+            {
+                stage.Pointer(n, false, true, false);
+                ev.Use();
+            }
+            else if (ev.type == EventType.MouseUp)
+            {
+                stage.Pointer(n, false, false, true);
+                ev.Use();
+            }
         }
 
         void DrawCatch(D22Hunt hunt, Rect inner)
@@ -570,9 +685,114 @@ namespace D22
             if (flow.ReducedMotion) flyT = 2;
         }
 
+        void DrawConduct()
+        {
+            var song = flow.Conductor;
+            if (song == null) return;
+            Fill(new Rect(0, 0, Width, Height), new Color(0, 0, 0, .34f));
+            Vector2 c = new Vector2(Width * .5f, Height * .44f);
+            const float radius = 214;
+            FillDisc(c, radius + 28, new Color(0, 0, 0, .62f));
+            var ring = song.Flash > .05f ? Color.white : new Color(.95f, .9f, .8f, .7f);
+            for (int i = 0; i < 80; i++)
+            {
+                Vector2 p = OnRing(c, i / 80f * 360f, radius);
+                Fill(new Rect(p.x - 2.5f, p.y - 2.5f, 5, 5), ring);
+            }
+            int dots = Mathf.Clamp(song.Dots, 2, 5);
+            for (int b = 0; b < dots; b++)
+            {
+                float deg = (b + 1) * (360f / dots) % 360f;
+                bool hot = song.Approach == b;
+                float s = hot ? 12f + song.Near * 10f : 9f;
+                Vector2 p = OnRing(c, deg, radius);
+                Fill(new Rect(p.x - s * .5f, p.y - s * .5f, s, s), hot ? Color.white : new Color(.95f, .9f, .8f, .95f));
+            }
+            for (int i = 3; i <= 16; i++)
+            {
+                Vector2 p = OnRing(c, song.Angle, radius * i / 16f);
+                float w = i == 16 ? 12 : 5;
+                Fill(new Rect(p.x - w * .5f, p.y - w * .5f, w, w), Color.white);
+            }
+            Fill(new Rect(c.x - 7, c.y - 7, 14, 14), Color.white);
+            var info = D22Abilities.Slots[Mathf.Clamp(song.Cue, 1, D22Abilities.Slots.Length - 1)];
+            var keyStyleBig = new GUIStyle(title) { alignment = TextAnchor.MiddleCenter, fontSize = 72 };
+            GUI.Label(new Rect(c.x - 180, c.y - 78, 360, 84), info.key, keyStyleBig);
+            GUI.Label(new Rect(c.x - 220, c.y + 6, 440, 40), info.title, new GUIStyle(body) { alignment = TextAnchor.MiddleCenter });
+            GUI.Label(new Rect(180, 760, Width - 360, 36), "到拍子上，按 2 3 4 5 6 7", new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+        }
+
+        void DrawCredits()
+        {
+            if (credits == null) return;
+            float y = creditY;
+            for (int i = 0; i < credits.Length; i++)
+            {
+                var line = credits[i];
+                bool head = i == 0;
+                float h = CreditStep(i, line);
+                if (y < Height + 40 && y > -h)
+                {
+                    if (head)
+                        GUI.Label(new Rect(80, y, Width - 160, 72), line.zh, new GUIStyle(title) { alignment = TextAnchor.MiddleCenter, fontSize = 56 });
+                    else
+                    {
+                        GUI.Label(new Rect(80, y, Width - 160, 40), line.zh, new GUIStyle(body) { alignment = TextAnchor.MiddleCenter });
+                        if (!string.IsNullOrEmpty(line.en) && line.en != line.zh)
+                            GUI.Label(new Rect(80, y + 38, Width - 160, 30), line.en, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+                    }
+                }
+                y += h;
+            }
+        }
+
+        void TickCredits()
+        {
+            if (mode != ScreenMode.Credits || creditDone || credits == null) return;
+            float bottom = creditY;
+            for (int i = 0; i < credits.Length; i++) bottom += CreditStep(i, credits[i]);
+            if (bottom < Height * .36f)
+            {
+                creditHold += Time.unscaledDeltaTime;
+                if (creditHold > 1.8f)
+                {
+                    creditDone = true;
+                    done?.Invoke();
+                }
+                return;
+            }
+            creditY -= 54f * Time.unscaledDeltaTime;
+        }
+
+        static float CreditStep(int i, D22Line line)
+        {
+            if (i == 0) return 130;
+            bool both = line != null && !string.IsNullOrEmpty(line.en) && line.en != line.zh;
+            return both ? 112 : 82;
+        }
+
+        static void FillDisc(Vector2 c, float r, Color color)
+        {
+            const int rows = 36;
+            float thick = (2 * r) / rows + 1.5f;
+            for (int i = 0; i < rows; i++)
+            {
+                float y = -r + (2 * r) * i / (rows - 1);
+                float x = Mathf.Sqrt(Mathf.Max(0, r * r - y * y));
+                Fill(new Rect(c.x - x, c.y + y - thick * .5f, x * 2, thick), color);
+            }
+        }
+
+        static Vector2 OnRing(Vector2 c, float deg, float r)
+        {
+            float rad = deg * Mathf.Deg2Rad;
+            return c + new Vector2(Mathf.Sin(rad), -Mathf.Cos(rad)) * r;
+        }
+
         void Update()
         {
             TickType();
+            TickCredits();
             if (flyT < 0) return;
             flyT += Time.unscaledDeltaTime;
             if (flyT > 1.4f) NextFly();
@@ -614,6 +834,7 @@ namespace D22
         static Rect WalkRect() => new Rect(1330, 800, 80, 80);
         static Rect AbilityFrame() => new Rect((Width - 440) / 2, Height * .46f - 220, 440, 440);
         static Rect MenuRect() => new Rect(35, 28, 110, 44);
+        static Rect SkipRect() => new Rect(160, 28, 150, 44);
         static Rect HintRect() => new Rect(470, 748, 500, 42);
         static Rect InteractRect() => new Rect(500, 690, 440, 50);
 
@@ -627,6 +848,7 @@ namespace D22
         {
             if (mode == ScreenMode.Ability && AbilityFrame().Contains(m)) return true;
             if (MenuRect().Contains(m)) return true;
+            if (OffersLevelSkip && SkipRect().Contains(m)) return true;
             if (WalkRect().Contains(m)) return true;
             for (int i = 0; i < D22Abilities.SlotCount; i++) if (SlotRect(i).Contains(m)) return true;
             if (mode == ScreenMode.Minigame && AbilityFrame().Contains(m)) return true;
@@ -665,6 +887,17 @@ namespace D22
         public void ShowDrink(Action a, Action b) { pourAction = a; back = b; pour = 0; pouring = false; mode = ScreenMode.Drink; }
         public void ShowAbility() { mode = ScreenMode.Ability; abilityHeld = false; }
         public void ShowMinigame() { mode = ScreenMode.Minigame; abilityHeld = false; }
+        public void ShowConduct() { mode = ScreenMode.Conduct; abilityHeld = false; }
+        public void ShowCredits(D22Line[] lines, Action a)
+        {
+            if (lines == null || lines.Length == 0) { a?.Invoke(); return; }
+            credits = lines;
+            creditY = Height + 30;
+            creditHold = 0;
+            creditDone = false;
+            done = a;
+            mode = ScreenMode.Credits;
+        }
         public void DisableDrink() => pouring = true;
         public void SetPour(float p) => pour = p;
         public void ShowPause(Action a) { done = a; mode = ScreenMode.Pause; }

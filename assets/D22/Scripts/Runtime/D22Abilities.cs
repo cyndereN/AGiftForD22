@@ -28,11 +28,12 @@ namespace D22
         public static readonly D22AbilityInfo Walk = new() { id="walk", mark="走", title="行走", caption="", zh="", en="" };
 
         readonly HashSet<string> learned = new();
-        readonly AudioSource oneshot, loop;
+        readonly AudioSource oneshot, loop, bandShot, bandLoop;
         readonly GameObject previewRoot;
         readonly Transform bottlePreview;
         readonly Camera bottleCam;
         readonly AudioClip pourClip, cricketClip, pigeonLoop, scrapeLoop;
+        AudioClip knifeClip;
         readonly AudioClip[] guitarClips = new AudioClip[6];
         readonly AudioClip[] bassClips = new AudioClip[4];
         readonly AudioClip[] drumClips = new AudioClip[3];
@@ -70,6 +71,13 @@ namespace D22
             loop.playOnAwake = false;
             loop.loop = true;
             loop.spatialBlend = 0;
+            bandShot = host.gameObject.AddComponent<AudioSource>();
+            bandShot.playOnAwake = false;
+            bandShot.spatialBlend = 0;
+            bandLoop = host.gameObject.AddComponent<AudioSource>();
+            bandLoop.playOnAwake = false;
+            bandLoop.loop = true;
+            bandLoop.spatialBlend = 0;
             SetVolume(volume);
 
             pourClip = MakePour();
@@ -153,6 +161,13 @@ namespace D22
         {
             oneshot.volume = Mathf.Clamp01(volume) * .85f;
             loop.volume = Mathf.Clamp01(volume) * .7f;
+            bandShot.volume = 1f;
+            bandLoop.volume = 1f;
+        }
+
+        public void SetKnife(AudioClip clip)
+        {
+            if (clip) knifeClip = clip;
         }
 
         public void SetBeer(AudioClip beer)
@@ -261,7 +276,8 @@ namespace D22
         {
             held = false;
             lastString = -1;
-            if (OpenId == "bass" || OpenId == "pigeon" || OpenId == "scissors") StopLoop();
+            if (OpenId == "bass") StopBand();
+            else if (OpenId == "pigeon" || OpenId == "scissors") StopLoop();
         }
 
         public bool Tick(Action onPoured)
@@ -330,7 +346,7 @@ namespace D22
         {
             ScissorsX = Mathf.Clamp01(n.x);
             ScissorsSpark = Mathf.Clamp01(Mathf.Abs(n.x - prevPointer.x) * 14);
-            EnsureLoop(scrapeLoop, Mathf.Lerp(.85f, 1.2f, ScissorsX));
+            EnsureLoop(knifeClip ? knifeClip : scrapeLoop, Mathf.Lerp(.85f, 1.2f, ScissorsX));
         }
 
         void Strum(Vector2 from, Vector2 to)
@@ -342,7 +358,7 @@ namespace D22
                 if (i == lastString) continue;
                 lastString = i;
                 LitString = i;
-                Play(guitarClips[i]);
+                PlayBand(guitarClips[i]);
             }
         }
 
@@ -350,14 +366,49 @@ namespace D22
         {
             int i = Mathf.Clamp(Mathf.FloorToInt(n.x * 4), 0, 3);
             LitString = i;
-            if (loop.clip != bassClips[i] || !loop.isPlaying) EnsureLoop(bassClips[i], 1);
+            if (bandLoop.clip != bassClips[i] || !bandLoop.isPlaying)
+            {
+                bandLoop.clip = bassClips[i];
+                bandLoop.volume = 1f;
+                bandLoop.pitch = 1f;
+                bandLoop.Play();
+            }
         }
 
         void HitDrum(Vector2 n)
         {
             int pad = n.x < .33f ? 0 : n.x < .66f ? 1 : 2;
             LitPad = pad;
-            Play(drumClips[pad]);
+            PlayDrum(pad);
+        }
+
+        public void PlayGuitar(int i)
+        {
+            if (i >= 0 && i < guitarClips.Length) PlayBand(guitarClips[i]);
+        }
+
+        public void PlayBass(int i)
+        {
+            if (i >= 0 && i < bassClips.Length) PlayBand(bassClips[i], .85f);
+        }
+
+        public void PlayDrum(int pad)
+        {
+            if (pad >= 0 && pad < drumClips.Length) PlayBand(drumClips[pad]);
+        }
+
+        public void TapSlot(int slot)
+        {
+            if (slot < 1 || slot >= Slots.Length) return;
+            switch (Slots[slot].id)
+            {
+                case "cricket": Play(cricketClip); break;
+                case "pigeon": Play(pigeonLoop, 1.15f); break;
+                case "scissors": Play(knifeClip ? knifeClip : scrapeLoop); break;
+                case "guitar": PlayGuitar(UnityEngine.Random.Range(0, guitarClips.Length)); break;
+                case "bass": PlayBass(UnityEngine.Random.Range(0, bassClips.Length)); break;
+                case "drums": PlayDrum(UnityEngine.Random.Range(0, drumClips.Length)); break;
+            }
         }
 
         void Play(AudioClip clip, float pitch = 1)
@@ -365,6 +416,20 @@ namespace D22
             if (!clip) return;
             oneshot.pitch = pitch;
             oneshot.PlayOneShot(clip);
+        }
+
+        void PlayBand(AudioClip clip, float pitch = 1)
+        {
+            if (!clip) return;
+            bandShot.pitch = pitch;
+            bandShot.volume = 1f;
+            bandShot.PlayOneShot(clip);
+        }
+
+        void StopBand()
+        {
+            bandLoop.Stop();
+            bandLoop.clip = null;
         }
 
         void EnsureLoop(AudioClip clip, float pitch)
