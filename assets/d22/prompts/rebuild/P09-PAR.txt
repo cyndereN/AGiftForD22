@@ -1,4 +1,0 @@
-One detailed compact black tungsten stage PAR lamp with cylindrical vented housing, clear lens, U yoke and clamp, matching D22 performance photographs. Lens OFF for neutral material reference. Full isolated three-quarter view on light gray, soft white light. Separate lens, body and yoke for aiming; show credible clamp connection. Preserve metal thickness, vents and scuffed edges. No miniature low-poly look, no environment, no colored lighting or baked glow.
-
-PARTS: body, lens, yoke, clamp, separate power cable
-REVIEW: Assign actual light source and lens response in Blender, not colored texture.

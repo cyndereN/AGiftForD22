@@ -1,1 +1,0 @@
-{"name":"d22-scan-conversion","private":true,"version":"1.0.0","description":"Pinned, offline-after-install SOG to PLY converter for D22","dependencies":{"@playcanvas/splat-transform":"3.9.0"}}

@@ -1,0 +1,31 @@
+[2026-10-03T08:44:07.389Z][INFO] Command-line: 'C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.4f1\\Editor\\Data\\Resources\\PackageManager\\Server\\UnityPackageManager.exe' server -s 72808 --ipc-path Unity-Upm-72808 -l 2 --log-file C:\\Users\\CC\\Desktop\\AGiftForD22\\unity\\D22Game/Logs/upm.log
+[2026-10-03T08:44:07.425Z][INFO] IPC server started (IPC path=Unity-Upm-72808).
+[2026-10-03T08:44:07.425Z][INFO] Hint: To connect to this UPM instance, launch Unity with the command-line parameter -upmIpcPath Upm-72808.
+[2026-10-03T08:44:15.842Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:15.942Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-03T08:44:15.953Z][INFO] config:project:get-registries --> 200 (11 ms)
+[2026-10-03T08:44:15.954Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:15.993Z][INFO] project:list-packages --> 200 (151 ms)
+[2026-10-03T08:44:16.060Z][INFO] project:list-packages --> 200 (106 ms)
+[2026-10-03T08:44:19.081Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:19.148Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:19.190Z][INFO] project:list-packages --> 200 (109 ms)
+[2026-10-03T08:44:19.245Z][INFO] project:list-packages --> 200 (98 ms)
+[2026-10-03T08:44:19.384Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:19.452Z][INFO] project:list-packages --> 200 (68 ms)
+[2026-10-03T08:44:19.500Z][INFO] config:project:get-registries <-- Request received
+params: {}
+[2026-10-03T08:44:19.503Z][INFO] config:project:get-registries --> 200 (3 ms)
+[2026-10-03T08:44:21.573Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:21.683Z][INFO] project:list-packages --> 200 (110 ms)
+[2026-10-03T08:44:27.174Z][INFO] project:list-packages <-- Request received
+params: {}
+[2026-10-03T08:44:35.417Z][INFO] project:list-packages --> 200 (8243 ms)
+[2026-10-03T08:55:26.238Z][INFO] Shutting down UnityPackageManager.exe: parent process [72808] is no longer running.

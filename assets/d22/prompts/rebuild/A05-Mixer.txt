@@ -1,4 +1,0 @@
-One detailed analog live sound mixer for the D22 game, wedge chassis with distinct repeated channel strips, faders, knobs, sockets and meter windows. Neutral evenly lit product reference, entire console visible, front three-quarter. Keep controls spatially separate with circular shafts and clean gaps; print legends as a separate texture. Functional late-2000s stage equipment, modest contact wear. No low-poly or pixelated treatment, no surrounding table, no colored light, no baked shadows.
-
-PARTS: chassis, repeatable channel strip, knobs, faders, master section
-REVIEW: Channel count and exact historic FOH location remain design choices.

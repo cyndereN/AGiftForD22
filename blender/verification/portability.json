@@ -1,9 +1,0 @@
-{
-  "blender_version": "4.5.3 LTS",
-  "source": "blender/source/D22_Balanced_Lighting_v18.blend",
-  "sha256": "57afe1b0bb12522c9cdf1781e5d92175ce9f6539b5befa8bb33836beb7e0020b",
-  "objects": 1791,
-  "packed_images": 81,
-  "external_libraries": 0,
-  "unpacked_images": 0
-}
