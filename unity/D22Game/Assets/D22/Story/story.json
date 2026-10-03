@@ -57,6 +57,78 @@
       "en": "The drink is still in the throat. The hutong is here. Walk to the door first."
     }
   ],
+  "door": [
+    {
+      "zh": "已满。",
+      "en": "Full."
+    },
+    {
+      "zh": "有的 live house 会允许 jam。乐器在，空位在，谁都能坐下接一句。",
+      "en": "Some live houses allow a jam. The instruments are there, the empty chairs are there, anyone can sit in for a phrase."
+    },
+    {
+      "zh": "也有的在找人 gig。不是谁都能上。他们要某一件乐器的演奏者。吉他、鼓、贝斯，对上了，门才开。",
+      "en": "Others are looking for someone to gig. Not just anyone. They want a player of one particular instrument. Guitar, drums, bass. Match it, and the door opens."
+    },
+    {
+      "zh": "想进去，得有一点音乐素养，和一些胆量。",
+      "en": "To get in, you need a little musical literacy, and some balls."
+    }
+  ],
+  "pigeonTalk": [
+    {
+      "zh": "天上有一群。捉住一只。尾巴上绑着哨。",
+      "en": "A flock is overhead. Catch one. There is a whistle tied to its tail."
+    },
+    {
+      "zh": "老北京把鸽子养在房顶上。哨多半是个小葫芦，风一灌就响。",
+      "en": "Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind goes in, and it sounds."
+    },
+    {
+      "zh": "不是一只在叫。一群飞过，每只哨不一样，合在一起，像城里的和弦。",
+      "en": "It is not one bird calling. A flock passes, each whistle different, and together they are a chord over the city."
+    },
+    {
+      "zh": "这声音和叫卖是一类。胡同不靠喇叭。靠翅膀，靠嗓子。",
+      "en": "This sound belongs with the vendor cries still to come. A hutong does not use a loudspeaker. It uses wings, and a voice."
+    }
+  ],
+  "cricketTalk": [
+    {
+      "zh": "翻开草堆。里面有一只蛐蛐。",
+      "en": "Turn the grass pile over. There is a cricket inside."
+    },
+    {
+      "zh": "秋天的胡同靠这个。砖缝里、草里，捉回去，养在罐里。",
+      "en": "Autumn in the hutong runs on this. In the cracks of bricks, in the grass, you catch one and keep it in a jar."
+    },
+    {
+      "zh": "斗蛐蛐不是闹着玩的名目。盆里两只，一根草棍撩一下，比的是那一口咬，还有叫。",
+      "en": "Cricket fighting is not a joke of a name. Two of them in a bowl, a tickle from a grass stem. What is weighed is the bite, and the song."
+    },
+    {
+      "zh": "明清的人就这么听。宫廷里听，胡同里也听。一声细，比鸽哨更近，近到耳朵边上。",
+      "en": "People listened this way in the Ming and the Qing. In the court, and in the hutong. One thin note, closer than the pigeon whistle, right against the ear."
+    }
+  ],
+  "grindTalk": [
+    {
+      "zh": "胡同深处有人在喊。磨剪子嘞，戗菜刀。",
+      "en": "Someone is calling from deep in the hutong. Sharpen the scissors. Sharpen the knife."
+    },
+    {
+      "zh": "这是老北京的货声。人走过来，家里就把剪子和菜刀拿下去。",
+      "en": "This is an old Beijing vendor cry. The man comes through, and the house brings the scissors and the kitchen knife down."
+    },
+    {
+      "zh": "磨石，一点水，一下一下。喊本身就是乐器，让整条胡同知道：该磨了。",
+      "en": "A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole alley: time to sharpen."
+    },
+    {
+      "zh": "鸽哨在天上。蛐蛐在草里。这一声在路上。三件都是这儿的音乐。",
+      "en": "The pigeon whistle is in the sky. The cricket is in the grass. This cry is on the road. All three are the music of this place."
+    }
+  ],
   "boss": [
     {
       "zh": "吃了么您。着急去看演出？",
@@ -93,6 +165,57 @@
       "en": "Take the glass. This is the second thing you know."
     }
   ],
+  "hutongAsk": {
+    "zh": "这儿有两种声音。哨和叫卖是人做的。蛐蛐那一声是它自己的。你觉得哪种更好？",
+    "en": "There are two kinds of sound here. The whistle and the vendor cry are made by people. The cricket's note is its own. Which do you think is better?",
+    "choices": [
+      {
+        "zh": "人为",
+        "en": "Made by people",
+        "note": "BGM：鸽哨和「磨剪子」靠前，磨石的一下一下变成拍子。蛐蛐被收进这个拍子里，不再自由叫。\n相机：抖动是有意的，像有人在取景。视野收到 56，转向稳，慢慢对准门、哨、那张嘴。\n后处理：边缘更锐，对比略高，颜色偏暖。天上的鸽子带一点光晕。"
+      },
+      {
+        "zh": "自然",
+        "en": "Natural",
+        "note": "BGM：翅膀扇动和蛐蛐在前，叫卖退到胡同那头。没有拍子，谁响谁算。\n相机：几乎不抖，人站着就行。视野放到 68，转向变慢，天空和草堆一起留在画面里。\n后处理：变软，饱和收一点，偏草木的绿。暗角很淡，光晕关掉。"
+      },
+      {
+        "zh": "都不喜欢",
+        "en": "Neither",
+        "note": "BGM：哨、叫卖、蛐蛐一起退后。只剩墙和风，偶尔一声刺过来，马上又灭。\n相机：细碎地抖，停不住，也不往哪儿看。视野固定 60。\n后处理：颜色抽成灰，对比发硬，暗角收紧。画面清楚，但是不好看。"
+      }
+    ]
+  },
+  "livehouse": [
+    {
+      "zh": "Livehouse 是乐队站在你面前的房间。不是音乐厅。也不是顺便放歌的舞厅。",
+      "en": "A livehouse is a room where the band stands in front of you. Not a concert hall. Not a dance floor that happens to have songs."
+    },
+    {
+      "zh": "酒吧演出也是这一晚，只是旁边还有个柜台。酒在，舞台也在。人是冲着台上的人来的。",
+      "en": "A bar show is the same night, with a counter beside it. The drinks are there, and so is the stage. People came for the people on it."
+    },
+    {
+      "zh": "乐队文化就是几个人，几件乐器，一些还没写完的歌。订一场 gig，或者坐下接一段 jam。排练只算练习。在这间屋里演完，才算一支乐队。",
+      "en": "Band culture is a few people, a few instruments, songs that are not finished. Book a gig, or sit in for a jam. Practice is only practice. Play it through in this room, and it is a band."
+    },
+    {
+      "zh": "2005 年的 D-22，就是坐落于北京的 CBGB （传奇livehouse）。",
+      "en": "D-22 in 2005 was the CBGB that stood in Beijing."
+    },
+    {
+      "zh": "尽管资金不足，钱全花在音响设备上，难以照顾到电力系统和洗手间。常常演到一半停电，或者水漫金山。可 D-22 的派对从不因为简陋停下来。",
+      "en": "There was never enough money. What there was went into the sound system, not the power, and not the toilets. Shows died at half time when the lights went out, or the place flooded. The parties did not stop for the roughness."
+    },
+    {
+      "zh": "D-22 对乐手和乐迷都是乌托邦。Michael 创办的时候就没想过盈利。演出所得不是用来修音响，就是给了来演的乐手。来看的多半是口袋里没有几个子儿的高校学生，一场票价只在三十块到五十块。",
+      "en": "For players and for listeners, D-22 was a utopia. Michael did not found it to make money. What the door took went back into the PA, or to the bands who played. Most of the crowd were students with almost nothing in their pockets. A ticket was thirty to fifty kuai."
+    },
+    {
+      "zh": "对乐手和乐迷都友好，于是声名大噪。来演的多，来看的也多。到后来几乎场场爆满，十点半必须关门，限制入内。",
+      "en": "It was kind to both, and the name got loud. More bands came. More listeners came. In the end almost every night was full. At ten-thirty the door had to shut."
+    }
+  ],
   "choice": {
     "zh": "噪声已经把情感放大了。这一口，你要它怎样？",
     "en": "The noise has already turned the feeling up. This mouthful. What do you want it to do?",
@@ -113,5 +236,14 @@
         "note": "BGM：鼓退到很远，混响变大，只剩低频和电流。\n相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。\n后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。"
       }
     ]
-  }
+  },
+  "abilities": [
+    { "id": "drink", "title": "喝酒", "caption": "点击倾倒", "zh": "情感放大器。莫贪杯哦。", "en": "Emotion amplifier. Try not to overdose." },
+    { "id": "cricket", "title": "蛐蛐", "caption": "点击唤叫", "zh": "胡同夜里还在叫。一笼子虫，能把夏天留下来。", "en": "The hutong still sings at night. One cage can keep the summer." },
+    { "id": "pigeon", "title": "鸽哨", "caption": "拖动盘旋", "zh": "鸽哨不是鸟叫。是风穿过竹哨，从天上划过来。", "en": "A pigeon whistle is not a bird. Wind through bamboo, drawn across the sky." },
+    { "id": "scissors", "title": "磨剪子", "caption": "来回推磨", "zh": "磨剪子嘞，戗菜刀。巷口那一声，人就知道谁来了。", "en": "Scissors, knives. That street call tells you who has arrived." },
+    { "id": "guitar", "title": "吉他", "caption": "拨弦 / 扫弦", "zh": "先拨一下。空弦也是一句。", "en": "Pluck it once. An open string is already a line." },
+    { "id": "bass", "title": "贝斯", "caption": "按住拨弦", "zh": "低音贴着地板走。按住，让它停在这间屋子里。", "en": "The low end walks the floor. Hold it, and keep it in the room." },
+    { "id": "drums", "title": "鼓", "caption": "点击敲击", "zh": "鼓点把房间的心跳敲实。", "en": "The drums put a heartbeat under the room." }
+  ]
 }

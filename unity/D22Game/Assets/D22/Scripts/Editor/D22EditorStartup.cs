@@ -14,6 +14,7 @@ namespace D22.Editor
 
         static D22EditorStartup()
         {
+            EditorApplication.playModeStateChanged += BindSfxOnPlay;
             if (!Application.isBatchMode) EditorApplication.delayCall += Initialize;
         }
 
@@ -30,6 +31,28 @@ namespace D22.Editor
             // A fresh checkout has an untitled default scene. Keep authored/unsaved work intact.
             if (SceneManager.sceneCount == 1 && string.IsNullOrEmpty(scene.path) && !scene.isDirty)
                 D22ProjectSetup.OpenGame();
+        }
+
+        static void BindSfxOnPlay(PlayModeStateChange state)
+        {
+            if (state != PlayModeStateChange.EnteredPlayMode) return;
+            EditorApplication.delayCall += () =>
+            {
+                var flow = D22GameFlow.Instance;
+                if (!flow) return;
+                foreach (var guid in AssetDatabase.FindAssets("t:AudioClip", new[] { "Assets/D22/Music", "Assets/D22/Audio" }))
+                {
+                    string path = AssetDatabase.GUIDToAssetPath(guid);
+                    var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+                    if (!clip) continue;
+                    string name = clip.name.ToLowerInvariant();
+                    if (name.Contains("beer")) flow.beerClip = clip;
+                    if (name.Contains("cricket")) flow.cricketClip = clip;
+                    if (name.Contains("pigeon")) flow.pigeonClip = clip;
+                    if (name.Contains("knife") || name.Contains("grind") || name.Contains("scissor")) flow.grindClip = clip;
+                }
+                flow.BindSfx();
+            };
         }
 
         static void ApplyPlayEntry()

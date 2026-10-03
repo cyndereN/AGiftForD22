@@ -114,7 +114,7 @@ namespace D22.Editor
             {
                 var exit=new GameObject("Chapter Exit").AddComponent<D22Exit>();exit.transform.position=new Vector3(0,0,-3);exit.radius=1.7f;
                 exit.nextScene=index==1?"D22_LiveScan":index==2?"D22_Bootstrap":"END";
-                exit.label=index==1?"走进现场 / ENTER LIVE HOUSE":index==2?"听演出 / HEAR THE SHOW":"离场 / LEAVE THE SHOW";
+                exit.label=index==1?"门":index==2?"听演出":"离场";
             }
             EditorSceneManager.SaveScene(scene,path);
         }
@@ -131,6 +131,17 @@ namespace D22.Editor
             flow.storyAsset=AssetDatabase.LoadAssetAtPath<TextAsset>(Root+"/Story/story.json");flow.uiFont=AssetDatabase.LoadAssetAtPath<Font>(Root+"/UI/Fonts/NotoSansSC.ttf");flow.poster=AssetDatabase.LoadAssetAtPath<Texture2D>(Root+"/UI/poster.png");flow.cover=AssetDatabase.LoadAssetAtPath<Texture2D>(Root+"/UI/d22.png");
             flow.music=AssetDatabase.FindAssets("t:AudioClip",new[]{Root+"/Audio"}).Select(AssetDatabase.GUIDToAssetPath).OrderBy(p=>p,StringComparer.Ordinal).Select(AssetDatabase.LoadAssetAtPath<AudioClip>).ToArray();
             flow.bottlePrefab=AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/Prefabs/WinePickup.prefab");
+            foreach(var guid in AssetDatabase.FindAssets("t:AudioClip",new[]{Root+"/Music",Root+"/Audio"}))
+            {
+                string path=AssetDatabase.GUIDToAssetPath(guid);
+                var clip=AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+                if(!clip)continue;
+                string name=clip.name.ToLowerInvariant();
+                if(name.Contains("beer"))flow.beerClip=clip;
+                if(name.Contains("cricket"))flow.cricketClip=clip;
+                if(name.Contains("pigeon"))flow.pigeonClip=clip;
+                if(name.Contains("knife")||name.Contains("grind")||name.Contains("scissor"))flow.grindClip=clip;
+            }
             EditorSceneManager.SaveScene(scene,Scenes+"D22_Menu.unity");
         }
         public static void ConfigureBuildScenes()=>EditorBuildSettings.scenes=GameScenes.Where(n=>File.Exists(Scenes+n+".unity")).Select(n=>new EditorBuildSettingsScene(Scenes+n+".unity",true)).ToArray();

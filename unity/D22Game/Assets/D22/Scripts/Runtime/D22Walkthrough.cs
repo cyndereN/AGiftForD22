@@ -14,17 +14,15 @@ namespace D22
 
         private void Update()
         {
-            if (D22GameFlow.InputBlocked) return;
-            var keyboard = Keyboard.current;
-            var mouse = Mouse.current;
-            if (keyboard == null || mouse == null || view == null) return;
-            if (mouse.rightButton.isPressed)
+            if (D22GameFlow.InputBlocked)
             {
-                Vector2 delta = mouse.delta.ReadValue() * .09f;
-                transform.Rotate(0, delta.x, 0);
-                pitch = Mathf.Clamp(pitch - delta.y, -80, 80);
-                view.localRotation = Quaternion.Euler(pitch, 0, 0);
+                D22Look.Unlock();
+                return;
             }
+            if (view == null && Camera.main) view = Camera.main.transform;
+            var keyboard = Keyboard.current;
+            if (keyboard == null || view == null) return;
+            D22Look.ApplyYawPitch(transform, view, ref pitch, D22GameFlow.UiBlocksLook);
             float x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);
             float z = (keyboard.wKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed ? 1 : 0);
             var controller = GetComponent<CharacterController>();
@@ -32,6 +30,7 @@ namespace D22
             if (controller.isGrounded && keyboard.spaceKey.wasPressedThisFrame) verticalSpeed = 3.2f;
             verticalSpeed += Physics.gravity.y * Time.deltaTime;
             Vector3 motion = transform.TransformDirection(Vector3.ClampMagnitude(new Vector3(x, 0, z), 1));
+            if (motion.sqrMagnitude > .0001f) D22GameFlow.Instance?.NoteWalk();
             motion *= speed * (keyboard.leftShiftKey.isPressed ? 1.6f : 1);
             motion.y = verticalSpeed;
             controller.Move(motion * Time.deltaTime);

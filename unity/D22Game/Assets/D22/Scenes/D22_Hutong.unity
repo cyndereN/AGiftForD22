@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::D22.D22Exit
   nextScene: D22_LiveScan
-  label: "\u8D70\u8FDB\u73B0\u573A / ENTER LIVE HOUSE"
+  label: "\u95E8"
   radius: 1.7
 --- !u!4 &367441380
 Transform:
