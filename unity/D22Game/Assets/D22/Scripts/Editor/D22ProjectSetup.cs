@@ -135,7 +135,12 @@ namespace D22.Editor
         }
         public static void ConfigureBuildScenes()=>EditorBuildSettings.scenes=GameScenes.Where(n=>File.Exists(Scenes+n+".unity")).Select(n=>new EditorBuildSettingsScene(Scenes+n+".unity",true)).ToArray();
         [MenuItem("D22/Game/Open Main Menu")]
-        public static void OpenGame()=>EditorSceneManager.OpenScene(Scenes+"D22_Menu.unity",OpenSceneMode.Single);
+        public static void OpenGame()
+        {
+            if (!EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            EditorSceneManager.OpenScene(Scenes+"D22_Menu.unity",OpenSceneMode.Single);
+            D22EditorStartup.ShowScenes();
+        }
         [MenuItem("D22/Build/macOS")]
         public static void BuildMac()=>Build(BuildTarget.StandaloneOSX,"builds/macOS/A Gift for D22.app");
         [MenuItem("D22/Build/Windows x64")]

@@ -4,6 +4,8 @@
 
 ## 第一次打开
 
+**Unity Hub 必须添加 `AGiftForD22/unity/D22Game` 这个文件夹。** 如果窗口标题是 `Untitled - AGiftForD22`，且 Project 面板只有 `d22` / `scans`，说明打开了仓库根目录。关闭它，双击根目录的 `OpenUnity.command`（Mac）或 `OpenUnity.bat`（Windows），即可打开正确工程 `D22Game`。
+
 两人都安装 **Unity Hub + Unity 6000.6.4f1**、Git 和 Git LFS。朋友在 Windows 安装 Windows Build Support；Mac 开发者安装 macOS Build Support。不要各自升级 Unity 或包版本。
 
 ```sh
@@ -27,6 +29,8 @@ git lfs pull
 - 自定义编辑器安装位置时设置 `UNITY_EDITOR` 为 Unity 可执行文件的完整路径，或直接从 Hub 打开。
 
 Unity 导入结束后，执行 **D22 → Game → Open Main Menu**，点击 Play。从主菜单开始故事，或选择空间漫游。WASD 移动、按住右键转向、E 交互、1 喝酒、Esc 打开菜单。默认开启减少镜头晃动，可在暂停菜单调整。扫描空间使用与网页一致的自由相机，Blender 重建空间使用有碰撞的行走控制。
+
+场景位于 Unity 的 **Project → Assets → D22 → Scenes**；菜单 **D22 → Game → Show Scene Files** 可直接定位。首次打开干净工程时自动加载主菜单，Play 默认从主菜单开始。需要单独调试当前场景时，取消勾选 **D22 → Game → Start Play From Main Menu**；该偏好只影响你本机。
 
 ## 游戏与资源在哪里
 
