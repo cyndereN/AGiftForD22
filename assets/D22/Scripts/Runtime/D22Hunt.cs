@@ -53,7 +53,7 @@ namespace D22
             && flow.Abilities.Learned("scissors");
         public const int NeedPigeon = 10, NeedGrind = 7, NeedCricket = 4, NeedDrink = 3;
         public bool QuotaDone(int sips) => Pigeon >= NeedPigeon && Grind >= NeedGrind && Cricket >= NeedCricket && sips >= NeedDrink;
-        public string Quota(int sips) => $"需要十个鸽哨 {Pigeon}/{NeedPigeon}，{Grind}/{NeedGrind}磨刀 {Cricket}/{NeedCricket}蛐蛐 {sips}/{NeedDrink}酒";
+        public string Quota(int sips) => $"需要 {Pigeon}/{NeedPigeon}个鸽哨 {Grind}/{NeedGrind}磨刀 {Cricket}/{NeedCricket}个蛐蛐 {sips}/{NeedDrink}酒";
         public float CdCricket { get; private set; }
         public float CdPigeon { get; private set; }
         public float CdGrind { get; private set; }
@@ -342,7 +342,7 @@ namespace D22
                         {
                             grindHits = 0;
                             Grind++;
-                            Grant("scissors");
+                            if (Grant("scissors")) flow.CloseHunt();
                             flow.Stage?.NoteGrind();
                         }
                     }
@@ -393,7 +393,7 @@ namespace D22
                 {
                     notes.RemoveAt(i);
                     Pigeon++;
-                    Grant("pigeon");
+                    if (Grant("pigeon")) flow.CloseHunt();
                     return;
                 }
             }
@@ -489,10 +489,14 @@ namespace D22
             else if (grindLoop.isPlaying) grindLoop.Stop();
         }
 
-        void Grant(string abilityId)
+        bool Grant(string abilityId)
         {
             if (flow.Abilities != null && flow.Abilities.Learn(abilityId))
+            {
                 flow.UI.PlayLearnFly(abilityId);
+                return true;
+            }
+            return false;
         }
 
         public string Tally(int sips) => Quota(sips);

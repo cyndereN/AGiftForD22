@@ -153,7 +153,7 @@ namespace D22
                     break;
                 case "D22_Performance":
                     blocked = true;
-                    UI.ShowEnding("名字没有一起关掉，还在人嘴里走。", () => LoadSpace("D22_Menu"));
+                    UI.ShowEnding("这个名字，至今仍被大家口口相传。", () => LoadSpace("D22_Menu"));
                     break;
                 default:
                     LoadSpace("D22_RecordShop");
@@ -403,10 +403,10 @@ namespace D22
             string huntHint = Hunt?.AimHint(camera);
             string stageHint = Chapter == "D22_LiveScan" ? Stage?.Hint(camera) : null;
             string hint = aimingBottle ? "E 拿酒瓶"
-                : Chapter == "D22_Hutong" && atExit && Hunt != null && Hunt.Unlocked ? Hunt.Quota(Sips)
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : Chapter == "D22_LiveScan" && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
+                : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "已满" : "门")
                 : atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label))
                 : Chapter == "D22_RecordShop"
@@ -454,7 +454,7 @@ namespace D22
                 else MeetDoor();
                 return;
             }
-            if (exit.nextScene == "END") { blocked = true; UI.ShowEnding("名字没有一起关掉，还在人嘴里走。", () => LoadSpace("D22_Menu")); }
+            if (exit.nextScene == "END") { blocked = true; UI.ShowEnding("这个名字，至今仍被大家口口相传。", () => LoadSpace("D22_Menu")); }
             else LoadSpace(exit.nextScene);
         }
 

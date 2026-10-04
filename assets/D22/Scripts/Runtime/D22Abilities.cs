@@ -16,13 +16,13 @@ namespace D22
         public const int SlotCount = 7;
         public static readonly D22AbilityInfo[] Slots =
         {
-            new() { id="drink",    key="1", mark="酒", title="喝酒",     caption="点击倾倒",   zh="情感放大器。莫贪杯哦。", en="Emotion amplifier. Try not to overdose." },
-            new() { id="cricket",  key="2", mark="蛐", title="蛐蛐",     caption="点击唤叫",   zh="胡同夜里还在叫。一笼子虫，能把夏天留下来。", en="The hutong still sings at night. One cage can keep the summer." },
-            new() { id="pigeon",   key="3", mark="哨", title="鸽哨",     caption="拖动盘旋",   zh="鸽哨不是鸟叫。是风穿过竹哨，从天上划过来。", en="A pigeon whistle is not a bird. Wind through bamboo, drawn across the sky." },
-            new() { id="scissors", key="4", mark="磨", title="磨剪子",   caption="来回推磨",   zh="磨剪子嘞，戗菜刀。巷口那一声，人就知道谁来了。", en="Scissors, knives. That street call tells you who has arrived." },
-            new() { id="guitar",   key="5", mark="吉", title="吉他",     caption="拨弦 / 扫弦", zh="先拨一下。空弦也是一句。", en="Pluck it once. An open string is already a line." },
-            new() { id="bass",     key="6", mark="贝", title="贝斯",     caption="按住拨弦",   zh="低音贴着地板走。按住，让它停在这间屋子里。", en="The low end walks the floor. Hold it, and keep it in the room." },
-            new() { id="drums",    key="7", mark="鼓", title="鼓",       caption="点击敲击",   zh="鼓点把房间的心跳敲实。", en="The drums put a heartbeat under the room." }
+            new() { id="drink",    key="1", mark="酒", title="喝酒",     caption="点击倾倒",   zh="情绪放大器，还请您切莫贪杯。", en="An amplifier for feeling. Please don't drink past your limit." },
+            new() { id="cricket",  key="2", mark="蛐", title="蛐蛐",     caption="点击唤叫",   zh="请您拨开草丛，里面藏着一只蛐蛐。", en="Part the grass. A cricket is hiding inside." },
+            new() { id="pigeon",   key="3", mark="哨", title="鸽哨",     caption="拖动盘旋",   zh="天上飞过一群鸽子，请您捉住其中一只，它的尾巴系着鸽哨。", en="A flock is passing overhead. Catch one. A pigeon whistle is tied to its tail." },
+            new() { id="scissors", key="4", mark="磨", title="磨剪子",   caption="来回推磨",   zh="胡同深处传来吆喝：磨剪子嘞，戗菜刀。", en="From deep in the hutong, a cry: sharpen the scissors, sharpen the knife." },
+            new() { id="guitar",   key="5", mark="吉", title="吉他",     caption="拨弦 / 扫弦", zh="吉他是弥漫在空气之中的一层情绪。和弦、噪音，一句未曾唱出的心里话。", en="The guitar is a layer of feeling hung in the air. Chords, noise, a sentence of the heart not yet sung." },
+            new() { id="bass",     key="6", mark="贝", title="贝斯",     caption="按住拨弦",   zh="贝斯音高最低，也最容易被忽略。与其说听见它，不如说脚下切实感受到了根基。", en="The bass is the lowest, and the easiest to miss. You do not so much hear it as feel the floor under your feet." },
+            new() { id="drums",    key="7", mark="鼓", title="鼓",       caption="点击敲击",   zh="鼓掌管时间。一次敲击，整个空间便拥有了当下。", en="The drum keeps the time. One strike, and the whole room has a now." }
         };
 
         public static readonly D22AbilityInfo Walk = new() { id="walk", mark="走", title="行走", caption="", zh="", en="" };

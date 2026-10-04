@@ -26,7 +26,7 @@ namespace D22
         D22WorldMark drumMark, guitarMark, bassMark;
         float moleLife, moleGap;
         int mole = -1;
-        bool heardDrum, heardGuitar, heardBass;
+        bool heardDrum, heardGuitar, heardBass, teachDrum, teachGuitar, teachBass;
 
         public string Game { get; private set; }
         public bool Open => Game != null;
@@ -73,6 +73,7 @@ namespace D22
             ShowDrink = ShowGrind = ShowGuitar = ShowBass = ShowDrum = 0;
             DoneDrum = DoneGuitar = DoneBass = false;
             heardDrum = heardGuitar = heardBass = false;
+            teachDrum = teachGuitar = teachBass = false;
             DrumHits = GuitarSweeps = BassHolds = 0;
             Walker = 0;
             mole = -1;
@@ -184,7 +185,12 @@ namespace D22
             {
                 heard = true;
                 if (flow.Abilities != null && flow.Abilities.Learn(id))
+                {
                     flow.UI.PlayLearnFly(id);
+                    if (id == "drums") teachDrum = true;
+                    else if (id == "guitar") teachGuitar = true;
+                    else if (id == "bass") teachBass = true;
+                }
                 if (lines != null && lines.Length > 0)
                 {
                     talk(title, lines, () => flow.ResumeStage(id));
@@ -235,6 +241,7 @@ namespace D22
             moleGap = .18f;
             DrumHits++;
             flow.Abilities?.PlayDrum(UnityEngine.Random.Range(0, 3));
+            if (teachDrum) { teachDrum = false; EndLesson(); return; }
             if (!DoneDrum && DrumHits >= NeedDrum) Finish("drums");
             else if (Encore && ShowDrum < ShowNeedDrum) ShowDrum++;
         }
@@ -259,6 +266,7 @@ namespace D22
             for (int i = 0; i < swept.Length; i++) if (!swept[i]) return;
             for (int i = 0; i < swept.Length; i++) swept[i] = false;
             GuitarSweeps++;
+            if (teachGuitar) { teachGuitar = false; EndLesson(); return; }
             if (!DoneGuitar && GuitarSweeps >= NeedGuitar) Finish("guitar");
             else if (Encore && ShowGuitar < ShowNeedGuitar) ShowGuitar++;
         }
@@ -272,8 +280,15 @@ namespace D22
             Walker = 0;
             BassHolds++;
             flow.Abilities?.PlayBass(fret);
+            if (teachBass) { teachBass = false; EndLesson(); return; }
             if (!DoneBass && BassHolds >= NeedBass) Finish("bass");
             else if (Encore && ShowBass < ShowNeedBass) ShowBass++;
+        }
+
+        void EndLesson()
+        {
+            Close();
+            if (!flow.Loading) flow.UI.ShowHUD();
         }
 
         void Finish(string id)

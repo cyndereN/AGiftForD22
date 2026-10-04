@@ -1,60 +1,72 @@
 {
   "intro": [
     {
-      "zh": "五道口。高校围着的街上，有一间叫 D-22 的房间。",
-      "en": "Wudaokou. On a street ringed by colleges, a room called D-22."
+      "zh": "五道口，被一圈高校环绕的街上，坐落着一间名叫 D22 的小酒吧。",
+      "en": "Wudaokou. On a street ringed by universities, a small bar called D22."
     },
     {
-      "zh": "2012 年它关了门。名字没有一起关掉，还在人嘴里走。",
-      "en": "It closed in 2012. The name did not. It is still being passed around."
+      "zh": "它在 2012 年正式歇业，不过这个名字，至今仍被大家口口相传。",
+      "en": "It closed for good in 2012. The name, though, is still passed from mouth to mouth."
     },
     {
-      "zh": "在北大教书的 Michael，看见当时北京活跃的地下乐手，觉得这座城市正在变成世界要听见的地方。",
-      "en": "Michael, teaching at Peking University, saw how alive the underground was, and thought the city was turning into a place the world would have to hear."
+      "zh": "当年在北大任教的 Michael，亲眼见证了北京地下音乐圈蓬勃的生命力。他觉得，这座城市的声音，理应被全世界听见。",
+      "en": "Michael, then teaching at Peking University, saw for himself how fiercely Beijing's underground was alive. He felt this city's sound deserved to be heard by the world."
     },
     {
-      "zh": "他想帮那些还在象牙塔里的音乐天才。于是有了 D-22。",
-      "en": "He wanted to help the talent still inside the ivory tower. So there was D-22."
+      "zh": "他希望能够帮到那些尚且身处校园、富有天赋的音乐人，于是便有了 D22。",
+      "en": "He wanted to help the gifted players still on campus. So there was D22."
     },
     {
-      "zh": "这里很快成了高校乐队的天堂。",
-      "en": "It quickly became a heaven for campus bands."
+      "zh": "这里很快就成了校园乐队的乐土。",
+      "en": "It soon became a haven for campus bands."
     },
     {
-      "zh": "刺猬的子健那时还在北航。他记得演完一定喝酒，喝到天亮。他们叫这「坐穿馆」：把馆坐穿，再换个地方继续。",
-      "en": "Zijian of Hedgehog was still at Beihang. After the show they drank until morning. They called it zuo chuan guan: sit the place through, then move on and keep drinking."
+      "zh": "刺猬乐队的子健那时还在北航念书，他回忆，演出结束后大伙总要喝酒，常常畅饮到天亮。他们把这叫作「坐穿馆」：在酒馆待到打烊，再换个地方继续欢聚。",
+      "en": "Zijian of Hedgehog was still studying at Beihang. He remembers that after a show everyone drank, often until dawn. They called it zuo chuan guan: stay until the bar closes, then move on and keep the night going."
     },
     {
-      "zh": "Carsick Cars、Snapline 从这里走出去。Carsick Cars 还为 Sonic Youth 暖过场。",
-      "en": "Carsick Cars and Snapline came out of this room. Carsick Cars opened for Sonic Youth."
+      "zh": "Carsick Cars、Snapline 都是从这里走出来的乐队，Carsick Cars 还曾经为传奇乐队 Sonic Youth 担任暖场嘉宾。",
+      "en": "Carsick Cars and Snapline came out of this room. Carsick Cars once opened for Sonic Youth."
     },
     {
-      "zh": "酒并不特别。特别的是这间紧的屋子，和它不肯过滤的声音。",
-      "en": "The drinks were nothing special. The tight room was. So was the sound it refused to filter."
+      "zh": "店里的酒水并不算出彩。",
+      "en": "The drinks were nothing special."
+    },
+    {
+      "zh": "珍贵的，是这间拥挤的小屋，以及那些毫无修饰、赤诚纯粹的声响。",
+      "en": "What mattered was the crowded little room, and the sound left unadorned, plain and sincere."
     }
   ],
   "recordShop": [
     {
-      "zh": "唱片店是翻音乐的房间。黑胶和 CD 立在格子里，抽出来，就能听。",
-      "en": "A record shop is a room for flipping through music. Vinyl and CDs stand in the bins. Pull one out, and you can listen."
+      "zh": "您可以使用 WASD 移动，点击画面即可转动视角。",
+      "en": "Use WASD to move. Click the picture to turn your view."
     },
     {
-      "zh": "北京还有这样的店。独音唱片 2011 年开在鼓楼东大街，自己也做厂牌。痛仰、旅行团的片子从这里出去过。",
-      "en": "Beijing still has rooms like this. Duyin Records opened on Gulou East Street in 2011, and became a label. Miserable Faith and The Life Journey passed through here."
+      "zh": "唱片店，就是用来淘音乐的空间。黑胶唱片与 CD 整齐码放在格子之中，您抽出一张，就可以聆听它。",
+      "en": "A record shop is a room for hunting down music. Vinyl and CDs stand in the bins. Pull one out, and you can listen."
     },
     {
-      "zh": "福声更早。2002 年开在平安里，2018 年搬到冰窖口胡同。架子上是崔健、唐朝、黑豹，还有窦唯。",
-      "en": "Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves keep Cui Jian, Tang Dynasty, Black Panther, and Dou Wei."
+      "zh": "北京如今依旧留存着这样的小店：",
+      "en": "Beijing still keeps shops like this."
     },
     {
-      "zh": "你脚下这间，也是这种店。走两步看看。",
-      "en": "The room under your feet is that kind of shop. Take a couple of steps."
+      "zh": "独音唱片 2011 年开设于鼓楼东大街，同时也运营唱片厂牌，痛仰、旅行团都曾和它结缘；",
+      "en": "Duyin Records opened on Gulou East Street in 2011, and ran a label too. Miserable Faith and The Life Journey both passed through it."
+    },
+    {
+      "zh": "福声唱片的资历更老，2002 年落户平安里，2018 年搬迁至冰窖口胡同。货架之上陈列着崔健、唐朝、黑豹，还有窦唯的作品。",
+      "en": "Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves hold Cui Jian, Tang Dynasty, Black Panther, and Dou Wei."
+    },
+    {
+      "zh": "您此刻身处的，正是这样一间小店，不妨四处走走看一看。",
+      "en": "You are in a shop like that now. Walk around and have a look."
     }
   ],
   "hutong": [
     {
-      "zh": "酒还在嗓子里。胡同到了。先走到那扇门前。",
-      "en": "The drink is still in the throat. The hutong is here. Walk to the door first."
+      "zh": "酒意还萦绕在喉头，我们来到了胡同。还请您先移步到那扇门前。",
+      "en": "The drink is still in the throat. Here is the hutong. Please walk to that door first."
     }
   ],
   "door": [
@@ -63,239 +75,247 @@
       "en": "Full."
     },
     {
-      "zh": "有的 live house 会允许 jam。乐器在，空位在，谁都能坐下接一句。",
-      "en": "Some live houses allow a jam. The instruments are there, the empty chairs are there, anyone can sit in for a phrase."
+      "zh": "部分 Livehouse 会开放即兴 jam，乐器就位，空位尚存，任何人都可以上前参与合奏。",
+      "en": "Some livehouses open the floor for a jam. The instruments are set, a seat is free, and anyone can step in and play along."
     },
     {
-      "zh": "也有的在找人 gig。不是谁都能上。他们要某一件乐器的演奏者。吉他、鼓、贝斯，对上了，门才开。",
-      "en": "Others are looking for someone to gig. Not just anyone. They want a player of one particular instrument. Guitar, drums, bass. Match it, and the door opens."
+      "zh": "也有些场地在邀约乐手登台，并非人人都可上场。他们需要对应乐器的演奏者：吉他、鼓、贝斯，匹配到位，门才会为您敞开。",
+      "en": "Other rooms are inviting players onstage. Not everyone may go up. They need the player of one instrument: guitar, drums, bass. Match it, and the door opens."
     },
     {
-      "zh": "想进去，得有一点音乐素养，和一些胆量。",
-      "en": "To get in, you need a little musical literacy, and some balls."
+      "zh": "若想要入场，既需要些许音乐素养，也需要一份胆量。",
+      "en": "To get in, you need a little musical sense, and some nerve."
     }
   ],
   "pigeonTalk": [
     {
-      "zh": "天上有一群。捉住一只。尾巴上绑着哨。",
-      "en": "A flock is overhead. Catch one. There is a whistle tied to its tail."
+      "zh": "天上飞过一群鸽子，请您捉住其中一只，它的尾巴系着鸽哨。",
+      "en": "A flock is passing overhead. Catch one. A pigeon whistle is tied to its tail."
     },
     {
-      "zh": "老北京把鸽子养在房顶上。哨多半是个小葫芦，风一灌就响。",
-      "en": "Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind goes in, and it sounds."
+      "zh": "老北京习惯在房顶饲养鸽子，鸽哨大多是小小的葫芦，风灌入其中，便会发出鸣响。",
+      "en": "Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind pours in, and it sounds."
     },
     {
-      "zh": "不是一只在叫。一群飞过，每只哨不一样，合在一起，像城里的和弦。",
-      "en": "It is not one bird calling. A flock passes, each whistle different, and together they are a chord over the city."
+      "zh": "并非单只飞鸟在鸣叫，成群掠过之时，每一只的哨音各不相同，交织在一起，化作城市上空的和弦。",
+      "en": "It is not one bird calling. When the flock sweeps past, each whistle is different, and woven together they become a chord over the city."
     },
     {
-      "zh": "这声音和叫卖是一类。胡同不靠喇叭。靠翅膀，靠嗓子。",
-      "en": "This sound belongs with the vendor cries still to come. A hutong does not use a loudspeaker. It uses wings, and a voice."
+      "zh": "这份声响，和市井叫卖属于同一类。胡同不靠扩音喇叭，依靠的是飞鸟振翅，与人的嗓音。",
+      "en": "This sound belongs with the street cries. A hutong does not rely on a loudspeaker. It relies on wings, and on a human voice."
     }
   ],
   "cricketTalk": [
     {
-      "zh": "翻开草堆。里面有一只蛐蛐。",
-      "en": "Turn the grass pile over. There is a cricket inside."
+      "zh": "请您拨开草丛，里面藏着一只蛐蛐。",
+      "en": "Part the grass. A cricket is hiding inside."
     },
     {
-      "zh": "秋天的胡同靠这个。砖缝里、草里，捉回去，养在罐里。",
-      "en": "Autumn in the hutong runs on this. In the cracks of bricks, in the grass, you catch one and keep it in a jar."
+      "zh": "秋日胡同，少不了它的鸣唱。人们从砖缝、草丛中将它捕捉回来，养在陶罐之内。",
+      "en": "An autumn hutong is never without this song. People catch them from the cracks in the brick and from the grass, and keep them in a clay jar."
     },
     {
-      "zh": "斗蛐蛐不是闹着玩的名目。盆里两只，一根草棍撩一下，比的是那一口咬，还有叫。",
-      "en": "Cricket fighting is not a joke of a name. Two of them in a bowl, a tickle from a grass stem. What is weighed is the bite, and the song."
+      "zh": "斗蛐蛐可不是玩乐消遣。两只蛐蛐置于盆中，以草茎轻轻挑逗，比拼的是缠斗，也是鸣叫。",
+      "en": "Cricket fighting is not a pastime. Two of them in a bowl, a grass stem to tease them. What is weighed is the grapple, and the song."
     },
     {
-      "zh": "明清的人就这么听。宫廷里听，胡同里也听。一声细，比鸽哨更近，近到耳朵边上。",
-      "en": "People listened this way in the Ming and the Qing. In the court, and in the hutong. One thin note, closer than the pigeon whistle, right against the ear."
+      "zh": "明清时期人们便喜爱这般声响，宫廷之中听，胡同街巷也听。纤细的鸣音，比鸽哨更加贴近，仿佛就在耳畔。",
+      "en": "People loved this sound in the Ming and the Qing. They listened at court, and in the hutong lanes. A thin note, closer than the pigeon whistle, as if it were against the ear."
     }
   ],
   "grindTalk": [
     {
-      "zh": "胡同深处有人在喊。磨剪子嘞，戗菜刀。",
-      "en": "Someone is calling from deep in the hutong. Sharpen the scissors. Sharpen the knife."
+      "zh": "胡同深处传来吆喝：磨剪子嘞，戗菜刀。",
+      "en": "From deep in the hutong, a cry: sharpen the scissors, sharpen the knife."
     },
     {
-      "zh": "这是老北京的货声。人走过来，家里就把剪子和菜刀拿下去。",
-      "en": "This is an old Beijing vendor cry. The man comes through, and the house brings the scissors and the kitchen knife down."
+      "zh": "这是老北京传统的市井货声。匠人沿街走过，住户便会把剪刀菜刀拿出来打磨。",
+      "en": "This is an old Beijing street cry. The sharpener comes down the lane, and the houses bring out their scissors and kitchen knives."
     },
     {
-      "zh": "磨石，一点水，一下一下。喊本身就是乐器，让整条胡同知道：该磨了。",
-      "en": "A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole alley: time to sharpen."
+      "zh": "磨石沾水，一下一下往复打磨。吆喝本身便是乐器，告知整条街巷：可以打磨厨具了。",
+      "en": "A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole lane: time to sharpen."
     },
     {
-      "zh": "鸽哨在天上。蛐蛐在草里。这一声在路上。三件都是这儿的音乐。",
-      "en": "The pigeon whistle is in the sky. The cricket is in the grass. This cry is on the road. All three are the music of this place."
+      "zh": "鸽哨响彻天际，蛐蛐鸣于草丛，吆喝回荡在路上。这三者，都属于此地独有的音乐。",
+      "en": "The pigeon whistle fills the sky. The cricket sings in the grass. The cry hangs on the road. All three belong to this place alone."
     }
   ],
   "boss": [
     {
-      "zh": "吃了么您。着急去看演出？",
+      "zh": "吃了么您？是赶着去看演出吗？",
       "en": "Eaten yet? Rushing off to the show?"
     },
     {
-      "zh": "门口那帮人，演完没有不喝的。你先别走。",
-      "en": "The ones at the door, none of them leave a show sober. Don't go yet."
+      "zh": "门口那伙乐手，演出结束没有不喝上几杯的，还请您先别急着走。",
+      "en": "The players by the door, none of them leave a show without a few drinks. Don't hurry off."
     },
     {
-      "zh": "身后。刚给你搁上的。走之前拿一下。",
-      "en": "Behind you. I just set it out. Take it before you leave."
+      "zh": "东西就在您身后，我刚刚放置好的，离开前麻烦您记得拿上。",
+      "en": "It's behind you. I just set it down. Please take it before you go."
     }
   ],
   "wine": [
     {
-      "zh": "酒并不为了解渴。台上声音一大，人就需要一点东西把白天关掉。",
-      "en": "The drink is not for thirst. When the sound onstage gets big, people need something to switch the day off."
+      "zh": "酒，并非只为解渴。",
+      "en": "Drink is not only for thirst."
     },
     {
-      "zh": "尼采管这叫酒神。不是神话，是那一下边界松了，嗓子和身子一起往前冲。",
-      "en": "Nietzsche called it the Dionysian. Not the myth. The moment the edges loosen, and the voice and the body rush forward together."
+      "zh": "当台上的声响轰然响起，人们总需要一点慰藉，来消解白日里的种种纷扰。",
+      "en": "When the sound onstage breaks open, people need a little comfort, something to settle what the day stirred up."
     },
     {
-      "zh": "所以演出必喝酒。音量把情感放大，酒把放大按实，让它停在这间屋子里。",
-      "en": "So a show means drinking. Not for the crowd. The volume turns the feeling up. The drink holds it down, keeps it in the room."
+      "zh": "尼采将其称作酒神精神。这并非神话传说，而是那一刻内心边界逐渐松弛，人声与躯体，随同音乐一同释放。",
+      "en": "Nietzsche called it the Dionysian. Not a myth. The moment the inner edge loosens, and voice and body let go with the music."
     },
     {
-      "zh": "D-22 也是这样。演完坐穿馆，喝到天亮。酒是那场噪声还没散的时候，留下的那一口。",
-      "en": "D-22 was the same. After the set they sat the place through, and drank until morning. The drink is the mouthful left while the noise is still in the room."
+      "zh": "所以看完演出总少不了小酌。音量放大了情绪，酒水将这份感受稳稳承接，留存于这一方小屋之内。",
+      "en": "So a show is never without a drink. The volume turns the feeling up. The drink holds that feeling, and keeps it inside this small room."
     },
     {
-      "zh": "拿上。酒杯。这是你会的第二件事。",
-      "en": "Take the glass. This is the second thing you know."
+      "zh": "D22 也是这般光景。演出落幕便坐穿酒馆，饮酒直至拂晓。",
+      "en": "D22 was the same. When the set ended they sat the bar through, and drank until dawn."
+    },
+    {
+      "zh": "杯中这一口，正是噪音尚未消散之时，留给人们的余韵。",
+      "en": "This mouthful is the aftertaste left while the noise has not yet gone."
+    },
+    {
+      "zh": "还请您拿好酒杯，这是您要熟悉的第二件事。",
+      "en": "Take the glass. This is the second thing you will come to know."
     }
   ],
   "hutongAsk": {
-    "zh": "这儿有两种声音。哨和叫卖是人做的。蛐蛐那一声是它自己的。你觉得哪种更好？",
-    "en": "There are two kinds of sound here. The whistle and the vendor cry are made by people. The cricket's note is its own. Which do you think is better?",
+    "zh": "这里有两种声音：鸽哨与叫卖出自人手，蛐蛐的鸣叫源于它本身。请问您更偏爱哪一种？",
+    "en": "There are two kinds of sound here. The pigeon whistle and the vendor's cry are made by hand. The cricket's song is its own. Which do you prefer?",
     "choices": [
       {
         "zh": "人为",
         "en": "Made by people",
-        "note": "BGM：鸽哨和「磨剪子」靠前，磨石的一下一下变成拍子。蛐蛐被收进这个拍子里，不再自由叫。\n相机：抖动是有意的，像有人在取景。视野收到 56，转向稳，慢慢对准门、哨、那张嘴。\n后处理：边缘更锐，对比略高，颜色偏暖。天上的鸽子带一点光晕。"
+        "note": "BGM：鸽哨与叫卖声前置，磨刀石的声响化作节拍，蛐蛐鸣响融入节奏，不再肆意鸣叫。\n相机：带有刻意的手持抖动，视野收至 56，转向平稳，缓缓对准门、飞鸽、吆喝之人。\n后处理：边缘锐度提升，对比度略高，整体暖调，飞鸟带有淡淡光晕。"
       },
       {
         "zh": "自然",
         "en": "Natural",
-        "note": "BGM：翅膀扇动和蛐蛐在前，叫卖退到胡同那头。没有拍子，谁响谁算。\n相机：几乎不抖，人站着就行。视野放到 68，转向变慢，天空和草堆一起留在画面里。\n后处理：变软，饱和收一点，偏草木的绿。暗角很淡，光晕关掉。"
+        "note": "BGM：振翅声、蛐蛐鸣唱居于前景，叫卖声退至胡同远处，没有固定节拍，随心作响。\n相机：几乎无抖动，视野放宽至 68，转向舒缓，天空与草丛一同收纳进画面。\n后处理：画面质感柔和，饱和度降低，草木绿意，暗角浅淡，关闭光晕。"
       },
       {
         "zh": "都不喜欢",
         "en": "Neither",
-        "note": "BGM：哨、叫卖、蛐蛐一起退后。只剩墙和风，偶尔一声刺过来，马上又灭。\n相机：细碎地抖，停不住，也不往哪儿看。视野固定 60。\n后处理：颜色抽成灰，对比发硬，暗角收紧。画面清楚，但是不好看。"
+        "note": "BGM：鸽哨、叫卖、蛐蛐声一同远去，余下墙壁与风声，偶尔一声异响转瞬消散。\n相机：细碎不停抖动，没有明确注视方向，视野固定 60。\n后处理：色调偏向灰白，对比度硬朗，暗角收紧，画面清晰，却难言悦目。"
       }
     ]
   },
   "livehouse": [
     {
-      "zh": "Livehouse 是乐队站在你面前的房间。不是音乐厅。也不是顺便放歌的舞厅。",
-      "en": "A livehouse is a room where the band stands in front of you. Not a concert hall. Not a dance floor that happens to have songs."
+      "zh": "Livehouse，是乐队站在您面前表演的空间。它不是音乐厅，也并非顺带播放音乐的舞厅。",
+      "en": "A livehouse is a room where the band stands in front of you and plays. It is not a concert hall. It is not a dance hall that happens to have music on."
     },
     {
-      "zh": "酒吧演出也是这一晚，只是旁边还有个柜台。酒在，舞台也在。人是冲着台上的人来的。",
-      "en": "A bar show is the same night, with a counter beside it. The drinks are there, and so is the stage. People came for the people on it."
+      "zh": "酒吧里的演出亦是如此，一旁设有吧台，酒水与舞台同在。各位前来，都是为了台上的表演者。",
+      "en": "A show in a bar is the same night, with a counter beside it. The drinks are there, and so is the stage. Everyone came for the people on it."
     },
     {
-      "zh": "乐队文化就是几个人，几件乐器，一些还没写完的歌。订一场 gig，或者坐下接一段 jam。排练只算练习。在这间屋里演完，才算一支乐队。",
-      "en": "Band culture is a few people, a few instruments, songs that are not finished. Book a gig, or sit in for a jam. Practice is only practice. Play it through in this room, and it is a band."
+      "zh": "所谓乐队文化，便是几个人，几样乐器，若干尚未完成的作品。预约一场演出，或是坐下参与即兴合奏。排练仅仅只是练习，唯有在这样的场地完成表演，才算真正成就一支乐队。",
+      "en": "Band culture is a few people, a few instruments, songs that are not finished yet. Book a show, or sit in and play along. Rehearsal is only practice. Play it through in a room like this, and it is a band."
     },
     {
-      "zh": "2005 年的 D-22，就是坐落于北京的 CBGB （传奇livehouse）。",
-      "en": "D-22 in 2005 was the CBGB that stood in Beijing."
+      "zh": "2005 年的 D22，便是属于北京的 CBGB。",
+      "en": "D22 in 2005 was Beijing's CBGB."
     },
     {
-      "zh": "尽管资金不足，钱全花在音响设备上，难以照顾到电力系统和洗手间。常常演到一半停电，或者水漫金山。可 D-22 的派对从不因为简陋停下来。",
-      "en": "There was never enough money. What there was went into the sound system, not the power, and not the toilets. Shows died at half time when the lights went out, or the place flooded. The parties did not stop for the roughness."
+      "zh": "当年资金十分拮据，经费大多投入音响设备，电力系统与洗手间便无力顾及。演出时常中途断电，甚至出现积水漫溢。可 D22 的热闹，从不会因条件简陋就此停歇。",
+      "en": "Money was tight. Most of it went into the PA. The power and the toilets had to wait. Shows often died halfway when the lights went out, or when the water rose. The noise of D22 never stopped for the roughness."
     },
     {
-      "zh": "D-22 对乐手和乐迷都是乌托邦。Michael 创办的时候就没想过盈利。演出所得不是用来修音响，就是给了来演的乐手。来看的多半是口袋里没有几个子儿的高校学生，一场票价只在三十块到五十块。",
-      "en": "For players and for listeners, D-22 was a utopia. Michael did not found it to make money. What the door took went back into the PA, or to the bands who played. Most of the crowd were students with almost nothing in their pockets. A ticket was thirty to fifty kuai."
+      "zh": "对于乐手与乐迷而言，D22 是一处乌托邦。Michael 创办这里，本就不谋求盈利。演出收入，要么用于维护音响，要么交付登台的音乐人。到场的大多是囊中羞涩的高校学子，门票仅三十至五十元。",
+      "en": "For players and listeners, D22 was a utopia. Michael did not found it to make money. What the door took went back into the PA, or to the people who played. Most of the crowd were students with little in their pockets. A ticket was thirty to fifty yuan."
     },
     {
-      "zh": "对乐手和乐迷都友好，于是声名大噪。来演的多，来看的也多。到后来几乎场场爆满，十点半必须关门，限制入内。",
-      "en": "It was kind to both, and the name got loud. More bands came. More listeners came. In the end almost every night was full. At ten-thirty the door had to shut."
+      "zh": "善待乐手，也善待听众，它的名声就此传开。前来演出的乐队络绎不绝，观众也越来越多。后期几乎场场满座，十点半便必须闭店限流。",
+      "en": "Kind to the players, and kind to the listeners, the name traveled. Bands kept coming. The crowd kept growing. Later, almost every night was full. At ten-thirty the door had to shut."
     }
   ],
   "choice": {
-    "zh": "噪声已经把情感放大了。这一口，你要它怎样？",
-    "en": "The noise has already turned the feeling up. This mouthful. What do you want it to do?",
+    "zh": "噪音已然将情绪推至高点。喝下这一口，请问您希望带来怎样的感受？",
+    "en": "The noise has already pushed the feeling to its height. This mouthful. What do you want it to do?",
     "choices": [
       {
         "zh": "再放大",
         "en": "Turn it up again",
-        "note": "BGM：失真推高，鼓贴到耳朵上，旋律几乎被噪声盖住。\n相机：手持抖得明显，视野在 58 和 66 之间慢慢呼吸，转向更灵。\n后处理：光晕打开，对比拉高，颜色偏暖、偏红，边缘色散，暗角收紧。"
+        "note": "BGM：失真拉高，鼓点贴近耳畔，旋律几乎被噪音所覆盖。\n相机：手持抖动感明显，视野在 58-66 之间缓缓浮动，转向更为灵敏。\n后处理：开启光晕，拉高对比度，色调偏向暖红，边缘色散，暗角收紧。"
       },
       {
         "zh": "按在这间屋子里",
         "en": "Hold it in this room",
-        "note": "BGM：同一条曲子收干，房间声大过失真，低音稳住，像人还坐在馆里。\n相机：抖动很轻，视野固定在 60，转向变慢，一句镜头拉得很长。\n后处理：略微变锐，对比和饱和都收一点，暗角宽而淡，光晕关掉。"
+        "note": "BGM：乐曲收敛，房间环境声响大过失真，低音沉稳，仿佛您依旧安坐在酒馆之中。\n相机：抖动轻微，视野固定 60，转向节奏放缓，使用长镜头缓缓铺展画面。\n后处理：画面适度锐化，下调对比度与饱和度，暗角宽而柔和，关闭光晕。"
       },
       {
         "zh": "把白天关掉",
         "en": "Switch the day off",
-        "note": "BGM：鼓退到很远，混响变大，只剩低频和电流。\n相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。\n后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。"
+        "note": "BGM：鼓点向远处退去，混响增强，余下低频与电流的嗡鸣。\n相机：大多时候保持静止，偶尔剧烈晃动后骤然定格，视野收至 52。\n后处理：降低画面亮度，保留对比度，色调清冷寡淡，暗角浓重。"
       }
     ]
   },
   "band": [
     {
-      "zh": "一支乐队先有这三件。鼓、吉他、贝斯。歌手可以后上。这三件不齐，屋里就还是排练。",
-      "en": "A band starts with these three. Drums, guitar, bass. The singer can come later. Without the three, the room is still a practice."
+      "zh": "组建一支乐队，先要备齐三样乐器：鼓、吉他、贝斯。主唱可以后续加入。三者不全，那依旧只算是排练。",
+      "en": "To start a band, first gather three instruments: drums, guitar, bass. The singer can come later. Without all three, it is still only a rehearsal."
     }
   ],
   "drumTalk": [
     {
-      "zh": "鼓是时间。一下，房间就有了现在。",
-      "en": "The drum is time. One hit, and the room has a now."
+      "zh": "鼓掌管时间。一次敲击，整个空间便拥有了当下。",
+      "en": "The drum keeps the time. One strike, and the whole room has a now."
     },
     {
-      "zh": "它不负责旋律。它负责让所有人同时往前。胸腔先收到，耳朵后收到。",
-      "en": "It does not carry the tune. It makes everyone move forward together. The chest gets it first. The ear gets it after."
+      "zh": "它不承载旋律，让所有人同步向前。震动先抵达胸腔，之后才传入耳朵。",
+      "en": "It carries no melody. It moves everyone forward together. The vibration reaches the chest first, and the ear after."
     }
   ],
   "guitarTalk": [
     {
-      "zh": "吉他是空气里的那一层。和弦、噪声、一句还没唱出来的话。",
-      "en": "The guitar is the layer in the air. Chords, noise, a sentence that has not been sung yet."
+      "zh": "吉他是弥漫在空气之中的一层情绪。和弦、噪音，一句未曾唱出的心里话。",
+      "en": "The guitar is a layer of feeling hung in the air. Chords, noise, a sentence of the heart not yet sung."
     },
     {
-      "zh": "在这种房间里，它常常是失真的。干净的音色留在家里。上台，就要让墙也响。",
-      "en": "In a room like this, it is usually distorted. The clean tone stays at home. Onstage, the wall has to sound too."
+      "zh": "在这样的场地，吉他常常使用失真效果。干净音色留作私下练习，登上舞台，要让墙壁一同震颤共鸣。",
+      "en": "In a room like this the guitar is usually distorted. The clean tone stays for practice at home. Onstage, the walls have to shake with it."
     }
   ],
   "bassTalk": [
     {
-      "zh": "贝斯最低，也最容易被忘掉。把它拿掉，鼓还在敲，吉他还在响，歌却站不稳。",
-      "en": "The bass is the lowest, and the easiest to forget. Take it away, and the drum still hits, the guitar still rings, and the song cannot stand."
+      "zh": "贝斯音高最低，也最容易被忽略。若是去掉贝斯，鼓依旧敲打，吉他依旧鸣响，整首乐曲却摇摇欲坠。",
+      "en": "The bass is the lowest, and the easiest to miss. Take it away and the drums still hit, the guitar still rings, and the song cannot stand."
     },
     {
-      "zh": "它把鼓的时间和吉他的音拴在一起。你与其说听见它，不如说脚底下突然有了地。",
-      "en": "It ties the drum's time to the guitar's notes. You do not so much hear it as feel the floor appear under your feet."
+      "zh": "它把鼓的节奏和吉他的音符紧紧联结。与其说听见贝斯，不如说脚下切实感受到了根基。",
+      "en": "It binds the drum's time to the guitar's notes. You do not so much hear it as feel the floor under your feet."
     }
   ],
   "stage": [
     {
-      "zh": "三件齐了。走上这方小台。",
-      "en": "The three are here. Step onto this small stage."
+      "zh": "三大乐器已然就位，请您踏上这座小小的舞台。",
+      "en": "The three instruments are in place. Please step onto this small stage."
     },
     {
-      "zh": "灯一亮，这间屋子就不够用了。",
-      "en": "The light comes up, and this room is no longer enough."
+      "zh": "灯光亮起的那一刻，这间小屋，便快要承载不住奔涌的情绪。",
+      "en": "The moment the lights come up, this little room can barely hold the feeling rushing through it."
     }
   ],
   "chorus": [
     {
-      "zh": "灯打到脸上了。下一秒是一万人。可你还是你。",
-      "en": "The light is on your face. The next second is ten thousand people. You are still you."
+      "zh": "灯光落在您的脸上，恍惚间台下仿佛汇聚万人，可您依旧是您。",
+      "en": "The light falls on your face. For a moment it seems ten thousand people are gathered below. You are still you."
     },
     {
-      "zh": "你站上来，图的是什么？",
-      "en": "What did you step up here for?"
+      "zh": "请问您站上舞台，是为了什么？",
+      "en": "What did you come up here for?"
     }
   ],
   "chorusAsk": {
-    "zh": "你站上来，图的是什么？",
-    "en": "What did you step up here for?",
+    "zh": "请问您站上舞台，是为了什么？",
+    "en": "What did you come up here for?",
     "choices": [
       { "zh": "被记住", "en": "To be remembered" },
       { "zh": "把这一首唱完", "en": "To finish this song" },
@@ -304,73 +324,61 @@
   },
   "remembered": [
     {
-      "zh": "名字比屋子活得长。2012 年门关了，有些名字还在人嘴里走。你要的是这个。",
-      "en": "The name outlives the room. The door shut in 2012, and some names are still being passed around. This is what you want."
+      "zh": "名字可以比场地活得更久。2012 年酒吧关闭，可不少名字依旧被人们谈起，这便是您所求。",
+      "en": "A name can outlive the room. The bar closed in 2012, and still some names are spoken. This is what you want."
     }
   ],
   "finishSong": [
     {
-      "zh": "万人也好，三十个人也好。歌有开头，就该有结尾。你只要把它唱完。",
-      "en": "Ten thousand, or thirty. A song that starts ought to end. You only want to finish it."
+      "zh": "台下万人也好，区区三十人也罢。乐曲既然开启，便应当好好收尾，您只求完整唱完这一曲。",
+      "en": "Ten thousand below, or only thirty. A piece that has started ought to be brought to its end. You only want to sing this one through."
     }
   ],
   "unsure": [
     {
-      "zh": "很多人上台的时候并不知道。知道的是鼓已经在敲。先站着。",
-      "en": "A lot of people do not know when they step up. What they know is that the drum is already hitting. Stand here first."
+      "zh": "不少人登台之时也并无答案。只听见鼓点已然响起，不妨先站在这里。",
+      "en": "Plenty of people have no answer when they step up. What they hear is that the drum has already started. Stand here first."
     }
   ],
   "aftersong": [
     {
-      "zh": "最后一声落地。",
-      "en": "The last note lands."
+      "zh": "最后一个音符缓缓落下。",
+      "en": "The last note settles."
     },
     {
-      "zh": "歌唱完了。灯可以暗了。",
-      "en": "The song is finished. The lights can go down."
+      "zh": "一曲终了，灯光便可暗下。",
+      "en": "The song is over. The lights can go down."
     },
     {
-      "zh": "屋子回到原来的大小。装得下的，本来就这么多。",
+      "zh": "场地回归原本的模样，它所能容纳的，本就只有这么多。",
       "en": "The room goes back to its old size. It never held more than it could."
     },
     {
-      "zh": "2012 年它关了门。你今晚把它又开了一晚。",
-      "en": "It closed in 2012. Tonight you opened it for one more night."
+      "zh": "2012 年它已然闭店，今夜，承蒙您，让它再度迎来一夜喧嚣。",
+      "en": "It had already closed in 2012. Tonight, because of you, it has one more noisy night."
     },
     {
-      "zh": "去喝吧。坐穿了，再换个地方继续。",
-      "en": "Go drink. Sit the place through. Then move on, and keep going."
+      "zh": "还请前去举杯畅饮。在此尽兴，之后再去往别处，继续奔赴前路。",
+      "en": "Go and raise a glass. Drink this place through. Then go somewhere else, and keep on."
     }
   ],
   "credits": [
-    { "zh": "A Gift For D22", "en": "" },
+    { "zh": "A Gift For D22", "en": "A Gift For D22" },
     { "zh": "献给", "en": "For" },
-    { "zh": "D-22", "en": "" },
+    { "zh": "D-22", "en": "D-22" },
     { "zh": "五道口", "en": "Wudaokou" },
-    { "zh": "Michael", "en": "" },
-    { "zh": "把钱花在音响上的那个人", "en": "The one who put the money into the PA" },
+    { "zh": "Michael", "en": "Michael" },
+    { "zh": "那位把经费尽数投入音响设备的人", "en": "The one who put all the money into the PA" },
     { "zh": "No-Beijing", "en": "No-Beijing" },
-    { "zh": "以及所有三十块到五十块走进来的人", "en": "And everyone who walked in for thirty to fifty quid" },
-    { "zh": "乐手们", "en": "Performers" },
-    { "zh": "这一晚", "en": "Tonight" },
-    { "zh": "唱片店", "en": "The record shop" },
-    { "zh": "酒", "en": "The drink" },
-    { "zh": "胡同", "en": "The hutong" },
-    { "zh": "鸽哨", "en": "The pigeon whistle" },
-    { "zh": "蛐蛐", "en": "The cricket" },
-    { "zh": "磨剪子嘞，戗菜刀", "en": "The knife-sharpener's cry" },
-    { "zh": "鼓", "en": "Drums" },
-    { "zh": "吉他", "en": "Guitar" },
-    { "zh": "贝斯", "en": "Bass" },
-    { "zh": "你", "en": "You" }
+    { "zh": "以及每一位花三十至五十元前来的诸位", "en": "And everyone who came in for thirty to fifty yuan" }
   ],
   "abilities": [
-    { "id": "drink", "title": "喝酒", "caption": "点击倾倒", "zh": "情感放大器。莫贪杯哦。", "en": "Emotion amplifier. Try not to overdose." },
-    { "id": "cricket", "title": "蛐蛐", "caption": "点击唤叫", "zh": "胡同夜里还在叫。一笼子虫，能把夏天留下来。", "en": "The hutong still sings at night. One cage can keep the summer." },
-    { "id": "pigeon", "title": "鸽哨", "caption": "拖动盘旋", "zh": "鸽哨不是鸟叫。是风穿过竹哨，从天上划过来。", "en": "A pigeon whistle is not a bird. Wind through bamboo, drawn across the sky." },
-    { "id": "scissors", "title": "磨剪子", "caption": "来回推磨", "zh": "磨剪子嘞，戗菜刀。巷口那一声，人就知道谁来了。", "en": "Scissors, knives. That street call tells you who has arrived." },
-    { "id": "guitar", "title": "吉他", "caption": "拨弦 / 扫弦", "zh": "先拨一下。空弦也是一句。", "en": "Pluck it once. An open string is already a line." },
-    { "id": "bass", "title": "贝斯", "caption": "按住拨弦", "zh": "低音贴着地板走。按住，让它停在这间屋子里。", "en": "The low end walks the floor. Hold it, and keep it in the room." },
-    { "id": "drums", "title": "鼓", "caption": "点击敲击", "zh": "鼓点把房间的心跳敲实。", "en": "The drums put a heartbeat under the room." }
+    { "id": "drink", "title": "喝酒", "caption": "点击倾倒", "zh": "情绪放大器，还请您切莫贪杯。", "en": "An amplifier for feeling. Please don't drink past your limit." },
+    { "id": "cricket", "title": "蛐蛐", "caption": "点击唤叫", "zh": "请您拨开草丛，里面藏着一只蛐蛐。", "en": "Part the grass. A cricket is hiding inside." },
+    { "id": "pigeon", "title": "鸽哨", "caption": "拖动盘旋", "zh": "天上飞过一群鸽子，请您捉住其中一只，它的尾巴系着鸽哨。", "en": "A flock is passing overhead. Catch one. A pigeon whistle is tied to its tail." },
+    { "id": "scissors", "title": "磨剪子", "caption": "来回推磨", "zh": "胡同深处传来吆喝：磨剪子嘞，戗菜刀。", "en": "From deep in the hutong, a cry: sharpen the scissors, sharpen the knife." },
+    { "id": "guitar", "title": "吉他", "caption": "拨弦 / 扫弦", "zh": "吉他是弥漫在空气之中的一层情绪。和弦、噪音，一句未曾唱出的心里话。", "en": "The guitar is a layer of feeling hung in the air. Chords, noise, a sentence of the heart not yet sung." },
+    { "id": "bass", "title": "贝斯", "caption": "按住拨弦", "zh": "贝斯音高最低，也最容易被忽略。与其说听见它，不如说脚下切实感受到了根基。", "en": "The bass is the lowest, and the easiest to miss. You do not so much hear it as feel the floor under your feet." },
+    { "id": "drums", "title": "鼓", "caption": "点击敲击", "zh": "鼓掌管时间。一次敲击，整个空间便拥有了当下。", "en": "The drum keeps the time. One strike, and the whole room has a now." }
   ]
 }

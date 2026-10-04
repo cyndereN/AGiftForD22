@@ -1,381 +1,366 @@
-致敬 D22 与 No Beijing 时代
-一款结合娄烨粗粝手持摄像、相米慎二长镜头流动感与地下噪声摇滚律动的增量式声音漫游与混音解谜游戏。
-The best place for punk music in Beijing. Located in Wudaokou D22 (Chinese Name: D22酒吧) is an eclectic place with a clear mission - to bring real, raw, and unfiltered quality to its audiences whether it be in the form of punk, jazz, experimental noise metal, or weekly film screenings. Though the drinks are nothing special, D-22's tight community and commitment to local music doubtlessly are.
-The D-22 bar is a venue frequented by serious music fans of all ages. The owners have experience running clubs all over the world and are serious about music and film.
+# 致敬 D22 与 No Beijing 时代
+# For D22, and the No Beijing years
 
+（娄烨式粗粝手持镜头 + 相米慎二流动长镜头 + 地下噪音摇滚律动，沉浸式声音漫游 + 混音解谜）
+(A rough handheld camera after Lou Ye, a drifting long take after Somai Shinji, the pulse of underground noise rock. A walk through sound, and a mix you solve.)
 
-开场
+## 开场
+## Opening
 
-五道口。高校围着的街上，有一间叫 D-22 的房间。
-Wudaokou. On a street ringed by colleges, a room called D-22.
+五道口，被一圈高校环绕的街上，坐落着一间名叫 D22 的小酒吧。
+Wudaokou. On a street ringed by universities, a small bar called D22.
 
-2012 年它关了门。名字没有一起关掉，还在人嘴里走。
-It closed in 2012. The name did not. It is still being passed around.
+它在 2012 年正式歇业，不过这个名字，至今仍被大家口口相传。
+It closed for good in 2012. The name, though, is still passed from mouth to mouth.
 
-在北大教书的 Michael，看见当时北京活跃的地下乐手，觉得这座城市正在变成世界要听见的地方。
-Michael, teaching at Peking University, saw how alive the underground was, and thought the city was turning into a place the world would have to hear.
+当年在北大任教的 Michael，亲眼见证了北京地下音乐圈蓬勃的生命力。他觉得，这座城市的声音，理应被全世界听见。
+Michael, then teaching at Peking University, saw for himself how fiercely Beijing's underground was alive. He felt this city's sound deserved to be heard by the world.
 
-他想帮那些还在象牙塔里的音乐天才。于是有了 D-22。
-He wanted to help the talent still inside the ivory tower. So there was D-22.
+他希望能够帮到那些尚且身处校园、富有天赋的音乐人，于是便有了 D22。
+He wanted to help the gifted players still on campus. So there was D22.
 
-这里很快成了高校乐队的天堂。
-It quickly became a heaven for campus bands.
+这里很快就成了校园乐队的乐土。
+It soon became a haven for campus bands.
 
-刺猬的子健那时还在北航。他记得演完一定喝酒，喝到天亮。他们叫这「坐穿馆」：把馆坐穿，再换个地方继续。
-Zijian of Hedgehog was still at Beihang. After the show they drank until morning. They called it zuo chuan guan: sit the place through, then move on and keep drinking.
+刺猬乐队的子健那时还在北航念书，他回忆，演出结束后大伙总要喝酒，常常畅饮到天亮。他们把这叫作「坐穿馆」：在酒馆待到打烊，再换个地方继续欢聚。
+Zijian of Hedgehog was still studying at Beihang. He remembers that after a show everyone drank, often until dawn. They called it zuo chuan guan: stay until the bar closes, then move on and keep the night going.
 
-Carsick Cars、Snapline 从这里走出去。Carsick Cars 还为 Sonic Youth 暖过场。
-Carsick Cars and Snapline came out of this room. Carsick Cars opened for Sonic Youth.
+Carsick Cars、Snapline 都是从这里走出来的乐队，Carsick Cars 还曾经为传奇乐队 Sonic Youth 担任暖场嘉宾。
+Carsick Cars and Snapline came out of this room. Carsick Cars once opened for Sonic Youth.
 
-酒并不特别。特别的是这间紧的屋子，和它不肯过滤的声音。
-The drinks were nothing special. The tight room was. So was the sound it refused to filter.
+店里的酒水并不算出彩。
+The drinks were nothing special.
 
-唱片店
+珍贵的，是这间拥挤的小屋，以及那些毫无修饰、赤诚纯粹的声响。
+What mattered was the crowded little room, and the sound left unadorned, plain and sincere.
 
-唱片店
-Record Shop
-现在可以用 WASD 移动
+## 唱片店
+## The record shop
 
-唱片店是翻音乐的房间。黑胶和 CD 立在格子里，抽出来，就能听。
-A record shop is a room for flipping through music. Vinyl and CDs stand in the bins. Pull one out, and you can listen.
+您可以使用 WASD 移动，点击画面即可转动视角。
+Use WASD to move. Click the picture to turn your view.
 
-北京还有这样的店。独音唱片 2011 年开在鼓楼东大街，自己也做厂牌。痛仰、旅行团的片子从这里出去过。
-Beijing still has rooms like this. Duyin Records opened on Gulou East Street in 2011, and became a label. Miserable Faith and The Life Journey passed through here.
+唱片店，就是用来淘音乐的空间。黑胶唱片与 CD 整齐码放在格子之中，您抽出一张，就可以聆听它。
+A record shop is a room for hunting down music. Vinyl and CDs stand in the bins. Pull one out, and you can listen.
 
-福声更早。2002 年开在平安里，2018 年搬到冰窖口胡同。架子上是崔健、唐朝、黑豹，还有窦唯。
-Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves keep Cui Jian, Tang Dynasty, Black Panther, and Dou Wei.
+北京如今依旧留存着这样的小店：
+Beijing still keeps shops like this.
 
-你脚下这间，也是这种店。走两步看看。
-The room under your feet is that kind of shop. Take a couple of steps.
+独音唱片 2011 年开设于鼓楼东大街，同时也运营唱片厂牌，痛仰、旅行团都曾和它结缘；
+Duyin Records opened on Gulou East Street in 2011, and ran a label too. Miserable Faith and The Life Journey both passed through it.
 
-现在可以用 WASD 移动 · 点击画面转向
-点击画面转向 · WASD 自由移动
+福声唱片的资历更老，2002 年落户平安里，2018 年搬迁至冰窖口胡同。货架之上陈列着崔健、唐朝、黑豹，还有窦唯的作品。
+Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves hold Cui Jian, Tang Dynasty, Black Panther, and Dou Wei.
 
-老板
+您此刻身处的，正是这样一间小店，不妨四处走走看一看。
+You are in a shop like that now. Walk around and have a look.
 
-吃了么您。着急去看演出？
+### 老板
+### The owner
+
+吃了么您？是赶着去看演出吗？
 Eaten yet? Rushing off to the show?
 
-门口那帮人，演完没有不喝的。你先别走。
-The ones at the door, none of them leave a show sober. Don't go yet.
+门口那伙乐手，演出结束没有不喝上几杯的，还请您先别急着走。
+The players by the door, none of them leave a show without a few drinks. Don't hurry off.
 
-身后。刚给你搁上的。走之前拿一下。
-Behind you. I just set it out. Take it before you leave.
+东西就在您身后，我刚刚放置好的，离开前麻烦您记得拿上。
+It's behind you. I just set it down. Please take it before you go.
 
-酒
+## 酒
+## The drink
 
-酒并不为了解渴。台上声音一大，人就需要一点东西把白天关掉。
-The drink is not for thirst. When the sound onstage gets big, people need something to switch the day off.
+酒，并非只为解渴。
+Drink is not only for thirst.
 
-尼采管这叫酒神。不是神话，是那一下边界松了，嗓子和身子一起往前冲。
-Nietzsche called it the Dionysian. Not the myth. The moment the edges loosen, and the voice and the body rush forward together.
+当台上的声响轰然响起，人们总需要一点慰藉，来消解白日里的种种纷扰。
+When the sound onstage breaks open, people need a little comfort, something to settle what the day stirred up.
 
-所以演出必喝酒。音量把情感放大，酒把放大按实，让它停在这间屋子里。
-So a show means drinking. Not for the crowd. The volume turns the feeling up. The drink holds it down, keeps it in the room.
+尼采将其称作酒神精神。这并非神话传说，而是那一刻内心边界逐渐松弛，人声与躯体，随同音乐一同释放。
+Nietzsche called it the Dionysian. Not a myth. The moment the inner edge loosens, and voice and body let go with the music.
 
-D-22 也是这样。演完坐穿馆，喝到天亮。酒是那场噪声还没散的时候，留下的那一口。
-D-22 was the same. After the set they sat the place through, and drank until morning. The drink is the mouthful left while the noise is still in the room.
+所以看完演出总少不了小酌。音量放大了情绪，酒水将这份感受稳稳承接，留存于这一方小屋之内。
+So a show is never without a drink. The volume turns the feeling up. The drink holds that feeling, and keeps it inside this small room.
 
-拿上。酒杯。这是你会的第二件事。
-Take the glass. This is the second thing you know.
+D22 也是这般光景。演出落幕便坐穿酒馆，饮酒直至拂晓。
+D22 was the same. When the set ended they sat the bar through, and drank until dawn.
 
-酒杯交互
+杯中这一口，正是噪音尚未消散之时，留给人们的余韵。
+This mouthful is the aftertaste left while the noise has not yet gone.
 
-情感放大器。莫贪杯哦。
-Emotion amplifier. Try not to overdose.
+还请您拿好酒杯，这是您要熟悉的第二件事。
+Take the glass. This is the second thing you will come to know.
 
-问
+### 酒杯交互
+### The glass
 
-噪声已经把情感放大了。这一口，你要它怎样？
-The noise has already turned the feeling up. This mouthful. What do you want it to do?
+情绪放大器，还请您切莫贪杯。
+An amplifier for feeling. Please don't drink past your limit.
 
-再放大
-Turn it up again
-BGM：失真推高，鼓贴到耳朵上，旋律几乎被噪声盖住。
-相机：手持抖得明显，视野在 58 和 66 之间慢慢呼吸，转向更灵。
-后处理：光晕打开，对比拉高，颜色偏暖、偏红，边缘色散，暗角收紧。
+### 问
+### The question
 
-按在这间屋子里
-Hold it in this room
-BGM：同一条曲子收干，房间声大过失真，低音稳住，像人还坐在馆里。
-相机：抖动很轻，视野固定在 60，转向变慢，一句镜头拉得很长。
-后处理：略微变锐，对比和饱和都收一点，暗角宽而淡，光晕关掉。
+噪音已然将情绪推至高点。喝下这一口，请问您希望带来怎样的感受？
+The noise has already pushed the feeling to its height. This mouthful. What do you want it to do?
 
-把白天关掉
-Switch the day off
-BGM：鼓退到很远，混响变大，只剩低频和电流。
-相机：大多时候不动，偶尔猛晃一下再停住，视野收到 52。
-后处理：亮度压低，对比仍在，颜色抽得很淡、偏冷，暗角很重。
+- **再放大**
+- **Turn it up again**
+BGM：失真拉高，鼓点贴近耳畔，旋律几乎被噪音所覆盖；
+The mix: distortion pushed up, the drums against the ear, the tune almost buried in noise.
+相机：手持抖动感明显，视野在 58‑66 之间缓缓浮动，转向更为灵敏；
+The camera: a clear handheld shake, the view breathing between 58 and 66, the turn more quick.
+后处理：开启光晕，拉高对比度，色调偏向暖红，边缘色散，暗角收紧。
+The picture: bloom on, contrast up, a warm red cast, color fringing at the edges, the vignette pulled tight.
 
-胡同口
+- **按在这间屋子里**
+- **Hold it in this room**
+BGM：乐曲收敛，房间环境声响大过失真，低音沉稳，仿佛您依旧安坐在酒馆之中；
+The mix: the song dries out, the room louder than the distortion, the low end steady, as if you were still sitting in the bar.
+相机：抖动轻微，视野固定 60，转向节奏放缓，使用长镜头缓缓铺展画面；
+The camera: a light shake, the view held at 60, the turn slowed, a long take laying the picture out.
+后处理：画面适度锐化，下调对比度与饱和度，暗角宽而柔和，关闭光晕。
+The picture: a little sharper, contrast and saturation down, a wide soft vignette, bloom off.
 
-酒还在嗓子里。胡同到了。先走到那扇门前。
-The drink is still in the throat. The hutong is here. Walk to the door first.
+- **把白天关掉**
+- **Switch the day off**
+BGM：鼓点向远处退去，混响增强，余下低频与电流的嗡鸣；
+The mix: the drums retreat, the reverb grows, what remains is low end and the hum of current.
+相机：大多时候保持静止，偶尔剧烈晃动后骤然定格，视野收至 52；
+The camera: still most of the time, then one hard shake and a sudden hold, the view pulled in to 52.
+后处理：降低画面亮度，保留对比度，色调清冷寡淡，暗角浓重。
+The picture: darker, the contrast kept, a cold thin color, a heavy vignette.
 
-门
+## 胡同口
+## The mouth of the hutong
+
+酒意还萦绕在喉头，我们来到了胡同。还请您先移步到那扇门前。
+The drink is still in the throat. Here is the hutong. Please walk to that door first.
+
+### 门
+### The door
 
 已满。
 Full.
 
-有的 live house 会允许 jam。乐器在，空位在，谁都能坐下接一句。
-Some live houses allow a jam. The instruments are there, the empty chairs are there, anyone can sit in for a phrase.
+部分 Livehouse 会开放即兴 jam，乐器就位，空位尚存，任何人都可以上前参与合奏。
+Some livehouses open the floor for a jam. The instruments are set, a seat is free, and anyone can step in and play along.
 
-也有的在找人 gig。不是谁都能上。他们要某一件乐器的演奏者。吉他、鼓、贝斯，对上了，门才开。
-Others are looking for someone to gig. Not just anyone. They want a player of one particular instrument. Guitar, drums, bass. Match it, and the door opens.
+也有些场地在邀约乐手登台，并非人人都可上场。他们需要对应乐器的演奏者：吉他、鼓、贝斯，匹配到位，门才会为您敞开。
+Other rooms are inviting players onstage. Not everyone may go up. They need the player of one instrument: guitar, drums, bass. Match it, and the door opens.
 
-想进去，得有一点音乐素养，和一些胆量。
-To get in, you need a little musical literacy, and some balls.
+若想要入场，既需要些许音乐素养，也需要一份胆量。
+To get in, you need a little musical sense, and some nerve.
 
-鸽子
+### 鸽子
+### The pigeons
 
-天上有一群。捉住一只。尾巴上绑着哨。
-A flock is overhead. Catch one. There is a whistle tied to its tail.
+天上飞过一群鸽子，请您捉住其中一只，它的尾巴系着鸽哨。
+A flock is passing overhead. Catch one. A pigeon whistle is tied to its tail.
 
-老北京把鸽子养在房顶上。哨多半是个小葫芦，风一灌就响。
-Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind goes in, and it sounds.
+老北京习惯在房顶饲养鸽子，鸽哨大多是小小的葫芦，风灌入其中，便会发出鸣响。
+Old Beijing kept pigeons on the roof. The whistle is usually a little gourd. Wind pours in, and it sounds.
 
-不是一只在叫。一群飞过，每只哨不一样，合在一起，像城里的和弦。
-It is not one bird calling. A flock passes, each whistle different, and together they are a chord over the city.
+并非单只飞鸟在鸣叫，成群掠过之时，每一只的哨音各不相同，交织在一起，化作城市上空的和弦。
+It is not one bird calling. When the flock sweeps past, each whistle is different, and woven together they become a chord over the city.
 
-这声音和叫卖是一类。胡同不靠喇叭。靠翅膀，靠嗓子。
-This sound belongs with the vendor cries still to come. A hutong does not use a loudspeaker. It uses wings, and a voice.
+这份声响，和市井叫卖属于同一类。胡同不靠扩音喇叭，依靠的是飞鸟振翅，与人的嗓音。
+This sound belongs with the street cries. A hutong does not rely on a loudspeaker. It relies on wings, and on a human voice.
 
-蛐蛐
+### 蛐蛐
+### The cricket
 
-翻开草堆。里面有一只蛐蛐。
-Turn the grass pile over. There is a cricket inside.
+请您拨开草丛，里面藏着一只蛐蛐。
+Part the grass. A cricket is hiding inside.
 
-秋天的胡同靠这个。砖缝里、草里，捉回去，养在罐里。
-Autumn in the hutong runs on this. In the cracks of bricks, in the grass, you catch one and keep it in a jar.
+秋日胡同，少不了它的鸣唱。人们从砖缝、草丛中将它捕捉回来，养在陶罐之内。
+An autumn hutong is never without this song. People catch them from the cracks in the brick and from the grass, and keep them in a clay jar.
 
-斗蛐蛐不是闹着玩的名目。盆里两只，一根草棍撩一下，比的是那一口咬，还有叫。
-Cricket fighting is not a joke of a name. Two of them in a bowl, a tickle from a grass stem. What is weighed is the bite, and the song.
+斗蛐蛐可不是玩乐消遣。两只蛐蛐置于盆中，以草茎轻轻挑逗，比拼的是缠斗，也是鸣叫。
+Cricket fighting is not a pastime. Two of them in a bowl, a grass stem to tease them. What is weighed is the grapple, and the song.
 
-明清的人就这么听。宫廷里听，胡同里也听。一声细，比鸽哨更近，近到耳朵边上。
-People listened this way in the Ming and the Qing. In the court, and in the hutong. One thin note, closer than the pigeon whistle, right against the ear.
+明清时期人们便喜爱这般声响，宫廷之中听，胡同街巷也听。纤细的鸣音，比鸽哨更加贴近，仿佛就在耳畔。
+People loved this sound in the Ming and the Qing. They listened at court, and in the hutong lanes. A thin note, closer than the pigeon whistle, as if it were against the ear.
 
-磨剪子磨刀
+### 磨剪子磨刀
+### Sharpening scissors, sharpening knives
 
-胡同深处有人在喊。磨剪子嘞，戗菜刀。
-Someone is calling from deep in the hutong. Sharpen the scissors. Sharpen the knife.
+胡同深处传来吆喝：磨剪子嘞，戗菜刀。
+From deep in the hutong, a cry: sharpen the scissors, sharpen the knife.
 
-这是老北京的货声。人走过来，家里就把剪子和菜刀拿下去。
-This is an old Beijing vendor cry. The man comes through, and the house brings the scissors and the kitchen knife down.
+这是老北京传统的市井货声。匠人沿街走过，住户便会把剪刀菜刀拿出来打磨。
+This is an old Beijing street cry. The sharpener comes down the lane, and the houses bring out their scissors and kitchen knives.
 
-磨石，一点水，一下一下。喊本身就是乐器，让整条胡同知道：该磨了。
-A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole alley: time to sharpen.
+磨石沾水，一下一下往复打磨。吆喝本身便是乐器，告知整条街巷：可以打磨厨具了。
+A whetstone, a little water, stroke after stroke. The cry itself is the instrument. It tells the whole lane: time to sharpen.
 
-鸽哨在天上。蛐蛐在草里。这一声在路上。三件都是这儿的音乐。
-The pigeon whistle is in the sky. The cricket is in the grass. This cry is on the road. All three are the music of this place.
+鸽哨响彻天际，蛐蛐鸣于草丛，吆喝回荡在路上。这三者，都属于此地独有的音乐。
+The pigeon whistle fills the sky. The cricket sings in the grass. The cry hangs on the road. All three belong to this place alone.
 
-问
+### 问
+### The question
 
-这儿有两种声音。哨和叫卖是人做的。蛐蛐那一声是它自己的。你觉得哪种更好？
-There are two kinds of sound here. The whistle and the vendor cry are made by people. The cricket's note is its own. Which do you think is better?
+这里有两种声音：鸽哨与叫卖出自人手，蛐蛐的鸣叫源于它本身。请问您更偏爱哪一种？
+There are two kinds of sound here. The pigeon whistle and the vendor's cry are made by hand. The cricket's song is its own. Which do you prefer?
 
-人为
-Made by people
-BGM：鸽哨和「磨剪子」靠前，磨石的一下一下变成拍子。蛐蛐被收进这个拍子里，不再自由叫。
-相机：抖动是有意的，像有人在取景。视野收到 56，转向稳，慢慢对准门、哨、那张嘴。
-后处理：边缘更锐，对比略高，颜色偏暖。天上的鸽子带一点光晕。
+- **人为**
+- **Made by people**
+BGM：鸽哨与叫卖声前置，磨刀石的声响化作节拍，蛐蛐鸣响融入节奏，不再肆意鸣叫；
+The mix: pigeon whistle and the cry in front, the whetstone turned into a beat, the cricket folded into that beat, no longer calling as it pleases.
+相机：带有刻意的手持抖动，视野收至 56，转向平稳，缓缓对准门、飞鸽、吆喝之人；
+The camera: a deliberate handheld shake, the view pulled to 56, the turn steady, slowly finding the door, the birds, the crier.
+后处理：边缘锐度提升，对比度略高，整体暖调，飞鸟带有淡淡光晕。
+The picture: sharper edges, a little more contrast, a warm cast, a faint bloom on the birds.
 
-自然
-Natural
-BGM：翅膀扇动和蛐蛐在前，叫卖退到胡同那头。没有拍子，谁响谁算。
-相机：几乎不抖，人站着就行。视野放到 68，转向变慢，天空和草堆一起留在画面里。
-后处理：变软，饱和收一点，偏草木的绿。暗角很淡，光晕关掉。
+- **自然**
+- **Natural**
+BGM：振翅声、蛐蛐鸣唱居于前景，叫卖声退至胡同远处，没有固定节拍，随心作响；
+The mix: wings and the cricket in front, the cry fallen back down the hutong, no fixed beat, each sound as it comes.
+相机：几乎无抖动，视野放宽至 68，转向舒缓，天空与草丛一同收纳进画面；
+The camera: almost no shake, the view opened to 68, the turn unhurried, sky and grass held in the same frame.
+后处理：画面质感柔和，饱和度降低，草木绿意，暗角浅淡，关闭光晕。
+The picture: soft, saturation down, a green of grass and leaves, a pale vignette, bloom off.
 
-都不喜欢
-Neither
-BGM：哨、叫卖、蛐蛐一起退后。只剩墙和风，偶尔一声刺过来，马上又灭。
-相机：细碎地抖，停不住，也不往哪儿看。视野固定 60。
-后处理：颜色抽成灰，对比发硬，暗角收紧。画面清楚，但是不好看。
+- **都不喜欢**
+- **Neither**
+BGM：鸽哨、叫卖、蛐蛐声一同远去，余下墙壁与风声，偶尔一声异响转瞬消散；
+The mix: whistle, cry, and cricket all recede. Walls and wind remain. Now and then a stray sound, gone at once.
+相机：细碎不停抖动，没有明确注视方向，视野固定 60；
+The camera: a fine shake that will not stop, no clear thing to look at, the view fixed at 60.
+后处理：色调偏向灰白，对比度硬朗，暗角收紧，画面清晰，却难言悦目。
+The picture: a gray-white cast, hard contrast, the vignette tight. Clear, and not pleasant to look at.
 
-Livehouse
+## Livehouse
 
-Livehouse 是乐队站在你面前的房间。不是音乐厅。也不是顺便放歌的舞厅。
-A livehouse is a room where the band stands in front of you. Not a concert hall. Not a dance floor that happens to have songs. 
+Livehouse，是乐队站在您面前表演的空间。它不是音乐厅，也并非顺带播放音乐的舞厅。
+A livehouse is a room where the band stands in front of you and plays. It is not a concert hall. It is not a dance hall that happens to have music on.
 
-酒吧演出也是这一晚，只是旁边还有个柜台。酒在，舞台也在。人是冲着台上的人来的。
-A bar show is the same night, with a counter beside it. The drinks are there, and so is the stage. People came for the people on it.
+酒吧里的演出亦是如此，一旁设有吧台，酒水与舞台同在。各位前来，都是为了台上的表演者。
+A show in a bar is the same night, with a counter beside it. The drinks are there, and so is the stage. Everyone came for the people on it.
 
-乐队文化就是几个人，几件乐器，一些还没写完的歌。订一场 gig，或者坐下接一段 jam。排练只算练习。在这间屋里演完，才算一支乐队。
-Band culture is a few people, a few instruments, songs that are not finished. Book a gig, or sit in for a jam. Practice is only practice. Play it through in this room, and it is a band.
+所谓乐队文化，便是几个人，几样乐器，若干尚未完成的作品。预约一场演出，或是坐下参与即兴合奏。排练仅仅只是练习，唯有在这样的场地完成表演，才算真正成就一支乐队。
+Band culture is a few people, a few instruments, songs that are not finished yet. Book a show, or sit in and play along. Rehearsal is only practice. Play it through in a room like this, and it is a band.
 
-2005 年的 D-22，就是坐落于北京的 CBGB （传奇livehouse）。
-D-22 in 2005 was the CBGB that stood in Beijing.
+2005 年的 D22，便是属于北京的 CBGB。
+D22 in 2005 was Beijing's CBGB.
 
-尽管资金不足，钱全花在音响设备上，难以照顾到电力系统和洗手间。常常演到一半停电，或者水漫金山。可 D-22 的派对从不因为简陋停下来。
-There was never enough money. What there was went into the sound system, not the power, and not the toilets. Shows died at half time when the lights went out, or the place flooded. The parties did not stop for the roughness.
+当年资金十分拮据，经费大多投入音响设备，电力系统与洗手间便无力顾及。演出时常中途断电，甚至出现积水漫溢。可 D22 的热闹，从不会因条件简陋就此停歇。
+Money was tight. Most of it went into the PA. The power and the toilets had to wait. Shows often died halfway when the lights went out, or when the water rose. The noise of D22 never stopped for the roughness.
 
-D-22 对乐手和乐迷都是乌托邦。Michael 创办的时候就没想过盈利。演出所得不是用来修音响，就是给了来演的乐手。来看的多半是口袋里没有几个子儿的高校学生，一场票价只在三十块到五十块。
-For players and for listeners, D-22 was a utopia. Michael did not found it to make money. What the door took went back into the PA, or to the bands who played. Most of the crowd were students with almost nothing in their pockets. A ticket was thirty to fifty kuai.
+对于乐手与乐迷而言，D22 是一处乌托邦。Michael 创办这里，本就不谋求盈利。演出收入，要么用于维护音响，要么交付登台的音乐人。到场的大多是囊中羞涩的高校学子，门票仅三十至五十元。
+For players and listeners, D22 was a utopia. Michael did not found it to make money. What the door took went back into the PA, or to the people who played. Most of the crowd were students with little in their pockets. A ticket was thirty to fifty yuan.
 
-对乐手和乐迷都友好，于是声名大噪。来演的多，来看的也多。到后来几乎场场爆满，十点半必须关门，限制入内。
-It was kind to both, and the name got loud. More bands came. More listeners came. In the end almost every night was full. At ten-thirty the door had to shut.
+善待乐手，也善待听众，它的名声就此传开。前来演出的乐队络绎不绝，观众也越来越多。后期几乎场场满座，十点半便必须闭店限流。
+Kind to the players, and kind to the listeners, the name traveled. Bands kept coming. The crowd kept growing. Later, almost every night was full. At ten-thirty the door had to shut.
 
-三大件
+### 三大件
+### The three
 
-一支乐队先有这三件。鼓、吉他、贝斯。歌手可以后上。这三件不齐，屋里就还是排练。
-A band starts with these three. Drums, guitar, bass. The singer can come later. Without the three, the room is still a practice.
+组建一支乐队，先要备齐三样乐器：鼓、吉他、贝斯。主唱可以后续加入。三者不全，那依旧只算是排练。
+To start a band, first gather three instruments: drums, guitar, bass. The singer can come later. Without all three, it is still only a rehearsal.
 
-鼓
+- **鼓**：掌管时间。一次敲击，整个空间便拥有了当下。它不承载旋律，让所有人同步向前。震动先抵达胸腔，之后才传入耳朵。
+- **Drums**: they keep the time. One strike, and the whole room has a now. They carry no melody. They move everyone forward together. The vibration reaches the chest first, and the ear after.
 
-鼓是时间。一下，房间就有了现在。
-The drum is time. One hit, and the room has a now.
+- **吉他**：弥漫在空气之中的一层情绪。和弦、噪音，一句未曾唱出的心里话。在这样的场地，吉他常常使用失真效果。干净音色留作私下练习，登上舞台，要让墙壁一同震颤共鸣。
+- **Guitar**: a layer of feeling hung in the air. Chords, noise, a sentence of the heart not yet sung. In a room like this the guitar is usually distorted. The clean tone stays for practice at home. Onstage, the walls have to shake with it.
 
-它不负责旋律。它负责让所有人同时往前。胸腔先收到，耳朵后收到。
-It does not carry the tune. It makes everyone move forward together. The chest gets it first. The ear gets it after.
+- **贝斯**：音高最低，也最容易被忽略。若是去掉贝斯，鼓依旧敲打，吉他依旧鸣响，整首乐曲却摇摇欲坠。它把鼓的节奏和吉他的音符紧紧联结。与其说听见贝斯，不如说脚下切实感受到了根基。
+- **Bass**: the lowest, and the easiest to miss. Take it away and the drums still hit, the guitar still rings, and the song cannot stand. It binds the drum's time to the guitar's notes. You do not so much hear it as feel the floor under your feet.
 
-吉他
+### 舞台
+### The stage
 
-吉他是空气里的那一层。和弦、噪声、一句还没唱出来的话。
-The guitar is the layer in the air. Chords, noise, a sentence that has not been sung yet.
+三大乐器已然就位，请您踏上这座小小的舞台。
+The three instruments are in place. Please step onto this small stage.
 
-在这种房间里，它常常是失真的。干净的音色留在家里。上台，就要让墙也响。
-In a room like this, it is usually distorted. The clean tone stays at home. Onstage, the wall has to sound too.
+灯光亮起的那一刻，这间小屋，便快要承载不住奔涌的情绪。
+The moment the lights come up, this little room can barely hold the feeling rushing through it.
 
-贝斯
+### 问
+### The question
 
-贝斯最低，也最容易被忘掉。把它拿掉，鼓还在敲，吉他还在响，歌却站不稳。
-The bass is the lowest, and the easiest to forget. Take it away, and the drum still hits, the guitar still rings, and the song cannot stand.
+灯光落在您的脸上，恍惚间台下仿佛汇聚万人，可您依旧是您。
+The light falls on your face. For a moment it seems ten thousand people are gathered below. You are still you.
 
-它把鼓的时间和吉他的音拴在一起。你与其说听见它，不如说脚底下突然有了地。
-It ties the drum's time to the guitar's notes. You do not so much hear it as feel the floor appear under your feet.
+请问您站上舞台，是为了什么？
+What did you come up here for?
 
-舞台
+- **被记住**：名字可以比场地活得更久。2012 年酒吧关闭，可不少名字依旧被人们谈起，这便是您所求。
+- **To be remembered**: a name can outlive the room. The bar closed in 2012, and still some names are spoken. This is what you want.
 
-三件齐了。走上这方小台。
-The three are here. Step onto this small stage.
+- **把这一首唱完**：台下万人也好，区区三十人也罢。乐曲既然开启，便应当好好收尾，您只求完整唱完这一曲。
+- **To finish this song**: ten thousand below, or only thirty. A piece that has started ought to be brought to its end. You only want to sing this one through.
 
-灯一亮，这间屋子就不够用了。
-The light comes up, and this room is no longer enough.
+- **不知道**：不少人登台之时也并无答案。只听见鼓点已然响起，不妨先站在这里。
+- **I don't know**: plenty of people have no answer when they step up. What they hear is that the drum has already started. Stand here first.
 
-问
+### 万人现场
+### Ten thousand
 
-灯打到脸上了。下一秒是一万人。可你还是你。
-The light is on your face. The next second is ten thousand people. You are still you.
+有些乐队憧憬体育场的演出，万众齐声合唱。副歌响起之时，仿佛整座城市都在随同歌唱。
+Some bands dream of the stadium, ten thousand voices on the chorus. When it comes back, it feels as if the whole city is singing along.
 
-你站上来，图的是什么？
-What did you step up here for?
+灯光放大乐队的名字，面孔模糊不清，乐声却能够抵达最后一排，飘出场馆门外。
+The lights enlarge the name. The faces blur. The sound still reaches the last row, and drifts out past the door.
 
-被记住
-To be remembered
-名字比屋子活得长。2012 年门关了，有些名字还在人嘴里走。你要的是这个。
-The name outlives the room. The door shut in 2012, and some names are still being passed around. This is what you want.
+也有不少人不愿改变。地下音乐偏爱 Livehouse 那份滚烫的躁动。汗水、酒气、失真音效贴着后颈，您可以看清谁在点头，谁闭上双眼沉浸其中。
+Others will not change. The underground prefers the heat of a livehouse. Sweat, drink, distortion against the back of the neck. You can see who is nodding, and whose eyes are shut.
 
-把这一首唱完
-To finish this song
-万人也好，三十个人也好。歌有开头，就该有结尾。你只要把它唱完。
-Ten thousand, or thirty. A song that starts ought to end. You only want to finish it.
+狭小的现场是贴身的狂热。音响震耳，地板晃动，稍有失误全场都听得清清楚楚，那份热烈近在咫尺。体育场将这份狂热铺展开来，化作笼罩所有人的氛围。
+A small room is a fever against the skin. The PA is too loud, the floor moves, and if a line goes wrong everyone hears it. That heat stays close. A stadium spreads the fever out, until it becomes the weather over everyone.
 
-不知道
-I don't know
-很多人上台的时候并不知道。知道的是鼓已经在敲。先站着。
-A lot of people do not know when they step up. What they know is that the drum is already hitting. Stand here first.
+D22 从未变成大型体育场。它所珍视的，正是这间容纳不下更多人的小屋。十点半关门，只因场内早已满员。
+D22 never became a stadium. What it kept was the room that could not hold any more. At ten-thirty the door shut, because the room was already full.
 
+可梦想从未消散。带着三件乐器站上小舞台的人，下一刻，便能够置身盛大的夜色之中。
+But the dream does not leave. Someone who carries the three onto a small stage stands, in the next moment, in a very large night.
 
+此刻，就是那个瞬间。万众瞩目，灯光朝向您。
+This is that moment. Ten thousand. The lights are on you.
 
-万人现场
+## 演唱完
+## After the song
 
-有的乐队做梦，梦到体育场。一万人一张嘴。副歌回来的时候，城市像在替你唱。
-Some bands dream of the stadium. Ten thousand mouths. When the chorus comes back, the city sings it for you.
+最后一个音符缓缓落下。
+The last note settles.
 
-名字被灯打大。脸看不清了。声音却能走到最后一排，走到卖票的门口外面。
-The name is enlarged by the lights. The faces disappear. The sound still reaches the last row, and past the door where they sold the tickets.
+一曲终了，灯光便可暗下。
+The song is over. The lights can go down.
 
-也有的不肯换。地下偏爱 livehouse 那股躁狂。汗、酒、失真贴着后颈。你看得见谁在点头，谁闭上了眼。
-Others will not trade. The underground prefers the mania of the livehouse. Sweat, drink, distortion against the back of the neck. You can see who is nodding, and whose eyes are shut.
-
-小房间会咬人。音响太大，地板在跳，一句唱错所有人都听见。那股疯是贴身的。体育场把疯拉开，拉开以后，它变成天气。
-A small room bites. The PA is too loud, the floor jumps, and if you miss a line, everyone hears it. That madness stays against the skin. A stadium pulls the madness apart. Once it is apart, it becomes weather.
-
-D-22 没有变成体育场。它要的就是那间装不下更多人的屋子。十点半关门，是因为人已经满了。
-D-22 did not become a stadium. What it wanted was the room that could not hold any more. At ten-thirty the door shut, because the people were already full.
-
-可梦还在。三件乐器走上小台的人，下一秒会站到很大的夜里。
-But the dream stays. Someone who carries the three onto a small stage stands, in the next second, in a very large night.
-
-现在就是那一秒。万人。灯在你这边。
-This is that second. Ten thousand. The lights are on your side.
-
-演唱完
-
-最后一声落地。
-The last note lands.
-
-
-歌唱完了。灯可以暗了。
-The song is finished. The lights can go down.
-
-屋子回到原来的大小。装得下的，本来就这么多。
+场地回归原本的模样，它所能容纳的，本就只有这么多。
 The room goes back to its old size. It never held more than it could.
 
-2012 年它关了门。你今晚把它又开了一晚。
-It closed in 2012. Tonight you opened it for one more night.
+2012 年它已然闭店，今夜，承蒙您，让它再度迎来一夜喧嚣。
+It had already closed in 2012. Tonight, because of you, it has one more noisy night.
 
-去喝吧。坐穿了，再换个地方继续。
-Go drink. Sit the place through. Then move on, and keep going.
+还请前去举杯畅饮。在此尽兴，之后再去往别处，继续奔赴前路。
+Go and raise a glass. Drink this place through. Then go somewhere else, and keep on.
 
+---
 
+## 名单
+## Credits
 
-名单
-
+A Gift For D22
 A Gift For D22
 
 献给
 For
 
 D-22
+D-22
 
 五道口
 Wudaokou
 
 Michael
+Michael
 
-把钱花在音响上的那个人
-The one who put the money into the PA
+那位把经费尽数投入音响设备的人
+The one who put all the money into the PA
 
 No-Beijing
 No-Beijing
 
-以及所有三十块到五十块走进来的人
-And everyone who walked in for thirty to fifty quid
-
-乐手们
-Performers
-
-这一晚
-Tonight
-
-唱片店
-The record shop
-
-酒
-The drink
-
-胡同
-The hutong
-
-鸽哨
-The pigeon whistle
-
-蛐蛐
-The cricket
-
-磨剪子嘞，戗菜刀
-The knife-sharpener's cry
-
-鼓
-Drums
-
-吉他
-Guitar
-
-贝斯
-Bass
-
-你
-You
-
-
+以及每一位花三十至五十元前来的诸位
+And everyone who came in for thirty to fifty yuan
