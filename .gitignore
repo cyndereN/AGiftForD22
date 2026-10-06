@@ -49,3 +49,6 @@ unity/**/Assets/Resources/PerformanceTestRunSettings.json*
 assets/**/*.meta
 unity/D22Game/Assets/Screenshots/
 unity/D22Game/Assets/Screenshots.meta
+unity/D22Game/Assets/Settings/Build Profiles/
+unity/D22Game/Assets/Settings/Build Profiles.meta
+unity/D22Game/Assets/Resources.meta

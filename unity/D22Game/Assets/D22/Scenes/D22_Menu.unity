@@ -243,7 +243,7 @@ MonoBehaviour:
   storyAsset: {fileID: 4900000, guid: e6b6b6813e2df4b8a807acf3a4b508fb, type: 3}
   uiFont: {fileID: 12800000, guid: 29b00dcf5fbda4543bc285a353c0b4fd, type: 3}
   poster: {fileID: 2800000, guid: 4afae51927be94680b31f5c73ea68455, type: 3}
-  cover: {fileID: 2800000, guid: cd94747011475411e8753a89c6923de1, type: 3}
+  cover: {fileID: 2800000, guid: 9ebfe8855073a8e40b9234658bee7278, type: 3}
   music:
   - {fileID: 8300000, guid: 9320b1964cdae4ab0a51798ad627b80d, type: 3}
   - {fileID: 8300000, guid: 959e3a04141cd4c98bd5cae8d67284c2, type: 3}
@@ -255,6 +255,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: efe8b1512df6d478b87d31791a4c8a66, type: 3}
   - {fileID: 8300000, guid: faabbebd2b61c4ec3b527e092b532678, type: 3}
   - {fileID: 8300000, guid: 43b28db894e8d42cd888ec1dc3da6c60, type: 3}
+  beerClip: {fileID: 0}
+  cricketClip: {fileID: 0}
+  pigeonClip: {fileID: 0}
+  grindClip: {fileID: 0}
   bottlePrefab: {fileID: 8347389621288403890, guid: be19b32bbb037404ba8054a80067fe0f, type: 3}
 --- !u!4 &2133578839
 Transform:
