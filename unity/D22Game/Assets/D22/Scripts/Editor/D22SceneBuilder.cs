@@ -49,6 +49,7 @@ namespace D22.Editor
             if (!File.Exists(Scenes + "D22_Lighting.unity")) BuildLighting(data);
             // Gameplay is authored independently and never replaced on an art republish.
             if (!File.Exists(Scenes + "D22_Gameplay.unity")) BuildGameplay();
+            PublishPlayableLivehouse();
             if (!File.Exists(Scenes + "D22_Bootstrap.unity"))
             {
                 var boot = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
@@ -77,12 +78,12 @@ namespace D22.Editor
             serialized.ApplyModifiedPropertiesWithoutUndo();
         }
 
-        static Dictionary<string, Material> BuildMaterials(JObject data)
+        public static Dictionary<string, Material> BuildMaterials(JObject data, string materialFolder = Root + "/Materials")
         {
             var materials = new Dictionary<string, Material>();
             foreach (var item in data["materials"])
             {
-                string id = (string)item["id"], path = Root + "/Materials/" + id + ".mat";
+                string id = (string)item["id"], path = materialFolder + "/" + id + ".mat";
                 var material = AssetDatabase.LoadAssetAtPath<Material>(path);
                 if (!material) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(material, path); }
                 material.name = id;
@@ -229,6 +230,145 @@ namespace D22.Editor
             EditorSceneManager.SaveScene(scene,Scenes+"D22_Gameplay.unity");
         }
 
+        static GameObject Upsert(string name)
+        {
+            return GameObject.Find(name) ?? new GameObject(name);
+        }
+
+        static void Boundary(string name, Vector3 position, Vector3 size)
+        {
+            var obj=Upsert(name);
+            obj.transform.position=position;
+            var box=obj.GetComponent<BoxCollider>();
+            if(!box)box=obj.AddComponent<BoxCollider>();
+            box.size=size;
+            box.isTrigger=false;
+        }
+
+        static void BuildLivehouseDoors()
+        {
+            const string modelPath = Root + "/Art/RecordShopV4/Models/RS4_Architecture.fbx";
+            var source = AssetDatabase.LoadAssetAtPath<GameObject>(modelPath);
+            if (!source) throw new InvalidOperationException("Missing door source: " + modelPath);
+            MeshFilter sourceFilter = null;
+            MeshRenderer sourceRenderer = null;
+            foreach (var filter in source.GetComponentsInChildren<MeshFilter>(true))
+            {
+                if (!filter.name.StartsWith("Door_to_hutong")) continue;
+                sourceFilter = filter;
+                sourceRenderer = filter.GetComponent<MeshRenderer>();
+                break;
+            }
+            if (!sourceFilter || !sourceRenderer || !sourceFilter.sharedMesh)
+                throw new InvalidOperationException("Door mesh is missing from " + modelPath);
+
+            var assembly = Upsert("Livehouse Door Assemblies");
+            while (assembly.transform.childCount > 0)
+                Object.DestroyImmediate(assembly.transform.GetChild(0).gameObject);
+
+            Action<string, Vector3, Vector3> addLeaf = (name, position, scale) =>
+            {
+                var leaf = new GameObject(name);
+                leaf.transform.SetParent(assembly.transform, false);
+                leaf.transform.position = position;
+                leaf.transform.rotation = Quaternion.Euler(270.02f, 0, 0);
+                leaf.transform.localScale = scale;
+                var filter = leaf.AddComponent<MeshFilter>();
+                filter.sharedMesh = sourceFilter.sharedMesh;
+                var renderer = leaf.AddComponent<MeshRenderer>();
+                renderer.sharedMaterials = sourceRenderer.sharedMaterials;
+                GameObjectUtility.SetStaticEditorFlags(leaf, StaticEditorFlags.BatchingStatic | StaticEditorFlags.OccluderStatic | StaticEditorFlags.OccludeeStatic);
+                var collider = leaf.AddComponent<MeshCollider>();
+                collider.sharedMesh = sourceFilter.sharedMesh;
+            };
+
+            // The Blender opening is 1.56m wide x 2.36m high.
+            addLeaf("Main entry door / left", new Vector3(-.385f, 1.18f, -6.47f), new Vector3(0.98f, .91f, 1.24f));
+            addLeaf("Main entry door / right", new Vector3(.385f, 1.18f, -6.47f), new Vector3(-0.98f, .91f, 1.24f));
+            // The upper exit is a 1.0m x 1.95m service door above the rear landing.
+            addLeaf("Upper exit door", new Vector3(2.10f, 3.63f, 6.47f), new Vector3(1.25f, .91f, 1.03f));
+        }
+
+        static void Exit(string name, Vector3 position, float radius, string nextScene, string label)
+        {
+            var obj=Upsert(name);
+            obj.transform.position=position;
+            var exit=obj.GetComponent<D22Exit>();
+            if(!exit)exit=obj.AddComponent<D22Exit>();
+            exit.radius=radius;exit.nextScene=nextScene;exit.label=label;
+        }
+
+        [MenuItem("D22/Publish/Playable Livehouse")]
+        public static void PublishPlayableLivehouse()
+        {
+            if(EditorApplication.isPlaying)throw new InvalidOperationException("Stop Play before publishing the livehouse.");
+            if(!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())return;
+            var data=Data;
+            var sources=data["objects"].ToDictionary(o=>(string)o["id"]);
+            var scene=EditorSceneManager.OpenScene(Scenes+"D22_Environment.unity",OpenSceneMode.Single);
+            int added=0;
+            foreach(var renderer in Object.FindObjectsByType<MeshRenderer>())
+            {
+                if(!sources.TryGetValue(renderer.name,out var source) || renderer.GetComponent<Collider>())continue;
+                string group=(string)source["group"];
+                string name=((string)source["source_name"]).ToLowerInvariant();
+                bool solid=group=="Architecture" && !name.Contains("light") && !name.Contains("cable") &&
+                    !name.Contains("brick") && !name.Contains("photo") && !name.Contains("notice") &&
+                    !name.Contains("roof") && !name.Contains("joist") && !name.Contains("stringer");
+                solid|=group=="BarFOH" && (name.Contains("bar / module") || name.Contains("stool") ||
+                    name.Contains("backbar shelf") || name.Contains("foh") || name.Contains("flight case"));
+                solid|=group=="StageProps" && (name.Contains("drum kit") || name.Contains("amplifier") ||
+                    name.Contains("cabinet") || name.Contains("flight case"));
+                if(solid && renderer.GetComponent<MeshFilter>()){renderer.gameObject.AddComponent<MeshCollider>();added++;}
+            }
+            Boundary("Venue Safety / Entrance edge",new Vector3(0,1.25f,-6.52f),new Vector3(1.5f,2.5f,.16f));
+            Boundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.75f,7.49f),new Vector3(1.35f,2.2f,.16f));
+            BuildLivehouseDoors();
+            Lightmapping.SetLightingDataAssetForScene(scene, null);
+            EditorSceneManager.SaveScene(scene);
+
+            scene=EditorSceneManager.OpenScene(Scenes+"D22_Gameplay.unity",OpenSceneMode.Single);
+            Exit("Venue Entrance / Return to Hutong",new Vector3(0,1.55f,-6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Upper Exit / Return to Hutong",new Vector3(2.1f,3.95f,6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Stage Exit",new Vector3(0,1.8f,4),2f,"D22_Performance","演出开始 / HEAR THE SHOW");
+            Lightmapping.SetLightingDataAssetForScene(scene, null);
+            EditorSceneManager.SaveScene(scene);
+
+            scene=EditorSceneManager.OpenScene(Scenes+"D22_Lighting.unity",OpenSceneMode.Single);
+            int realtime=0;
+            foreach(var item in data["lights"])
+            {
+                string name=(string)item["name"];
+                var obj=Upsert(name);
+                obj.transform.position=Vec(item["position"]);
+                obj.transform.rotation=Quaternion.LookRotation(Vec(item["direction"]),Vector3.up);
+                var light=obj.GetComponent<Light>();
+                if(!light)light=obj.AddComponent<Light>();
+                string type=(string)item["type"];
+                light.type=type=="POINT"?LightType.Point:LightType.Spot;
+                light.color=Col(item["color"]).gamma;
+                light.range=name.StartsWith("L0")?9:6;
+                light.intensity=type=="SPOT"?(float)item["power"]/30f:
+                    type=="AREA"?Mathf.Min(6,(float)item["power"]/12f):(float)item["power"]/2f;
+                light.spotAngle=type=="AREA"?100:Mathf.Clamp((float)item["angle"],1,175);
+                light.shadows=type=="SPOT"?LightShadows.Soft:LightShadows.None;
+                light.lightmapBakeType=LightmapBakeType.Realtime;
+                // These objects were authored from a baked Blender lighting pass. Clear
+                // the stale bake flag or Unity silently ignores the realtime component.
+                var baking=light.bakingOutput;
+                baking.isBaked=false;
+                baking.lightmapBakeType=LightmapBakeType.Realtime;
+                light.bakingOutput=baking;
+                realtime++;
+            }
+            // Both the environment and lighting scene referenced the previous bake.
+            // That asset restores a Baked flag on these realtime lights after reload.
+            Lightmapping.SetLightingDataAssetForScene(scene, null);
+            Lightmapping.Clear();
+            EditorSceneManager.SaveScene(scene);
+            Debug.Log($"D22_LIVEHOUSE_PLAYABLE colliders_added={added} realtime_lights={realtime}");
+        }
+
         [MenuItem("D22/Open Collaborative Workspace")]
         public static void OpenWorkspace()
         {
@@ -245,7 +385,14 @@ namespace D22.Editor
         {
             var meshes=Object.FindObjectsByType<MeshRenderer>();
             var missing=meshes.Where(r=>r.sharedMaterials.Any(m=>!m||!m.shader||m.shader.name.Contains("Error"))).Select(r=>r.name).ToArray();
-            var report=new JObject { ["unity_version"]=Application.unityVersion,["renderer_count"]=meshes.Length,["missing_materials"]=new JArray(missing),["lights"]=Object.FindObjectsByType<Light>().Length,["colliders"]=Object.FindObjectsByType<Collider>().Length,["lightmaps"]=LightmapSettings.lightmaps.Length,["scene_count"]=SceneManager.sceneCount };
+            var lights=Object.FindObjectsByType<Light>();
+            var doorAssembly=GameObject.Find("Livehouse Door Assemblies");
+            var doorColliders=doorAssembly?doorAssembly.GetComponentsInChildren<MeshCollider>():Array.Empty<MeshCollider>();
+            int doorCount=doorAssembly?doorAssembly.transform.childCount:0;
+            var entrance=GameObject.Find("Venue Entrance / Return to Hutong");
+            var upper=GameObject.Find("Upper Exit / Return to Hutong");
+            bool exitsReachable=entrance && upper && entrance.transform.position.z> -6.47f && upper.transform.position.z<6.47f;
+            var report=new JObject { ["unity_version"]=Application.unityVersion,["renderer_count"]=meshes.Length,["missing_materials"]=new JArray(missing),["lights"]=lights.Length,["baked_lights"]=lights.Count(l=>l.bakingOutput.isBaked),["colliders"]=Object.FindObjectsByType<Collider>().Length,["door_count"]=doorCount,["door_colliders"]=doorColliders.Length,["exits_reachable"]=exitsReachable,["lightmaps"]=LightmapSettings.lightmaps.Length,["scene_count"]=SceneManager.sceneCount };
             var sources=Data["objects"].ToDictionary(o=>(string)o["id"]);
             float maxError=0; int matched=0; var placementErrors=new JArray();
             foreach(var renderer in meshes)
@@ -266,7 +413,7 @@ namespace D22.Editor
             var floorHit=floor?floorHits[0]:default;
             report["spawn_floor_hit"]=floor;report["spawn_floor_height_m"]=floor?floorHit.point.y:0;
             File.WriteAllText(Root+"/Validation/migration-report.json",report.ToString());
-            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !floor || Mathf.Abs(floorHit.point.y)>.3f)throw new InvalidOperationException("D22 migration validation failed: "+report);
+            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"]+3 || matched!=sources.Count || placementErrors.Count>0 || !floor || Mathf.Abs(floorHit.point.y)>.3f || doorCount!=3 || doorColliders.Length!=3 || !exitsReachable || lights.Length!=47 || lights.Any(l=>l.bakingOutput.isBaked))throw new InvalidOperationException("D22 migration validation failed: "+report);
             Debug.Log("D22_VALIDATION "+report.ToString(Newtonsoft.Json.Formatting.None));
         }
 

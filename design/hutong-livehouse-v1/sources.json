@@ -1,0 +1,118 @@
+[
+  {
+    "path": "assets/d22/architecture/E03_BlackBeam_4m.glb",
+    "sha256": "0e49f35f3c789766efd60661eb212bbb49ee102de6fc02b03bda236403473a52"
+  },
+  {
+    "path": "assets/d22/architecture/E04_Stage_2x1m.glb",
+    "sha256": "a0bc32168d2684f7d2f6c260df70ef75009b141b5858afe5525dbf639d740377"
+  },
+  {
+    "path": "assets/d22/architecture/E06_PracticalLight.glb",
+    "sha256": "b05822edb077772dc952e44b8d297181798dbd9e378d143762dfca6f5bd9e5a8"
+  },
+  {
+    "path": "assets/d22/architecture/E08_Cable.glb",
+    "sha256": "9d81919b748dad393e729d12dffba8bb406c826818162432f977e7a3fdafed42"
+  },
+  {
+    "path": "assets/d22/architecture/E09_OriginalFlyer.glb",
+    "sha256": "bf60395e5e9c2e6d4a684361e61ddc8767d643b54bfbc07d168fd5d7c781cc59"
+  },
+  {
+    "path": "assets/d22/meshy/A01-Amplifier.glb",
+    "sha256": "73582506153039be55bfcbc685b446fa25b8beffd56540298244f7588ab3424f"
+  },
+  {
+    "path": "assets/d22/meshy/A05-Mixer.glb",
+    "sha256": "b93bba8334d51861f46bbd8d47bbac00674636fec0dc5261c82ae8bd9e2b9c12"
+  },
+  {
+    "path": "assets/d22/meshy/P02-FOH.glb",
+    "sha256": "86f06379e4ea8bfdf6a2473b02d1567b8bb7c319f9420b32acf802357a8689b3"
+  },
+  {
+    "path": "assets/d22/meshy/P04-Drums.glb",
+    "sha256": "8292021d2120fd1a829eed0b960051388cd5175bc82d5e1850a00a02a795bb84"
+  },
+  {
+    "path": "assets/d22/meshy/P05-PA.glb",
+    "sha256": "87f4cec49e37de0732b972d9880fded04cfa485c19db992dcdf9b220b6edb07e"
+  },
+  {
+    "path": "assets/d22/meshy/P06-Guitar.glb",
+    "sha256": "d8cf8d1692b495de5e2d89981b18aeb71d40cc03601ea7f87e8f7dc951101fb3"
+  },
+  {
+    "path": "assets/d22/meshy/P07-Bar.glb",
+    "sha256": "2d4e35581e07a199e0a82160f00110df723ead6629ec1d27136902fdc49a150a"
+  },
+  {
+    "path": "assets/d22/meshy/P08-Microphone.glb",
+    "sha256": "193e5f42b349bad2c3fe8539162dd7f90ce6c55122179abbed1858bec8ed35d9"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B02-TileFloor.glb",
+    "sha256": "9f10c1325f9cc8ee40cdf3ba6e7d73214a14fcecf8f4f15aaa02e1563472e8da"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B03-BarCounter.glb",
+    "sha256": "99cfcb7e0d585d8cbdd0dadc08ddeb51ca0c62bfe2f90675e774fd876fe22dfd"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B06-BarStool.glb",
+    "sha256": "62288a08b512e716d29d313b80a603ed29280f22d128faac260e2736d479b338"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B11-FlightCase.glb",
+    "sha256": "9387c34b6d71067f588d1db4d4848a5fdbf204b9c153dc155dfed49b2545100e"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+    "sha256": "63fce8124716104d0e8b9b7a61e2eea9976a839e05ed79ad8b52077c6149abb9"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+    "sha256": "4cf2e3ccb2fd5b681c705d337052054ae284591bc5874005560201df6721bd22"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+    "sha256": "23515bfd2c237fd4ea48d9370c230eca12a8cfd551a26ba52393259326b6b0a1"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+    "sha256": "115a7974be85bbd69eba521af821026916345c15f5d1514cadcc3ff7a6de25ce"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "sha256": "4a4bbbbe23cf2b6b1203c4ea8db17bdf6ae0df8775bdd8d1a3a55a42ea7bfe01"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS210-ListeningChair.glb",
+    "sha256": "9b03522b98f6a3ad3e7e28fb2dcef3fce577cfdd97c46c161a60a8d68714c316"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+    "sha256": "d4298163dfb612facec493ff74b3418ef3edb27701ad9c66b76f9ab02389a49e"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+    "sha256": "f0a71172de064e21b8b55946b4a7cbb81fe1e5ae9320578133b161ed5af57c36"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+    "sha256": "ddbd8c3aa2ec08fc4068a621814b6a0f8d69dbaa9f7162c0fff5dc87814067db"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+    "sha256": "ee64dea88446b361ccbd4e08f56bea533f48fc4539bded82bdec17485fdb8e4c"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+    "sha256": "b6cdd46c802c97368f85cab03e7f97c43b27e99e6760a73079166604bc52ccd4"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+    "sha256": "4df1289dc1b8b46944e4d7d582d179d9d9c8dabfc126095cd5407c9f3d19df14"
+  }
+]

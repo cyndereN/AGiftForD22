@@ -1,0 +1,9 @@
+{
+  "scene": "Assets/D22/Scenes/D22_RecordShopV3.unity",
+  "mesh_renderers": 105,
+  "meshy_source_assets": 24,
+  "route_capsule_radius_m": 0.21,
+  "route_samples": 246,
+  "errors": [],
+  "passed": true
+}

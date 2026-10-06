@@ -1,0 +1,55 @@
+{
+  "scene": "D22_HutongMusicBlock",
+  "subscenes": [
+    {
+      "id": "Hutong_Approach",
+      "entry": "主胡同南口",
+      "exit": "RecordShop_2006 / Courtyard_Transition",
+      "player_goal": "认出门脸并选择观察或进入",
+      "validation": "主路连续直行 < 12m；至少一个可绕生活物件"
+    },
+    {
+      "id": "RecordShop_2006",
+      "entry": "沿街门脸",
+      "exit": "Courtyard_Transition",
+      "player_goal": "按分类找唱片，听到后院试音",
+      "validation": "中央唱片岛双侧可绕；收银/试听/分类牌可见"
+    },
+    {
+      "id": "Courtyard_Transition",
+      "entry": "唱片店后门",
+      "exit": "LiveHouse_Backroom",
+      "player_goal": "在检票和后台之间作选择",
+      "validation": "两条路线在舞台侧边汇合；无碰撞堵塞"
+    },
+    {
+      "id": "LiveHouse_Backroom",
+      "entry": "检票走廊",
+      "exit": "Hutong_NightExit",
+      "player_goal": "在吧台、后排、舞台侧边观察演出",
+      "validation": "观众区形成小循环；后台路线不穿过主观众流"
+    },
+    {
+      "id": "Hutong_NightExit",
+      "entry": "现场侧门",
+      "exit": "D22_Performance / 下一章",
+      "player_goal": "离开高能量现场，回望胡同",
+      "validation": "蓝色后巷光；出口方向和下一场景提示清楚"
+    }
+  ],
+  "camera_views": [
+    "hutong_entry",
+    "recordshop_window",
+    "courtyard_ticket",
+    "stage_side",
+    "night_roof"
+  ],
+  "route_rules": [
+    "两个选择点",
+    "三种现场观察点",
+    "声音提前视觉 2–4m",
+    "每区至少一个记忆锚点"
+  ],
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

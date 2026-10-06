@@ -1,0 +1,4207 @@
+{
+  "version": 1,
+  "source": "blender/source/D22_RecordShop_v4_MeshyOnly.blend",
+  "source_units_m": 1.0,
+  "coordinate_mapping": "Unity (x,y,z) = Blender (x,z,y); FBX converted by importer",
+  "geometry_count": 139,
+  "materials": [
+    {
+      "id": "A01-Amplifier__Material_0_003_128e507c",
+      "source_name": "A01-Amplifier__Material_0.003",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_023_a34bdbaf.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_023_fbbed1ef.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/A01-Amplifier__Material_0_003_128e507c_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "B02-TileFloor__Material_0_9682a7d6",
+      "source_name": "B02-TileFloor__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_297551ae.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_96abf7c7.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/B02-TileFloor__Material_0_9682a7d6_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "B07-GalleryFrame__Material_0_7c27aa42",
+      "source_name": "B07-GalleryFrame__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_028_371c33a0.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_028_a0b368a1.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/B07-GalleryFrame__Material_0_7c27aa42_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "B10-Zines__Material_0_b52156e2",
+      "source_name": "B10-Zines__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_013_658a3879.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_013_fabd94c0.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/B10-Zines__Material_0_b52156e2_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_cash_8b60c06a",
+      "source_name": "Category ink cash",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/cash_png_a35178ae.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_demo_18815e8d",
+      "source_name": "Category ink demo",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/demo_png_b6519797.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_electronic_6760148b",
+      "source_name": "Category ink electronic",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/electronic_png_cbd76b5f.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_jazz_0c20f9be",
+      "source_name": "Category ink jazz",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/jazz_png_ca669cf6.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_new_274a5adb",
+      "source_name": "Category ink new",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/new_png_c8eae952.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_open_6b208d57",
+      "source_name": "Category ink open",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/open_png_d9720e61.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_rock_538cbcd2",
+      "source_name": "Category ink rock",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/rock_png_baae6397.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_rock_wall_188f93c9",
+      "source_name": "Category ink rock_wall",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/rock_wall_png_c6cb05db.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_soul_98ffe33e",
+      "source_name": "Category ink soul",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/soul_png_4baf1ab5.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_staff_96b7f3f0",
+      "source_name": "Category ink staff",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/staff_png_f57c1887.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_used_c77aebca",
+      "source_name": "Category ink used",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/used_png_653aea55.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Category_ink_used35_2b8b6f2f",
+      "source_name": "Category ink used35",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.9399999976158142,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/used35_png_3ae1e768.png",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Ceiling_tint_61820491",
+      "source_name": "Ceiling_tint",
+      "base_color": [
+        0.07999999821186066,
+        0.0949999988079071,
+        0.09000000357627869,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_297551ae.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_96abf7c7.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/Ceiling_tint_61820491_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Meshy_band_photo_1_07cc3988",
+      "source_name": "Meshy band photo 1",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/band-1_jpg_e6b0a988.jpg",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Meshy_band_photo_3_3ab4bde6",
+      "source_name": "Meshy band photo 3",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/band-3_jpg_8ec0f181.jpg",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Meshy_band_photo_4_b4df8c62",
+      "source_name": "Meshy band photo 4",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/band-4_jpg_5d2f607e.jpg",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Meshy_band_photo_5_0c47845c",
+      "source_name": "Meshy band photo 5",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8799999952316284,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/band-5_jpg_658f06ed.jpg",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "P06-Guitar__Material_0_254fd206",
+      "source_name": "P06-Guitar__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_022_84b03744.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_022_aec7746c.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/P06-Guitar__Material_0_254fd206_MetallicSmoothness.png",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS201-RecordBin__Material_0_a612d591",
+      "source_name": "RS201-RecordBin__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_006_ecbc9c4e.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_006_dcc356cf.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS201-RecordBin__Material_0_a612d591_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_005_0768e457.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS202-CDTower__Material_0_042fff73",
+      "source_name": "RS202-CDTower__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_007_6eb71f0a.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_007_68c101f2.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS202-CDTower__Material_0_042fff73_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_006_522e08ee.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS203-CashDesk__Material_0_f48d6881",
+      "source_name": "RS203-CashDesk__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_009_782f40f3.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_009_3ca7e920.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS203-CashDesk__Material_0_f48d6881_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_008_ba212ffd.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS204-Turntable__Material_0_c6458bf2",
+      "source_name": "RS204-Turntable__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_016_af47aa41.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_016_7b8a029d.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS204-Turntable__Material_0_c6458bf2_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_014_02fb5c47.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS205-DeskFan__Material_0_e52ede52",
+      "source_name": "RS205-DeskFan__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_021_f999df91.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_021_7fb4ab5d.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS205-DeskFan__Material_0_e52ede52_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_019_5136f8ba.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS206-DeskLamp__Material_0_b3d0b906",
+      "source_name": "RS206-DeskLamp__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_018_8ab96613.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_018_16a2ed10.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS206-DeskLamp__Material_0_b3d0b906_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_016_73ba0c99.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS207-Thermos__Material_0_4193388f",
+      "source_name": "RS207-Thermos__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_011_a4780931.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_011_adf6c766.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS207-Thermos__Material_0_4193388f_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_010_f189e4b9.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS208-Pothos__Material_0_beca8afb",
+      "source_name": "RS208-Pothos__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_012_222f29a3.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_012_20753a6b.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS208-Pothos__Material_0_beca8afb_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_011_99a80bf9.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS209-ListeningDesk__Material_0_1ddbab40",
+      "source_name": "RS209-ListeningDesk__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_015_2a27f8de.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_015_e8658e9c.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS209-ListeningDesk__Material_0_1ddbab40_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_013_c6aa81f6.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS210-ListeningChair__Material_0_1983b524",
+      "source_name": "RS210-ListeningChair__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_019_88b4dc37.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_019_a8301a96.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS210-ListeningChair__Material_0_1983b524_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_017_8d9df40f.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS211-HifiSpeaker__Material_0_d258b227",
+      "source_name": "RS211-HifiSpeaker__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_017_941cc9e0.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_017_c5d8a856.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS211-HifiSpeaker__Material_0_d258b227_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_015_68086ce5.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS212-CassetteStereo__Material_0_6770d21d",
+      "source_name": "RS212-CassetteStereo__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_020_a3c6dc7b.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_020_ece87ff7.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS212-CassetteStereo__Material_0_6770d21d_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_018_95ec9bb1.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS213-TapeCrate__Material_0_47558b67",
+      "source_name": "RS213-TapeCrate__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_014_75242ca9.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_014_38ae5c8b.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS213-TapeCrate__Material_0_47558b67_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_012_b946ca00.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS301-HutongWallPanel__Material_0_f598ff36",
+      "source_name": "RS301-HutongWallPanel__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_001_d532886b.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_001_30b0027f.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS301-HutongWallPanel__Material_0_f598ff36_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_1083cbea.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS302-HutongWindowBay__Material_0_a1f1d37d",
+      "source_name": "RS302-HutongWindowBay__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_004_80b58501.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_004_10ddba74.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS302-HutongWindowBay__Material_0_a1f1d37d_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_003_114fa187.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS303-RedTimberDoor__Material_0_c943f250",
+      "source_name": "RS303-RedTimberDoor__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_003_6e275656.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_003_b9865255.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS303-RedTimberDoor__Material_0_c943f250_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_002_a2e598fb.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS306-CeilingBeamFluorescent__Material_0_aacebd34",
+      "source_name": "RS306-CeilingBeamFluorescent__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_005_81e28d48.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_005_2df1b277.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS306-CeilingBeamFluorescent__Material_0_aacebd34_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_004_bb960847.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS310-PlasterOnly__Material_0_1fe22825",
+      "source_name": "RS310-PlasterOnly__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_002_b69cb846.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_002_fa01f661.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS310-PlasterOnly__Material_0_1fe22825_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_001_f2b53021.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS401-FaceOutLPDisplay__Material_0_c26cfc7d",
+      "source_name": "RS401-FaceOutLPDisplay__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_008_261468fe.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_008_f7d58e34.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS401-FaceOutLPDisplay__Material_0_c26cfc7d_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_007_0b3b2b8e.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS402-VinylAlbum__Material_0_2dc269cb",
+      "source_name": "RS402-VinylAlbum__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_026_4087f91c.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_026_ff635f4d.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS402-VinylAlbum__Material_0_2dc269cb_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_022_95b5e448.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS403-UsedRecordCrate__Material_0_d2981a7c",
+      "source_name": "RS403-UsedRecordCrate__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_025_5e0a9876.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_025_6fbe7614.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS403-UsedRecordCrate__Material_0_d2981a7c_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_021_aebd07a3.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS404-CategoryCard__Material_0_8abad61c",
+      "source_name": "RS404-CategoryCard__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_029_a71a966d.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_029_e8f4472d.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS404-CategoryCard__Material_0_8abad61c_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_024_dc69b155.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS405-CashierWorkKit__Material_0_360a9b5c",
+      "source_name": "RS405-CashierWorkKit__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_010_67abf42f.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_010_0c4200d2.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS405-CashierWorkKit__Material_0_360a9b5c_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_009_f42702de.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS406-UsedLPCarton__Material_0_6ed53e67",
+      "source_name": "RS406-UsedLPCarton__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_024_2a88a48e.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_024_75c08a8e.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS406-UsedLPCarton__Material_0_6ed53e67_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_020_cc60fdf3.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "RS407-VinylJazz__Material_0_10aeceb3",
+      "source_name": "RS407-VinylJazz__Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "Assets/D22/Art/RecordShopV4/Textures/Image_0_027_0f642e7c.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV4/Textures/Image_2_027_07160cf5.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV4/Textures/RS407-VinylJazz__Material_0_10aeceb3_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV4/Textures/Image_3_023_81358387.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "Floor_0_0__mesh0_130201ee",
+      "source_name": "Floor 0_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_1__mesh0_8acd90f7",
+      "source_name": "Floor 0_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_2__mesh0_7d10ed95",
+      "source_name": "Floor 0_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_3__mesh0_c6d28bb0",
+      "source_name": "Floor 0_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_4__mesh0_dcb76107",
+      "source_name": "Floor 0_4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_5__mesh0_40796f47",
+      "source_name": "Floor 0_5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_6__mesh0_98c8479b",
+      "source_name": "Floor 0_6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_0_7__mesh0_ab060e86",
+      "source_name": "Floor 0_7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6050000190734863,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.5549999475479126,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_0__mesh0_eedf99df",
+      "source_name": "Floor 1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_1__mesh0_fc42367f",
+      "source_name": "Floor 1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_2__mesh0_87e14e58",
+      "source_name": "Floor 1_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_3__mesh0_03fbf0c8",
+      "source_name": "Floor 1_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_4__mesh0_e950e8fb",
+      "source_name": "Floor 1_4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_5__mesh0_b32f3df2",
+      "source_name": "Floor 1_5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_6__mesh0_f1bea0bd",
+      "source_name": "Floor 1_6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_1_7__mesh0_5c56736f",
+      "source_name": "Floor 1_7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5649999380111694,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -0.5149999856948853,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_0__mesh0_f2202977",
+      "source_name": "Floor 2_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_1__mesh0_0644c1b4",
+      "source_name": "Floor 2_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_2__mesh0_b86c5c2b",
+      "source_name": "Floor 2_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_3__mesh0_c5ca0ed8",
+      "source_name": "Floor 2_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_4__mesh0_63ed4407",
+      "source_name": "Floor 2_4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_5__mesh0_47894ebe",
+      "source_name": "Floor 2_5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_6__mesh0_ace421dd",
+      "source_name": "Floor 2_6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_2_7__mesh0_355a5103",
+      "source_name": "Floor 2_7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.5249999761581421,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.5249999761581421,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_0__mesh0_fe9c0478",
+      "source_name": "Floor 3_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_1__mesh0_9343c4ef",
+      "source_name": "Floor 3_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_2__mesh0_38a01334",
+      "source_name": "Floor 3_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_3__mesh0_b26780cd",
+      "source_name": "Floor 3_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_4__mesh0_d64ab384",
+      "source_name": "Floor 3_4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_5__mesh0_febbc9bb",
+      "source_name": "Floor 3_5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_6__mesh0_5d2d1365",
+      "source_name": "Floor 3_6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_3_7__mesh0_92fe8b38",
+      "source_name": "Floor 3_7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.5149999856948853,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.5649999380111694,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_0__mesh0_e1b35923",
+      "source_name": "Floor 4_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_1__mesh0_7d1669d0",
+      "source_name": "Floor 4_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_2__mesh0_0b4a2fda",
+      "source_name": "Floor 4_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_3__mesh0_2219bebc",
+      "source_name": "Floor 4_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_4__mesh0_006d2d97",
+      "source_name": "Floor 4_4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_5__mesh0_2db98a97",
+      "source_name": "Floor 4_5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_6__mesh0_49a0ba3c",
+      "source_name": "Floor 4_6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Floor_4_7__mesh0_220cc7ce",
+      "source_name": "Floor 4_7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.5549999475479126,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.6050000190734863,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Front_floor_threshold__mesh0_577d0125",
+      "source_name": "Front floor threshold__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.75,
+        -0.5199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.75,
+        0.08000001311302185,
+        -3.725290298461914e-09
+      ],
+      "polygons": 16067,
+      "materials": [
+        "B02-TileFloor__Material_0_9682a7d6"
+      ]
+    },
+    {
+      "id": "Ceiling__mesh0_8c325e27",
+      "source_name": "Ceiling__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.75,
+        -0.7249999046325684,
+        2.8499999046325684
+      ],
+      "bounds_max": [
+        2.75,
+        8.524999618530273,
+        2.940000057220459
+      ],
+      "polygons": 16067,
+      "materials": [
+        "Ceiling_tint_61820491"
+      ]
+    },
+    {
+      "id": "Lower_wall_-1_0__mesh0_5c15e79b",
+      "source_name": "Lower wall -1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        -0.419999897480011,
+        0.0
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        2.0799999237060547,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_-1_0__mesh0_2e7ed200",
+      "source_name": "Upper wall -1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        -0.419999897480011,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        2.0799999237060547,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_-1_1__mesh0_947eb027",
+      "source_name": "Lower wall -1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        2.0350000858306885,
+        0.0
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        4.115000247955322,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_-1_1__mesh0_8a4efdc3",
+      "source_name": "Upper wall -1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        2.0350000858306885,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        4.115000247955322,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_-1_2__mesh0_53605bd8",
+      "source_name": "Lower wall -1_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        4.085000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        6.164999961853027,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_-1_2__mesh0_325e2185",
+      "source_name": "Upper wall -1_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        4.085000038146973,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        6.164999961853027,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_-1_3__mesh0_9754fb40",
+      "source_name": "Lower wall -1_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        6.135000228881836,
+        0.0
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        8.21500015258789,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_-1_3__mesh0_f966855d",
+      "source_name": "Upper wall -1_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.7800002098083496,
+        6.135000228881836,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.559999942779541,
+        8.21500015258789,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_1_0__mesh0_c6202726",
+      "source_name": "Lower wall 1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        -0.419999897480011,
+        0.0
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        2.0799999237060547,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_1_0__mesh0_6d3357fc",
+      "source_name": "Upper wall 1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        -0.419999897480011,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        2.0799999237060547,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_1_1__mesh0_44c12045",
+      "source_name": "Lower wall 1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        2.0350000858306885,
+        0.0
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        4.115000247955322,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_1_1__mesh0_f8429b92",
+      "source_name": "Upper wall 1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        2.0350000858306885,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        4.115000247955322,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_1_2__mesh0_6fb78f99",
+      "source_name": "Lower wall 1_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        4.085000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        6.164999961853027,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_1_2__mesh0_ae081e68",
+      "source_name": "Upper wall 1_2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        4.085000038146973,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        6.164999961853027,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Lower_wall_1_3__mesh0_55754f0f",
+      "source_name": "Lower wall 1_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        6.135000228881836,
+        0.0
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        8.21500015258789,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Upper_wall_1_3__mesh0_4db596c7",
+      "source_name": "Upper wall 1_3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.559999942779541,
+        6.135000228881836,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.7800002098083496,
+        8.21500015258789,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Back_lower_0__mesh0_023a2bb2",
+      "source_name": "Back lower 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.629999876022339,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        -0.8499999642372131,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Back_upper_0__mesh0_93c08fe7",
+      "source_name": "Back upper 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.629999876022339,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -0.8499999642372131,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Back_lower_1__mesh0_20d89e41",
+      "source_name": "Back lower 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8899999856948853,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        0.8899999856948853,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Back_upper_1__mesh0_c2029e08",
+      "source_name": "Back upper 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8899999856948853,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        0.8899999856948853,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Back_lower_2__mesh0_37dedd30",
+      "source_name": "Back lower 2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.8500000834465027,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        2.630000114440918,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Back_upper_2__mesh0_84d09622",
+      "source_name": "Back upper 2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.8500000834465027,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.630000114440918,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Front_wall_below_window__mesh0_887d5357",
+      "source_name": "Front wall below window__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.125,
+        -0.5100001692771912,
+        0.0
+      ],
+      "bounds_max": [
+        -0.17499999701976776,
+        -0.2899998426437378,
+        0.4999999701976776
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Front_wall_above_window__mesh0_c2f3f5a9",
+      "source_name": "Front wall above window__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.125,
+        -0.5100001692771912,
+        2.299999952316284
+      ],
+      "bounds_max": [
+        -0.17499999701976776,
+        -0.2899998426437378,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Front_wall_left_lower__mesh0_1bc2b787",
+      "source_name": "Front wall left lower__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6000001430511475,
+        -0.5100000500679016,
+        0.0
+      ],
+      "bounds_max": [
+        -1.8250000476837158,
+        -0.28999993205070496,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Front_wall_left_upper__mesh0_0f8dbfe1",
+      "source_name": "Front wall left upper__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.6000001430511475,
+        -0.5100000500679016,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -1.8250000476837158,
+        -0.28999993205070496,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Front_wall_right_lower__mesh0_23cf34f9",
+      "source_name": "Front wall right lower__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.4750000536441803,
+        -0.5100002288818359,
+        0.0
+      ],
+      "bounds_max": [
+        2.5999999046325684,
+        -0.28999975323677063,
+        0.9199999570846558
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS301-HutongWallPanel__Material_0_f598ff36"
+      ]
+    },
+    {
+      "id": "Front_wall_right_upper__mesh0_ed4d2ee3",
+      "source_name": "Front wall right upper__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.4750000536441803,
+        -0.5100002288818359,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.5999999046325684,
+        -0.28999975323677063,
+        2.8499999046325684
+      ],
+      "polygons": 60916,
+      "materials": [
+        "RS310-PlasterOnly__Material_0_1fe22825"
+      ]
+    },
+    {
+      "id": "Door_to_hutong__mesh0_e671586d",
+      "source_name": "Door to hutong__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.1799999475479126,
+        7.940000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        2.0799999237060547,
+        8.100000381469727,
+        2.1399998664855957
+      ],
+      "polygons": 62133,
+      "materials": [
+        "RS303-RedTimberDoor__Material_0_c943f250"
+      ]
+    },
+    {
+      "id": "Front_window__mesh0_043b1da8",
+      "source_name": "Front window__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.0250000953674316,
+        -0.25500011444091797,
+        0.3799999952316284
+      ],
+      "bounds_max": [
+        -0.2749999463558197,
+        -0.0049998704344034195,
+        2.500000238418579
+      ],
+      "polygons": 61514,
+      "materials": [
+        "RS302-HutongWindowBay__Material_0_a1f1d37d"
+      ]
+    },
+    {
+      "id": "Left_window__mesh0_14a1f086",
+      "source_name": "Left window__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.634999990463257,
+        0.30000001192092896,
+        0.7600000500679016
+      ],
+      "bounds_max": [
+        -2.424999952316284,
+        1.9000000953674316,
+        2.380000114440918
+      ],
+      "polygons": 61514,
+      "materials": [
+        "RS302-HutongWindowBay__Material_0_a1f1d37d"
+      ]
+    },
+    {
+      "id": "Beam_light_0__mesh0_aced67a9",
+      "source_name": "Beam light 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.5999996662139893,
+        1.6799999475479126,
+        2.6500000953674316
+      ],
+      "bounds_max": [
+        2.5999999046325684,
+        1.9199999570846558,
+        2.81000018119812
+      ],
+      "polygons": 63588,
+      "materials": [
+        "RS306-CeilingBeamFluorescent__Material_0_aacebd34"
+      ]
+    },
+    {
+      "id": "Beam_light_1__mesh0_cba599a1",
+      "source_name": "Beam light 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.5999996662139893,
+        5.579999923706055,
+        2.6500000953674316
+      ],
+      "bounds_max": [
+        2.5999999046325684,
+        5.820000171661377,
+        2.81000018119812
+      ],
+      "polygons": 63588,
+      "materials": [
+        "RS306-CeilingBeamFluorescent__Material_0_aacebd34"
+      ]
+    },
+    {
+      "id": "Island_bin_0_0__mesh0_954b180b",
+      "source_name": "Island bin 0_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8500000238418579,
+        2.3600001335144043,
+        0.0
+      ],
+      "bounds_max": [
+        -0.06999999284744263,
+        3.0400002002716064,
+        0.9600000381469727
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Island_bin_0_1__mesh0_0e9b831e",
+      "source_name": "Island bin 0_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.010000020265579224,
+        2.3600001335144043,
+        0.0
+      ],
+      "bounds_max": [
+        0.7699999809265137,
+        3.0400002002716064,
+        0.9600000381469727
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Island_bin_1_0__mesh0_c06758b0",
+      "source_name": "Island bin 1_0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8500000834465027,
+        3.0899999141693115,
+        0.0
+      ],
+      "bounds_max": [
+        -0.06999994069337845,
+        3.7699999809265137,
+        0.9600000381469727
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Island_bin_1_1__mesh0_861fdb4a",
+      "source_name": "Island bin 1_1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.010000071488320827,
+        3.0899999141693115,
+        0.0
+      ],
+      "bounds_max": [
+        0.7700000405311584,
+        3.7699999809265137,
+        0.9600000381469727
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Wall_browse_bin_0__mesh0_8f88b793",
+      "source_name": "Wall browse bin 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.4800002574920654,
+        2.325000047683716,
+        0.0
+      ],
+      "bounds_max": [
+        -1.8000000715255737,
+        3.375,
+        0.9500000476837158
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Wall_browse_bin_1__mesh0_f86e5685",
+      "source_name": "Wall browse bin 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.491466999053955,
+        3.6976478099823,
+        0.0
+      ],
+      "bounds_max": [
+        -1.7885334491729736,
+        4.762352466583252,
+        0.9500000476837158
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Wall_browse_bin_2__mesh0_62f5b367",
+      "source_name": "Wall browse bin 2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.4878363609313965,
+        4.999959468841553,
+        0.0
+      ],
+      "bounds_max": [
+        -1.792163610458374,
+        6.0600409507751465,
+        0.9500000476837158
+      ],
+      "polygons": 12855,
+      "materials": [
+        "RS201-RecordBin__Material_0_a612d591"
+      ]
+    },
+    {
+      "id": "Archive_CD_6_75__mesh0_4b9692bf",
+      "source_name": "Archive CD 6.75__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.5381319522857666,
+        6.237422943115234,
+        0.0
+      ],
+      "bounds_max": [
+        -2.301868438720703,
+        7.262576580047607,
+        1.9600000381469727
+      ],
+      "polygons": 15459,
+      "materials": [
+        "RS202-CDTower__Material_0_042fff73"
+      ]
+    },
+    {
+      "id": "Archive_CD_7_64__mesh0_21084fff",
+      "source_name": "Archive CD 7.64__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.520653247833252,
+        7.203263282775879,
+        0.0
+      ],
+      "bounds_max": [
+        -2.3193471431732178,
+        8.076736450195312,
+        1.6700000762939453
+      ],
+      "polygons": 15459,
+      "materials": [
+        "RS202-CDTower__Material_0_042fff73"
+      ]
+    },
+    {
+      "id": "Cashier_counter__mesh0_c7f80333",
+      "source_name": "Cashier counter__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.590000033378601,
+        6.710000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        0.23000001907348633,
+        7.450000286102295,
+        0.9399999976158142
+      ],
+      "polygons": 12467,
+      "materials": [
+        "RS203-CashDesk__Material_0_f48d6881"
+      ]
+    },
+    {
+      "id": "Listening_desk__mesh0_7fea7932",
+      "source_name": "Listening desk__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.8200000524520874,
+        5.139999866485596,
+        0.0
+      ],
+      "bounds_max": [
+        2.500000238418579,
+        6.839999675750732,
+        0.7899999618530273
+      ],
+      "polygons": 14585,
+      "materials": [
+        "RS209-ListeningDesk__Material_0_1ddbab40"
+      ]
+    },
+    {
+      "id": "Listening_chair__mesh0_428d5443",
+      "source_name": "Listening chair__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.978585422039032,
+        5.749040603637695,
+        0.0
+      ],
+      "bounds_max": [
+        1.7814147472381592,
+        6.510960102081299,
+        0.7300000190734863
+      ],
+      "polygons": 16202,
+      "materials": [
+        "RS210-ListeningChair__Material_0_1983b524"
+      ]
+    },
+    {
+      "id": "Listening_turntable__mesh0_daae5b50",
+      "source_name": "Listening turntable__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.931275725364685,
+        5.705000400543213,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.268724203109741,
+        6.175000190734863,
+        0.9392218589782715
+      ],
+      "polygons": 18627,
+      "materials": [
+        "RS204-Turntable__Material_0_c6458bf2"
+      ]
+    },
+    {
+      "id": "Near_speaker__mesh0_2ddbba33",
+      "source_name": "Near speaker__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.171123743057251,
+        5.307703495025635,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.328876495361328,
+        5.472295761108398,
+        1.0699999332427979
+      ],
+      "polygons": 13550,
+      "materials": [
+        "RS211-HifiSpeaker__Material_0_d258b227"
+      ]
+    },
+    {
+      "id": "Far_speaker__mesh0_041e97b3",
+      "source_name": "Far speaker__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.171123743057251,
+        6.517703533172607,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.328876495361328,
+        6.682295799255371,
+        1.0699999332427979
+      ],
+      "polygons": 13550,
+      "materials": [
+        "RS211-HifiSpeaker__Material_0_d258b227"
+      ]
+    },
+    {
+      "id": "Demo_cassette_player__mesh0_1067464f",
+      "source_name": "Demo cassette player__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.1602933406829834,
+        5.100000381469727,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.2997069358825684,
+        5.420000076293945,
+        0.98028165102005
+      ],
+      "polygons": 16862,
+      "materials": [
+        "RS212-CassetteStereo__Material_0_6770d21d"
+      ]
+    },
+    {
+      "id": "Shop_guitar__mesh0_67412c93",
+      "source_name": "Shop guitar__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.028491735458374,
+        7.034594535827637,
+        0.0
+      ],
+      "bounds_max": [
+        2.411508321762085,
+        7.385406017303467,
+        0.9800000190734863
+      ],
+      "polygons": 14250,
+      "materials": [
+        "P06-Guitar__Material_0_254fd206"
+      ]
+    },
+    {
+      "id": "Shop_amp__mesh0_a9b99c9c",
+      "source_name": "Shop amp__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.0008811950683594,
+        7.6133131980896,
+        0.0
+      ],
+      "bounds_max": [
+        2.4591188430786133,
+        7.926686763763428,
+        0.39292973279953003
+      ],
+      "polygons": 3457,
+      "materials": [
+        "A01-Amplifier__Material_0_003_128e507c"
+      ]
+    },
+    {
+      "id": "Rock_sleeve_wall__mesh0_dd8c66fa",
+      "source_name": "Rock sleeve wall__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.575000047683716,
+        2.484999895095825,
+        1.1200000047683716
+      ],
+      "bounds_max": [
+        -2.424999952316284,
+        4.135000228881836,
+        2.320000171661377
+      ],
+      "polygons": 22956,
+      "materials": [
+        "RS401-FaceOutLPDisplay__Material_0_c26cfc7d"
+      ]
+    },
+    {
+      "id": "Jazz_sleeve_wall__mesh0_5b993449",
+      "source_name": "Jazz sleeve wall__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.575000047683716,
+        4.364999771118164,
+        1.119999885559082
+      ],
+      "bounds_max": [
+        -2.424999952316284,
+        5.795000076293945,
+        2.1700000762939453
+      ],
+      "polygons": 22956,
+      "materials": [
+        "RS401-FaceOutLPDisplay__Material_0_c26cfc7d"
+      ]
+    },
+    {
+      "id": "Used_sleeve_wall__mesh0_0d34e5e9",
+      "source_name": "Used sleeve wall__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.424999952316284,
+        1.7899999618530273,
+        0.8600000143051147
+      ],
+      "bounds_max": [
+        2.575000047683716,
+        3.6100001335144043,
+        2.1600000858306885
+      ],
+      "polygons": 22956,
+      "materials": [
+        "RS401-FaceOutLPDisplay__Material_0_c26cfc7d"
+      ]
+    },
+    {
+      "id": "Staff_picks_behind_counter__mesh0_45029309",
+      "source_name": "Staff picks behind counter__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.465000033378601,
+        7.960000038146973,
+        1.3799998760223389
+      ],
+      "bounds_max": [
+        0.06499999761581421,
+        8.130000114440918,
+        2.490000009536743
+      ],
+      "polygons": 22956,
+      "materials": [
+        "RS401-FaceOutLPDisplay__Material_0_c26cfc7d"
+      ]
+    },
+    {
+      "id": "Work_in_progress_sleeves__mesh0_a88b6147",
+      "source_name": "Work in progress sleeves__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.37627387046813965,
+        6.9112548828125,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -0.06372613459825516,
+        7.208745002746582,
+        1.0604981184005737
+      ],
+      "polygons": 15920,
+      "materials": [
+        "B10-Zines__Material_0_b52156e2"
+      ]
+    },
+    {
+      "id": "Counter_lower_fanzines__mesh0_af3e8f9e",
+      "source_name": "Counter lower fanzines__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.475807249546051,
+        6.885522365570068,
+        0.1599999964237213
+      ],
+      "bounds_max": [
+        -0.08419273793697357,
+        7.2544779777526855,
+        0.32066404819488525
+      ],
+      "polygons": 15920,
+      "materials": [
+        "B10-Zines__Material_0_b52156e2"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_0__mesh0_249015de",
+      "source_name": "Featured vinyl 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8288447856903076,
+        2.333800792694092,
+        0.7400000095367432
+      ],
+      "bounds_max": [
+        -0.33115512132644653,
+        2.4061989784240723,
+        1.0500000715255737
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_1__mesh0_90f99e15",
+      "source_name": "Featured vinyl 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.0031047258526086807,
+        2.335176467895508,
+        0.7400000095367432
+      ],
+      "bounds_max": [
+        0.5168952941894531,
+        2.4048233032226562,
+        1.059999942779541
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS407-VinylJazz__Material_0_10aeceb3"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_2__mesh0_d18a9e2f",
+      "source_name": "Featured vinyl 2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.6087853908538818,
+        3.733675956726074,
+        0.7400000095367432
+      ],
+      "bounds_max": [
+        -0.11121463030576706,
+        3.7863240242004395,
+        1.0500000715255737
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_3__mesh0_3da797fe",
+      "source_name": "Featured vinyl 3__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.24918238818645477,
+        3.71496844291687,
+        0.7400000095367432
+      ],
+      "bounds_max": [
+        0.7308176159858704,
+        3.785031318664551,
+        1.0399999618530273
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS407-VinylJazz__Material_0_10aeceb3"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_4__mesh0_e536f2d6",
+      "source_name": "Featured vinyl 4__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.9224423170089722,
+        2.393251419067383,
+        0.7000000476837158
+      ],
+      "bounds_max": [
+        -1.8375576734542847,
+        2.9067487716674805,
+        1.0199999809265137
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_5__mesh0_c42193bc",
+      "source_name": "Featured vinyl 5__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.9186595678329468,
+        3.8212029933929443,
+        0.7200000286102295
+      ],
+      "bounds_max": [
+        -1.8413405418395996,
+        4.318797588348389,
+        1.03000009059906
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS407-VinylJazz__Material_0_10aeceb3"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_6__mesh0_787794f5",
+      "source_name": "Featured vinyl 6__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.9148234128952026,
+        5.1931047439575195,
+        0.7100000381469727
+      ],
+      "bounds_max": [
+        -1.8451766967773438,
+        5.706895351409912,
+        1.0299999713897705
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_7__mesh0_f1e8904a",
+      "source_name": "Featured vinyl 7__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.7747708559036255,
+        1.617445468902588,
+        0.16999998688697815
+      ],
+      "bounds_max": [
+        2.285228967666626,
+        1.7425543069839478,
+        0.49000000953674316
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS407-VinylJazz__Material_0_10aeceb3"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_8__mesh0_b5a190ad",
+      "source_name": "Featured vinyl 8__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.9116406440734863,
+        2.49153995513916,
+        0.17000000178813934
+      ],
+      "bounds_max": [
+        2.4083592891693115,
+        2.5884599685668945,
+        0.48000001907348633
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_9__mesh0_b48c75b1",
+      "source_name": "Featured vinyl 9__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.3688448369503021,
+        7.2938008308410645,
+        0.9399999380111694
+      ],
+      "bounds_max": [
+        0.12884484231472015,
+        7.366199016571045,
+        1.25
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS407-VinylJazz__Material_0_10aeceb3"
+      ]
+    },
+    {
+      "id": "Featured_vinyl_10__mesh0_36c56769",
+      "source_name": "Featured vinyl 10__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.3335931301116943,
+        5.401671886444092,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.3664064407348633,
+        5.898327827453613,
+        1.100000023841858
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Album_being_priced__mesh0_cea1f975",
+      "source_name": "Album being priced__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.6681683659553528,
+        6.715816974639893,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -0.25183168053627014,
+        7.0041823387146,
+        0.9657667279243469
+      ],
+      "polygons": 7590,
+      "materials": [
+        "RS402-VinylAlbum__Material_0_2dc269cb"
+      ]
+    },
+    {
+      "id": "Local_gig_poster__mesh0_26d50b50",
+      "source_name": "Local gig poster__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.2245254516601562,
+        1.6034513711929321,
+        0.03999999165534973
+      ],
+      "bounds_max": [
+        -2.135474681854248,
+        2.1365487575531006,
+        0.7200000286102295
+      ],
+      "polygons": 13876,
+      "materials": [
+        "B07-GalleryFrame__Material_0_7c27aa42",
+        "Meshy_band_photo_3_3ab4bde6"
+      ]
+    },
+    {
+      "id": "Counter_gig_flyer__mesh0_a378cfb9",
+      "source_name": "Counter gig flyer__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.23585942387580872,
+        8.030320167541504,
+        1.7400000095367432
+      ],
+      "bounds_max": [
+        0.6441405415534973,
+        8.049680709838867,
+        2.259999990463257
+      ],
+      "polygons": 13876,
+      "materials": [
+        "B07-GalleryFrame__Material_0_7c27aa42",
+        "Meshy_band_photo_4_b4df8c62"
+      ]
+    },
+    {
+      "id": "Listening_gig_flyer__mesh0_e21b1675",
+      "source_name": "Listening gig flyer__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.497713565826416,
+        5.880898475646973,
+        1.4800000190734863
+      ],
+      "bounds_max": [
+        2.5222866535186768,
+        6.399101257324219,
+        2.140000104904175
+      ],
+      "polygons": 13876,
+      "materials": [
+        "B07-GalleryFrame__Material_0_7c27aa42",
+        "Meshy_band_photo_1_07cc3988"
+      ]
+    },
+    {
+      "id": "Listening_small_flyer__mesh0_e2dd27b4",
+      "source_name": "Listening small flyer__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.501995086669922,
+        6.671191692352295,
+        1.7999998331069946
+      ],
+      "bounds_max": [
+        2.518004894256592,
+        7.008808612823486,
+        2.2299997806549072
+      ],
+      "polygons": 13876,
+      "materials": [
+        "B07-GalleryFrame__Material_0_7c27aa42",
+        "Meshy_band_photo_5_0c47845c"
+      ]
+    },
+    {
+      "id": "Category_new__mesh0_156f9f22",
+      "source_name": "Category new__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.6809331774711609,
+        2.6123266220092773,
+        0.9599999189376831
+      ],
+      "bounds_max": [
+        -0.2590668201446533,
+        2.687673568725586,
+        1.3398319482803345
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_new_274a5adb"
+      ]
+    },
+    {
+      "id": "Category_rock__mesh0_a1743347",
+      "source_name": "Category rock__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.2344885766506195,
+        2.6237359046936035,
+        0.9599999189376831
+      ],
+      "bounds_max": [
+        0.5455113649368286,
+        2.6762640476226807,
+        1.2403521537780762
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_rock_538cbcd2"
+      ]
+    },
+    {
+      "id": "Category_jazz__mesh0_af29c658",
+      "source_name": "Category jazz__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.6207467317581177,
+        3.4723448753356934,
+        0.9600000381469727
+      ],
+      "bounds_max": [
+        -0.31925326585769653,
+        3.5276548862457275,
+        1.2313085794448853
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_jazz_0c20f9be"
+      ]
+    },
+    {
+      "id": "Category_electronic__mesh0_d62ce298",
+      "source_name": "Category electronic__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.16420376300811768,
+        3.464243173599243,
+        0.9599999189376831
+      ],
+      "bounds_max": [
+        0.5757962465286255,
+        3.535756826400757,
+        1.3307883739471436
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_electronic_6760148b"
+      ]
+    },
+    {
+      "id": "Category_rock_wall__mesh0_3b6608c1",
+      "source_name": "Category rock_wall__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.097111225128174,
+        2.829472064971924,
+        0.949999988079071
+      ],
+      "bounds_max": [
+        -2.042888641357422,
+        3.1505279541015625,
+        1.2393958568572998
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_rock_wall_188f93c9"
+      ]
+    },
+    {
+      "id": "Category_soul__mesh0_c3e1421f",
+      "source_name": "Category soul__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.123591899871826,
+        4.218747615814209,
+        0.9500000476837158
+      ],
+      "bounds_max": [
+        -2.056408166885376,
+        4.521252155303955,
+        1.2213085889816284
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_soul_98ffe33e"
+      ]
+    },
+    {
+      "id": "Category_used__mesh0_632b0376",
+      "source_name": "Category used__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.130629539489746,
+        5.508970260620117,
+        0.9500000476837158
+      ],
+      "bounds_max": [
+        -2.0693702697753906,
+        5.811029434204102,
+        1.2213085889816284
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_used_c77aebca"
+      ]
+    },
+    {
+      "id": "Category_used35__mesh0_a5dc3280",
+      "source_name": "Category used35__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.116408348083496,
+        2.1187477111816406,
+        0.3799999952316284
+      ],
+      "bounds_max": [
+        2.1835920810699463,
+        2.421252489089966,
+        0.651308536529541
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_used35_2b8b6f2f"
+      ]
+    },
+    {
+      "id": "Category_demo__mesh0_c2a0e65a",
+      "source_name": "Category demo__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        2.0783259868621826,
+        5.069999694824219,
+        0.9700000286102295
+      ],
+      "bounds_max": [
+        2.121673822402954,
+        5.369999885559082,
+        1.241308569908142
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_demo_18815e8d"
+      ]
+    },
+    {
+      "id": "Category_cash__mesh0_83188345",
+      "source_name": "Category cash__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.22062210738658905,
+        6.774884223937988,
+        0.9399999380111694
+      ],
+      "bounds_max": [
+        0.06062213331460953,
+        6.82511568069458,
+        1.1932213306427002
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_cash_8b60c06a"
+      ]
+    },
+    {
+      "id": "Category_open__mesh0_6f039510",
+      "source_name": "Category open__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.2350000143051147,
+        -0.01739644445478916,
+        1.649999976158142
+      ],
+      "bounds_max": [
+        -0.9250000715255737,
+        0.027396442368626595,
+        1.9303522109985352
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_open_6b208d57"
+      ]
+    },
+    {
+      "id": "Category_staff__mesh0_84383926",
+      "source_name": "Category staff__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.9300000071525574,
+        7.9811015129089355,
+        2.5199999809265137
+      ],
+      "bounds_max": [
+        -0.5299999713897705,
+        8.038898468017578,
+        2.881744861602783
+      ],
+      "polygons": 3606,
+      "materials": [
+        "RS404-CategoryCard__Material_0_8abad61c",
+        "Category_ink_staff_96b7f3f0"
+      ]
+    },
+    {
+      "id": "Register_receipts_tape_pens_staff_cup__mesh0_da04f3b2",
+      "source_name": "Register receipts tape pens staff cup__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.2899999618530273,
+        6.785419940948486,
+        0.9399999380111694
+      ],
+      "bounds_max": [
+        -0.5700000524520874,
+        7.334579944610596,
+        1.1788665056228638
+      ],
+      "polygons": 16429,
+      "materials": [
+        "RS405-CashierWorkKit__Material_0_360a9b5c"
+      ]
+    },
+    {
+      "id": "Staff_thermos__mesh0_0cce5a40",
+      "source_name": "Staff thermos__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.476798415184021,
+        7.297175884246826,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -1.363201379776001,
+        7.382823944091797,
+        1.2200000286102295
+      ],
+      "polygons": 12296,
+      "materials": [
+        "RS207-Thermos__Material_0_4193388f"
+      ]
+    },
+    {
+      "id": "Small_cashier_plant__mesh0_50ee05ed",
+      "source_name": "Small cashier plant__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.5817830562591553,
+        7.288197994232178,
+        0.9399999976158142
+      ],
+      "bounds_max": [
+        -1.398216962814331,
+        7.471802711486816,
+        1.2400000095367432
+      ],
+      "polygons": 18626,
+      "materials": [
+        "RS208-Pothos__Material_0_beca8afb"
+      ]
+    },
+    {
+      "id": "Counter_lower_tape_stock__mesh0_ac72aa47",
+      "source_name": "Counter lower tape stock__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.244999885559082,
+        6.965501308441162,
+        0.15999998152256012
+      ],
+      "bounds_max": [
+        -0.8149999380111694,
+        7.254498481750488,
+        0.4215865135192871
+      ],
+      "polygons": 14951,
+      "materials": [
+        "RS213-TapeCrate__Material_0_47558b67"
+      ]
+    },
+    {
+      "id": "Listening_amber_lamp_model__mesh0_cb829937",
+      "source_name": "Listening amber lamp model__mesh0",
+      "group": "Fixtures",
+      "bounds_min": [
+        2.286850929260254,
+        6.187191009521484,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.473149538040161,
+        6.39280891418457,
+        1.149999976158142
+      ],
+      "polygons": 13911,
+      "materials": [
+        "RS206-DeskLamp__Material_0_b3d0b906"
+      ]
+    },
+    {
+      "id": "Listening_local_tapes__mesh0_c99e5a44",
+      "source_name": "Listening local tapes__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.9700000286102295,
+        6.219024658203125,
+        0.0
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        6.460975646972656,
+        0.21900266408920288
+      ],
+      "polygons": 14951,
+      "materials": [
+        "RS213-TapeCrate__Material_0_47558b67"
+      ]
+    },
+    {
+      "id": "Staff_fan__mesh0_0a5fd0cb",
+      "source_name": "Staff fan__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.0424039363861084,
+        7.284404754638672,
+        0.0
+      ],
+      "bounds_max": [
+        -1.4975961446762085,
+        7.955594539642334,
+        0.4999999701976776
+      ],
+      "polygons": 18421,
+      "materials": [
+        "RS205-DeskFan__Material_0_e52ede52"
+      ]
+    },
+    {
+      "id": "Incoming_used_carton_0__mesh0_849c6c4d",
+      "source_name": "Incoming used carton 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.8761858940124512,
+        1.6343324184417725,
+        0.0
+      ],
+      "bounds_max": [
+        2.423814058303833,
+        2.085667371749878,
+        0.4674214720726013
+      ],
+      "polygons": 15426,
+      "materials": [
+        "RS406-UsedLPCarton__Material_0_6ed53e67"
+      ]
+    },
+    {
+      "id": "Incoming_used_carton_1__mesh0_869581f3",
+      "source_name": "Incoming used carton 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        1.8879472017288208,
+        2.5666801929473877,
+        0.0
+      ],
+      "bounds_max": [
+        2.4320528507232666,
+        3.013319969177246,
+        0.4674214720726013
+      ],
+      "polygons": 15426,
+      "materials": [
+        "RS406-UsedLPCarton__Material_0_6ed53e67"
+      ]
+    },
+    {
+      "id": "Incoming_used_carton_2__mesh0_31bb0cdc",
+      "source_name": "Incoming used carton 2__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -2.0089328289031982,
+        5.967425346374512,
+        0.0
+      ],
+      "bounds_max": [
+        -1.451067328453064,
+        6.4325737953186035,
+        0.4674214720726013
+      ],
+      "polygons": 15426,
+      "materials": [
+        "RS406-UsedLPCarton__Material_0_6ed53e67"
+      ]
+    },
+    {
+      "id": "Island_lower_stock_0__mesh0_1355425a",
+      "source_name": "Island lower stock 0__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.7257899641990662,
+        2.498324155807495,
+        0.12999999523162842
+      ],
+      "bounds_max": [
+        -0.17420995235443115,
+        2.981675863265991,
+        0.5299999713897705
+      ],
+      "polygons": 19656,
+      "materials": [
+        "RS403-UsedRecordCrate__Material_0_d2981a7c"
+      ]
+    },
+    {
+      "id": "Island_lower_stock_1__mesh0_60fcfbfa",
+      "source_name": "Island lower stock 1__mesh0",
+      "group": "Architecture",
+      "bounds_min": [
+        0.0997018963098526,
+        3.213092088699341,
+        0.12999999523162842
+      ],
+      "bounds_max": [
+        0.6602981090545654,
+        3.7069079875946045,
+        0.5299999713897705
+      ],
+      "polygons": 19656,
+      "materials": [
+        "RS403-UsedRecordCrate__Material_0_d2981a7c"
+      ]
+    }
+  ],
+  "lights": [
+    {
+      "name": "Window afternoon",
+      "type": "AREA",
+      "position": [
+        -2.359999895095825,
+        2.130000114440918,
+        1.100000023841858
+      ],
+      "direction": [
+        0.7066187858581543,
+        -0.46214908361434937,
+        0.5358247756958008
+      ],
+      "color": [
+        0.6000000238418579,
+        0.7300000190734863,
+        1.0
+      ],
+      "power": 92.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.649999976158142,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Doorway daylight",
+      "type": "AREA",
+      "position": [
+        0.6499999761581421,
+        2.200000047683716,
+        0.05000000074505806
+      ],
+      "direction": [
+        -0.18529880046844482,
+        -0.399105042219162,
+        0.8979864716529846
+      ],
+      "color": [
+        0.6700000166893005,
+        0.800000011920929,
+        1.0
+      ],
+      "power": 55.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.5,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Browse warm pool",
+      "type": "AREA",
+      "position": [
+        -0.20000000298023224,
+        2.549999952316284,
+        3.25
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "color": [
+        1.0,
+        0.8500000238418579,
+        0.6499999761581421
+      ],
+      "power": 105.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.7000000476837158,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Fluorescent sage",
+      "type": "AREA",
+      "position": [
+        0.0,
+        2.5399999618530273,
+        5.599999904632568
+      ],
+      "direction": [
+        -0.14397794008255005,
+        -0.979050874710083,
+        -0.14397795498371124
+      ],
+      "color": [
+        0.7900000214576721,
+        0.9399999976158142,
+        0.8100000023841858
+      ],
+      "power": 95.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.7999999523162842,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Listening amber lamp",
+      "type": "AREA",
+      "position": [
+        2.190000057220459,
+        1.1399999856948853,
+        6.269999980926514
+      ],
+      "direction": [
+        -0.5587267279624939,
+        -0.7128579616546631,
+        -0.423861026763916
+      ],
+      "color": [
+        1.0,
+        0.5299999713897705,
+        0.2199999988079071
+      ],
+      "power": 20.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 0.30000001192092896,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Counter practical",
+      "type": "AREA",
+      "position": [
+        -0.6700000166893005,
+        2.5299999713897705,
+        6.849999904632568
+      ],
+      "direction": [
+        0.012857304885983467,
+        -0.9835822582244873,
+        0.18000207841396332
+      ],
+      "color": [
+        1.0,
+        0.75,
+        0.47999998927116394
+      ],
+      "power": 115.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.2000000476837158,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Staff picks wash",
+      "type": "AREA",
+      "position": [
+        -0.6499999761581421,
+        2.4800000190734863,
+        7.099999904632568
+      ],
+      "direction": [
+        -0.04781680554151535,
+        -0.5068578720092773,
+        0.860702395439148
+      ],
+      "color": [
+        1.0,
+        0.8100000023841858,
+        0.5699999928474426
+      ],
+      "power": 45.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.2000000476837158,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Front ceiling bounce",
+      "type": "AREA",
+      "position": [
+        0.0,
+        2.5999999046325684,
+        1.899999976158142
+      ],
+      "direction": [
+        0.0,
+        -0.9990562200546265,
+        0.0434371754527092
+      ],
+      "color": [
+        0.8199999928474426,
+        0.8299999833106995,
+        0.7300000190734863
+      ],
+      "power": 15.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 2.5,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Shelf bounce",
+      "type": "AREA",
+      "position": [
+        1.9800000190734863,
+        2.25,
+        3.0
+      ],
+      "direction": [
+        0.42834848165512085,
+        -0.8668957948684692,
+        -0.2549692988395691
+      ],
+      "color": [
+        1.0,
+        0.75,
+        0.5299999713897705
+      ],
+      "power": 14.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.0,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    },
+    {
+      "name": "Right rear wall fill",
+      "type": "AREA",
+      "position": [
+        2.4800000190734863,
+        2.049999952316284,
+        5.349999904632568
+      ],
+      "direction": [
+        -0.45269227027893066,
+        -0.8916669487953186,
+        -4.470348358154297e-08
+      ],
+      "color": [
+        0.7200000286102295,
+        0.7799999713897705,
+        1.0
+      ],
+      "power": 78.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 1.350000023841858,
+      "size_y": 0.25,
+      "radius": 0.0,
+      "group": "Meshy Lights"
+    }
+  ],
+  "groups": [
+    "Architecture",
+    "Fixtures"
+  ],
+  "approximation_notes": [
+    "Procedural micro-bump and Blender transmission require Unity shader equivalents.",
+    "Light placement and color are preserved; intensity is calibrated for URP, not numerically copied between renderers."
+  ]
+}

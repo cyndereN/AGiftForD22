@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "authorized": "Previous user authorization: 随便用meshy，我有很多credit",
+  "estimated_credits": 150,
+  "assets": [
+    {
+      "name": "RS209-ListeningDesk",
+      "prompt": "One modest old 1990s Chinese elm-wood writing desk repurposed for a record player, 120cm wide 60cm deep 76cm high. Dark walnut stained timber top with worn pale edges, four slim square wood legs, two shallow drawers with small brass pulls, an open space below for sitting. Authentic secondhand domestic furniture. Empty tabletop, realistic detailed joinery, uneven rubbed varnish, no decorations, no objects, no background or base, no modern metal frame.",
+      "polycount": 18000,
+      "preview": {
+        "task_id": "01a10262-4d91-7390-a37b-1663960cb4e4",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10262-4d91-7390-a37b-1663960cb4e4",
+        "estimated_time": "2-3 minutes"
+      },
+      "status": "preview"
+    },
+    {
+      "name": "RS210-ListeningChair",
+      "prompt": "One old Chinese wooden armchair from a Beijing hutong home around 2000, low and comfortable, dark worn timber frame, simple curved wooden arms, four short legs, faded olive green upholstered seat and rectangular back cushion, slight fabric sag and worn corners. Modest 1980s domestic furniture reused in an independent record shop. Realistic functional proportions, detailed seams and joinery, no background, no pedestal, no extra objects.",
+      "polycount": 18000,
+      "preview": {
+        "task_id": "01a10262-6279-734f-ba08-c928213ab0e1",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10262-6279-734f-ba08-c928213ab0e1",
+        "estimated_time": "2-3 minutes"
+      },
+      "status": "preview"
+    },
+    {
+      "name": "RS211-HifiSpeaker",
+      "prompt": "One single compact 1990s bookshelf hi-fi loudspeaker. Tall rectangular dark walnut wood veneer cabinet, black fabric front grille removed to reveal one circular paper woofer at bottom and small tweeter above, rear cable terminals, scuffed corners, slight dust, realistic screws and rubber cone surround. Height 38cm, width 23cm, depth 22cm. Realistic detailed game prop, no brand or text, no background or pedestal, single speaker only.",
+      "polycount": 14000,
+      "preview": {
+        "task_id": "01a10262-7607-775a-b4bc-8383c890bcf3",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10262-7607-775a-b4bc-8383c890bcf3",
+        "estimated_time": "2-3 minutes"
+      },
+      "status": "preview"
+    },
+    {
+      "name": "RS212-CassetteStereo",
+      "prompt": "One worn 1990s silver and black portable cassette radio boombox with a horizontal carrying handle folded down, two circular black speaker grilles left and right, central transparent cassette deck with one tape inside, narrow radio tuner dial and small analogue buttons on top. A modest 2005 Beijing music shop object, realistic scratched plastic and brushed aluminium, no logos, no cables floating, no background or stand. 45cm wide.",
+      "polycount": 18000,
+      "preview": {
+        "task_id": "01a10262-819e-72a1-9376-99f7a462b1e3",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10262-819e-72a1-9376-99f7a462b1e3",
+        "estimated_time": "2-3 minutes"
+      },
+      "status": "preview"
+    },
+    {
+      "name": "RS213-TapeCrate",
+      "prompt": "One small dark green plastic milk crate filled with varied used compact disc jewel cases and cassette tape boxes upright and leaning naturally. Thin transparent cases with faded cream, black and red printed paper inserts, several paper dividers, irregular heights and a few horizontal stacks. Object 38cm wide 28cm deep 25cm high, authentic 2005 Beijing record shop secondhand stock. Realistic detail, no readable text, no background, no floor, no pedestal.",
+      "polycount": 18000,
+      "preview": {
+        "task_id": "01a10262-94cb-77e4-bd28-45e9858e75d2",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10262-94cb-77e4-bd28-45e9858e75d2",
+        "estimated_time": "2-3 minutes"
+      },
+      "status": "preview"
+    }
+  ]
+}

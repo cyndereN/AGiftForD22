@@ -1,0 +1,34 @@
+{
+  "asset": "brick_wall_08",
+  "source": "https://polyhaven.com/a/brick_wall_08",
+  "license": "CC0",
+  "authors": {
+    "Amal Kumar": "All"
+  },
+  "dimensions_mm": [
+    1899.9998569488525,
+    1899.9998569488525
+  ],
+  "maps": {
+    "Diffuse": {
+      "file": "Diffuse.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brick_wall_08/brick_wall_08_diff_2k.jpg",
+      "md5": "7ee8d22f280cf9b40ceec057a7800d85"
+    },
+    "Rough": {
+      "file": "Rough.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brick_wall_08/brick_wall_08_rough_2k.jpg",
+      "md5": "4109b36a487961745f5d91da7344dcc1"
+    },
+    "nor_gl": {
+      "file": "nor_gl.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brick_wall_08/brick_wall_08_nor_gl_2k.jpg",
+      "md5": "a6b814e305d316ca78826fbffbbc43f5"
+    },
+    "Displacement": {
+      "file": "Displacement.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/brick_wall_08/brick_wall_08_disp_2k.jpg",
+      "md5": "13406b88ca39928d2ffc7542bda883b1"
+    }
+  }
+}

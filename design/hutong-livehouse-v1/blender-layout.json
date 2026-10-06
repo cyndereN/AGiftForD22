@@ -1,0 +1,7228 @@
+{
+  "version": 1,
+  "scene": "D22_HutongLiveHouse_v1_MeshyOnly",
+  "time_anchor": "2006 Beijing hutong music block",
+  "dimensions_m": [
+    6,
+    36,
+    2.9
+  ],
+  "zones": [
+    {
+      "id": "approach",
+      "y": [
+        0,
+        5
+      ]
+    },
+    {
+      "id": "record_shop",
+      "y": [
+        5,
+        12
+      ]
+    },
+    {
+      "id": "courtyard",
+      "y": [
+        12,
+        18
+      ]
+    },
+    {
+      "id": "livehouse",
+      "y": [
+        18,
+        29
+      ]
+    },
+    {
+      "id": "night_exit",
+      "y": [
+        29,
+        36
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "label": "Hutong floor 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 0_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 1_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 2_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 3_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 4_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        0.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        1.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        1.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        2.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        2.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        3.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        3.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        4.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        4.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        5.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        5.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        6.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        6.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        7.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        7.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        8.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_8",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        8.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        9.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_9",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        9.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        10.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_10",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        10.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        11.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_11",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        11.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        12.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_12",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        12.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        12.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        13.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_13",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        13.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        13.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        14.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_14",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        14.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        14.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        15.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_15",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        15.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        15.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        16.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_16",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        16.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        16.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        17.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_17",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        17.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        17.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        18.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_18",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        18.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        18.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        19.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_19",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        19.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        19.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        20.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_20",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        20.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        20.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        21.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_21",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        21.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        21.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        22.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_22",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        22.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        22.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        23.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_23",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        23.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        23.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        24.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_24",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        24.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        24.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        25.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_25",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        25.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        25.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        26.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_26",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        26.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        26.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        27.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_27",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        27.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        27.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        28.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_28",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        28.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        28.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        29.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_29",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        29.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        29.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        30.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_30",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        30.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        30.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        31.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_31",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        31.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        31.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        32.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_32",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        32.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        32.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        33.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_33",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        33.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        33.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        34.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_34",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        34.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        34.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        35.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Hutong floor 5_35",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5,
+        35.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0,
+        35.0,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0,
+        36.0,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 0",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        1,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        0.02500002831220627,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        1.975000023841858,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 0",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        1,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        0.02500002831220627,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        1.975000023841858,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        3,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        2.0249998569488525,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        3.9749999046325684,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        3,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        2.0249998569488525,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        3.9749999046325684,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 2",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        5,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        4.025000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        5.974999904632568,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 2",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        5,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        4.025000095367432,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        5.974999904632568,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 3",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        7,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        6.025000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        7.974999904632568,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 3",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        7,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        6.025000095367432,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        7.974999904632568,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 4",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        9,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        8.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        9.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 4",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        9,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        8.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        9.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 5",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        11,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        10.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        11.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 5",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        11,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        10.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        11.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 6",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        13,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        12.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        13.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 6",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        13,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        12.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        13.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 7",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        15,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        14.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        15.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 7",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        15,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        14.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        15.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 8",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        17,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        16.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        17.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 8",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        17,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        16.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        17.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 9",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        19,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        18.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        19.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 9",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        19,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        18.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        19.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 10",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        21,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        20.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        21.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 10",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        21,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        20.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        21.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 11",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        23,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        22.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        23.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 11",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        23,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        22.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        23.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 12",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        25,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        24.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        25.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 12",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        25,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        24.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        25.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 13",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        27,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        26.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        27.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 13",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        27,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        26.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        27.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 14",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        29,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        28.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        29.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 14",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        29,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        28.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        29.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 15",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        31,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        30.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        31.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 15",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        31,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        30.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        31.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 16",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        33,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        32.02499771118164,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        33.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 16",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        33,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        32.02499771118164,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        33.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall lower 17",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        35,
+        0
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        34.02499771118164,
+        0.0
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        35.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left hutong wall upper 17",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.95,
+        35,
+        0.92
+      ],
+      "bounds_min": [
+        -3.06000018119812,
+        34.02499771118164,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -2.8399999141693115,
+        35.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 0",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        1,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        0.02500002831220627,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        1.975000023841858,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 0",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        1,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        0.02500002831220627,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        1.975000023841858,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        3,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        2.0249998569488525,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        3.9749999046325684,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        3,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        2.0249998569488525,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        3.9749999046325684,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 2",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        5,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        4.025000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        5.974999904632568,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 2",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        5,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        4.025000095367432,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        5.974999904632568,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 3",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        7,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        6.025000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        7.974999904632568,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 3",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        7,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        6.025000095367432,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        7.974999904632568,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 4",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        9,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        8.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        9.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 4",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        9,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        8.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        9.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 5",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        11,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        10.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        11.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 5",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        11,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        10.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        11.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 6",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        13,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        12.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        13.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 6",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        13,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        12.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        13.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 7",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        15,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        14.02500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        15.975000381469727,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 7",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        15,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        14.02500057220459,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        15.975000381469727,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 8",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        17,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        16.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        17.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 8",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        17,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        16.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        17.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 9",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        19,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        18.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        19.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 9",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        19,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        18.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        19.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 10",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        21,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        20.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        21.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 10",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        21,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        20.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        21.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 11",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        23,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        22.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        23.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 11",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        23,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        22.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        23.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 12",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        25,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        24.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        25.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 12",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        25,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        24.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        25.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 13",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        27,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        26.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        27.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 13",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        27,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        26.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        27.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 14",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        29,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        28.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        29.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 14",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        29,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        28.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        29.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 15",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        31,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        30.024999618530273,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        31.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 15",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        31,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        30.024999618530273,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        31.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 16",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        33,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        32.02499771118164,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        33.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 16",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        33,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        32.02499771118164,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        33.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall lower 17",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        35,
+        0
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        34.02499771118164,
+        0.0
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        35.974998474121094,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Right hutong wall upper 17",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.95,
+        35,
+        0.92
+      ],
+      "bounds_min": [
+        2.8399999141693115,
+        34.02499771118164,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        3.06000018119812,
+        35.974998474121094,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Record shop red door",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.88,
+        7.1,
+        0
+      ],
+      "bounds_min": [
+        -2.9700002670288086,
+        6.625,
+        0.0
+      ],
+      "bounds_max": [
+        -2.7900002002716064,
+        7.575000286102295,
+        2.1399998664855957
+      ],
+      "collision": false
+    },
+    {
+      "label": "Record shop window",
+      "source": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+      "group": "Architecture",
+      "position": [
+        -2.87,
+        8.65,
+        0.43
+      ],
+      "bounds_min": [
+        -2.9699997901916504,
+        7.874999046325684,
+        0.4300000071525574
+      ],
+      "bounds_max": [
+        -2.7699997425079346,
+        9.424999237060547,
+        2.180000066757202
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard gate",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.88,
+        13.9,
+        0
+      ],
+      "bounds_min": [
+        -2.9700002670288086,
+        13.375,
+        0.0
+      ],
+      "bounds_max": [
+        -2.7900002002716064,
+        14.425000190734863,
+        2.179999828338623
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse door",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        2.88,
+        19.15,
+        0
+      ],
+      "bounds_min": [
+        2.7900002002716064,
+        18.625,
+        0.0
+      ],
+      "bounds_max": [
+        2.9700002670288086,
+        19.674999237060547,
+        2.179999828338623
+      ],
+      "collision": false
+    },
+    {
+      "label": "Night exit door",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        2.88,
+        31.7,
+        0
+      ],
+      "bounds_min": [
+        2.7900002002716064,
+        31.17500114440918,
+        0.0
+      ],
+      "bounds_max": [
+        2.9700002670288086,
+        32.22500228881836,
+        2.179999828338623
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop courtyard threshold lower -2.1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.1,
+        11.75,
+        0
+      ],
+      "bounds_min": [
+        -2.9250001907348633,
+        11.639999389648438,
+        0.0
+      ],
+      "bounds_max": [
+        -1.2750002145767212,
+        11.859999656677246,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop courtyard threshold upper -2.1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.1,
+        11.75,
+        0.92
+      ],
+      "bounds_min": [
+        -2.9250001907348633,
+        11.639999389648438,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -1.2750002145767212,
+        11.859999656677246,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop courtyard threshold lower 2.1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.1,
+        11.75,
+        0
+      ],
+      "bounds_min": [
+        1.2749998569488525,
+        11.639999389648438,
+        0.0
+      ],
+      "bounds_max": [
+        2.924999713897705,
+        11.859999656677246,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop courtyard threshold upper 2.1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.1,
+        11.75,
+        0.92
+      ],
+      "bounds_min": [
+        1.2749998569488525,
+        11.639999389648438,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        2.924999713897705,
+        11.859999656677246,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop courtyard threshold red gate",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        11.75,
+        0.0
+      ],
+      "bounds_min": [
+        -0.45000001788139343,
+        11.65999984741211,
+        0.0
+      ],
+      "bounds_max": [
+        0.45000001788139343,
+        11.84000015258789,
+        2.119999885559082
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard livehouse threshold lower -2.1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.1,
+        18.05,
+        0
+      ],
+      "bounds_min": [
+        -2.9250001907348633,
+        17.940000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        -1.2750002145767212,
+        18.15999984741211,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard livehouse threshold upper -2.1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.1,
+        18.05,
+        0.92
+      ],
+      "bounds_min": [
+        -2.9250001907348633,
+        17.940000534057617,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        -1.2750002145767212,
+        18.15999984741211,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard livehouse threshold lower 2.1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.1,
+        18.05,
+        0
+      ],
+      "bounds_min": [
+        1.2749998569488525,
+        17.940000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        2.924999713897705,
+        18.15999984741211,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard livehouse threshold upper 2.1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.1,
+        18.05,
+        0.92
+      ],
+      "bounds_min": [
+        1.2749998569488525,
+        17.940000534057617,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        2.924999713897705,
+        18.15999984741211,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard livehouse threshold red gate",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        18.05,
+        0.0
+      ],
+      "bounds_min": [
+        -0.45000001788139343,
+        17.959999084472656,
+        0.0
+      ],
+      "bounds_max": [
+        0.45000001788139343,
+        18.139999389648438,
+        2.119999885559082
+      ],
+      "collision": false
+    },
+    {
+      "label": "Night exit end wall",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        35.15,
+        0
+      ],
+      "bounds_min": [
+        -2.8999998569488525,
+        35.040000915527344,
+        0.0
+      ],
+      "bounds_max": [
+        2.8999998569488525,
+        35.26000213623047,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Night exit end plaster",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        35.15,
+        0.92
+      ],
+      "bounds_min": [
+        -2.8999998569488525,
+        35.040000915527344,
+        0.9200000762939453
+      ],
+      "bounds_max": [
+        2.8999998569488525,
+        35.26000213623047,
+        3.0200002193450928
+      ],
+      "collision": false
+    },
+    {
+      "label": "Bicycle-like guitar poster prop",
+      "source": "assets/d22/meshy/P06-Guitar.glb",
+      "group": "Life",
+      "position": [
+        2.35,
+        2.8,
+        0
+      ],
+      "bounds_min": [
+        2.1837522983551025,
+        2.6549298763275146,
+        0.0
+      ],
+      "bounds_max": [
+        2.516247510910034,
+        2.945070266723633,
+        0.949999988079071
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard beverage crate",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Courtyard",
+      "position": [
+        -1.98,
+        12.95,
+        0
+      ],
+      "bounds_min": [
+        -2.2200000286102295,
+        12.78869915008545,
+        0.0
+      ],
+      "bounds_max": [
+        -1.7400000095367432,
+        13.111300468444824,
+        0.2920035421848297
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard plant",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "group": "Life",
+      "position": [
+        -2.25,
+        14.15,
+        0
+      ],
+      "bounds_min": [
+        -2.418268918991089,
+        13.981695175170898,
+        0.0
+      ],
+      "bounds_max": [
+        -2.081731081008911,
+        14.318304061889648,
+        0.5500000715255737
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard equipment case",
+      "source": "assets/d22/v9/meshy/B11-FlightCase.glb",
+      "group": "Courtyard",
+      "position": [
+        1.95,
+        14.65,
+        0
+      ],
+      "bounds_min": [
+        1.6400001049041748,
+        14.438085556030273,
+        0.0
+      ],
+      "bounds_max": [
+        2.259999990463257,
+        14.861913681030273,
+        0.4613674283027649
+      ],
+      "collision": true
+    },
+    {
+      "label": "Courtyard fan",
+      "source": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+      "group": "Life",
+      "position": [
+        2.15,
+        16.5,
+        0
+      ],
+      "bounds_min": [
+        1.9601997137069702,
+        16.179454803466797,
+        0.0
+      ],
+      "bounds_max": [
+        2.3398003578186035,
+        16.820547103881836,
+        0.550000011920929
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop window crate",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "RecordShop",
+      "position": [
+        -1.65,
+        6.55,
+        0
+      ],
+      "bounds_min": [
+        -2.125,
+        6.200000286102295,
+        0.0
+      ],
+      "bounds_max": [
+        -1.1749999523162842,
+        6.900000095367432,
+        0.9500000476837158
+      ],
+      "collision": true
+    },
+    {
+      "label": "Shop center crate",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "RecordShop",
+      "position": [
+        -0.25,
+        8.0,
+        0
+      ],
+      "bounds_min": [
+        -0.7249999642372131,
+        7.650000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        0.22499997913837433,
+        8.350000381469727,
+        0.9500000476837158
+      ],
+      "collision": true
+    },
+    {
+      "label": "Shop center crate 2",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "RecordShop",
+      "position": [
+        0.95,
+        8.0,
+        0
+      ],
+      "bounds_min": [
+        0.4749999940395355,
+        7.650000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        1.4249999523162842,
+        8.350000381469727,
+        0.9500000476837158
+      ],
+      "collision": true
+    },
+    {
+      "label": "Shop cashier",
+      "source": "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+      "group": "RecordShop",
+      "position": [
+        0.95,
+        9.75,
+        0
+      ],
+      "bounds_min": [
+        0.125,
+        9.390000343322754,
+        0.0
+      ],
+      "bounds_max": [
+        1.774999976158142,
+        10.110000610351562,
+        0.9399999976158142
+      ],
+      "collision": true
+    },
+    {
+      "label": "Shop listening turntable",
+      "source": "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+      "group": "RecordShop",
+      "position": [
+        0.15,
+        10.05,
+        0.94
+      ],
+      "bounds_min": [
+        -0.09999999403953552,
+        9.870506286621094,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        0.3999999761581421,
+        10.229494094848633,
+        1.0987467765808105
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop listening chair",
+      "source": "assets/recordshop/v2/meshy/RS210-ListeningChair.glb",
+      "group": "RecordShop",
+      "position": [
+        -0.65,
+        10.15,
+        0
+      ],
+      "bounds_min": [
+        -1.013698935508728,
+        9.764201164245605,
+        0.0
+      ],
+      "bounds_max": [
+        -0.2863009572029114,
+        10.535799026489258,
+        0.7400000095367432
+      ],
+      "collision": true
+    },
+    {
+      "label": "Shop LP shelf 0",
+      "source": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "group": "RecordShop",
+      "position": [
+        -2.68,
+        5.55,
+        0.94
+      ],
+      "bounds_min": [
+        -3.205000162124634,
+        5.460000514984131,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -2.1549999713897705,
+        5.640000343322754,
+        2.190000057220459
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop LP shelf 1",
+      "source": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "group": "RecordShop",
+      "position": [
+        -2.68,
+        6.8,
+        0.94
+      ],
+      "bounds_min": [
+        -3.205000162124634,
+        6.710000514984131,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -2.1549999713897705,
+        6.890000343322754,
+        2.190000057220459
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop LP shelf 2",
+      "source": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "group": "RecordShop",
+      "position": [
+        -2.68,
+        8.1,
+        0.94
+      ],
+      "bounds_min": [
+        -3.205000162124634,
+        8.010000228881836,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -2.1549999713897705,
+        8.190000534057617,
+        2.190000057220459
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shop LP shelf 3",
+      "source": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "group": "RecordShop",
+      "position": [
+        -2.68,
+        9.3,
+        0.94
+      ],
+      "bounds_min": [
+        -3.205000162124634,
+        9.210000038146973,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -2.1549999713897705,
+        9.390000343322754,
+        2.190000057220459
+      ],
+      "collision": false
+    },
+    {
+      "label": "Temporary ticket desk",
+      "source": "assets/d22/v9/meshy/B03-BarCounter.glb",
+      "group": "Courtyard",
+      "position": [
+        -0.55,
+        14.9,
+        0
+      ],
+      "bounds_min": [
+        -1.350000023841858,
+        14.574999809265137,
+        0.0
+      ],
+      "bounds_max": [
+        0.25,
+        15.22499942779541,
+        0.9500000476837158
+      ],
+      "collision": true
+    },
+    {
+      "label": "Courtyard poster 0",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        2.68,
+        13.2,
+        1.05
+      ],
+      "bounds_min": [
+        2.6698460578918457,
+        12.94615364074707,
+        1.0499999523162842
+      ],
+      "bounds_max": [
+        2.6901538372039795,
+        13.453845977783203,
+        1.7699999809265137
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard poster 1",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        2.68,
+        14.25,
+        1.05
+      ],
+      "bounds_min": [
+        2.6698460578918457,
+        13.996153831481934,
+        1.0499999523162842
+      ],
+      "bounds_max": [
+        2.6901538372039795,
+        14.503846168518066,
+        1.7699999809265137
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard poster 2",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        2.68,
+        15.3,
+        1.05
+      ],
+      "bounds_min": [
+        2.6698460578918457,
+        15.046154022216797,
+        1.0499999523162842
+      ],
+      "bounds_max": [
+        2.6901538372039795,
+        15.55384635925293,
+        1.7699999809265137
+      ],
+      "collision": false
+    },
+    {
+      "label": "Ticket stool",
+      "source": "assets/d22/v9/meshy/B06-BarStool.glb",
+      "group": "Courtyard",
+      "position": [
+        -1.35,
+        15.1,
+        0
+      ],
+      "bounds_min": [
+        -1.625624656677246,
+        14.822265625,
+        0.0
+      ],
+      "bounds_max": [
+        -1.0743753910064697,
+        15.377735137939453,
+        0.7200000286102295
+      ],
+      "collision": true
+    },
+    {
+      "label": "Low livehouse stage",
+      "source": "assets/d22/architecture/E04_Stage_2x1m.glb",
+      "group": "LiveHouse",
+      "position": [
+        0,
+        25.0,
+        0
+      ],
+      "bounds_min": [
+        -2.0,
+        24.0,
+        0.0
+      ],
+      "bounds_max": [
+        2.0,
+        26.0,
+        0.3399999737739563
+      ],
+      "collision": true
+    },
+    {
+      "label": "Drum kit",
+      "source": "assets/d22/meshy/P04-Drums.glb",
+      "group": "Audio",
+      "position": [
+        0,
+        25.3,
+        0.34
+      ],
+      "bounds_min": [
+        -0.4749999940395355,
+        24.889013290405273,
+        0.3400000035762787
+      ],
+      "bounds_max": [
+        0.4749999940395355,
+        25.71098518371582,
+        1.0079686641693115
+      ],
+      "collision": true
+    },
+    {
+      "label": "Left PA",
+      "source": "assets/d22/meshy/P05-PA.glb",
+      "group": "Audio",
+      "position": [
+        -2.15,
+        25.1,
+        0.34
+      ],
+      "bounds_min": [
+        -2.601172924041748,
+        24.701196670532227,
+        0.3399999737739563
+      ],
+      "bounds_max": [
+        -1.6988273859024048,
+        25.49880599975586,
+        1.9900000095367432
+      ],
+      "collision": true
+    },
+    {
+      "label": "Right PA",
+      "source": "assets/d22/meshy/P05-PA.glb",
+      "group": "Audio",
+      "position": [
+        2.15,
+        25.1,
+        0.34
+      ],
+      "bounds_min": [
+        1.6988273859024048,
+        24.701196670532227,
+        0.3399999737739563
+      ],
+      "bounds_max": [
+        2.601172924041748,
+        25.49880599975586,
+        1.9900000095367432
+      ],
+      "collision": true
+    },
+    {
+      "label": "Vocal mic",
+      "source": "assets/d22/meshy/P08-Microphone.glb",
+      "group": "Audio",
+      "position": [
+        0,
+        24.45,
+        0.34
+      ],
+      "bounds_min": [
+        -0.42929738759994507,
+        24.091798782348633,
+        0.3399999737739563
+      ],
+      "bounds_max": [
+        0.42929738759994507,
+        24.808202743530273,
+        1.7400000095367432
+      ],
+      "collision": false
+    },
+    {
+      "label": "Live guitar",
+      "source": "assets/d22/meshy/P06-Guitar.glb",
+      "group": "Audio",
+      "position": [
+        -1.0,
+        25.15,
+        0.34
+      ],
+      "bounds_min": [
+        -1.1702150106430054,
+        25.005931854248047,
+        0.3400000333786011
+      ],
+      "bounds_max": [
+        -0.8297850489616394,
+        25.294065475463867,
+        1.3899999856948853
+      ],
+      "collision": false
+    },
+    {
+      "label": "Backline amp",
+      "source": "assets/d22/meshy/A01-Amplifier.glb",
+      "group": "Audio",
+      "position": [
+        1.05,
+        25.2,
+        0.34
+      ],
+      "bounds_min": [
+        0.7399999499320984,
+        25.026836395263672,
+        0.3400000035762787
+      ],
+      "bounds_max": [
+        1.3599998950958252,
+        25.373165130615234,
+        0.920039176940918
+      ],
+      "collision": false
+    },
+    {
+      "label": "Small bar",
+      "source": "assets/d22/meshy/P07-Bar.glb",
+      "group": "LiveHouse",
+      "position": [
+        3.75,
+        22.0,
+        0
+      ],
+      "bounds_min": [
+        2.9000000953674316,
+        21.64000129699707,
+        0.0
+      ],
+      "bounds_max": [
+        4.599999904632568,
+        22.360000610351562,
+        1.0499999523162842
+      ],
+      "collision": true
+    },
+    {
+      "label": "FOH table",
+      "source": "assets/d22/meshy/P02-FOH.glb",
+      "group": "LiveHouse",
+      "position": [
+        -3.8,
+        21.25,
+        0
+      ],
+      "bounds_min": [
+        -4.324999809265137,
+        20.962890625,
+        0.0
+      ],
+      "bounds_max": [
+        -3.2750000953674316,
+        21.537109375,
+        0.8162111639976501
+      ],
+      "collision": true
+    },
+    {
+      "label": "Mixer",
+      "source": "assets/d22/meshy/A05-Mixer.glb",
+      "group": "Audio",
+      "position": [
+        -3.8,
+        21.25,
+        1.02
+      ],
+      "bounds_min": [
+        -4.074999809265137,
+        21.060937881469727,
+        1.0199999809265137
+      ],
+      "bounds_max": [
+        -3.5249998569488525,
+        21.439062118530273,
+        1.2541800737380981
+      ],
+      "collision": false
+    },
+    {
+      "label": "Bar green practical",
+      "source": "assets/d22/architecture/E06_PracticalLight.glb",
+      "group": "LiveHouse",
+      "position": [
+        3.45,
+        22.0,
+        1.4
+      ],
+      "bounds_min": [
+        2.1700007915496826,
+        21.8266658782959,
+        1.4000000953674316
+      ],
+      "bounds_max": [
+        4.729999542236328,
+        22.1733341217041,
+        1.6999999284744263
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse beam",
+      "source": "assets/d22/architecture/E03_BlackBeam_4m.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        22.4,
+        2.55
+      ],
+      "bounds_min": [
+        -2.5,
+        22.29374885559082,
+        2.549999952316284
+      ],
+      "bounds_max": [
+        2.5,
+        22.506250381469727,
+        2.825000047683716
+      ],
+      "collision": false
+    },
+    {
+      "label": "Stage cable",
+      "source": "assets/d22/architecture/E08_Cable.glb",
+      "group": "Audio",
+      "position": [
+        -1.0,
+        24.0,
+        0.36
+      ],
+      "bounds_min": [
+        -1.7455874681472778,
+        23.567209243774414,
+        0.36000001430511475
+      ],
+      "bounds_max": [
+        -0.2544124126434326,
+        24.43279266357422,
+        0.3921215832233429
+      ],
+      "collision": false
+    }
+  ],
+  "sources": [
+    "assets/d22/architecture/E03_BlackBeam_4m.glb",
+    "assets/d22/architecture/E04_Stage_2x1m.glb",
+    "assets/d22/architecture/E06_PracticalLight.glb",
+    "assets/d22/architecture/E08_Cable.glb",
+    "assets/d22/architecture/E09_OriginalFlyer.glb",
+    "assets/d22/meshy/A01-Amplifier.glb",
+    "assets/d22/meshy/A05-Mixer.glb",
+    "assets/d22/meshy/P02-FOH.glb",
+    "assets/d22/meshy/P04-Drums.glb",
+    "assets/d22/meshy/P05-PA.glb",
+    "assets/d22/meshy/P06-Guitar.glb",
+    "assets/d22/meshy/P07-Bar.glb",
+    "assets/d22/meshy/P08-Microphone.glb",
+    "assets/d22/v9/meshy/B02-TileFloor.glb",
+    "assets/d22/v9/meshy/B03-BarCounter.glb",
+    "assets/d22/v9/meshy/B06-BarStool.glb",
+    "assets/d22/v9/meshy/B11-FlightCase.glb",
+    "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+    "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+    "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+    "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+    "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "assets/recordshop/v2/meshy/RS210-ListeningChair.glb",
+    "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+    "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+    "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+    "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+    "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+    "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb"
+  ],
+  "cameras": [
+    {
+      "name": "hutong_entry",
+      "position": [
+        0.0,
+        -0.20000000298023224,
+        1.649999976158142
+      ],
+      "lens": 28.0
+    },
+    {
+      "name": "recordshop_window",
+      "position": [
+        -2.1500000953674316,
+        6.199999809265137,
+        1.5499999523162842
+      ],
+      "lens": 30.0
+    },
+    {
+      "name": "courtyard_ticket",
+      "position": [
+        1.649999976158142,
+        13.600000381469727,
+        1.600000023841858
+      ],
+      "lens": 28.0
+    },
+    {
+      "name": "stage_side",
+      "position": [
+        0.25,
+        20.399999618530273,
+        1.649999976158142
+      ],
+      "lens": 25.0
+    },
+    {
+      "name": "night_roof",
+      "position": [
+        0.44999998807907104,
+        29.200000762939453,
+        1.649999976158142
+      ],
+      "lens": 30.0
+    }
+  ],
+  "rule": "All visible geometry imported from Meshy GLB assets. Blender only assembles, scales, rotates, reuses textures, lights and cameras.",
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

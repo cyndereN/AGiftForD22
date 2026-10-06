@@ -1,0 +1,12 @@
+{
+  "reference_height_m": 1.75,
+  "door_height_m": 2.1,
+  "wall_clear_width_min_m": 2.6,
+  "route_sample_count": 289,
+  "player_radius_m": 0.3,
+  "architecture_collisions": [],
+  "roof_count": 15,
+  "nontraditional_roof_count": 6,
+  "geometry_pass": true,
+  "scope": "Architecture capsule-clearance check; props, Unity movement, audio and triggers are not runtime-tested."
+}

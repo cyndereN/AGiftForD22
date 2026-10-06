@@ -1,0 +1,143 @@
+{
+  "version": 2,
+  "scene": "D22_RecordShop_v2",
+  "dimensions_m": [
+    4.25,
+    8.2,
+    2.85
+  ],
+  "camera_views": [
+    "entry",
+    "listening",
+    "cash"
+  ],
+  "meshy_assets": [
+    {
+      "name": "RS2 / Front browsing bin",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "location": [
+        -1.399999976158142,
+        1.350000023841858,
+        0.0
+      ],
+      "scale": [
+        0.9961237907409668,
+        0.9961237907409668,
+        0.9961237907409668
+      ]
+    },
+    {
+      "name": "RS2 / Mid browsing bin",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "location": [
+        -1.2799999713897705,
+        3.549999952316284,
+        0.0
+      ],
+      "scale": [
+        0.8835185170173645,
+        0.8835185170173645,
+        0.8835185170173645
+      ]
+    },
+    {
+      "name": "RS2 / Tall CD and cassette tower",
+      "source": "assets/recordshop/v2/meshy/RS202-CDTower.glb",
+      "location": [
+        -1.7000000476837158,
+        6.619999885559082,
+        0.0
+      ],
+      "scale": [
+        1.221575379371643,
+        1.221575379371643,
+        1.221575379371643
+      ]
+    },
+    {
+      "name": "RS2 / Cashier desk",
+      "source": "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+      "location": [
+        0.550000011920929,
+        6.929999828338623,
+        0.0
+      ],
+      "scale": [
+        0.6428787708282471,
+        0.6428787708282471,
+        0.6428787708282471
+      ]
+    },
+    {
+      "name": "RS2 / Listening turntable",
+      "source": "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+      "location": [
+        1.25,
+        3.950000047683716,
+        1.0700000524520874
+      ],
+      "scale": [
+        0.2948401868343353,
+        0.2948401868343353,
+        0.2948401868343353
+      ]
+    },
+    {
+      "name": "RS2 / Window fan",
+      "source": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+      "location": [
+        -1.8799999952316284,
+        2.3499999046325684,
+        1.100000023841858
+      ],
+      "scale": [
+        0.23339961469173431,
+        0.23339961469173431,
+        0.23339961469173431
+      ]
+    },
+    {
+      "name": "RS2 / Listening lamp",
+      "source": "assets/recordshop/v2/meshy/RS206-DeskLamp.glb",
+      "location": [
+        1.7000000476837158,
+        4.050000190734863,
+        1.100000023841858
+      ],
+      "scale": [
+        0.23166771233081818,
+        0.23166771233081818,
+        0.23166771233081818
+      ]
+    },
+    {
+      "name": "RS2 / Tea thermos",
+      "source": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+      "location": [
+        0.3400000035762787,
+        6.880000114440918,
+        1.0499999523162842
+      ],
+      "scale": [
+        0.18427987396717072,
+        0.18427987396717072,
+        0.18427987396717072
+      ]
+    },
+    {
+      "name": "RS2 / Window pothos",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "location": [
+        -1.8799999952316284,
+        2.319999933242798,
+        1.0399999618530273
+      ],
+      "scale": [
+        0.263407438993454,
+        0.263407438993454,
+        0.263407438993454
+      ]
+    }
+  ],
+  "style": "00s Beijing hutong record shop / D22 documentary underground music"
+}

@@ -1,0 +1,44 @@
+{
+  "scene": "D22_RecordShop_v3_MeshyOnly",
+  "use_case": "Unity game environment / Blender composition",
+  "style": "2006 Beijing hutong independent record shop; free, literary, rock; documentary realism",
+  "preview_credits": 120,
+  "refine_credits": 50,
+  "assets": [
+    {
+      "name": "RS301-HutongWallPanel",
+      "preview_task": "01a102af-ff97-7333-8ff3-e379f26de58b",
+      "refine_task": "01a102b9-95bf-77a1-a495-ba1201d97822"
+    },
+    {
+      "name": "RS302-HutongWindowBay",
+      "preview_task": "01a102b0-20e6-73ba-bca5-e47a3b84dc30",
+      "refine_task": "01a102b9-7c11-7008-852a-e339ba301962"
+    },
+    {
+      "name": "RS303-RedTimberDoor",
+      "preview_task": "01a102b0-309b-7112-b6af-4f447484000d",
+      "refine_task": "01a102b9-8a17-7420-9447-02b405ace902"
+    },
+    {
+      "name": "RS304-LPWallShelf",
+      "preview_task": "01a102b0-5010-765f-90b2-d3fe72c265ba",
+      "refine_task": "01a102b9-9ceb-7225-8b45-cb63e8e23289"
+    },
+    {
+      "name": "RS305-ConcreteFloorModule",
+      "preview_task": null,
+      "refine_task": null,
+      "status": "retry_SUCCEEDED",
+      "retry_task": "01a102c7-c549-74dc-8c46-f351f589e9b8",
+      "review": "rejected_cabinet_geometry_not_a_floor",
+      "used": false,
+      "replacement": "assets/d22/v9/meshy/B02-TileFloor.glb"
+    },
+    {
+      "name": "RS306-CeilingBeamFluorescent",
+      "preview_task": "01a102b0-6bb8-7228-8b55-131012447f11",
+      "refine_task": "01a102b9-913c-73d9-aba2-856c455c52db"
+    }
+  ]
+}

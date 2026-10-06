@@ -11,9 +11,18 @@ import sys
 from pathlib import Path
 from mathutils import Vector
 import numpy as np
+import argparse
 
 ROOT = Path(__file__).resolve().parents[2]
-DEST = ROOT / 'unity/D22Game/Assets/D22/Art'
+parser = argparse.ArgumentParser()
+parser.add_argument('--destination', default='Assets/D22/Art')
+parser.add_argument('--prefix', default='D22')
+parser.add_argument('--manifest', default='d22-export.json')
+parser.add_argument('--scene')
+options = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
+if options.scene:
+    bpy.context.window.scene = bpy.data.scenes[options.scene]
+DEST = ROOT / 'unity/D22Game' / options.destination
 for folder in ['Models', 'Textures', 'Data']:
     (DEST / folder).mkdir(parents=True, exist_ok=True)
 
@@ -52,7 +61,7 @@ def save_image(im):
     else:
         path = DEST/'Textures'/(name+'.png')
         im.filepath_raw = str(path); im.file_format = 'PNG'; im.save()
-    result = 'Assets/D22/Art/Textures/'+path.name
+    result = options.destination+'/Textures/'+path.name
     image_paths[im.name] = result
     return result
 
@@ -121,7 +130,7 @@ for mat in materials:
             pixels[:,:,3]=1-scalar_pixels(rough,ri,rv,size)
             packed=bpy.data.images.new(ident+'_MetallicSmoothness',width=size,height=size,alpha=True)
             packed.colorspace_settings.name='Non-Color';packed.pixels.foreach_set(pixels.ravel());packed.file_format='PNG';packed.filepath_raw=str(DEST/'Textures'/(ident+'_MetallicSmoothness.png'));packed.save()
-            record['metallic_map']='Assets/D22/Art/Textures/'+Path(packed.filepath_raw).name
+            record['metallic_map']=options.destination+'/Textures/'+Path(packed.filepath_raw).name
             bpy.data.images.remove(packed)
         normal=upstream(p.inputs['Normal'],{'NORMAL_MAP'})
         if normal:
@@ -178,7 +187,7 @@ for group,items in sorted(export_groups.items()):
     bpy.ops.object.select_all(action='DESELECT')
     for obj in items:obj.select_set(True)
     bpy.context.view_layer.objects.active=items[0]
-    bpy.ops.export_scene.fbx(filepath=str(DEST/'Models'/f'D22_{group}.fbx'),use_selection=True,object_types={'MESH'},global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',use_mesh_modifiers=False,bake_space_transform=False,add_leaf_bones=False,bake_anim=False,path_mode='STRIP',embed_textures=False,use_custom_props=False)
+    bpy.ops.export_scene.fbx(filepath=str(DEST/'Models'/f'{options.prefix}_{group}.fbx'),use_selection=True,object_types={'MESH'},global_scale=1,apply_unit_scale=True,apply_scale_options='FBX_SCALE_UNITS',axis_forward='-Z',axis_up='Y',use_mesh_modifiers=False,bake_space_transform=False,add_leaf_bones=False,bake_anim=False,path_mode='STRIP',embed_textures=False,use_custom_props=False)
     print('EXPORTED',group,len(items),flush=True)
 
 def unity_vec(v):return [float(v[0]),float(v[2]),float(v[1])]
@@ -188,6 +197,6 @@ for obj in visible:
     d=obj.data
     direction=obj.matrix_world.to_quaternion()@Vector((0,0,-1))
     lights.append({'name':obj.name,'type':d.type,'position':unity_vec(obj.matrix_world.translation),'direction':unity_vec(direction),'color':list(d.color),'power':d.energy,'angle':math.degrees(getattr(d,'spot_size',math.pi/2)),'blend':getattr(d,'spot_blend',.5),'size':getattr(d,'size',.1),'size_y':getattr(d,'size_y',getattr(d,'size',.1)),'radius':getattr(d,'shadow_soft_size',.05),'group':obj.users_collection[0].name if obj.users_collection else ''})
-report={'version':1,'source':'blender/source/D22_Balanced_Lighting_v18.blend','source_units_m':scene.unit_settings.scale_length,'coordinate_mapping':'Unity (x,y,z) = Blender (x,z,y); FBX converted by importer','geometry_count':len(objects),'materials':records,'objects':objects,'lights':lights,'groups':sorted(export_groups),'approximation_notes':['Procedural micro-bump and Blender transmission require Unity shader equivalents.','Light placement and color are preserved; intensity is calibrated for URP, not numerically copied between renderers.']}
-(DEST/'Data/d22-export.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+report={'version':1,'source':str(Path(original_file).relative_to(ROOT)),'source_units_m':scene.unit_settings.scale_length,'coordinate_mapping':'Unity (x,y,z) = Blender (x,z,y); FBX converted by importer','geometry_count':len(objects),'materials':records,'objects':objects,'lights':lights,'groups':sorted(export_groups),'approximation_notes':['Procedural micro-bump and Blender transmission require Unity shader equivalents.','Light placement and color are preserved; intensity is calibrated for URP, not numerically copied between renderers.']}
+(DEST/'Data'/options.manifest).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print('UNITY_EXPORT_COMPLETE',len(objects),len(records),len(lights),flush=True)

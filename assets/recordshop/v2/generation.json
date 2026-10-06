@@ -1,0 +1,496 @@
+{
+  "model": "meshy-6",
+  "texture_resolution": "2k",
+  "authorized": "User: 随便用meshy，我有很多credit",
+  "estimated_credits": 240,
+  "assets": [
+    {
+      "name": "RS201-RecordBin",
+      "prompt": "A waist-high battered wooden record store browsing bin on four squared timber legs, about 85cm high and 85cm wide, deep upper open box densely holding 12-inch vinyl albums upright with varied illustrated aged paper sleeves, irregular leaning thin sleeves, two handwritten cardboard dividers. Dark brown varnished plywood, worn pale corners, visible joints, lower shelf with a cardboard record storage box. Front low enough to flip records. Back taller than front. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 18000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-993b-7585-82a6-e661e8cf2da5",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-993b-7585-82a6-e661e8cf2da5",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-993b-7585-82a6-e661e8cf2da5",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013b-21eb-76fd-9bab-48f14a8905fd",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-21eb-76fd-9bab-48f14a8905fd/output/model.glb?Expires=4944585600&Signature=neI8VudQWlYOFzUpZCpfzPDhUrlDiUlrLwoyRJqjSBPgmr~ZUhnZoUp-uc8P~pJ3icBitCRL9-K2B76wA0h1TnItayJbrk6f1PvmxgT1B25y6zbJcODAhpi5Ep272mpuWYoqcfeRfOAjTTssbn3R1~uDycr5doFhhjnSwuEqxz52MvqnejYBC7v7fu59qY8z1EnqZgt~Q2MRBFEjh3JdRK4iT~GjGkiJSZ3FvgwU2pVYRBaQoOojanA4E-Sbsr0Ea0tobakmWawtASdHIA5uq3BnABjOsvkHrlsNGeqaRQ1I91H00iuTHnvjKK92o-ulKSFvm8s6KRy8am6sq1lp5w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-21eb-76fd-9bab-48f14a8905fd/output/model.fbx?Expires=4944585600&Signature=KiGPcUzYuHNpTSgREELJYHzyPRQdUGD5Ky~liQRQm6KlMJYR31Q5eEKk5bUKXvguyaCCMogjWpVR-i3aHBmwoVsLXC4VFjcMdiICh5rFO-I7UL1wtz1cbtbihYpwWfqzHPoh3QUWOcoSfeRHpsoeX8Lfn~zBCAeAOMZQvgNwpWv0pJvKogljd9fCYwaIpnVQ0d0oMGmv-y0NqLvy7F-5RFhbb6gMdmEihVXEXnDt-tzGvo0JFzLJcG1jkswkUl2lIlkt81nfKw9HcOM9~pJkMwuYoFHTLC9yydQ5BDXJ5pPbTkTd~8hYBwJlfPg5hH3Mr6SnuD394xjjDIXMQiJilg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-993b-7585-82a6-e661e8cf2da5",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-993b-7585-82a6-e661e8cf2da5/output/model.glb?Expires=4944585600&Signature=lLOpcEuqTm8eFy7Ruvak3bqt7JFVy6Bw6oWvM~orYBP2kMyhW~rUyW6zdQqdN5y2v6sYW1qcvM4-W~qc4IiU7AXvLuVGqJ4r9177SzmmA4BEb4BC8k~4n6X5zQK8Fm2oL2iRvht7eUSPxvWi82XYq-4PDj0hSEFJ9oFkiGUFWpgYP2y2VuLZ1UGH8ffj~3sRHylGqhiZA-jwz50nCTQbHTY3QII3Ayzsf27z9HcT65PMbz9Y~Jcn4Pq4yZ82dbAnyIOVewhtZjTLGSeK3rhXXnByGdw3IUYHdAaNllRQOq0BXb9NfzmuTsRgG24ZyRFhycdPP6XFr3ncN4KMxG2dGQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-993b-7585-82a6-e661e8cf2da5/output/model.fbx?Expires=4944585600&Signature=W0Qpk~wtfluYY0gpJ1JLKfRySdqRLeT0u3SwmmddIP0km-0XghvGBzzOs96XZK3sTKFimkqtxYEKLC2O8YITEWmzb3-XtR--irhP5~ard-lzsgw5p7pxdjUOegIxS757H6Do8GHy2pl8lzekvT67pVf-z6jQnL0-WS-8HkELCgddFQjjLf-nWTjp3uYHteZLtemCdFP9wz2HbY~ReRsM-kl7nchE5ZxUXtBFiqufbghTLa~~ZOlXNewETdssUrLYi-1r-a4stcIu-hMphkkZoNHDRH1fFmknSyPeQyEUl4Pwz07Md-MUJdJhsCzYr0K0UhdWEDfXIJlnP7bGU1Gb-g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a1013b-21eb-76fd-9bab-48f14a8905fd",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013b-21eb-76fd-9bab-48f14a8905fd",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-21eb-76fd-9bab-48f14a8905fd/output/model.glb?Expires=4944585600&Signature=neI8VudQWlYOFzUpZCpfzPDhUrlDiUlrLwoyRJqjSBPgmr~ZUhnZoUp-uc8P~pJ3icBitCRL9-K2B76wA0h1TnItayJbrk6f1PvmxgT1B25y6zbJcODAhpi5Ep272mpuWYoqcfeRfOAjTTssbn3R1~uDycr5doFhhjnSwuEqxz52MvqnejYBC7v7fu59qY8z1EnqZgt~Q2MRBFEjh3JdRK4iT~GjGkiJSZ3FvgwU2pVYRBaQoOojanA4E-Sbsr0Ea0tobakmWawtASdHIA5uq3BnABjOsvkHrlsNGeqaRQ1I91H00iuTHnvjKK92o-ulKSFvm8s6KRy8am6sq1lp5w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-21eb-76fd-9bab-48f14a8905fd/output/model.fbx?Expires=4944585600&Signature=KiGPcUzYuHNpTSgREELJYHzyPRQdUGD5Ky~liQRQm6KlMJYR31Q5eEKk5bUKXvguyaCCMogjWpVR-i3aHBmwoVsLXC4VFjcMdiICh5rFO-I7UL1wtz1cbtbihYpwWfqzHPoh3QUWOcoSfeRHpsoeX8Lfn~zBCAeAOMZQvgNwpWv0pJvKogljd9fCYwaIpnVQ0d0oMGmv-y0NqLvy7F-5RFhbb6gMdmEihVXEXnDt-tzGvo0JFzLJcG1jkswkUl2lIlkt81nfKw9HcOM9~pJkMwuYoFHTLC9yydQ5BDXJ5pPbTkTd~8hYBwJlfPg5hH3Mr6SnuD394xjjDIXMQiJilg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-21eb-76fd-9bab-48f14a8905fd/output/model.glb?Expires=4944585600&Signature=neI8VudQWlYOFzUpZCpfzPDhUrlDiUlrLwoyRJqjSBPgmr~ZUhnZoUp-uc8P~pJ3icBitCRL9-K2B76wA0h1TnItayJbrk6f1PvmxgT1B25y6zbJcODAhpi5Ep272mpuWYoqcfeRfOAjTTssbn3R1~uDycr5doFhhjnSwuEqxz52MvqnejYBC7v7fu59qY8z1EnqZgt~Q2MRBFEjh3JdRK4iT~GjGkiJSZ3FvgwU2pVYRBaQoOojanA4E-Sbsr0Ea0tobakmWawtASdHIA5uq3BnABjOsvkHrlsNGeqaRQ1I91H00iuTHnvjKK92o-ulKSFvm8s6KRy8am6sq1lp5w__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+        "file_size_bytes": 8733160,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS201-RecordBin_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:09:59.381Z"
+      }
+    },
+    {
+      "name": "RS202-CDTower",
+      "prompt": "A tall narrow old honey-brown wooden CD shelving tower, 190cm high 65cm wide 22cm deep, eight closely spaced shelves tightly packed with hundreds of thin CD jewel cases and cassette tape cases, varied faded cream red blue black printed spines, some leaning, several gaps, a few flat horizontal piles. Clear slender joinery and rounded worn edges. Actual thin CD cases, not books. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 18000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-a99f-76f1-9331-8796c5ce3750",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-a99f-76f1-9331-8796c5ce3750",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-a99f-76f1-9331-8796c5ce3750",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-b6c4-7625-9bef-eec32de95d5b",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-b6c4-7625-9bef-eec32de95d5b/output/model.glb?Expires=4944585600&Signature=dex7q08pqY2NPUciexfs2pZywHWYjfobj8wLAlTZ4xFUHsjrTJ8r-a2T5CMDa6YhWz49sqaDBBVYP-e5U28mvEmY54ubxtITMEkIfoNfgftvA8cuxeIsR8j5TuFsbTjJN5inpsXszeTsvL8Nre43W3yJA2SadsKXeCEhT-msutfzeMvDZQjj-03Xy1io~pwk6iEg7USZsrveBAZSEL5YAX-YByw8V3TFb25snxfLVCffSbeTymgYsnJL2494P2tHWldbSZYnH261R03Wwz~nji5~H7H3B52wKDly3ej6KTFeeCMT58ipbke3sf-ppBxbZxv34Fce6GqW4mTlOC~4TQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-b6c4-7625-9bef-eec32de95d5b/output/model.fbx?Expires=4944585600&Signature=G5pjDGzUxgfrk2SGeix6sq8I6Au5AjVjR402qOMw0IeXnv61Ds6A-4t1OOk5oeBmiw4gNAM~svIjr21xc5Tam85mv3DlZC3JHuAWuALGFOLL-Cl3Y0WLrgsj~oz2DGK64y8c5AzAr0SCOZro79D6-o17vUDh2dy1gVCxllurfuVdqZCLC4eKmtkh9YAUU3tPooQ5dpP2bVeHqgP9q4rXxYE~0CXW~7E4Yu8skC8zFgfNPrrCwJvPp~KGr2T7z-C2d70z7LGwBQRmqvrHL2Rd4Xlg6xsf9aoBvAGys-F11a1AsR03NH7XF~tXOOyjwP178mk0erzxvCCCeNPch5j8GQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-a99f-76f1-9331-8796c5ce3750",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-a99f-76f1-9331-8796c5ce3750/output/model.glb?Expires=4944585600&Signature=aKyMTXAdLfpvctKEp1B9tcFPJ2PhxCSFrAtOD-XKxoLd6-Mhan03Dku8ckzlfDzKGJsM6AE7oDUDzZC8cyzth8PkmFhqCaQAj6TVSdITZvKiOxI2l6dlqsdGEsWi2btC6XkOedX9FPhk4GC8UNg5mZataOQTlV5F9jvj66A3vqkO9v5HX~yzNJztE3IkAxxj8aeG-1is2RfvEJ7ozSTdGxnLzjmjNdzJyuVuieNdGp~nNpUHhQX-Sa4Fio-2buJ7vVHXNp-0~Ge~AJq0rl2ZlMVUVUww9zVQxBJPs4Q~n5-iYf4uAQMW13rehEJPjg58Y2aqmtJQezaKsosDSrZ3vg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-a99f-76f1-9331-8796c5ce3750/output/model.fbx?Expires=4944585600&Signature=iJ-2iqt9moVdvdXT7U~szMk0YeTc1~~26SbagNlj8h7BilPMuDdY-nroUhM2azu9XR609UY2ZVfsU6-qQNIESaUVQ8xxm7STnt~V31ZM-TiJufaFSvpKwTpt2CDboBpAvZm4mtOlljKLMhmHrALWRx7dcoAdrJ6G7GD-bhHx0z9pZHLAEobwAmHPmpwwSYfcHRvnOhNf1on3hiRb0Lk3ZmUBe8siWobnh012SeWtfjfnJ322Hx964YtWG-rT2bCyFfBMbZASX0ECGdRbFae5lXZ-qhCml6DkezVb-2tBELClpj6crtOPjQHL1fQ4XaDS0rgcwNOoKAjcJXFgTqy26A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a10139-b6c4-7625-9bef-eec32de95d5b",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-b6c4-7625-9bef-eec32de95d5b",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-b6c4-7625-9bef-eec32de95d5b/output/model.glb?Expires=4944585600&Signature=dex7q08pqY2NPUciexfs2pZywHWYjfobj8wLAlTZ4xFUHsjrTJ8r-a2T5CMDa6YhWz49sqaDBBVYP-e5U28mvEmY54ubxtITMEkIfoNfgftvA8cuxeIsR8j5TuFsbTjJN5inpsXszeTsvL8Nre43W3yJA2SadsKXeCEhT-msutfzeMvDZQjj-03Xy1io~pwk6iEg7USZsrveBAZSEL5YAX-YByw8V3TFb25snxfLVCffSbeTymgYsnJL2494P2tHWldbSZYnH261R03Wwz~nji5~H7H3B52wKDly3ej6KTFeeCMT58ipbke3sf-ppBxbZxv34Fce6GqW4mTlOC~4TQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-b6c4-7625-9bef-eec32de95d5b/output/model.fbx?Expires=4944585600&Signature=G5pjDGzUxgfrk2SGeix6sq8I6Au5AjVjR402qOMw0IeXnv61Ds6A-4t1OOk5oeBmiw4gNAM~svIjr21xc5Tam85mv3DlZC3JHuAWuALGFOLL-Cl3Y0WLrgsj~oz2DGK64y8c5AzAr0SCOZro79D6-o17vUDh2dy1gVCxllurfuVdqZCLC4eKmtkh9YAUU3tPooQ5dpP2bVeHqgP9q4rXxYE~0CXW~7E4Yu8skC8zFgfNPrrCwJvPp~KGr2T7z-C2d70z7LGwBQRmqvrHL2Rd4Xlg6xsf9aoBvAGys-F11a1AsR03NH7XF~tXOOyjwP178mk0erzxvCCCeNPch5j8GQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-b6c4-7625-9bef-eec32de95d5b/output/model.glb?Expires=4944585600&Signature=dex7q08pqY2NPUciexfs2pZywHWYjfobj8wLAlTZ4xFUHsjrTJ8r-a2T5CMDa6YhWz49sqaDBBVYP-e5U28mvEmY54ubxtITMEkIfoNfgftvA8cuxeIsR8j5TuFsbTjJN5inpsXszeTsvL8Nre43W3yJA2SadsKXeCEhT-msutfzeMvDZQjj-03Xy1io~pwk6iEg7USZsrveBAZSEL5YAX-YByw8V3TFb25snxfLVCffSbeTymgYsnJL2494P2tHWldbSZYnH261R03Wwz~nji5~H7H3B52wKDly3ej6KTFeeCMT58ipbke3sf-ppBxbZxv34Fce6GqW4mTlOC~4TQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower.glb",
+        "file_size_bytes": 10164684,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS202-CDTower_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:07:52.244Z"
+      }
+    },
+    {
+      "name": "RS203-CashDesk",
+      "prompt": "A compact 110cm wide 95cm high old Chinese shop cashier counter made from dark chestnut wood and chipped dusty-red paint. Flat scratched laminated top, front is solid inset timber panels with scuffed corners and faded tape marks; back is open with two cash drawers, a small lower storage shelf. Modest 1990s secondhand furniture with no products on top. Handmade joinery and asymmetric repairs. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 16000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-b7bd-767e-932b-f117ea4902c4",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-b7bd-767e-932b-f117ea4902c4",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-b7bd-767e-932b-f117ea4902c4",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013b-37b8-723c-9283-447e2f2f5184",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-37b8-723c-9283-447e2f2f5184/output/model.glb?Expires=4944585600&Signature=EW1zHFmkpU9ecJqAqD6U1lLy0Y9TanuiqknIS3e8jWVMsQnmNeksGzgM6Cz2bswJbH3gQ0jebi4CPQM6FaC-1pa6EBFGOYWU9e6DI~n2ML8QkIvlKfEk79SJbPrG1mX6fuorewpwECveBhKSUc7V9~95~zJWiq44lZyEszgQzjGHsXcEliO4udLkHyrU416dRO8I39ifYbg2uWyPpvQht4c4eV5mGH9-kqltIpjHAXVKrciOTC4igCh~gUwenDj2~S1k0X8cu8Qt80RXbWRYJ1CoQWn7VnXpzz6p5UB5NUmgi6la~LYW2VJLp3f3zrIMpeUsEPJOakaf0yMA7C3d0g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-37b8-723c-9283-447e2f2f5184/output/model.fbx?Expires=4944585600&Signature=SRZrP~N3d2RwpJZMTSfR2vFTCReHNO1DiI~ocB3NlKAcXeFIG97KvTQSJa7IIgdbZ~BpGh5ASWuBObEFQ~YOz6x7Ad9YDze3ZHBbgr1Mj9dSd-xjt14HAx2jVqGMxMSnc5eymiHwimMq9bnmGv8pJT1npjDY9kzghDGuoEzvHsgKkcZi~EzV3glOSEsQRb2pw1qRJpVNljeoKAuP5-EQXM8wbiJk2EAk3j5fkVCdbA6~mJhU7qYT-FNIH3vN7B0MeWG91vkJmhIpNLzCXgSwvCjQB1S~VUTIyKkuyF7ahOnZ71bV3b48FW6cYWbtCbykMEjwdtNjk1cFjjAFRNPzCg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-b7bd-767e-932b-f117ea4902c4",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-b7bd-767e-932b-f117ea4902c4/output/model.glb?Expires=4944585600&Signature=UanOTMt9-fz0xPYAn9LLfdSKBl5YTdNb28gC8y-GT0u2Pfzd6qiNa1XWN64c092D~3fwLerpluNR2ABaaPkPE47y2hDP6Wiy3G2U7yjioG-v27wG-FaDtq~vxWxXAdaLE7Q1OuJGn4Rj8mdRPvW8E9Emt0vFGWFWSkXyn3sQGdm1UAA8WHpGSntEsmy1Zeyfsr9ZdesmdSB6~4VFo3edWfeiPSLz3My5-lDdWBfnb380eEVYNys9XdC9y6oXUHpmy4sR~Nqm6nB~OwB-EtlBUR-4HMgXo-WUixPhBDNWYS5~4ABoWJMnqt7~FR92yZJvupk7kAZUTa1vnwJjKh6vmw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-b7bd-767e-932b-f117ea4902c4/output/model.fbx?Expires=4944585600&Signature=CKr3PJOnacybQEkxXVcaq9fQVdNZCiqJDK7c8OZSt3TUzq~YNFOpIGIgjr~AnlSh~PaU0Pe0EPIKQ5HumwzLBM8lJk71rSovm1vcytGwJE6uMZxn-E8ljRSaDEzVLua~-JaR4rRbVA7Q6LpTXWjSDT6Gcgcu2NZzWjAhh1f3BjkiTk7TrfLVRgMnSFNvOVr5nZcaB9N8xyCf6~F3z3Pr5dY32NkDlZ0UU0l4Iwh0criB8IDigyDlUVIZEPOZIYGZX2VUdZm2abC3IPp8x2drttJpQ57WaVY~aeKQJyk1uM7G1ZalnjxT~gtuOO2AXOXlqKx-1pgskkILpPm8Mtmk2w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a1013b-37b8-723c-9283-447e2f2f5184",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013b-37b8-723c-9283-447e2f2f5184",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-37b8-723c-9283-447e2f2f5184/output/model.glb?Expires=4944585600&Signature=EW1zHFmkpU9ecJqAqD6U1lLy0Y9TanuiqknIS3e8jWVMsQnmNeksGzgM6Cz2bswJbH3gQ0jebi4CPQM6FaC-1pa6EBFGOYWU9e6DI~n2ML8QkIvlKfEk79SJbPrG1mX6fuorewpwECveBhKSUc7V9~95~zJWiq44lZyEszgQzjGHsXcEliO4udLkHyrU416dRO8I39ifYbg2uWyPpvQht4c4eV5mGH9-kqltIpjHAXVKrciOTC4igCh~gUwenDj2~S1k0X8cu8Qt80RXbWRYJ1CoQWn7VnXpzz6p5UB5NUmgi6la~LYW2VJLp3f3zrIMpeUsEPJOakaf0yMA7C3d0g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-37b8-723c-9283-447e2f2f5184/output/model.fbx?Expires=4944585600&Signature=SRZrP~N3d2RwpJZMTSfR2vFTCReHNO1DiI~ocB3NlKAcXeFIG97KvTQSJa7IIgdbZ~BpGh5ASWuBObEFQ~YOz6x7Ad9YDze3ZHBbgr1Mj9dSd-xjt14HAx2jVqGMxMSnc5eymiHwimMq9bnmGv8pJT1npjDY9kzghDGuoEzvHsgKkcZi~EzV3glOSEsQRb2pw1qRJpVNljeoKAuP5-EQXM8wbiJk2EAk3j5fkVCdbA6~mJhU7qYT-FNIH3vN7B0MeWG91vkJmhIpNLzCXgSwvCjQB1S~VUTIyKkuyF7ahOnZ71bV3b48FW6cYWbtCbykMEjwdtNjk1cFjjAFRNPzCg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013b-37b8-723c-9283-447e2f2f5184/output/model.glb?Expires=4944585600&Signature=EW1zHFmkpU9ecJqAqD6U1lLy0Y9TanuiqknIS3e8jWVMsQnmNeksGzgM6Cz2bswJbH3gQ0jebi4CPQM6FaC-1pa6EBFGOYWU9e6DI~n2ML8QkIvlKfEk79SJbPrG1mX6fuorewpwECveBhKSUc7V9~95~zJWiq44lZyEszgQzjGHsXcEliO4udLkHyrU416dRO8I39ifYbg2uWyPpvQht4c4eV5mGH9-kqltIpjHAXVKrciOTC4igCh~gUwenDj2~S1k0X8cu8Qt80RXbWRYJ1CoQWn7VnXpzz6p5UB5NUmgi6la~LYW2VJLp3f3zrIMpeUsEPJOakaf0yMA7C3d0g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+        "file_size_bytes": 8439136,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS203-CashDesk_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:10:43.159Z"
+      }
+    },
+    {
+      "name": "RS204-Turntable",
+      "prompt": "One authentic late-1990s black and brushed aluminium direct-drive turntable with a black vinyl record on circular platter, small faded red centre label, silver S-shaped tonearm resting to right, cartridge, pitch slider, speed buttons, small black feet, removable smoked plastic cover absent. Precise realistic circular proportions, lightly scratched dusty studio equipment, 44cm wide. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 20000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-c948-7003-8865-91e897b26e4b",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-c948-7003-8865-91e897b26e4b",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-c948-7003-8865-91e897b26e4b",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-d413-71d4-a429-d98a2f6b6211",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-d413-71d4-a429-d98a2f6b6211/output/model.glb?Expires=4944585600&Signature=X3Y-r9w---vMnEaEA41tEPSlEhfoI0nYW--jyhcNa62vXS9xpz7aOwppaEUxgp0kvWcZaVuhNPOApBsEg2YWIzzSpk5Kh-tPLvEmqlY~rQPbgXIFLMBgYH3r20cLMbo-V0XsnfJktzwwiSVhPuq1g6lH2VTj3Vlh6eyJPjwH~V9QpRNTEh65VR03tvkNcgHCzKn3E2TjeaejoXq5O29wOmIC69pyRbUD5baGMZ6J2zUePorNQE7a95Cr92EyTbfKrNNiz72I2lL~MA7WyEYv3vsGxIgdHNQxjSBrDFTsBMorMuGFO3RRsouj6htE-I9g7no3Gasqo7fPTVmfoww-Hg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-d413-71d4-a429-d98a2f6b6211/output/model.fbx?Expires=4944585600&Signature=TRV6H9dX7i9qdj4~HbH~07rjiHywBZbBWUOGqkl29wuoRlFXEXBluQBU4vWicLlNaWFgDFcpboaYjp-Vz77tPr0HTZGypCTLh4q0DTh7R5b9Xam29O-sxygzd3BOjDm9F6zJEfm5jVxQsT0k3iqGKMmo519Vv3lv0QUls2GE9fL1aFyUWaMbb8S4uotO8T3o~rOMo9DcZq6IKKAKd0PT7UQeiWkcf0AymmvHSy2RpBvClc4AH2ksyz3yH6Chj7OP0zL1nbdeMQfd05lm1B3tmeuC1eEpCmlWd1vui~vpYVGXZ3fUI~4BAn-zwdICt7iGSnxylab6tHM4G16EtPwW4w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-c948-7003-8865-91e897b26e4b",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-c948-7003-8865-91e897b26e4b/output/model.glb?Expires=4944585600&Signature=cpGzlX-SBws7Rzhe3YkKEZbESg-SryF-ZHgETIyBD4EQYZ4PdZMvwXOuch2UysA18xELLMzjisD7wlSCM0Z5qVXfnL-JwnbywYeVIbRDlSZxJIqFjLpB3E38AQHLUzRPipyFQRUFQbmmtXMM0QRkzOL46Iw1DpATmCnJfaRnf7E5wTk1HnwBxBPyKKtCBw1~Jo16drUQyQ9xxAuxY89dCkUN~kw6BRkG11y4RpZN0YBvHp3T6cDmfrYf~O9exDZATQsPIY73YqFt6NyPVuk8mH7Ryxvl3seDwBe-coONGFlJ96V0FIdbh3oKi-qFeLF8mY12evZpGkec3TmpqCuDzw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-c948-7003-8865-91e897b26e4b/output/model.fbx?Expires=4944585600&Signature=HDuFBCWME-dz3W92tuFMpNiDR1PLbCOBVF27uIiyWIqxQj31VNz-nDYnoRTnmqsS7aT-77sReunPnFjjLBlZPAEOJFmO5P1DlxGdgQ56ZM0RLbrQJpN6v9iow4oXPNRkQRuTGsZR6rzaF3xCGK2o2WzD5SxYHF4ruMMzWnITW1uKJTvom69hb4WGHC-OcdQIBUCIwCzUMQKb3xuY7EZCNYUup0PFXGZCz5H77TOUt6doEpCTAXBcqQS~YEoTh-cA68mN0bTmW2pUMIoKZq8QwE8XUbkGLqRA0l2LZEyY4feLurLuxsgSiNMxZesBFvboEyvCjLsu~4kCzWT~aITDMA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a10139-d413-71d4-a429-d98a2f6b6211",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-d413-71d4-a429-d98a2f6b6211",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-d413-71d4-a429-d98a2f6b6211/output/model.glb?Expires=4944585600&Signature=X3Y-r9w---vMnEaEA41tEPSlEhfoI0nYW--jyhcNa62vXS9xpz7aOwppaEUxgp0kvWcZaVuhNPOApBsEg2YWIzzSpk5Kh-tPLvEmqlY~rQPbgXIFLMBgYH3r20cLMbo-V0XsnfJktzwwiSVhPuq1g6lH2VTj3Vlh6eyJPjwH~V9QpRNTEh65VR03tvkNcgHCzKn3E2TjeaejoXq5O29wOmIC69pyRbUD5baGMZ6J2zUePorNQE7a95Cr92EyTbfKrNNiz72I2lL~MA7WyEYv3vsGxIgdHNQxjSBrDFTsBMorMuGFO3RRsouj6htE-I9g7no3Gasqo7fPTVmfoww-Hg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-d413-71d4-a429-d98a2f6b6211/output/model.fbx?Expires=4944585600&Signature=TRV6H9dX7i9qdj4~HbH~07rjiHywBZbBWUOGqkl29wuoRlFXEXBluQBU4vWicLlNaWFgDFcpboaYjp-Vz77tPr0HTZGypCTLh4q0DTh7R5b9Xam29O-sxygzd3BOjDm9F6zJEfm5jVxQsT0k3iqGKMmo519Vv3lv0QUls2GE9fL1aFyUWaMbb8S4uotO8T3o~rOMo9DcZq6IKKAKd0PT7UQeiWkcf0AymmvHSy2RpBvClc4AH2ksyz3yH6Chj7OP0zL1nbdeMQfd05lm1B3tmeuC1eEpCmlWd1vui~vpYVGXZ3fUI~4BAn-zwdICt7iGSnxylab6tHM4G16EtPwW4w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-d413-71d4-a429-d98a2f6b6211/output/model.glb?Expires=4944585600&Signature=X3Y-r9w---vMnEaEA41tEPSlEhfoI0nYW--jyhcNa62vXS9xpz7aOwppaEUxgp0kvWcZaVuhNPOApBsEg2YWIzzSpk5Kh-tPLvEmqlY~rQPbgXIFLMBgYH3r20cLMbo-V0XsnfJktzwwiSVhPuq1g6lH2VTj3Vlh6eyJPjwH~V9QpRNTEh65VR03tvkNcgHCzKn3E2TjeaejoXq5O29wOmIC69pyRbUD5baGMZ6J2zUePorNQE7a95Cr92EyTbfKrNNiz72I2lL~MA7WyEYv3vsGxIgdHNQxjSBrDFTsBMorMuGFO3RRsouj6htE-I9g7no3Gasqo7fPTVmfoww-Hg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable.glb",
+        "file_size_bytes": 7824256,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS204-Turntable_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:08:08.616Z"
+      }
+    },
+    {
+      "name": "RS205-DeskFan",
+      "prompt": "One vintage 1990s Chinese pale sage green metal oscillating tabletop electric fan, wire circular protective cage with numerous thin spokes, three cream fan blades, small circular unbranded centre, tilted motor head, stout neck, heavy oval metal base with three ivory pushbuttons. Yellowed enamel, light rust on base edges, believable fine wire geometry. 38cm high. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 18000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-d398-73e1-9f24-a716b690a5ba",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-d398-73e1-9f24-a716b690a5ba",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-d398-73e1-9f24-a716b690a5ba",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-e95e-74a2-b21a-969b11549dd4",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-e95e-74a2-b21a-969b11549dd4/output/model.glb?Expires=4944585600&Signature=eSKTu76RQ-c4thRezoCkICFy14e2Dz~P9bmSALIiXxjFsBp0XlroUmI3QCJgKsAyQ~WaWUkd5gEaq9qPTqbyNg0KRAjpT-2c3~QxOWjwnJ26p1eZNUggoZ~DsAINqW3ahUCmHG2YWq6MGoxr9vyHA-msvWoyZUpSNvPUiVIrPVUjdL8R46kVcnHTRWlNZpkrQh3Mghbvusuzf0jWK4EWV4DT3Il-tSKfAvjeywPVu8LBoDeOlo4os2USkGsi~dVVl33JQG0jjCFLaKkm0KMc59SYcyGMHM3xYE~xUiSa9SL~JdzBnuMAauKq-5~NC1g5p6j2RKUgvJXevjSjjS0lrg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-e95e-74a2-b21a-969b11549dd4/output/model.fbx?Expires=4944585600&Signature=WINBLNNtaSJLZHB8XJR4nXt8XqWWjbV8JjwI1AlEqJnAE1ny~N2550ig~zL5laoNYzWlAuu-zphxvjSBMK8Talxc6lKe3DYX1pKOOQZU7CTQI4jJ4OcZ-HOqRoKS-Si-zteNrLkaPPi7fA8KaExivAKWx4bB~9BcPTm7-ruBzxpV6lkz7oJE97PjmMikcnEKgdzOziPcwcEOpPY8dKMzYdntWpA2wugCDsAk0KL~jmg7BdeWJebFk6IRMk26XA7p~QYKKyq36PY578HZPGf9OXpTtqB4kP4R5dwos1h0SusMKRYG~8rpB1X8auKGi8Hnw7h8kQyxaunLmP4tATrQdw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-d398-73e1-9f24-a716b690a5ba",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-d398-73e1-9f24-a716b690a5ba/output/model.glb?Expires=4944585600&Signature=jG9BatDXmp6MGDDOnAleMjPJj69nawNMCAnwb2jEVDesuilvqQWa~SbIMxiHd5p1qqa9VrnA~tzXz2I5sic1BHfNXyZHqXc-MkYHYR2qQz6ZYbS3dDBcFs6xSe7biVo6nV6ET11b81k3kEbomvkiHDGuo3vJoMZwjlacqumSNc3ji1uOXv87ncgACIMuHlLQgWOr-rBpObK4ssWVCLAdv1omo1WZvtmn8LNTYRV0bEgo3EDtUgnuZRKNG-qJBHPUOSpagW12kfjTWlsTJVDbcRGSP3DOmjRWc035i4mptnoY2tY01Ose8Yif83A7BNu9y4VXbXRXi9JSDsOQHhH5aw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-d398-73e1-9f24-a716b690a5ba/output/model.fbx?Expires=4944585600&Signature=ddxbqzPflsMvuZ50xWdRj3xSfHqxtwQ6RsW-uXlETozbAm2ySEY~5owJx6PPHTIhkFd4rsZSKQSTdTDlS2BckHh2ZAS7lI0O63QiMrKIvbG0JomfGgbUu62c9ndr1CjIOe1iCW1MG~aIeC89xvyCp5JBMFvAH1bq9RNxYBjvdX2oukBeaeW1cync-s~PEhpjy-B-lm1r8i~mRUhIZhrNJ0zAWoWFL9IzUyh~eXm5~dnosKv6~efw-AuIYpN22p6gfXqAtAtbaT0n8tnuKoeaNErrBx~2RqJQg5Mv~evTo6tTRXIQGHjPQunoa6mOP2FVcq0HEq6PpXZ~IEbMATXfvw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a10139-e95e-74a2-b21a-969b11549dd4",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-e95e-74a2-b21a-969b11549dd4",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-e95e-74a2-b21a-969b11549dd4/output/model.glb?Expires=4944585600&Signature=eSKTu76RQ-c4thRezoCkICFy14e2Dz~P9bmSALIiXxjFsBp0XlroUmI3QCJgKsAyQ~WaWUkd5gEaq9qPTqbyNg0KRAjpT-2c3~QxOWjwnJ26p1eZNUggoZ~DsAINqW3ahUCmHG2YWq6MGoxr9vyHA-msvWoyZUpSNvPUiVIrPVUjdL8R46kVcnHTRWlNZpkrQh3Mghbvusuzf0jWK4EWV4DT3Il-tSKfAvjeywPVu8LBoDeOlo4os2USkGsi~dVVl33JQG0jjCFLaKkm0KMc59SYcyGMHM3xYE~xUiSa9SL~JdzBnuMAauKq-5~NC1g5p6j2RKUgvJXevjSjjS0lrg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-e95e-74a2-b21a-969b11549dd4/output/model.fbx?Expires=4944585600&Signature=WINBLNNtaSJLZHB8XJR4nXt8XqWWjbV8JjwI1AlEqJnAE1ny~N2550ig~zL5laoNYzWlAuu-zphxvjSBMK8Talxc6lKe3DYX1pKOOQZU7CTQI4jJ4OcZ-HOqRoKS-Si-zteNrLkaPPi7fA8KaExivAKWx4bB~9BcPTm7-ruBzxpV6lkz7oJE97PjmMikcnEKgdzOziPcwcEOpPY8dKMzYdntWpA2wugCDsAk0KL~jmg7BdeWJebFk6IRMk26XA7p~QYKKyq36PY578HZPGf9OXpTtqB4kP4R5dwos1h0SusMKRYG~8rpB1X8auKGi8Hnw7h8kQyxaunLmP4tATrQdw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-e95e-74a2-b21a-969b11549dd4/output/model.glb?Expires=4944585600&Signature=eSKTu76RQ-c4thRezoCkICFy14e2Dz~P9bmSALIiXxjFsBp0XlroUmI3QCJgKsAyQ~WaWUkd5gEaq9qPTqbyNg0KRAjpT-2c3~QxOWjwnJ26p1eZNUggoZ~DsAINqW3ahUCmHG2YWq6MGoxr9vyHA-msvWoyZUpSNvPUiVIrPVUjdL8R46kVcnHTRWlNZpkrQh3Mghbvusuzf0jWK4EWV4DT3Il-tSKfAvjeywPVu8LBoDeOlo4os2USkGsi~dVVl33JQG0jjCFLaKkm0KMc59SYcyGMHM3xYE~xUiSa9SL~JdzBnuMAauKq-5~NC1g5p6j2RKUgvJXevjSjjS0lrg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+        "file_size_bytes": 9802460,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS205-DeskFan_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:08:25.778Z"
+      }
+    },
+    {
+      "name": "RS206-DeskLamp",
+      "prompt": "One humble old desk lamp, 38cm tall, small faded ochre pleated fabric tapered conical lampshade over a slender dark brass curved stem on a heavy round brown base, subtle frayed fabric, aged warm amber cloth with tiny stains. A 2000s Chinese record shop listening corner lamp, realistic modest household proportions. No baked illumination, opaque shade fabric exterior. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 14000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-dfb7-770d-8e98-1ff945daa93e",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-dfb7-770d-8e98-1ff945daa93e",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-dfb7-770d-8e98-1ff945daa93e",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-fbda-710b-833c-57b271f9f93a",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-fbda-710b-833c-57b271f9f93a/output/model.glb?Expires=4944585600&Signature=KLqKZ~1OPRxLLDUxEmGvlvD21363X4CWhyua0-Rd~kIR9h3ENZlPmy2mVTAAPUeKG9wfBG2Rq87TF33r3WKZEzP~08yYGubaloz7GkfCTcc~eqHP0Zbn~~tAYwKt9K31YYPZI8dlUqsIj06R28c0sxzqvKiCgJyv3aY28lRbFY~XCaGHOTVGXHzeJ3Kyw8a~yeF7WQ-ibXzz9RdLHW8fO3xD2SK6Y1hNC~JUavZ4Jqkztu6bUxGsAWz9qezKjKQXYo~xOn90xrYlnPJ1rmAUWgcUft62eN913I6bRVvRmwcaydqcSfzJ4u9gRQyJInR5EM7zeJl61n1AWBcs-koGJQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-fbda-710b-833c-57b271f9f93a/output/model.fbx?Expires=4944585600&Signature=FfTYWSwEhogWdFmg85nXu5R9p7dtMKASXMQqCE~WyTHktPhJ45A3HtxdL6aS9h9C5UdoFewpRO3OYQE~eKlTeIP2B9-mCQb511JIYy2cfJKHOiDE-S4md9l1NwBJtkuum3LxfbkmpJB~lqWQZ8yzfleeJlRg7m2jsKhRjlyxv6jc~8xEfFCLOBftIeVDZpgAADUDNlofXiBs5MEIk0C5~r9KfSHzhOOxWDYzecp2hB8KTpBdehQ5cGKt2xbuZJ-z0tFbuzQvYstjURTSYLeWWi8qPDZwYdtICGUg2-EBOHDHZIpMQkjTCSZZBTjmsQBTQ9I4Bq855ZhT8PAb1pikaQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-dfb7-770d-8e98-1ff945daa93e",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-dfb7-770d-8e98-1ff945daa93e/output/model.glb?Expires=4944585600&Signature=Epjdrubx14TdyIfSfFY84NX-xvfP1tM~QHa-~pB93Zaz4gGNcQb-d2K0V0sP1mSATyLsKnPvwyykNieTutY0IaZzEvVM~8jz96u1I6Y5-VaPWf07S-Zvdnu5FBSQxIL4HSxowOTH4ycodGzOSpRdJSTzdGquXsYoRBIG3mIygdywPwJ0tI~ftkZWNz~e~kJhoRzenbze3gMFbcl0LSXM0juEyItXzKHqvjieD~DchJrpkY8~-MEZCKxgsIilFLeHShcH7CcZXXPnLuBj-Yu0Lhg-61AbGhRngzKvgRnCHd3NAPH5Xgki2h6E7~PEz-BaiYs8p~6OsqPm5xpRsWx7QA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-dfb7-770d-8e98-1ff945daa93e/output/model.fbx?Expires=4944585600&Signature=QrGZUePKqMC27d5e1wct9Mo-b9MFBW3AOf7MvDSTmhTgOm~u68F0bR4DTFUEPuLfTTl7FsRBOjPoLh2cDDQmVv59cZTUAA0LsUaHo9FxK6evrdeR-VwxfYzB2PwZlpE8WIedmmjCbF6~pEEQbUBvPCPw~DviZdGwzXzfQ6rPO9DqE49Eog2vfxMIH2aou8~Mv11jF~z73LyPCdt31z8k4Gs9NM2esY8nJCL1-5-Cnbd2IaVjibExNKXTk1vjs~ie2KNRoxiusf15fgt15WmKwqhfIOffo0o7lxZzIHKbN~7TCEsTznk~jGkRi53YKBxHxN-IMjRsTr44XYKLFyKRjg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a10139-fbda-710b-833c-57b271f9f93a",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10139-fbda-710b-833c-57b271f9f93a",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-fbda-710b-833c-57b271f9f93a/output/model.glb?Expires=4944585600&Signature=KLqKZ~1OPRxLLDUxEmGvlvD21363X4CWhyua0-Rd~kIR9h3ENZlPmy2mVTAAPUeKG9wfBG2Rq87TF33r3WKZEzP~08yYGubaloz7GkfCTcc~eqHP0Zbn~~tAYwKt9K31YYPZI8dlUqsIj06R28c0sxzqvKiCgJyv3aY28lRbFY~XCaGHOTVGXHzeJ3Kyw8a~yeF7WQ-ibXzz9RdLHW8fO3xD2SK6Y1hNC~JUavZ4Jqkztu6bUxGsAWz9qezKjKQXYo~xOn90xrYlnPJ1rmAUWgcUft62eN913I6bRVvRmwcaydqcSfzJ4u9gRQyJInR5EM7zeJl61n1AWBcs-koGJQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-fbda-710b-833c-57b271f9f93a/output/model.fbx?Expires=4944585600&Signature=FfTYWSwEhogWdFmg85nXu5R9p7dtMKASXMQqCE~WyTHktPhJ45A3HtxdL6aS9h9C5UdoFewpRO3OYQE~eKlTeIP2B9-mCQb511JIYy2cfJKHOiDE-S4md9l1NwBJtkuum3LxfbkmpJB~lqWQZ8yzfleeJlRg7m2jsKhRjlyxv6jc~8xEfFCLOBftIeVDZpgAADUDNlofXiBs5MEIk0C5~r9KfSHzhOOxWDYzecp2hB8KTpBdehQ5cGKt2xbuZJ-z0tFbuzQvYstjURTSYLeWWi8qPDZwYdtICGUg2-EBOHDHZIpMQkjTCSZZBTjmsQBTQ9I4Bq855ZhT8PAb1pikaQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10139-fbda-710b-833c-57b271f9f93a/output/model.glb?Expires=4944585600&Signature=KLqKZ~1OPRxLLDUxEmGvlvD21363X4CWhyua0-Rd~kIR9h3ENZlPmy2mVTAAPUeKG9wfBG2Rq87TF33r3WKZEzP~08yYGubaloz7GkfCTcc~eqHP0Zbn~~tAYwKt9K31YYPZI8dlUqsIj06R28c0sxzqvKiCgJyv3aY28lRbFY~XCaGHOTVGXHzeJ3Kyw8a~yeF7WQ-ibXzz9RdLHW8fO3xD2SK6Y1hNC~JUavZ4Jqkztu6bUxGsAWz9qezKjKQXYo~xOn90xrYlnPJ1rmAUWgcUft62eN913I6bRVvRmwcaydqcSfzJ4u9gRQyJInR5EM7zeJl61n1AWBcs-koGJQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp.glb",
+        "file_size_bytes": 10590292,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS206-DeskLamp_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:08:42.926Z"
+      }
+    },
+    {
+      "name": "RS207-Thermos",
+      "prompt": "One tall old Chinese red insulated hot-water thermos flask, 35cm high, faded oxblood metal cylindrical body, small cream painted floral decoration, cream plastic lid cup, curved pale handle along side, silver metal ring around neck. Dented painted steel near base, scuffed handle, realistic utilitarian 1990s household object. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 12000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-eb3f-73d7-a91f-25afc4a10acc",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-eb3f-73d7-a91f-25afc4a10acc",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-eb3f-73d7-a91f-25afc4a10acc",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013a-13c2-72ce-81b9-6a4687f152e2",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-13c2-72ce-81b9-6a4687f152e2/output/model.glb?Expires=4944585600&Signature=NcvaIjzbkj76GW5d45IBgIbFLk2Mlf0ItykkJQC-wRYYadYTvb2EwkmGyWmbnB9VmTV0gLak9v6S-4~P4pGVWAx9EIz73t7Vr04SYIfemEjZ5PSBSpGsGs0YJd-Xznpy3ix6UILj9yzwiUo6GVyb1uwEXoXslzCDTxFTa6sA-PIyd8kXU1NiGcHRA0Xdf6hjxMpCT9cUI0lmKbVo~FQ80Or2v0vgsJxIFQfWv4xIbz-vp0~FNgz1RGvpiI3yhR5LN5eqcQvIYFmTYQ5A7Amu-EUmckA1Jz6XXIVEXrGPbF~5CpZ1CZLvEiMB7DC8dDKFLCefEkDs0JXZ8nOAzxCcVQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-13c2-72ce-81b9-6a4687f152e2/output/model.fbx?Expires=4944585600&Signature=ND4iB-1VS3saxjKGxzsGwf-RfSE3sUcwZI9-81974EhOS1zGX-hZK-H5ZoQsTQ3xUblJakVcPNkYVMlLjX3pexUyjpAsmNKAhaVM1mqUMrMlpuJneGjTxIgKeO8OdKEbNFkwb~8KUkZDmk72vA9zTH0hHhQeEL-bWDa8m~uMwv8ndmHWtgutjc029xrIW3iDGA2KZt3pQIcgo07gvlViwluUjTRZDagOAREnB8uiPiJZkItvRc6wHxf~OBgPVuZNnFm3bHswsZ3d6-6krOMk1OAnEdkW1w00MJNvLkyNC5RVVrkOjuPFtjiVrwnqoLJrH1C0eLNcYAk9cxmB~ew0Vw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-eb3f-73d7-a91f-25afc4a10acc",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-eb3f-73d7-a91f-25afc4a10acc/output/model.glb?Expires=4944585600&Signature=D5IB6bqygW5rPaMY67u7QyUaLN7oip3dAU2O~pNtliJ3Lz8yrYGptaQM-okRF3M91saMLs0kShmWsOZ~wY3iXhsx7Vf3Ti7TS5MsIME890vT9L2U3LhAFJLLx3VCIg~L0YuZbbkGXanAAODEQ8hXkzwvcjzLuRG8Fyn0jqfb4Ta-H9Fos-roq1EC9O8guRXo-KWj3sj2CGvLwjCBjET2g49SQJoBLZitB~2MuhFGwpc8Do2vjvBgtGjrtQNIfWvHnwJsPHs-Uk0YQCV7sI6oMAaS9OxZH-VTQgDCKE7IHttPmYhsG3egEVrXCp8LzLqiuK7am1d2rjI4RZtunqWE7A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-eb3f-73d7-a91f-25afc4a10acc/output/model.fbx?Expires=4944585600&Signature=Qo-BHPoh6s4MAsxoMYclmIRb4PE6CsBlDNrgyniXpuRwC6-5vvGn0SN~ORV8xeP6ZWm9R1QhPdmJN4Xvu03-ybo6KJePTWCspvZmV~z0Bt8a7voWTSa7a29aLWEGWFOVHotZWVKr-LvVl9k8LvuViAxXQft8etOcAIpvi-6IeeHUdeQm7k3U9m7nYMQKpr40xHo-Zqghx2drhQ2Bxelf5gi5~YBg8Tn3myw0pFTG6QvbXJlAIoIhePDX~wCze1wbglG2Rv-xduht95avQtzB-yAa~Jyn6rJKfKyWtdy2LIR9~ul66ND4dyeE04UNz9ghJWvLmCcehIZePPEjyPeBlw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a1013a-13c2-72ce-81b9-6a4687f152e2",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013a-13c2-72ce-81b9-6a4687f152e2",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-13c2-72ce-81b9-6a4687f152e2/output/model.glb?Expires=4944585600&Signature=NcvaIjzbkj76GW5d45IBgIbFLk2Mlf0ItykkJQC-wRYYadYTvb2EwkmGyWmbnB9VmTV0gLak9v6S-4~P4pGVWAx9EIz73t7Vr04SYIfemEjZ5PSBSpGsGs0YJd-Xznpy3ix6UILj9yzwiUo6GVyb1uwEXoXslzCDTxFTa6sA-PIyd8kXU1NiGcHRA0Xdf6hjxMpCT9cUI0lmKbVo~FQ80Or2v0vgsJxIFQfWv4xIbz-vp0~FNgz1RGvpiI3yhR5LN5eqcQvIYFmTYQ5A7Amu-EUmckA1Jz6XXIVEXrGPbF~5CpZ1CZLvEiMB7DC8dDKFLCefEkDs0JXZ8nOAzxCcVQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-13c2-72ce-81b9-6a4687f152e2/output/model.fbx?Expires=4944585600&Signature=ND4iB-1VS3saxjKGxzsGwf-RfSE3sUcwZI9-81974EhOS1zGX-hZK-H5ZoQsTQ3xUblJakVcPNkYVMlLjX3pexUyjpAsmNKAhaVM1mqUMrMlpuJneGjTxIgKeO8OdKEbNFkwb~8KUkZDmk72vA9zTH0hHhQeEL-bWDa8m~uMwv8ndmHWtgutjc029xrIW3iDGA2KZt3pQIcgo07gvlViwluUjTRZDagOAREnB8uiPiJZkItvRc6wHxf~OBgPVuZNnFm3bHswsZ3d6-6krOMk1OAnEdkW1w00MJNvLkyNC5RVVrkOjuPFtjiVrwnqoLJrH1C0eLNcYAk9cxmB~ew0Vw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-13c2-72ce-81b9-6a4687f152e2/output/model.glb?Expires=4944585600&Signature=NcvaIjzbkj76GW5d45IBgIbFLk2Mlf0ItykkJQC-wRYYadYTvb2EwkmGyWmbnB9VmTV0gLak9v6S-4~P4pGVWAx9EIz73t7Vr04SYIfemEjZ5PSBSpGsGs0YJd-Xznpy3ix6UILj9yzwiUo6GVyb1uwEXoXslzCDTxFTa6sA-PIyd8kXU1NiGcHRA0Xdf6hjxMpCT9cUI0lmKbVo~FQ80Or2v0vgsJxIFQfWv4xIbz-vp0~FNgz1RGvpiI3yhR5LN5eqcQvIYFmTYQ5A7Amu-EUmckA1Jz6XXIVEXrGPbF~5CpZ1CZLvEiMB7DC8dDKFLCefEkDs0JXZ8nOAzxCcVQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos.glb",
+        "file_size_bytes": 8334808,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS207-Thermos_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:08:59.082Z"
+      }
+    },
+    {
+      "name": "RS208-Pothos",
+      "prompt": "A single modest dusty indoor pothos houseplant in a small weathered terracotta cylindrical flowerpot, real soil, numerous separate broad heart-shaped deep olive green leaves on trailing stems, one longer vine falling down side, asymmetric natural growth, about 45cm high overall. Plant healthy but slightly dusty, restrained realistic leaf sizes. Detailed leaf silhouettes and stems. Realistic 2006 Beijing shop prop. Moderate wear. Single object, no room, no base, no logo.",
+      "target_polycount": 18000,
+      "status": "downloaded",
+      "preview": {
+        "task_id": "01a10137-f597-7185-b5c7-acbe1bf26514",
+        "status": "PENDING",
+        "message": "3D generation task created successfully. Task ID: 01a10137-f597-7185-b5c7-acbe1bf26514",
+        "estimated_time": "2-3 minutes"
+      },
+      "preview_id": "01a10137-f597-7185-b5c7-acbe1bf26514",
+      "last_status": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013a-25dd-73c7-a21e-57c5b8a27c8a",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-25dd-73c7-a21e-57c5b8a27c8a/output/model.glb?Expires=4944585600&Signature=A55Um45vUrC596U0-PDTg8~nF7elGRjCZnB94135KsHs3ABcFQhX~Xbp0c65xR6gHdatM8goz5HDSB8nxG7IP7VAYX7TOylseQCzdH2x8p~vV6o8zuHiUJHLKS0zF1MHM3ONNEX7--cPcPjWAHdElR7pl3xkTkD6M4VS8lszkZsXjspbXySjIXqpaH9DTBYgNmnmst1fCcmW6K7MM5SuW4Pfja55ovLxwQQorUlnYpu5A1OV8Z96L7cLlxMmkuAkIy7Va42UOh4vYykBUZWxyZwxcUn7yivlJJCPUEvH8P8IjOiBLam3oZthhL8nJdcwKwoVYQxpYXp8P0hnHAjSdQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-25dd-73c7-a21e-57c5b8a27c8a/output/model.fbx?Expires=4944585600&Signature=VgMdDwMmIe1c~bNF1~djQpDxyfj1VpLFVYEZS0JuiVj9VqyPxDHKK75lzlZlUfwg0rqlOE99J2ga6ZtuQJCby~k5Zpfh9Y5asVXxsjukIO2MeG48F0Onm7NwnfRoixTu3fLaiWkLjuGrzuX1utD8QHuyDLihn173GFsAMbh9qVG5cdLUqfckm071J3BKTSnCt5kv4AGNvQY6K0m8ejNP2-HeEKDzUbbQ7ssqG7o-mFR7Plv-iOijti-yKwu-Y3Bol89v9xNjhtbQ39hBwPK-SW142Cdu3Pf3ZbSzcN3dpHWw9iyuTkOOSOAt6qLWTn1lV-b7zh4ti4BgMreW8md21A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "preview_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a10137-f597-7185-b5c7-acbe1bf26514",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-f597-7185-b5c7-acbe1bf26514/output/model.glb?Expires=4944585600&Signature=Dx1kkZgJ0l4fRq8xV7O-CaXU8Yeb5naYFt9jAaft2ajElv3jtsXIvyEY93yNeUO2I-7SqEgwzO3JGyHiUV4vFOaxrQJtyEDLCfdX3ZfG6iZB1tvjdoBAMpAHqV5iIwJza~lAblQegdFr~Y44KYuJG2ucC4t0MXLKJCzDXtbRTsJVlmc2oL9cl-9EN5m8EK8z1EpKd7ry2pFOFmfAbTFpe7UosMibSnj7rTuwTtT02TNFPYtx6qjA5~OcKlY0SCCQwywOmBsKV7bmFOH8-uQ6~xlrvQyWfNEoe8hwIV1kwYWuW8XdKKwYlmh9hEzN1UFxbP6BkZq9F-YoYOkY54LKIQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a10137-f597-7185-b5c7-acbe1bf26514/output/model.fbx?Expires=4944585600&Signature=ExxugqthEEX~j3JVhZBc6HK-v7k~5SPIODyEqX~3QyGuILgQndnFw2Xfs2KhMCBWhkQw08bfz5qenSME-4B1051ZqcRepJ22o9jxeBg7wXiFm73xP2Fzxf08bBogKZAtZEifFxh6Lbo8ooySDjyc6N6oroP6xaO1PoWLk8IAJR4Er~gIbqUJE1x2Blg3Pd0O~EchUp-Uc8wIIz-qVjocRZR1EiXtQc-qT2AYgeqL~zBijgr1XN18OrGhr-JZ350Cp9gXdpWayx0yCkEotLvZJH-n5WWUNolo1eN3uM2DCtVDGgQMyU4xPjUiXd4Ii8faE1ytW2hvQB0lpjU1pO-ZtA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 20
+      },
+      "refine_id": "01a1013a-25dd-73c7-a21e-57c5b8a27c8a",
+      "refine_result": {
+        "outcome": "SUCCEEDED",
+        "task_id": "01a1013a-25dd-73c7-a21e-57c5b8a27c8a",
+        "status": "SUCCEEDED",
+        "progress": 100,
+        "model_urls": {
+          "glb": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-25dd-73c7-a21e-57c5b8a27c8a/output/model.glb?Expires=4944585600&Signature=A55Um45vUrC596U0-PDTg8~nF7elGRjCZnB94135KsHs3ABcFQhX~Xbp0c65xR6gHdatM8goz5HDSB8nxG7IP7VAYX7TOylseQCzdH2x8p~vV6o8zuHiUJHLKS0zF1MHM3ONNEX7--cPcPjWAHdElR7pl3xkTkD6M4VS8lszkZsXjspbXySjIXqpaH9DTBYgNmnmst1fCcmW6K7MM5SuW4Pfja55ovLxwQQorUlnYpu5A1OV8Z96L7cLlxMmkuAkIy7Va42UOh4vYykBUZWxyZwxcUn7yivlJJCPUEvH8P8IjOiBLam3oZthhL8nJdcwKwoVYQxpYXp8P0hnHAjSdQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+          "fbx": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-25dd-73c7-a21e-57c5b8a27c8a/output/model.fbx?Expires=4944585600&Signature=VgMdDwMmIe1c~bNF1~djQpDxyfj1VpLFVYEZS0JuiVj9VqyPxDHKK75lzlZlUfwg0rqlOE99J2ga6ZtuQJCby~k5Zpfh9Y5asVXxsjukIO2MeG48F0Onm7NwnfRoixTu3fLaiWkLjuGrzuX1utD8QHuyDLihn173GFsAMbh9qVG5cdLUqfckm071J3BKTSnCt5kv4AGNvQY6K0m8ejNP2-HeEKDzUbbQ7ssqG7o-mFR7Plv-iOijti-yKwu-Y3Bol89v9xNjhtbQ39hBwPK-SW142Cdu3Pf3ZbSzcN3dpHWw9iyuTkOOSOAt6qLWTn1lV-b7zh4ti4BgMreW8md21A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+        },
+        "consumed_credits": 10
+      },
+      "download": {
+        "download_url": "https://assets.meshy.ai/fe71121d-8711-46d7-ba16-8c18861c75bb/tasks/01a1013a-25dd-73c7-a21e-57c5b8a27c8a/output/model.glb?Expires=4944585600&Signature=A55Um45vUrC596U0-PDTg8~nF7elGRjCZnB94135KsHs3ABcFQhX~Xbp0c65xR6gHdatM8goz5HDSB8nxG7IP7VAYX7TOylseQCzdH2x8p~vV6o8zuHiUJHLKS0zF1MHM3ONNEX7--cPcPjWAHdElR7pl3xkTkD6M4VS8lszkZsXjspbXySjIXqpaH9DTBYgNmnmst1fCcmW6K7MM5SuW4Pfja55ovLxwQQorUlnYpu5A1OV8Z96L7cLlxMmkuAkIy7Va42UOh4vYykBUZWxyZwxcUn7yivlJJCPUEvH8P8IjOiBLam3oZthhL8nJdcwKwoVYQxpYXp8P0hnHAjSdQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos.glb",
+        "file_size_bytes": 11689116,
+        "format": "glb",
+        "texture_paths": [
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos_textures/base_color.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos_textures/metallic.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos_textures/roughness.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos_textures/normal.png",
+          "/Users/yadongliu/WorkSpace/AGiftForD22/assets/recordshop/v2/meshy/RS208-Pothos_textures/emission.png"
+        ],
+        "expires_at": "2026-10-04T10:09:19.016Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "HT401-AirConditioner",
+    "preview_task_id": "01a109f3-8fa6-750d-84b0-019a5dbaeccf",
+    "refine_task_id": "01a109f9-f2a3-76d6-be3e-a0897e6d6796",
+    "texture_prompt": "Yellowed ivory painted metal casing, dark steel circular fan grille, dust inside vents, fine rust confined to screws and lower edge, dull plastic, functional 2003 Beijing residential condenser. Photorealistic materials, no dramatic lighting.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT401-AirConditioner.glb",
+    "prompt": "A single realistic wall mounted outdoor air conditioner condenser from a modest Beijing residence circa 2003. Rectangular yellowed ivory painted metal cabinet 78cm wide, 52cm tall, 32cm deep. Large circular fan behind fine steel wire grille on the front, small service hatch and insulated pipe connections on the right. Dust at vent edges, light rust under screws, faded plastic. No support wall, no floor, no scene, no brand, no words. Complete standalone appliance with flat rear and bottom.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": true
+  },
+  {
+    "name": "HT402-ElectricMeter",
+    "preview_task_id": "01a109f3-9a24-7365-b328-4ac5d1e66879",
+    "refine_task_id": "01a109f9-e7e9-71d6-b376-c137edad61df",
+    "texture_prompt": "Faded pale sage painted steel cabinet, dusty glass meter window, mechanical meter face, fine rust at hinges and paint chips at latch, intact ordinary 2003 Beijing residential meter. Realistic PBR materials without baked shadows.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT402-ElectricMeter.glb",
+    "prompt": "One small realistic 2000s Chinese residential electric meter cabinet, 28cm wide 38cm high 12cm deep. Faded pale sage metal box with hinged rectangular door, glass inspection window showing a mechanical electricity meter with number wheels, key latch on the right, two short black cable stubs from the top. Fine paint chips at edges, dust and local corrosion near hinges, otherwise in use. Standalone object, no wall, no ground, no scene, no logos or readable writing.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": true
+  },
+  {
+    "name": "HT403-LowTimberStool",
+    "preview_task_id": "01a109f3-a4a8-7140-a99b-deaec56b9ee9",
+    "refine_task_id": "01a109fa-0b9e-75f2-b275-f54cf1e52243",
+    "texture_prompt": "Worn neutral grey honey elm wood grain, smooth rubbed seat rim, dark dust at leg ends, visible mortise joints, everyday Beijing household stool, restrained wear. Realistic wood material without baked shadows.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT403-LowTimberStool.glb",
+    "prompt": "One small low everyday Chinese timber stool for a Beijing hutong doorstep circa 2003, seat height 38cm, width 30cm. Square scratched elm wood seat, four slightly splayed slender legs joined by lower cross stretchers, visible mortise joints. Old honey-grey timber with dark worn foot ends and smoother hand polished seat edges. Ordinary working household furniture, moderate use. No upholstery, no room, no floor, no decorations. Complete single object with feet.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": true
+  },
+  {
+    "name": "HT404-WashBucket",
+    "preview_task_id": "01a109f3-af6b-7114-b17b-7a03ff4f4b70",
+    "refine_task_id": "01a109f9-fcb9-7444-bd4f-17a742e61cb7",
+    "texture_prompt": "Faded mint green moulded plastic, scratches and detergent residue inside bucket, dusty bottom rim, dark metal carry handle. Realistic household object with modest wear, no liquid, no dramatic lighting.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT404-WashBucket.glb",
+    "prompt": "One realistic old light mint green plastic household wash bucket, 30cm diameter 32cm tall, OPEN circular top with visible thin curved interior wall and inside bottom. Raised rim, hinged dark wire carry handle resting down against outer side. Moulded plastic ribs and light scuffing, pale detergent residue inside and dust on bottom rim. Modest 2003 Beijing household prop. Empty bucket, no liquid, no floor, no scene, no logo, no writing. Single standalone object.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": true,
+    "usage_note": "Generated as shallow wash basin; used at 0.38m diameter with uniform scale."
+  },
+  {
+    "name": "HT405-StrawBroom",
+    "preview_task_id": "01a109f3-ba2e-72f5-9c55-1d933ec2f2a6",
+    "refine_task_id": "01a109fa-16a2-7633-becc-82c827592690",
+    "texture_prompt": "Natural straw tan fine sorghum fibres, darker worn straw tips, dark twine binding, weathered bamboo handle with visible nodes, realistic used Beijing household broom. No lighting or scenery baked into material.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT405-StrawBroom.glb",
+    "prompt": "One ordinary worn Chinese sorghum straw broom with a long slender bamboo handle, total height 130cm. Tightly bound fan shaped bundle of fine natural tan straw bristles at the bottom, dark twine binding, uneven tips from use. Smooth thin bamboo shaft with visible nodes and one small chipped end. Realistic modest Beijing hutong household tool from 2003, intact and used daily. Single complete standalone object, no wall, no ground, no other objects, no logo.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": false,
+    "rejection_reason": "Radial bristles around middle of shaft, not a usable floor broom."
+  },
+  {
+    "name": "HT406-Sandals",
+    "preview_task_id": "01a109f3-c6b2-70d8-8488-f2f7e5684941",
+    "refine_task_id": "01a109fa-20b9-705e-995e-25393a35aee4",
+    "texture_prompt": "Charcoal grey rubber sandals with subtle dusty sole edges, smoother used upper straps, scuffed toe rim, neutral natural rubber roughness. Realistic used household footwear, no logos, no lighting baked into texture.",
+    "credits": 30,
+    "local_path": "/Users/yadongliu/WorkSpace/AGiftForD22/assets/hutong/meshy-v4/HT406-Sandals.glb",
+    "prompt": "One pair of ordinary worn dark charcoal rubber slip-on house sandals, two separate shoes placed beside each other 4cm apart, each 26cm long, broad open toes, textured sole, simple single curved upper strap. Realistic 2003 Beijing household doorstep footwear, dusty soles, hand worn smoother strap edges, subtle natural asymmetry. No feet, no human, no ground, no pedestal, no scene, no logos or letters. Both complete sandals as one prop.",
+    "ai_model": "meshy-6",
+    "texture_resolution": "2k",
+    "target_polycount": 24000,
+    "target_formats": [
+      "glb"
+    ],
+    "accepted": false,
+    "rejection_reason": "Generated human toes and ankle forms inside footwear; removed from scene."
+  }
+]

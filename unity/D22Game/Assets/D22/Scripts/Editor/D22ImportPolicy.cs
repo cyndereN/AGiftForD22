@@ -6,7 +6,7 @@ namespace D22.Editor
     {
         private void OnPreprocessModel()
         {
-            if (!assetPath.StartsWith("Assets/D22/Art/Models/")) return;
+            if (!assetPath.StartsWith("Assets/D22/Art/") || !assetPath.Contains("/Models/")) return;
             var model = (ModelImporter)assetImporter;
             model.globalScale = 1;
             model.useFileScale = true;
@@ -25,7 +25,7 @@ namespace D22.Editor
 
         private void OnPreprocessTexture()
         {
-            if (!assetPath.StartsWith("Assets/D22/Art/Textures/")) return;
+            if (!assetPath.StartsWith("Assets/D22/Art/") || !assetPath.Contains("/Textures/")) return;
             var texture = (TextureImporter)assetImporter;
             texture.maxTextureSize = 2048;
             texture.mipmapEnabled = true;

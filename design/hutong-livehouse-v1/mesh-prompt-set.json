@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "time_anchor": "2006 Beijing Gulou / Wudaokou adjacent fictional music block",
+  "rule": "Generate every visible object with Meshy; Blender only assembles, scales, rotates, remaps textures, lights and cameras.",
+  "style_lock": [
+    "weathered grey brick",
+    "low single-storey courtyard houses",
+    "red timber doors",
+    "patched plaster",
+    "pre-Olympics independent music",
+    "functional clutter",
+    "no clean theme-park nostalgia",
+    "no neon cyberpunk"
+  ],
+  "groups": [
+    {
+      "id": "hutong_shell",
+      "priority": "P0",
+      "prompts": [
+        "weathered Beijing grey brick hutong courtyard wall module, low single-storey eaves, patched lime plaster, uneven mortar, 2006 residential street, game-ready modular prop, no text",
+        "narrow Beijing hutong gatehouse with red timber door, stone threshold, shallow tiled eave, worn grey brick piers, small address plaque area, game-ready prop, no people",
+        "old Beijing courtyard shadow wall and narrow side gate, grey brick, red paint remnants, low height, weathered but inhabited, game-ready prop"
+      ],
+      "assembly": "Repeat wall sections along a 5.2m main lane and 2.8–3.6m side lane; use 90 degree turns and a courtyard opening."
+    },
+    {
+      "id": "street_life",
+      "priority": "P0",
+      "prompts": [
+        "old black Beijing bicycle leaning against grey hutong wall, worn chrome, rear rack, practical 2006 city prop, game-ready",
+        "small Beijing recycling tricycle cart with cardboard and empty beverage crates, lived-in hutong street, game-ready prop",
+        "weathered courtyard clothesline with plain laundry, low brick wall, functional Beijing resident detail, game-ready prop",
+        "small bird cage, plastic washbasin, potted plant and enamel thermos grouped beside a red hutong door, game-ready prop"
+      ],
+      "assembly": "Place at edges and door thresholds so the player must choose whether to go around or inspect."
+    },
+    {
+      "id": "music_link",
+      "priority": "P0",
+      "prompts": [
+        "small independent record shop street facade in Beijing hutong, wood framed display window, hand painted sign area, narrow door, weathered plaster, 2006, game-ready modular prop",
+        "temporary courtyard gig ticket table with clip board, paper wristbands, old cash box, beverage crate, small poster rack, game-ready prop",
+        "narrow live house entrance corridor with layered fictional gig flyers, red door light, exposed cable, worn plaster and brick, game-ready prop",
+        "low intimate live house stage with drum kit, guitar amp, microphone stand and stained wooden floor, 80 to 120 square meter club, game-ready composition"
+      ],
+      "assembly": "Connect record shop back door to courtyard ticket desk, then to live house stage-side and backstage loop."
+    },
+    {
+      "id": "narrative_cards",
+      "priority": "P1",
+      "prompts": [
+        "blank off-white paper flyer card clipped to a wire, slightly curled, 2000s independent music venue prop, no readable logo, game-ready",
+        "small handwritten price tag card and used record stock label, paper clip, stained edges, blank text area, game-ready",
+        "black and cream backstage setlist card taped to peeling plaster, fictional band prop, no real artist names, game-ready"
+      ],
+      "assembly": "Apply fictional labels as textures to Meshy cards. Never model authored text geometry."
+    }
+  ],
+  "lighting_presets": {
+    "hutong_day": {
+      "key": "cool blue-grey sky through lane opening",
+      "fill": "very low warm bounce from red doors",
+      "contrast": "deep eave shadows, readable thresholds"
+    },
+    "record_shop_dusk": {
+      "key": "cool shop window",
+      "fill": "warm cashier and turntable pools",
+      "accent": "green register indicator"
+    },
+    "livehouse_show": {
+      "key": "red and amber side light from low stage",
+      "fill": "dark audience with green bar practical",
+      "contrast": "faces readable near stage only"
+    },
+    "night_exit": {
+      "key": "blue moonlit roofline",
+      "fill": "distant sodium city glow",
+      "contrast": "quiet, low exposure after show"
+    }
+  },
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

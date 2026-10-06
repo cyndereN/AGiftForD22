@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "scene": "D22_RecordShop_v1",
+  "source": "blender/source/D22_RecordShop_v1.blend",
+  "dimensions_m": [
+    6.4,
+    10,
+    3
+  ],
+  "unity_scene": "D22_RecordShop",
+  "preserved_scan_scene": "D22_RecordShopScan",
+  "reused_meshy": [
+    {
+      "path": "assets/d22/v9/meshy/B03-BarCounter.glb",
+      "name": "Meshy counter",
+      "source_extent": [
+        1,
+        0.42773401737213135,
+        0.5683590173721313
+      ],
+      "scale": 1.794640304496406,
+      "position": [
+        0,
+        8.3,
+        0
+      ]
+    },
+    {
+      "path": "assets/d22/v9/meshy/B06-BarStool.glb",
+      "name": "Meshy listening stool",
+      "source_extent": [
+        0.7656239867210388,
+        0.7714849710464478,
+        1
+      ],
+      "scale": 0.7,
+      "position": [
+        1.48,
+        5.5,
+        0
+      ]
+    },
+    {
+      "path": "assets/d22/v9/meshy/B10-Zines.glb",
+      "name": "Meshy zine pile",
+      "source_extent": [
+        1,
+        0.9296879768371582,
+        0.4462890028953552
+      ],
+      "scale": 0.4,
+      "position": [
+        -0.6,
+        8.15,
+        1.05
+      ]
+    },
+    {
+      "path": "assets/d22/meshy/A05-Mixer.glb",
+      "name": "Meshy mixer",
+      "source_extent": [
+        0.3522929847240448,
+        0.24220143258571625,
+        0.15000000596046448
+      ],
+      "scale": 1.504429616772401,
+      "position": [
+        2.32,
+        5.2,
+        0.95
+      ]
+    },
+    {
+      "path": "assets/d22/v9/meshy/B08-GalleryLamp.glb",
+      "name": "Meshy wall lamp 0",
+      "source_extent": [
+        0.5742179751396179,
+        0.7871090173721313,
+        1
+      ],
+      "scale": 0.28,
+      "position": [
+        -3,
+        2.4,
+        1.92
+      ]
+    },
+    {
+      "path": "assets/d22/v9/meshy/B08-GalleryLamp.glb",
+      "name": "Meshy wall lamp 1",
+      "source_extent": [
+        0.5742179751396179,
+        0.7871090173721313,
+        1
+      ],
+      "scale": 0.28,
+      "position": [
+        -3,
+        5.5,
+        1.92
+      ]
+    }
+  ],
+  "new_meshy_credits": 0,
+  "spawn_blender": [
+    0.25,
+    0.7,
+    0
+  ],
+  "counter_focus_blender": [
+    0,
+    7.35,
+    1.45
+  ],
+  "bottle_blender": [
+    0.45,
+    7.98,
+    1.08
+  ],
+  "exit_blender": [
+    2.8,
+    7.2,
+    1.6
+  ]
+}

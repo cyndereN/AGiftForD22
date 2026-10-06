@@ -1,0 +1,19 @@
+{
+  "file_key": "LOMa9NEcogELqstS7Fsol0",
+  "page": "Page 1",
+  "section_id": "263:1411",
+  "section_name": "胡同 × 唱片店 × 小型 Live House · 2006 设计研究",
+  "url": "https://www.figma.com/design/LOMa9NEcogELqstS7Fsol0/?node-id=263-1411",
+  "updated": "2026-10-04",
+  "visual_validation": {
+    "captured_nodes": [
+      "263:1411",
+      "267:1441",
+      "267:1443"
+    ],
+    "status": "PASS",
+    "notes": "Section contains research cards, five-zone route, two-choice structure, experience pacing, Meshy/Blender groups and lighting bands."
+  },
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

@@ -1,0 +1,3120 @@
+{
+  "version": 2,
+  "scene": "D22_HutongOutdoor_v2_MeshyOnly",
+  "type": "outdoor_hutong_connector",
+  "time_anchor": "2006 Beijing hutong music block",
+  "open_sky": true,
+  "ceiling": false,
+  "dimensions_m": [
+    19,
+    16,
+    2.9
+  ],
+  "anchors": [
+    {
+      "id": "recordshop_v4_exit",
+      "scene": "D22_RecordShopV4",
+      "position": [
+        -2.66,
+        4.7,
+        0
+      ]
+    },
+    {
+      "id": "livehouse_existing_exit",
+      "scene": "existing_livehouse_scene",
+      "position": [
+        9.9,
+        10.0,
+        0
+      ]
+    }
+  ],
+  "route": [
+    "recordshop_v4_exit",
+    "lane_entry",
+    "corner_90_degree",
+    "courtyard_pocket",
+    "livehouse_existing_exit",
+    "open_exit"
+  ],
+  "assets": [
+    {
+      "label": "Wide hutong mouth 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5153324661216097,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.030332565307617,
+        -1.0149999856948853,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0003323554992676,
+        0.014999985694885254,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5555488809396638,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0815420150756836,
+        -1.0259929895401,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0295559167861938,
+        0.025993019342422485,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4703531989316835,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9964515566825867,
+        -1.026098370552063,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0557451993227005,
+        0.02609838731586933,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5479092267574094,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.032692793756723404,
+        -1.01521635055542,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0631256103515625,
+        0.015216405503451824,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 4_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4580075187443875,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9321230053901672,
+        -1.0258846282958984,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9838922023773193,
+        0.025884568691253662,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 5_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.4629117732657777,
+        -0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.9367111921310425,
+        -1.0262006521224976,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.989112615585327,
+        0.02620070055127144,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5570961244333708,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0803234577178955,
+        -0.023227112367749214,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0338690280914307,
+        1.0232270956039429,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.510929750256326,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.030224561691284,
+        -0.019294846802949905,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9916348457336426,
+        1.0192948579788208,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4400873992775237,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9675798416137695,
+        -0.0274924635887146,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.08740505576133728,
+        1.0274925231933594,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.49549093277229145,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.027897991240024567,
+        -0.023388929665088654,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0188798904418945,
+        1.0233889818191528,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 4_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4412493362509209,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9221574068069458,
+        -0.01909194141626358,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9603413343429565,
+        1.0190919637680054,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 5_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5196484663482615,
+        0.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.9921972751617432,
+        -0.027451321482658386,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0470998287200928,
+        1.0274512767791748,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5463658692533593,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0738961696624756,
+        0.9724699258804321,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0188357830047607,
+        2.0275301933288574,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4562618575924475,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.9757583141326904,
+        0.980503499507904,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9367653727531433,
+        2.019496440887451,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4649049684264943,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9879680275917053,
+        0.976936936378479,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.05815810710191727,
+        2.0230631828308105,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4472182544016998,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.08034597337245941,
+        0.9724357724189758,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9747825264930725,
+        2.027564287185669,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 4_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4785062430657903,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.958809494972229,
+        0.9803032875061035,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.998202919960022,
+        2.0196967124938965,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 5_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5583204500836985,
+        1.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.035423755645752,
+        0.9771033525466919,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0812172889709473,
+        2.0228967666625977,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 0_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.4930070477089705,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0190000534057617,
+        1.9740070104599,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.967013955116272,
+        3.0259931087493896,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 1_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4418066113492949,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.9679049253463745,
+        1.973901629447937,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9157081842422485,
+        3.0260984897613525,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 2_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5219887477551157,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0372051000595093,
+        1.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.006772344466298819,
+        3.01521635055542,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 3_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4474728695186943,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.07841169834136963,
+        1.9741153717041016,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9733574390411377,
+        3.0258846282958984,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 4_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5355244108824333,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0093237161636353,
+        1.9737993478775024,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.06172513961792,
+        3.026200771331787,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Wide hutong mouth 5_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5433728809707183,
+        2.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.027940273284912,
+        1.9845672845840454,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.058805465698242,
+        3.015432596206665,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5153324661216097,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.030332565307617,
+        2.9850001335144043,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0003324747085571,
+        4.014999866485596,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.555548880939664,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.081541895866394,
+        2.9740068912506104,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.02955588698387146,
+        4.0259928703308105,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5296468010683165,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.003548426553606987,
+        2.9739015102386475,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.055745244026184,
+        4.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5479092267574095,
+        3.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0326929092407227,
+        2.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0631256103515625,
+        4.01521635055542,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5570961244333708,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0803232192993164,
+        3.9767727851867676,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0338690280914307,
+        5.023227214813232,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5109297502563257,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0302245616912842,
+        3.9807052612304688,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.008365084417164326,
+        5.019294738769531,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5599126007224763,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.03242015838623047,
+        3.9725074768066406,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0874050855636597,
+        5.027492523193359,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4954909327722914,
+        4.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9721019864082336,
+        3.9766111373901367,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0188798904418945,
+        5.023388862609863,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5463658692533593,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0738959312438965,
+        4.972469806671143,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0188357830047607,
+        6.027530193328857,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4562618575924474,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9757583141326904,
+        4.980503559112549,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.06323462724685669,
+        6.019496440887451,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5350950315735057,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.01203196495771408,
+        4.9769368171691895,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0581581592559814,
+        6.0230631828308105,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4472182544016998,
+        5.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9196540713310242,
+        4.97243595123291,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9747825860977173,
+        6.02756404876709,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 0_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4930070477089703,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0190000534057617,
+        5.9740071296691895,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9670140147209167,
+        7.0259928703308105,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 1_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4418066113492948,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9679049849510193,
+        5.973901748657227,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.08429177105426788,
+        7.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 2_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4780112522448843,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.037205155938863754,
+        5.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9932276606559753,
+        7.01521635055542,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 3_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4474728695186942,
+        6.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9215882420539856,
+        5.974115371704102,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9733574390411377,
+        7.025884628295898,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 0_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4460775142513025,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.9653723239898682,
+        6.980705261230469,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9267826080322266,
+        8.019294738769531,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 1_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4808540982590389,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0083465576171875,
+        6.972507476806641,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0466383695602417,
+        8.02749252319336,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 2_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4411438261960105,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.08224508911371231,
+        6.976611137390137,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9645327925682068,
+        8.023388862609863,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Narrow squeeze 3_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.496020686158928,
+        7.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9769287109375,
+        6.980907917022705,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0151126384735107,
+        8.019091606140137,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5153324661216097,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.030332565307617,
+        7.985000133514404,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0003323554992676,
+        9.015000343322754,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.5555488809396638,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.0815420150756836,
+        7.9740071296691895,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.0295559167861938,
+        9.025993347167969,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4703531989316835,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9964515566825867,
+        7.973901748657227,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.0557451993227005,
+        9.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5479092267574094,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.032692793756723404,
+        7.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0631256103515625,
+        9.015216827392578,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 4_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4580075187443875,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9321230053901672,
+        7.974115371704102,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9838922023773193,
+        9.025884628295898,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 5_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.4629117732657777,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.9367111921310425,
+        7.973799228668213,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.989112615585327,
+        9.026200294494629,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5570961244333708,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0803234577178955,
+        8.976773262023926,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0338690280914307,
+        10.023226737976074,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.510929750256326,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -2.030224561691284,
+        8.980705261230469,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9916348457336426,
+        10.019294738769531,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4400873992775237,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9675798416137695,
+        8.97250747680664,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.08740505576133728,
+        10.02749252319336,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.49549093277229145,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.027897991240024567,
+        8.976611137390137,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.0188798904418945,
+        10.023388862609863,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 4_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4412493362509209,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9221574068069458,
+        8.980908393859863,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9603413343429565,
+        10.019091606140137,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 5_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5196484663482615,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.9921972751617432,
+        8.972548484802246,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0470998287200928,
+        10.027451515197754,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.5463658692533593,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0738961696624756,
+        9.9724702835083,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -2.0188357830047607,
+        11.0275297164917,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4562618575924475,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.9757583141326904,
+        9.98050308227539,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9367653727531433,
+        11.01949691772461,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.4649049684264943,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.9879680275917053,
+        9.976937294006348,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.05815810710191727,
+        11.023062705993652,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4472182544016998,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.08034597337245941,
+        9.97243595123291,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9747825264930725,
+        11.02756404876709,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 4_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4785062430657903,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.958809494972229,
+        9.980303764343262,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.998202919960022,
+        11.019696235656738,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 5_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5583204500836985,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.035423755645752,
+        9.977103233337402,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0812172889709473,
+        11.022896766662598,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 0_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -2.4930070477089705,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -3.0190000534057617,
+        10.974006652832031,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -1.967013955116272,
+        12.025993347167969,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 1_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.4418066113492949,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.9679049253463745,
+        10.973901748657227,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.9157081842422485,
+        12.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 2_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5219887477551157,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -1.0372051000595093,
+        10.984783172607422,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        -0.006772344466298819,
+        12.015216827392578,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 3_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4474728695186943,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.07841169834136963,
+        10.974115371704102,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9733574390411377,
+        12.025884628295898,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 4_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5355244108824333,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0093237161636353,
+        10.973799705505371,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.06172513961792,
+        12.026200294494629,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard pocket 5_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5433728809707183,
+        11.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.027940273284912,
+        10.984567642211914,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.058805465698242,
+        12.015432357788086,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4846675338783901,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.030332446098327637,
+        7.985000133514404,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9996675252914429,
+        9.015000343322754,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4444511190603362,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9184580445289612,
+        7.9740071296691895,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        1.9704440832138062,
+        9.025993347167969,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5296468010683166,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0035483837127686,
+        7.973901748657227,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0557453632354736,
+        9.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        3.5479092267574095,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        3.0326929092407227,
+        7.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        4.0631256103515625,
+        9.015216827392578,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 4_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        4.458007518744387,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        3.9321227073669434,
+        7.974115371704102,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        4.98389196395874,
+        9.025884628295898,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 5_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        5.462911773265778,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        4.936710834503174,
+        7.973799228668213,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        5.989112377166748,
+        9.026200294494629,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 6_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        6.55154970889139,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        6.036117076873779,
+        7.984567165374756,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        7.066982746124268,
+        9.015432357788086,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 7_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        7.523804434387837,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        6.9980316162109375,
+        7.974226951599121,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        8.049577713012695,
+        9.025773048400879,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 8_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        8.442316150487226,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        7.916016578674316,
+        7.973700523376465,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        8.968615531921387,
+        9.026299476623535,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 9_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.491060058451149,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        8.975411415100098,
+        7.98435115814209,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        10.006709098815918,
+        9.01564884185791,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.442903875566629,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.0803232342004776,
+        8.976773262023926,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9661309719085693,
+        10.023226737976074,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.4890702497436743,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        0.9697754383087158,
+        8.980705261230469,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.0083651542663574,
+        10.019294738769531,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5599126007224764,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0324201583862305,
+        8.97250747680664,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.087405204772949,
+        10.02749252319336,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        3.4954909327722916,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.972102165222168,
+        8.976611137390137,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        4.0188798904418945,
+        10.023388862609863,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 4_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        4.441249336250921,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        3.9221575260162354,
+        8.980908393859863,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        4.960341453552246,
+        10.019091606140137,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 5_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        5.5196484663482615,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        4.992197036743164,
+        8.972548484802246,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        6.047100067138672,
+        10.027451515197754,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 6_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        6.5536874703284305,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        6.030139446258545,
+        8.976451873779297,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        7.077235698699951,
+        10.023548126220703,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 7_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        7.466516863722793,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        6.947628974914551,
+        8.981112480163574,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        7.985404968261719,
+        10.018887519836426,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 8_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        8.4549407651937,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        7.927534103393555,
+        8.972593307495117,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        8.98234748840332,
+        10.027406692504883,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 9_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.545094404921128,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        9.021389961242676,
+        8.976295471191406,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        10.068799018859863,
+        10.023704528808594,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.4536341307466408,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        -0.07389593869447708,
+        9.9724702835083,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        0.9811642169952393,
+        11.0275297164917,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.5437381424075525,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        1.0242416858673096,
+        9.98050308227539,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        2.063234567642212,
+        11.01949691772461,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        2.5350950315735057,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.0120317935943604,
+        9.976937294006348,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.0581581592559814,
+        11.023062705993652,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        3.4472182544016996,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        2.91965389251709,
+        9.97243595123291,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        3.9747824668884277,
+        11.02756404876709,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 4_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        4.478506243065791,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        3.9588093757629395,
+        9.980303764343262,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        4.998202800750732,
+        11.019696235656738,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 5_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        5.5583204500836985,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        5.035423755645752,
+        9.977103233337402,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        6.081217288970947,
+        11.022896766662598,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 6_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        6.506465219137967,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        5.978870868682861,
+        9.972405433654785,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        7.034060001373291,
+        11.027594566345215,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 7_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        7.44001353413562,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        6.9201178550720215,
+        9.980104446411133,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        7.959908962249756,
+        11.019895553588867,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 8_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        8.508992632579778,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        7.986264228820801,
+        9.977272033691406,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        9.031720161437988,
+        11.022727966308594,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Turn lane 9_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.557669163470127,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        9.030047416687012,
+        9.97237777709961,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        10.085291862487793,
+        11.02762222290039,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.48466753387839,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        8.969667434692383,
+        7.985000133514404,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        9.99966812133789,
+        9.015000343322754,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        10.444451119060336,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        9.918457984924316,
+        7.9740071296691895,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        10.970444679260254,
+        9.025993347167969,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        11.529646801068317,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        11.003548622131348,
+        7.973901748657227,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        12.055745124816895,
+        9.026098251342773,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        12.54790922675741,
+        8.5,
+        -0.06
+      ],
+      "bounds_min": [
+        12.032691955566406,
+        7.98478364944458,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        13.063125610351562,
+        9.015216827392578,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.442903875566628,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        8.919676780700684,
+        8.976773262023926,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        9.966130256652832,
+        10.023226737976074,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        10.489070249743675,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        9.969775199890137,
+        8.980705261230469,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        11.0083646774292,
+        10.019294738769531,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        11.559912600722477,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        11.03242015838623,
+        8.97250747680664,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        12.08740520477295,
+        10.02749252319336,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        12.495490932772292,
+        9.5,
+        -0.06
+      ],
+      "bounds_min": [
+        11.972102165222168,
+        8.976611137390137,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        13.018879890441895,
+        10.023388862609863,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        9.453634130746641,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        8.926104545593262,
+        9.9724702835083,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        9.98116397857666,
+        11.0275297164917,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        10.543738142407552,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        10.02424144744873,
+        9.98050308227539,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        11.06323528289795,
+        11.01949691772461,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        11.535095031573507,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        11.012032508850098,
+        9.976937294006348,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        12.058157920837402,
+        11.023062705993652,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "Livehouse approach 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        12.4472182544017,
+        10.5,
+        -0.06
+      ],
+      "bounds_min": [
+        11.91965389251709,
+        9.97243595123291,
+        -0.05999999865889549
+      ],
+      "bounds_max": [
+        12.97478199005127,
+        11.02756404876709,
+        0.04000000283122063
+      ],
+      "collision": false
+    },
+    {
+      "label": "West stagger 0 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        -2.25,
+        0.0,
+        0
+      ],
+      "bounds_min": [
+        -2.4000000953674316,
+        -1.0999999046325684,
+        0.0
+      ],
+      "bounds_max": [
+        -2.0999999046325684,
+        1.100000023841858,
+        2.5500001907348633
+      ],
+      "collision": false
+    },
+    {
+      "label": "West stagger 1 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        -1.65,
+        2.9,
+        0
+      ],
+      "bounds_min": [
+        -1.8000000715255737,
+        2.0,
+        0.0
+      ],
+      "bounds_max": [
+        -1.5,
+        3.799999952316284,
+        2.3499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "West stagger 2 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        -1.55,
+        5.2,
+        0
+      ],
+      "bounds_min": [
+        -1.7000000476837158,
+        4.199999809265137,
+        0.0
+      ],
+      "bounds_max": [
+        -1.399999976158142,
+        6.199999809265137,
+        3.049999952316284
+      ],
+      "collision": false
+    },
+    {
+      "label": "West stagger 3 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        -2.3,
+        8.8,
+        0
+      ],
+      "bounds_min": [
+        -2.450000047683716,
+        7.949999809265137,
+        0.0
+      ],
+      "bounds_max": [
+        -2.1499998569488525,
+        9.649999618530273,
+        2.4000000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "West stagger 4 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        -2.65,
+        10.4,
+        0
+      ],
+      "bounds_min": [
+        -2.8000001907348633,
+        9.499999046325684,
+        0.0
+      ],
+      "bounds_max": [
+        -2.5,
+        11.299999237060547,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "East stagger 0 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        2.0,
+        0.3,
+        0
+      ],
+      "bounds_min": [
+        1.8499999046325684,
+        -0.699999988079071,
+        0.0
+      ],
+      "bounds_max": [
+        2.1500000953674316,
+        1.2999999523162842,
+        2.5500001907348633
+      ],
+      "collision": false
+    },
+    {
+      "label": "East stagger 1 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        1.2,
+        3.0,
+        0
+      ],
+      "bounds_min": [
+        1.0499999523162842,
+        2.200000047683716,
+        0.0
+      ],
+      "bounds_max": [
+        1.350000023841858,
+        3.799999952316284,
+        2.25
+      ],
+      "collision": false
+    },
+    {
+      "label": "East stagger 2 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        1.05,
+        4.9,
+        0
+      ],
+      "bounds_min": [
+        0.8999997973442078,
+        3.8500001430511475,
+        0.0
+      ],
+      "bounds_max": [
+        1.1999999284744263,
+        5.950000286102295,
+        2.700000286102295
+      ],
+      "collision": false
+    },
+    {
+      "label": "East stagger 3 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        2.35,
+        7.8,
+        0
+      ],
+      "bounds_min": [
+        2.1999998092651367,
+        6.800000190734863,
+        0.0
+      ],
+      "bounds_max": [
+        2.5,
+        8.800000190734863,
+        2.4499998092651367
+      ],
+      "collision": false
+    },
+    {
+      "label": "East stagger 4 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        2.7,
+        10.4,
+        0
+      ],
+      "bounds_min": [
+        2.549999952316284,
+        9.549999237060547,
+        0.0
+      ],
+      "bounds_max": [
+        2.8500001430511475,
+        11.249999046325684,
+        2.75
+      ],
+      "collision": false
+    },
+    {
+      "label": "Offset shadow wall at turn",
+      "source": "assets/hutong/meshy/HT002-RedGateShadowWall.glb",
+      "group": "Architecture",
+      "position": [
+        0.45,
+        7.65,
+        0
+      ],
+      "bounds_min": [
+        -0.4749999940395355,
+        7.350000381469727,
+        0.0
+      ],
+      "bounds_max": [
+        1.375,
+        7.950000286102295,
+        2.6500000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "North turn wall 0 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        3.1,
+        10.85,
+        0
+      ],
+      "bounds_min": [
+        1.8999998569488525,
+        10.700000762939453,
+        0.0
+      ],
+      "bounds_max": [
+        4.299999713897705,
+        11.000000953674316,
+        2.5500001907348633
+      ],
+      "collision": false
+    },
+    {
+      "label": "North turn wall 1 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        5.8,
+        10.65,
+        0
+      ],
+      "bounds_min": [
+        4.900000095367432,
+        10.5,
+        0.0
+      ],
+      "bounds_max": [
+        6.699999809265137,
+        10.800000190734863,
+        2.950000047683716
+      ],
+      "collision": false
+    },
+    {
+      "label": "North turn wall 2 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        8.0,
+        10.9,
+        0
+      ],
+      "bounds_min": [
+        7.199999809265137,
+        10.75,
+        0.0
+      ],
+      "bounds_max": [
+        8.800000190734863,
+        11.050000190734863,
+        2.4000000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "North turn wall 3 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        10.2,
+        10.55,
+        0
+      ],
+      "bounds_min": [
+        9.25,
+        10.40000057220459,
+        0.0
+      ],
+      "bounds_max": [
+        11.149999618530273,
+        10.700000762939453,
+        2.8000001907348633
+      ],
+      "collision": false
+    },
+    {
+      "label": "South turn wall 0 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        3.2,
+        7.45,
+        0
+      ],
+      "bounds_min": [
+        2.25,
+        7.299999713897705,
+        0.0
+      ],
+      "bounds_max": [
+        4.150000095367432,
+        7.59999942779541,
+        2.3499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "South turn wall 1 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        5.4,
+        7.55,
+        0
+      ],
+      "bounds_min": [
+        4.350000381469727,
+        7.400000095367432,
+        0.0
+      ],
+      "bounds_max": [
+        6.449999809265137,
+        7.699999809265137,
+        2.6500000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "South turn wall 2 grey brick eave",
+      "source": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+      "group": "Architecture",
+      "position": [
+        8.0,
+        7.35,
+        0
+      ],
+      "bounds_min": [
+        7.299999713897705,
+        7.199999809265137,
+        0.0
+      ],
+      "bounds_max": [
+        8.699999809265137,
+        7.499999523162842,
+        2.25
+      ],
+      "collision": false
+    },
+    {
+      "label": "Existing RecordShop v4 exterior door",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "RecordShopAnchor",
+      "position": [
+        -1.66,
+        2.9,
+        0
+      ],
+      "bounds_min": [
+        -1.75,
+        2.375,
+        0.0
+      ],
+      "bounds_max": [
+        -1.5699999332427979,
+        3.4250001907348633,
+        2.1500000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "Existing RecordShop v4 display window",
+      "source": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+      "group": "RecordShopAnchor",
+      "position": [
+        -1.57,
+        4.45,
+        0.5
+      ],
+      "bounds_min": [
+        -1.6700000762939453,
+        3.7749998569488525,
+        0.5
+      ],
+      "bounds_max": [
+        -1.46999990940094,
+        5.125,
+        2.0
+      ],
+      "collision": false
+    },
+    {
+      "label": "Existing LiveHouse exterior door",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "LiveHouseAnchor",
+      "position": [
+        8.25,
+        10.55,
+        0
+      ],
+      "bounds_min": [
+        7.699999809265137,
+        10.460000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        8.800000190734863,
+        10.640000343322754,
+        2.200000286102295
+      ],
+      "collision": false
+    },
+    {
+      "label": "LiveHouse exterior gate shadow wall",
+      "source": "assets/hutong/meshy/HT002-RedGateShadowWall.glb",
+      "group": "LiveHouseAnchor",
+      "position": [
+        9.65,
+        10.55,
+        0
+      ],
+      "bounds_min": [
+        8.924999237060547,
+        10.27500057220459,
+        0.0
+      ],
+      "bounds_max": [
+        10.374999046325684,
+        10.824999809265137,
+        2.75
+      ],
+      "collision": false
+    },
+    {
+      "label": "Record shop delivery crate",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "StreetLife",
+      "position": [
+        -0.85,
+        3.6,
+        0
+      ],
+      "bounds_min": [
+        -1.125,
+        3.3499999046325684,
+        0.0
+      ],
+      "bounds_max": [
+        -0.5750000476837158,
+        3.8499999046325684,
+        0.5499999523162842
+      ],
+      "collision": true
+    },
+    {
+      "label": "Doorstep plant",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "group": "StreetLife",
+      "position": [
+        -1.2,
+        4.25,
+        0
+      ],
+      "bounds_min": [
+        -1.389685034751892,
+        4.060275077819824,
+        0.0
+      ],
+      "bounds_max": [
+        -1.01031494140625,
+        4.439724922180176,
+        0.6200000047683716
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard equipment case",
+      "source": "assets/d22/v9/meshy/B11-FlightCase.glb",
+      "group": "StreetLife",
+      "position": [
+        3.8,
+        8.35,
+        0
+      ],
+      "bounds_min": [
+        3.450000047683716,
+        8.110742568969727,
+        0.0
+      ],
+      "bounds_max": [
+        4.150000095367432,
+        8.589258193969727,
+        0.520898699760437
+      ],
+      "collision": true
+    },
+    {
+      "label": "LiveHouse delivery case",
+      "source": "assets/d22/v9/meshy/B11-FlightCase.glb",
+      "group": "StreetLife",
+      "position": [
+        7.6,
+        9.0,
+        0
+      ],
+      "bounds_min": [
+        7.289999961853027,
+        8.7880859375,
+        0.0
+      ],
+      "bounds_max": [
+        7.909999847412109,
+        9.2119140625,
+        0.4613674283027649
+      ],
+      "collision": true
+    },
+    {
+      "label": "Courtyard flyer 0",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        4.3,
+        10.38,
+        1.0
+      ],
+      "bounds_min": [
+        4.035577297210693,
+        10.369422912597656,
+        1.0
+      ],
+      "bounds_max": [
+        4.564423084259033,
+        10.390576362609863,
+        1.75
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard flyer 1",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        5.5,
+        10.38,
+        1.0
+      ],
+      "bounds_min": [
+        5.23557710647583,
+        10.369422912597656,
+        1.0
+      ],
+      "bounds_max": [
+        5.76442289352417,
+        10.390576362609863,
+        1.75
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard flyer 2",
+      "source": "assets/d22/architecture/E09_OriginalFlyer.glb",
+      "group": "Paper",
+      "position": [
+        6.7,
+        10.38,
+        1.0
+      ],
+      "bounds_min": [
+        6.435576915740967,
+        10.369422912597656,
+        1.0
+      ],
+      "bounds_max": [
+        6.964422702789307,
+        10.390576362609863,
+        1.75
+      ],
+      "collision": false
+    },
+    {
+      "label": "Courtyard fan",
+      "source": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+      "group": "StreetLife",
+      "position": [
+        5.0,
+        8.6,
+        0
+      ],
+      "bounds_min": [
+        4.810199737548828,
+        8.279454231262207,
+        0.0
+      ],
+      "bounds_max": [
+        5.189800262451172,
+        8.920546531677246,
+        0.550000011920929
+      ],
+      "collision": false
+    },
+    {
+      "label": "Plastic stool beside wall",
+      "source": "assets/d22/v9/meshy/B06-BarStool.glb",
+      "group": "StreetLife",
+      "position": [
+        6.0,
+        8.0,
+        0
+      ],
+      "bounds_min": [
+        5.751172065734863,
+        7.749267578125,
+        0.0
+      ],
+      "bounds_max": [
+        6.248827934265137,
+        8.250732421875,
+        0.6499999761581421
+      ],
+      "collision": true
+    },
+    {
+      "label": "Old black hutong bicycle",
+      "source": "assets/hutong/meshy/HT003-OldBicycle.glb",
+      "group": "StreetLife",
+      "position": [
+        0.95,
+        4.05,
+        0
+      ],
+      "bounds_min": [
+        0.7647503614425659,
+        3.4250004291534424,
+        0.0
+      ],
+      "bounds_max": [
+        1.1352496147155762,
+        4.675000190734863,
+        0.7303618788719177
+      ],
+      "collision": false
+    },
+    {
+      "label": "Utility pole and wire corner",
+      "source": "assets/hutong/meshy/HT004-UtilityCorner.glb",
+      "group": "StreetLife",
+      "position": [
+        1.45,
+        5.85,
+        0
+      ],
+      "bounds_min": [
+        1.1522756814956665,
+        5.224999904632568,
+        0.0
+      ],
+      "bounds_max": [
+        1.7477244138717651,
+        6.474999904632568,
+        0.9829646348953247
+      ],
+      "collision": false
+    }
+  ],
+  "sources": [
+    "assets/d22/architecture/E09_OriginalFlyer.glb",
+    "assets/d22/v9/meshy/B02-TileFloor.glb",
+    "assets/d22/v9/meshy/B06-BarStool.glb",
+    "assets/d22/v9/meshy/B11-FlightCase.glb",
+    "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+    "assets/hutong/meshy/HT002-RedGateShadowWall.glb",
+    "assets/hutong/meshy/HT003-OldBicycle.glb",
+    "assets/hutong/meshy/HT004-UtilityCorner.glb",
+    "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+    "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+    "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+    "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb"
+  ],
+  "cameras": [
+    {
+      "name": "hutong_entry",
+      "position": [
+        0.0,
+        -0.800000011920929,
+        1.600000023841858
+      ],
+      "lens": 30.0
+    },
+    {
+      "name": "recordshop_threshold",
+      "position": [
+        -1.0,
+        2.200000047683716,
+        1.5499999523162842
+      ],
+      "lens": 32.0
+    },
+    {
+      "name": "corner_90_degree",
+      "position": [
+        0.15000000596046448,
+        6.599999904632568,
+        1.600000023841858
+      ],
+      "lens": 30.0
+    },
+    {
+      "name": "courtyard_pocket",
+      "position": [
+        3.5,
+        8.100000381469727,
+        1.649999976158142
+      ],
+      "lens": 30.0
+    },
+    {
+      "name": "livehouse_threshold",
+      "position": [
+        7.0,
+        9.149999618530273,
+        1.5800000429153442
+      ],
+      "lens": 33.0
+    },
+    {
+      "name": "open_exit",
+      "position": [
+        11.300000190734863,
+        9.100000381469727,
+        1.649999976158142
+      ],
+      "lens": 32.0
+    }
+  ],
+  "rule": "Outdoor hutong connector only. All visible geometry comes from Meshy GLBs; Blender only assembles, scales, rotates, lights and cameras. Existing RecordShop v4 and LiveHouse scenes are preserved. No ceiling.",
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

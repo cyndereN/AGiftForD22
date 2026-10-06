@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: 045cb689be20b43e9abf875b29111530
+ModelImporter:
+  serializedVersion: 24600
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Aged_grey_blue_corrugated_sheet_7c83dd1d
+    second: {fileID: 2100000, guid: 3a0a2b59d0d514865a18df0061a9bde5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black_rubber_wire_8fb40382
+    second: {fileID: 2100000, guid: 7f4808f9867134a979d182ca60886b6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete_lane_scanned_PBR_1dccb5f3
+    second: {fileID: 2100000, guid: fcd986d268c4149e7bc675d5432703c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dry_dirt_at_wall_foot_c8471593
+    second: {fileID: 2100000, guid: 5840e104a18fe46c8ab17d72d72524e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dry_sorghum_straw_e51902f8
+    second: {fileID: 2100000, guid: 6bc9fa0734efb468e99654a0f8445b12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drying_damp_marks_d3186adc
+    second: {fileID: 2100000, guid: 6b29b42aa85d84ce98215b55993d7103, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dull_stainless_steel_b122b401
+    second: {fileID: 2100000, guid: f8b1a414cf0f5498c84e5bea30d814e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dusty_green_foliage_5cccae14
+    second: {fileID: 2100000, guid: 459d384b40c2d49c78b535e9b6e8fd23, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dusty_window_glass_879440b6
+    second: {fileID: 2100000, guid: 150a9b85123e94b8993edf326fb5a452, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Enamel_address_plate_24afeb37
+    second: {fileID: 2100000, guid: 951a20b3be7674c62b0bb39386246f69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faded_cream_paper_e84c6605
+    second: {fileID: 2100000, guid: 7892a27b550fc4db6b4c0d0adc880d0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faded_green_steel_c5b849f3
+    second: {fileID: 2100000, guid: 14cf71275e5644d83ab92277807e9dc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Faded_red_wood_3a4eaebf
+    second: {fileID: 2100000, guid: 493c41baabffb4d4f8735f07d5528967, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grey_handmade_masonry_scanned_PBR_2f5f94df
+    second: {fileID: 2100000, guid: 369c1a96358bb42fcbf111e429663ecf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Later_red_brick_scanned_PBR_3e21da87
+    second: {fileID: 2100000, guid: 04d08d76d9cb7480abe316b4883005d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_001_ba7590df
+    second: {fileID: 2100000, guid: ce9746237168b4c429cd9daaf1bddd8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_002_236c15d7
+    second: {fileID: 2100000, guid: a738e72b2a5df4d6dbb8c97ddd115051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_003_afe13760
+    second: {fileID: 2100000, guid: f6ced363ae0894d52bf5b9133d3fa7a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_004_1cb8a17b
+    second: {fileID: 2100000, guid: 82dfc868e39b448e3a2876cb220834a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_005_2fff5b5e
+    second: {fileID: 2100000, guid: 328175c4113104fcc87c22afa5bde64b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_006_54ba4c12
+    second: {fileID: 2100000, guid: 08563410333ac484790b30a0b16f69d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_007_357a1d56
+    second: {fileID: 2100000, guid: 086c18b31be474aaeb7e5764fa77c5dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_0_de28e699
+    second: {fileID: 2100000, guid: 8e29bb599cef448888047ddd01f32d2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Newer_repair_cement_scanned_PBR_6757c381
+    second: {fileID: 2100000, guid: 41c2666949cb34bddae723e53c5f879a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old_charcoal_clay_tiles_3834d5d3
+    second: {fileID: 2100000, guid: ea2c0571085cd4b068bbaf3f748df7b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old_lime_plaster_scanned_PBR_1016b979
+    second: {fileID: 2100000, guid: 35ded388eba9b4a1ab83e2dea93e141c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Repair_render_scanned_PBR_064830ca
+    second: {fileID: 2100000, guid: 566806a70661f4b319355ac08ddf8fe0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Replacement_tiles_b3912537
+    second: {fileID: 2100000, guid: b5a07fb41b8aa4102b2c3eebfcf176a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Unpainted_timber_8fd90038
+    second: {fileID: 2100000, guid: bfd78e02ae44d4513916598077342a92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Weathered_utility_trench_fill_scanned_PBR_87449c75
+    second: {fileID: 2100000, guid: c305e763ccba64c11bc1c56495485928, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellowed_PVC_air_conditioner_e2f220fa
+    second: {fileID: 2100000, guid: 750450fe498de4465ba9d1eaebd12595, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+    searchTexturesGlobally: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    preBakeConvexCollisionMesh: 0
+    preBakeTriangleCollisionMesh: 0
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    importUVs: -1
+    importVertexColors: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 8
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+    calculateBlendshapeNormalsDeltaFromImportedNormals: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

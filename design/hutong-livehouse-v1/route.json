@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "time_anchor": "2006 Beijing Gulou hutong fictional block",
+  "zones": [
+    {
+      "id": "approach",
+      "name": "主胡同入口",
+      "size_m": [
+        5.2,
+        14.0
+      ],
+      "anchor": "橱窗与门楼"
+    },
+    {
+      "id": "record_shop",
+      "name": "唱片店门脸",
+      "size_m": [
+        5.2,
+        7.0
+      ],
+      "anchor": "中央唱片岛 + 收银绿灯"
+    },
+    {
+      "id": "courtyard",
+      "name": "小院过渡",
+      "size_m": [
+        6.0,
+        7.0
+      ],
+      "anchor": "海报墙 + 检票桌"
+    },
+    {
+      "id": "livehouse",
+      "name": "小型 Live House",
+      "size_m": [
+        8.0,
+        12.0
+      ],
+      "anchor": "低舞台 + 红色侧光"
+    },
+    {
+      "id": "night_exit",
+      "name": "后巷/屋顶出口",
+      "size_m": [
+        3.5,
+        8.0
+      ],
+      "anchor": "屋檐与城市远光"
+    }
+  ],
+  "route_nodes": [
+    {
+      "id": "start",
+      "zone": "approach",
+      "type": "start"
+    },
+    {
+      "id": "window",
+      "zone": "approach",
+      "type": "choice",
+      "choices": [
+        "进入唱片店",
+        "绕门口观察"
+      ]
+    },
+    {
+      "id": "crate_loop",
+      "zone": "record_shop",
+      "type": "browse_loop",
+      "choices": [
+        "rock/indie",
+        "jazz/electronic"
+      ]
+    },
+    {
+      "id": "listen",
+      "zone": "record_shop",
+      "type": "story",
+      "event": "听到后院试音"
+    },
+    {
+      "id": "yard_split",
+      "zone": "courtyard",
+      "type": "choice",
+      "choices": [
+        "检票桌",
+        "后台侧门"
+      ]
+    },
+    {
+      "id": "stage_side",
+      "zone": "livehouse",
+      "type": "viewpoint",
+      "choices": [
+        "吧台",
+        "后排",
+        "舞台侧边"
+      ]
+    },
+    {
+      "id": "night_exit",
+      "zone": "night_exit",
+      "type": "end"
+    }
+  ],
+  "route_edges": [
+    [
+      "start",
+      "window"
+    ],
+    [
+      "window",
+      "crate_loop"
+    ],
+    [
+      "crate_loop",
+      "listen"
+    ],
+    [
+      "listen",
+      "yard_split"
+    ],
+    [
+      "yard_split",
+      "stage_side"
+    ],
+    [
+      "stage_side",
+      "night_exit"
+    ]
+  ],
+  "design_rules": [
+    "每个区至少一个视觉锚点",
+    "每次转场先用声音提示再用视觉揭示",
+    "主路线不超过 12m 连续直行",
+    "中央唱片岛和现场观众区都允许绕行",
+    "所有可见几何来自 Meshy，Blender 只做装配与灯光"
+  ],
+  "status": "DEPRECATED",
+  "superseded_by": "design/hutong-outdoor-v3"
+}

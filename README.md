@@ -28,7 +28,7 @@ git lfs pull
 - 也可以在 Unity Hub 的 **Add project from disk** 中选择 **`unity/D22Game`**，不是仓库根目录。
 - 自定义编辑器安装位置时设置 `UNITY_EDITOR` 为 Unity 可执行文件的完整路径，或直接从 Hub 打开。
 
-Unity 导入结束后，执行 **D22 → Game → Open Main Menu**，点击 Play。从主菜单开始故事，或选择空间漫游。WASD 移动、按住右键转向、E 交互、1 喝酒、Esc 打开菜单。默认开启减少镜头晃动，可在暂停菜单调整。扫描空间使用与网页一致的自由相机，Blender 重建空间使用有碰撞的行走控制。
+Unity 导入结束后，执行 **D22 → Game → Open Main Menu**，点击 Play。从主菜单开始故事，或选择空间漫游。WASD 移动、按住右键转向、E 交互、1 喝酒、Esc 打开菜单。默认开启减少镜头晃动，可在暂停菜单调整。剧情路线为唱片店 3D → 胡同 v4 3D → D-22 Livehouse 3D；`D22_HutongScan` 与 `D22_LiveScan` 仅供扫描档案漫游。
 
 场景位于 Unity 的 **Project → Assets → D22 → Scenes**；菜单 **D22 → Game → Show Scene Files** 可直接定位。首次打开干净工程时自动加载主菜单，Play 默认从主菜单开始。需要单独调试当前场景时，取消勾选 **D22 → Game → Start Play From Main Menu**；该偏好只影响你本机。
 
@@ -74,7 +74,7 @@ Git LFS 的 pre-push hook 会上传本次提交引用的大资源，再上传 Gi
 
 - 独立游戏：Unity 菜单 **D22 → Build → macOS / Windows x64**；结果写入仓库的 `builds/`，不进 Git。玩家不需要 Unity、Blender 或 MCP。
 - Gaussian 渲染固定使用 **Mac Metal / Windows DX12**。Windows 显卡/驱动须支持 DX12；不支持 DX11。Unity 高斯插件已随工程固定版本提交，朋友不用重复安装。
-- Blender → Unity：Mac 运行 `scripts/unity/export_d22.sh`；Windows 设置 `BLENDER_BIN` 后运行 `scripts/unity/export_d22.ps1`。然后在 Unity 执行 **D22 → Publish → Update Art From Blender**。更新几何后重新烘焙灯光。
+- Blender → Unity：Mac 运行 `scripts/unity/export_d22.sh`；Windows 设置 `BLENDER_BIN` 后运行 `scripts/unity/export_d22.ps1`。然后在 Unity 执行 **D22 → Publish → Update Art From Blender**。胡同使用已导出的 `Assets/D22/Art/Hutong`，在 Unity 执行 **D22 → Publish → Hutong V4 From Blender**。更新几何后重新烘焙灯光。
 - Figma bridge / Blender MCP / Meshy MCP / Unity MCP 是开发工具，每台电脑单独连接，不是游戏运行依赖。见 [连接说明](docs/MCP_SETUP.md)。Figma 文件引用与可审阅导出在 [design/figma](design/figma/README.md)。
 - Meshy 原模型确实已保存：36 个 GLB 中包含 27 个 Meshy 模型版本和 9 个结构模块，含输入、贴图与来源记录。见 [资产说明](docs/ASSET_CATALOG.md)。
 

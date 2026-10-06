@@ -1,0 +1,85 @@
+{
+  "type": "standalone_outdoor_connector",
+  "era_assumption": "2003–2006",
+  "units": "m",
+  "centerline": [
+    [
+      0,
+      -3
+    ],
+    [
+      -0.1,
+      2
+    ],
+    [
+      -0.32,
+      6
+    ],
+    [
+      0.15,
+      6.7
+    ],
+    [
+      0.7,
+      7.15
+    ],
+    [
+      1.45,
+      7.75
+    ],
+    [
+      1.6,
+      10
+    ],
+    [
+      1.65,
+      12.55
+    ],
+    [
+      0.3,
+      14
+    ],
+    [
+      0.1,
+      18
+    ],
+    [
+      0.1,
+      21
+    ],
+    [
+      4,
+      21
+    ],
+    [
+      9,
+      21
+    ],
+    [
+      13.5,
+      21
+    ],
+    [
+      13.5,
+      24.6
+    ]
+  ],
+  "choices": [
+    {
+      "node": "resident_threshold",
+      "options": [
+        "停留观察门牌与生活痕迹",
+        "沿主路继续"
+      ]
+    },
+    {
+      "node": "pocket",
+      "options": [
+        "在小桌处听环境声",
+        "转入现场方向"
+      ]
+    }
+  ],
+  "existing_interiors": "preserved",
+  "implementation": "Blender geometry only; Unity events not yet connected"
+}

@@ -1,0 +1,12 @@
+{
+  "images": 53,
+  "unpacked_file_images": [],
+  "mesh_objects": 1982,
+  "mesh_faces": 611300,
+  "render_device": "GPU",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "samples": 64
+}

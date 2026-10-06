@@ -77,8 +77,8 @@ namespace D22
         }
         void ShowGallery()
         {
-            question=new D22Question{zh="空间漫游 / EXPLORE",en="",choices=new[]{new D22Choice{zh="唱片店",en="Record Shop"},new D22Choice{zh="胡同",en="Hutong"},new D22Choice{zh="D-22 · 重建空间",en="Livehouse"},new D22Choice{zh="原始现场扫描",en="Live Scan"},new D22Choice{zh="演出",en="Performance"}}};
-            choose=i=>flow.LoadSpace(new[]{"D22_RecordShop","D22_Hutong","D22_Bootstrap","D22_LiveScan","D22_Performance"}[i]);mode=ScreenMode.Choices;
+            question=new D22Question{zh="空间漫游 / EXPLORE",en="",choices=new[]{new D22Choice{zh="唱片店",en="Record Shop"},new D22Choice{zh="胡同",en="Hutong"},new D22Choice{zh="D-22 · 重建空间",en="Livehouse"},new D22Choice{zh="原始现场扫描",en="Live Scan"},new D22Choice{zh="演出",en="Performance"},new D22Choice{zh="唱片店原始扫描",en="Record Shop Scan"}}};
+            choose=i=>flow.LoadSpace(new[]{"D22_RecordShop","D22_Hutong","D22_Bootstrap","D22_LiveScan","D22_Performance","D22_RecordShopScan"}[i]);mode=ScreenMode.Choices;
         }
         void Dialogue()
         {
@@ -118,7 +118,7 @@ namespace D22
             GUI.Label(new Rect(100,65,1220,100),question.zh,body);
             GUI.Label(new Rect(100,160,1220,90),question.en,small);
             for(int i=0;i<question.choices.Length;i++)
-                if(Button(new Rect(180,280+i*92,1080,72),question.choices[i].zh+" / "+question.choices[i].en))Choose(i);
+                if(Button(new Rect(180,250+i*92,1080,72),question.choices[i].zh+" / "+question.choices[i].en))Choose(i);
         }
         public void Choose(int i){if(mode==ScreenMode.Choices&&i>=0&&i<question.choices.Length)choose?.Invoke(i);}
         void Drink()

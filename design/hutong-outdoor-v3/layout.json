@@ -1,0 +1,436 @@
+{
+  "scene": "D22_HutongOutdoor_v3_Residential",
+  "era": "2003–2006 fictional inhabited Beijing residential hutong, not a historical venue address reconstruction.",
+  "authoring": "User authorized Blender buildings/road/utilities and Meshy detail props on 2026-10-04. Existing interiors locked.",
+  "doors": [
+    {
+      "name": "L0 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        -1.95,
+        -1.15,
+        0
+      ]
+    },
+    {
+      "name": "L1 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        -1.65,
+        4.85,
+        0
+      ]
+    },
+    {
+      "name": "L3 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        -2.0,
+        14.35,
+        0
+      ]
+    },
+    {
+      "name": "L5 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        -1.7,
+        21.35,
+        0
+      ]
+    },
+    {
+      "name": "R0 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        1.8,
+        -0.7,
+        0
+      ]
+    },
+    {
+      "name": "R1 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        1.0,
+        5.25,
+        0
+      ]
+    },
+    {
+      "name": "R3 resident door",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        2.05,
+        13.55,
+        0
+      ]
+    },
+    {
+      "name": "Quiet north residence",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        2.1999999999999997,
+        22.7,
+        0
+      ]
+    },
+    {
+      "name": "Existing livehouse threshold",
+      "height_m": 2.1,
+      "width_m": 1.02,
+      "position": [
+        5.5,
+        19.5,
+        0
+      ]
+    }
+  ],
+  "lane_sections": [
+    {
+      "y_m": 0,
+      "left_x": -1.95,
+      "right_x": 1.8,
+      "wall_clear_width_m": 3.75
+    },
+    {
+      "y_m": 5,
+      "left_x": -1.65,
+      "right_x": 1.0,
+      "wall_clear_width_m": 2.65
+    },
+    {
+      "y_m": 10,
+      "left_x": 0.3,
+      "right_x": 2.95,
+      "wall_clear_width_m": 2.65
+    },
+    {
+      "y_m": 14,
+      "left_x": -2.0,
+      "right_x": 2.05,
+      "wall_clear_width_m": 4.05
+    },
+    {
+      "y_m": 18,
+      "left_x": -1.15,
+      "right_x": 1.45,
+      "wall_clear_width_m": 2.6
+    }
+  ],
+  "route_centerline": [
+    [
+      0,
+      -3
+    ],
+    [
+      -0.1,
+      2
+    ],
+    [
+      -0.32,
+      6
+    ],
+    [
+      0.15,
+      6.7
+    ],
+    [
+      0.7,
+      7.15
+    ],
+    [
+      1.45,
+      7.75
+    ],
+    [
+      1.6,
+      10
+    ],
+    [
+      1.65,
+      12.55
+    ],
+    [
+      0.3,
+      14
+    ],
+    [
+      0.1,
+      18
+    ],
+    [
+      0.1,
+      21
+    ],
+    [
+      4,
+      21
+    ],
+    [
+      9,
+      21
+    ],
+    [
+      13.5,
+      21
+    ],
+    [
+      13.5,
+      24.6
+    ]
+  ],
+  "roof_states": [
+    {
+      "name": "L0 resident unit",
+      "state": "old_tile",
+      "eave_m": 2.9499999999999997,
+      "ridge_m": 3.4699999999999998
+    },
+    {
+      "name": "L1 resident unit",
+      "state": "patched_tile",
+      "eave_m": 2.5,
+      "ridge_m": 3.02
+    },
+    {
+      "name": "L2 resident unit",
+      "state": "patched_tile",
+      "eave_m": 2.96,
+      "ridge_m": 3.48
+    },
+    {
+      "name": "L3 resident unit",
+      "state": "corrugated",
+      "eave_m": 2.6999999999999997,
+      "ridge_m": 2.82
+    },
+    {
+      "name": "L4 resident unit",
+      "state": "old_tile",
+      "eave_m": 2.92,
+      "ridge_m": 3.44
+    },
+    {
+      "name": "L5 resident unit",
+      "state": "flat",
+      "eave_m": 2.55,
+      "ridge_m": 2.67
+    },
+    {
+      "name": "R0 resident unit",
+      "state": "patched_tile",
+      "eave_m": 2.9699999999999998,
+      "ridge_m": 3.4899999999999998
+    },
+    {
+      "name": "R1 resident unit",
+      "state": "corrugated",
+      "eave_m": 2.63,
+      "ridge_m": 2.75
+    },
+    {
+      "name": "R2 resident unit",
+      "state": "old_tile",
+      "eave_m": 2.48,
+      "ridge_m": 3.0
+    },
+    {
+      "name": "R3 resident unit",
+      "state": "old_tile",
+      "eave_m": 3.0,
+      "ridge_m": 3.52
+    },
+    {
+      "name": "R4 resident unit",
+      "state": "service_flat",
+      "eave_m": 2.7199999999999998,
+      "ridge_m": 2.84
+    },
+    {
+      "name": "N end property",
+      "state": "patched_tile",
+      "eave_m": 2.73,
+      "ridge_m": 3.25
+    },
+    {
+      "name": "S workshop addition",
+      "state": "corrugated",
+      "eave_m": 2.53,
+      "ridge_m": 2.65
+    },
+    {
+      "name": "East final wall",
+      "state": "flat",
+      "eave_m": 2.55,
+      "ridge_m": 2.67
+    },
+    {
+      "name": "North beyond return",
+      "state": "old_tile",
+      "eave_m": 2.9099999999999997,
+      "ridge_m": 3.4299999999999997
+    }
+  ],
+  "Meshy_assets": [
+    {
+      "name": "Full size roadster bicycle",
+      "source": "assets/hutong/meshy/HT003-OldBicycle.glb",
+      "position": [
+        -1.61,
+        1.3,
+        0.03
+      ],
+      "scale": 0.9589313920969781,
+      "dimensions_local_m": [
+        1.8199999332427979,
+        0.5394468307495117,
+        1.0634068250656128
+      ],
+      "yaw": 1.6257963267948965
+    },
+    {
+      "name": "Second roadster reversed",
+      "source": "assets/hutong/meshy/HT003-OldBicycle.glb",
+      "position": [
+        1.67,
+        14.65,
+        0.03
+      ],
+      "scale": 0.9589313920969781,
+      "dimensions_local_m": [
+        1.8199999332427979,
+        0.5394468307495117,
+        1.0634068250656128
+      ],
+      "yaw": -1.6507963267948966
+    },
+    {
+      "name": "Third parked bicycle",
+      "source": "assets/hutong/meshy/HT003-OldBicycle.glb",
+      "position": [
+        7.9,
+        22.39,
+        0.03
+      ],
+      "scale": 0.9378559768860555,
+      "dimensions_local_m": [
+        1.7799999713897705,
+        0.527590811252594,
+        1.0400352478027344
+      ],
+      "yaw": 3.211592653589793
+    },
+    {
+      "name": "Resident pot 0",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "position": [
+        -1.3,
+        5.4,
+        0.02
+      ],
+      "scale": 0.27394373110625114,
+      "dimensions_local_m": [
+        0.31818124651908875,
+        0.31824836134910583,
+        0.5199999809265137
+      ],
+      "yaw": 0.0
+    },
+    {
+      "name": "Resident pot 1",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "position": [
+        1.8,
+        14.1,
+        0.02
+      ],
+      "scale": 0.35823410990817456,
+      "dimensions_local_m": [
+        0.4160831868648529,
+        0.41617095470428467,
+        0.6800000071525574
+      ],
+      "yaw": 1.4
+    },
+    {
+      "name": "Resident pot 2",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "position": [
+        1.7,
+        16.1,
+        0.02
+      ],
+      "scale": 0.221262244355049,
+      "dimensions_local_m": [
+        0.25699254870414734,
+        0.25704675912857056,
+        0.42000001668930054
+      ],
+      "yaw": 2.8
+    },
+    {
+      "name": "Resident pot 3",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "position": [
+        -1.3,
+        21.6,
+        0.02
+      ],
+      "scale": 0.34242966388281393,
+      "dimensions_local_m": [
+        0.3977265954017639,
+        0.3978104591369629,
+        0.6500000357627869
+      ],
+      "yaw": 4.199999999999999
+    },
+    {
+      "name": "Record shop delivered carton",
+      "source": "assets/recordshop/v4/meshy/RS406-UsedLPCarton.glb",
+      "position": [
+        -1.51,
+        -0.2,
+        0.03
+      ],
+      "scale": 0.20024103266690413,
+      "dimensions_local_m": [
+        0.3799999952316284,
+        0.29985013604164124,
+        0.3482747972011566
+      ],
+      "yaw": 0.18
+    },
+    {
+      "name": "Tea flask on table",
+      "source": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+      "position": [
+        1.65,
+        15.8,
+        0.74
+      ],
+      "scale": 0.16848445964398112,
+      "dimensions_local_m": [
+        0.12982520461082458,
+        0.09788340330123901,
+        0.320000022649765
+      ],
+      "yaw": 0
+    }
+  ],
+  "dimensions": {
+    "reference_height": 1.75,
+    "camera_eye_height": 1.65,
+    "door_height": 2.1,
+    "door_width": 1.02
+  },
+  "status": "Blender review build, not deployed to Unity"
+}

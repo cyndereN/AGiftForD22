@@ -1,0 +1,79 @@
+{
+  "retextures": [
+    {
+      "name": "RS301-HutongWallPanel",
+      "task_id": "01a104c5-5ec3-7602-a9d6-314710449993",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb"
+    },
+    {
+      "name": "RS303-RedTimberDoor",
+      "task_id": "01a104c5-63a3-7698-8f2d-69d1203318ee",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb"
+    },
+    {
+      "name": "RS304-LPWallShelf",
+      "task_id": "01a104c5-6dc9-7478-ae84-329048d3790d",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb"
+    },
+    {
+      "name": "RS209-ListeningDesk",
+      "task_id": "01a104c5-780a-754c-8e12-d30545549068",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS209-ListeningDesk.glb"
+    },
+    {
+      "name": "RS211-HifiSpeaker",
+      "task_id": "01a104c5-7ea6-71c0-85a5-2b76f67a01f3",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS211-HifiSpeaker.glb"
+    },
+    {
+      "name": "RS212-CassetteStereo",
+      "task_id": "01a104c5-85b7-75c2-b4b4-79219e53361b",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS212-CassetteStereo.glb"
+    },
+    {
+      "name": "RS302-HutongWindowBay",
+      "task_id": "01a104c5-8b33-7348-be00-7fd5f156bd13",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb"
+    },
+    {
+      "name": "RS310-PlasterOnly",
+      "task_id": "01a104de-973e-766a-bc07-d793d292d86a",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb"
+    },
+    {
+      "name": "RS210-ListeningChair",
+      "task_id": "01a104de-9d37-70d4-ab0b-22c3b8892347",
+      "status": "SUCCEEDED",
+      "review": "used",
+      "file": "assets/recordshop/v3/retextured/RS210-ListeningChair.glb"
+    }
+  ],
+  "source": "Meshy API",
+  "credits": 90,
+  "rejected_image_to_3d": [
+    {
+      "name": "RS307-RockPosterRed",
+      "task_id": "01a104d3-aea7-73da-b8ae-27bdf9e79f32",
+      "status": "SUCCEEDED",
+      "review": "rejected_cube_geometry_not_a_poster",
+      "credits": 15,
+      "used": false
+    }
+  ]
+}

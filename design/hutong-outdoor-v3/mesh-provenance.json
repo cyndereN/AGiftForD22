@@ -1,0 +1,18 @@
+[
+  {
+    "path": "assets/hutong/meshy/HT003-OldBicycle.glb",
+    "sha256": "e1ab6c0e21b3be5acbe618e6fdb4fa94c94576f77182db4f25cf3c1d202b6e4f"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+    "sha256": "d3a614fdb31a69c8133d816adf4af2489bea4ecd9d9de8a27a1404a848a61b22"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "sha256": "4a4bbbbe23cf2b6b1203c4ea8db17bdf6ae0df8775bdd8d1a3a55a42ea7bfe01"
+  },
+  {
+    "path": "assets/recordshop/v4/meshy/RS406-UsedLPCarton.glb",
+    "sha256": "3cb4d7e2586ab84a1e8d5491d570d258dbf56c613944e989ca189c8067cd382d"
+  }
+]

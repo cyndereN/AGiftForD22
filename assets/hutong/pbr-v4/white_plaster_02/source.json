@@ -1,0 +1,34 @@
+{
+  "asset": "white_plaster_02",
+  "source": "https://polyhaven.com/a/white_plaster_02",
+  "license": "CC0",
+  "authors": {
+    "Rob Tuytel": "All"
+  },
+  "dimensions_mm": [
+    1000,
+    1000
+  ],
+  "maps": {
+    "Diffuse": {
+      "file": "Diffuse.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_diff_2k.jpg",
+      "md5": "35f9c96c16aa0d934da7884b232f6d07"
+    },
+    "Rough": {
+      "file": "Rough.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_rough_2k.jpg",
+      "md5": "47f989e9fd3e69e667244ff4b9f406f8"
+    },
+    "nor_gl": {
+      "file": "nor_gl.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_nor_gl_2k.jpg",
+      "md5": "a9fa643c4a200686ad89598b545b2adc"
+    },
+    "Displacement": {
+      "file": "Displacement.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/white_plaster_02/white_plaster_02_disp_2k.jpg",
+      "md5": "4078dba6ea1f4df9602d28e243e5ab21"
+    }
+  }
+}

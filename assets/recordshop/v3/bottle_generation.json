@@ -1,0 +1,14 @@
+{
+  "name": "RS311-BeerBottle",
+  "provider": "Meshy",
+  "model": "meshy-6",
+  "preview_task": "01a104fb-00b9-7267-9fc0-b8ad65c88fc9",
+  "refine_task": "01a104fc-d84b-7368-b9d1-80f71dec987d",
+  "status": "SUCCEEDED",
+  "preview_credits": 20,
+  "refine_credits": 10,
+  "height_m": 0.29,
+  "file": "assets/recordshop/v3/meshy/RS311-BeerBottle.glb",
+  "sha256": "e922258a32350b24773533379453e8f18eed20ddfe6721c5bc6566c49b52fffc",
+  "purpose": "Record shop story pickup; replaces the legacy Tripo bottle in this scene."
+}

@@ -16,10 +16,10 @@ namespace D22.Editor
     {
         const string Root="Assets/D22";
         const string Scenes=Root+"/Scenes/";
-        public static readonly string[] GameScenes={"D22_Menu","D22_RecordShop","D22_Hutong","D22_LiveScan","D22_Performance","D22_Bootstrap","D22_Environment","D22_Lighting","D22_Gameplay"};
+        public static readonly string[] GameScenes={"D22_Menu","D22_RecordShop","D22_RecordShopScan","D22_Hutong","D22_HutongScan","D22_LiveScan","D22_Performance","D22_Bootstrap","D22_Environment","D22_Lighting","D22_Gameplay"};
         const BindingFlags Private=BindingFlags.Instance|BindingFlags.NonPublic;
         static readonly string[] ScanKeys={"recordshop","hutong","live","performance"};
-        static readonly string[] ScanScenes={"D22_RecordShop","D22_Hutong","D22_LiveScan","D22_Performance"};
+        static readonly string[] ScanScenes={"D22_RecordShopScan","D22_HutongScan","D22_LiveScan","D22_Performance"};
 
         [MenuItem("D22/Game/Import Scans From Converted PLY")]
         public static void ImportScans()
@@ -53,6 +53,7 @@ namespace D22.Editor
         {
             ConfigureRendering();SetupWine();
             for(int i=0;i<ScanKeys.Length;i++)CreateScan(i);
+            D22HutongBuilder.Publish();
             CreateMenu();
             ConfigureBuildScenes();
             PlayerSettings.productName="A Gift for D22";
@@ -113,7 +114,7 @@ namespace D22.Editor
             if(index>0)
             {
                 var exit=new GameObject("Chapter Exit").AddComponent<D22Exit>();exit.transform.position=new Vector3(0,0,-3);exit.radius=1.7f;
-                exit.nextScene=index==1?"D22_LiveScan":index==2?"D22_Bootstrap":"END";
+                exit.nextScene=index==1?"D22_Bootstrap":index==2?"D22_Bootstrap":"END";
                 exit.label=index==1?"走进现场 / ENTER LIVE HOUSE":index==2?"听演出 / HEAR THE SHOW":"离场 / LEAVE THE SHOW";
             }
             EditorSceneManager.SaveScene(scene,path);

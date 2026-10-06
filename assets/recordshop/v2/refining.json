@@ -1,0 +1,34 @@
+{
+  "assets": [
+    {
+      "name": "RS209-ListeningDesk",
+      "preview_id": "01a10262-4d91-7390-a37b-1663960cb4e4",
+      "refine_id": "01a10288-2731-720f-b657-b2462422dfb4",
+      "status": "refine"
+    },
+    {
+      "name": "RS210-ListeningChair",
+      "preview_id": "01a10262-6279-734f-ba08-c928213ab0e1",
+      "refine_id": "01a10288-32bb-75b7-ab6a-4809d1d8ad95",
+      "status": "refine"
+    },
+    {
+      "name": "RS211-HifiSpeaker",
+      "preview_id": "01a10262-7607-775a-b4bc-8383c890bcf3",
+      "refine_id": "01a10288-38c3-768d-bdaa-2c5290fe3b3d",
+      "status": "refine"
+    },
+    {
+      "name": "RS212-CassetteStereo",
+      "preview_id": "01a10262-819e-72a1-9376-99f7a462b1e3",
+      "refine_id": "01a10288-3ddf-7312-919e-770fefad398e",
+      "status": "refine"
+    },
+    {
+      "name": "RS213-TapeCrate",
+      "preview_id": "01a10262-94cb-77e4-bd28-45e9858e75d2",
+      "refine_id": "01a10288-426f-7057-94a8-a8b38a1857c8",
+      "status": "refine"
+    }
+  ]
+}

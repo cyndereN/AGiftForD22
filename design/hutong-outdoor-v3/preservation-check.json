@@ -1,0 +1,21 @@
+{
+  "all_unchanged": true,
+  "files": {
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShop_PreV4.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShop.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Hutong.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShop_PreV3.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShopV3.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Gameplay.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Menu.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Performance.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_LiveScan.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShopScan.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Lighting.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Environment.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_Bootstrap.unity": true,
+    "unity/D22Game/Assets/D22/Scenes/D22_RecordShopV4.unity": true,
+    "blender/source/D22_RecordShop_v4_MeshyOnly.blend": true,
+    "blender/source/D22_Balanced_Lighting_v18.blend": true
+  }
+}

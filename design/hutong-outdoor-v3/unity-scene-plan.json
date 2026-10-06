@@ -1,0 +1,18 @@
+{
+  "target_new_scene": "D22_HutongOutdoorV3",
+  "status": "DESIGN_ONLY_NOT_CREATED",
+  "preserve": [
+    "D22_RecordShopV4",
+    "D22_Hutong",
+    "existing_livehouse_scene"
+  ],
+  "entry_anchor": "existing recordshop exterior exit",
+  "exit_anchor": "existing livehouse exterior threshold",
+  "next_checks": [
+    "mesh/material export",
+    "colliders including props",
+    "Unity walk test",
+    "door spawn positions",
+    "ambient audio occlusion"
+  ]
+}

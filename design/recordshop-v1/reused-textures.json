@@ -1,0 +1,27 @@
+{
+  "assets/d22/v9/meshy/B03-BarCounter.glb": [
+    "assets/recordshop/reused-textures/B03-BarCounter/image_0.jpg",
+    "assets/recordshop/reused-textures/B03-BarCounter/image_1.jpg",
+    "assets/recordshop/reused-textures/B03-BarCounter/image_2.jpg"
+  ],
+  "assets/d22/v9/meshy/B06-BarStool.glb": [
+    "assets/recordshop/reused-textures/B06-BarStool/image_0.jpg",
+    "assets/recordshop/reused-textures/B06-BarStool/image_1.jpg",
+    "assets/recordshop/reused-textures/B06-BarStool/image_2.jpg"
+  ],
+  "assets/d22/v9/meshy/B10-Zines.glb": [
+    "assets/recordshop/reused-textures/B10-Zines/image_0.jpg",
+    "assets/recordshop/reused-textures/B10-Zines/image_1.jpg",
+    "assets/recordshop/reused-textures/B10-Zines/image_2.jpg"
+  ],
+  "assets/d22/meshy/A05-Mixer.glb": [
+    "assets/recordshop/reused-textures/A05-Mixer/image_0.jpg",
+    "assets/recordshop/reused-textures/A05-Mixer/image_1.jpg",
+    "assets/recordshop/reused-textures/A05-Mixer/image_2.jpg"
+  ],
+  "assets/d22/v9/meshy/B08-GalleryLamp.glb": [
+    "assets/recordshop/reused-textures/B08-GalleryLamp/image_0.jpg",
+    "assets/recordshop/reused-textures/B08-GalleryLamp/image_1.jpg",
+    "assets/recordshop/reused-textures/B08-GalleryLamp/image_2.jpg"
+  ]
+}

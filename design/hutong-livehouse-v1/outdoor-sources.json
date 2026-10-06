@@ -1,0 +1,54 @@
+[
+  {
+    "path": "assets/d22/architecture/E09_OriginalFlyer.glb",
+    "sha256": "bf60395e5e9c2e6d4a684361e61ddc8767d643b54bfbc07d168fd5d7c781cc59"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B02-TileFloor.glb",
+    "sha256": "9f10c1325f9cc8ee40cdf3ba6e7d73214a14fcecf8f4f15aaa02e1563472e8da"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B06-BarStool.glb",
+    "sha256": "62288a08b512e716d29d313b80a603ed29280f22d128faac260e2736d479b338"
+  },
+  {
+    "path": "assets/d22/v9/meshy/B11-FlightCase.glb",
+    "sha256": "9387c34b6d71067f588d1db4d4848a5fdbf204b9c153dc155dfed49b2545100e"
+  },
+  {
+    "path": "assets/hutong/meshy/HT001-GreyBrickEaveWall.glb",
+    "sha256": "63b18b8b1009bcb05eaf7c01a49cad3dc71099f26351f7cc75ca6cd2f1d0408c"
+  },
+  {
+    "path": "assets/hutong/meshy/HT002-RedGateShadowWall.glb",
+    "sha256": "75711a897214a09932066ca10cd0339a092433291be9befe4e824cb5dd79eb58"
+  },
+  {
+    "path": "assets/hutong/meshy/HT003-OldBicycle.glb",
+    "sha256": "e1ab6c0e21b3be5acbe618e6fdb4fa94c94576f77182db4f25cf3c1d202b6e4f"
+  },
+  {
+    "path": "assets/hutong/meshy/HT004-UtilityCorner.glb",
+    "sha256": "17551b44185ac7afda0d7a9a6083e0b25cadb97df407afcb90f8b3a0dcd7972c"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+    "sha256": "115a7974be85bbd69eba521af821026916345c15f5d1514cadcc3ff7a6de25ce"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "sha256": "4a4bbbbe23cf2b6b1203c4ea8db17bdf6ae0df8775bdd8d1a3a55a42ea7bfe01"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+    "sha256": "d4298163dfb612facec493ff74b3418ef3edb27701ad9c66b76f9ab02389a49e"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+    "sha256": "ddbd8c3aa2ec08fc4068a621814b6a0f8d69dbaa9f7162c0fff5dc87814067db"
+  },
+  {
+    "path": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+    "sha256": "ee64dea88446b361ccbd4e08f56bea533f48fc4539bded82bdec17485fdb8e4c"
+  }
+]

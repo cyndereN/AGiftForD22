@@ -1,0 +1,52 @@
+{
+  "version": 4,
+  "era": "2003 Beijing",
+  "provider": "Meshy",
+  "assets": [
+    {
+      "name": "RS401-FaceOutLPDisplay",
+      "preview_id": "01a1050b-a97e-7330-a86d-060709ad03ca",
+      "refine_id": "01a1050f-d216-7651-b805-7446cb558d7f"
+    },
+    {
+      "name": "RS402-VinylAlbum",
+      "preview_id": "01a1050b-b893-71d3-9e4c-b2e8dba9ba35",
+      "refine_id": "01a1050f-dd72-7693-80b3-c5f5846eba19"
+    },
+    {
+      "name": "RS403-UsedRecordCrate",
+      "preview_id": "01a1050b-c550-77e0-90cb-af7660fddf10",
+      "refine_id": "01a10513-5397-7539-8952-958a2dd28a3d"
+    },
+    {
+      "name": "RS404-CategoryCard",
+      "prompt": "One single small yellowed cream paper index card standing upright in a small black metal binder clip on a tabletop. Rectangular landscape card width 24cm height 11cm, very thin cardboard, slightly bent upper corner, plain blank off-white front for a record store category label. Black binder clip base 4cm wide. Card and clip only, no letters, no frame, no table, no environment. Realistic used stationery, complete freestanding object.",
+      "preview_id": "01a10513-5eb0-76eb-8179-a53e4fbd9a52",
+      "refine_id": "01a10516-8111-70ed-b286-10c6ae780d0e"
+    },
+    {
+      "name": "RS405-CashierWorkKit",
+      "prompt": "A compact 1998 beige electronic cash register with many small square keys, narrow dark green numeric display, built-in cash drawer, on a flat small thin brown work mat. Beside it one small roll of clear packing tape, two pens, messy receipt slips, a red enamel staff cup and folded translucent record shopping bag. One realistic counter work cluster 65cm wide, 42cm deep, 30cm high. Moderate hand wear on keys and drawer, no desk, no room, no human, no modern touchscreen.",
+      "preview_id": "01a10513-6a10-75be-a500-411a770cbda8",
+      "refine_id": "01a10516-8bf3-72f9-b99e-bdba4c9e2dc0"
+    },
+    {
+      "name": "RS406-UsedLPCarton",
+      "prompt": "One open used brown corrugated cardboard shipping box of secondhand 12 inch vinyl records. About 40cm wide, 38cm deep, 26cm tall. Four bent flaps folded outward, clear tape remnants, scuffed carton edges, dense upright square record sleeves rising above the box with different faded cream red blue olive rock album covers, one sleeve leaning diagonally. Realistic 2003 Beijing independent record shop delivery carton. Box full of records only, no floor, no environment.",
+      "preview_id": "01a10513-7488-7733-8374-2d7835dc39ea",
+      "refine_id": "01a10519-246b-7613-96a4-4c9a7f6b0c0f"
+    },
+    {
+      "name": "RS407-VinylJazz",
+      "refine_id": "01a10516-9493-77c1-89e8-063dfcfd1e34",
+      "task_type": "retexture",
+      "texture_prompt": "The square cardboard sleeve is full-bleed mustard yellow and charcoal black vintage jazz artwork, a saxophonist silhouette and small cream typographic marks. Paper is matte, age-faded and rubbed at corners. Keep the exposed circular vinyl disc deep black with concentric grooves and a tiny yellow central paper label. No artwork on the black disc, no scenery."
+    },
+    {
+      "name": "RS408-VinylBlue",
+      "refine_id": "01a10516-9cc9-74f5-8939-4d063a14146d",
+      "task_type": "retexture",
+      "texture_prompt": "The entire square LP sleeve is printed with pale cyan blue and charcoal black grainy urban night photography, abstract underground post-punk cover graphics. Matte thin blue-gray paper with worn edges. The protruding circular vinyl disc remains black with fine grooves and a small pale blue center label. Do not add extra objects or a room."
+    }
+  ]
+}
