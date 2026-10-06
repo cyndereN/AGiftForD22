@@ -16,10 +16,10 @@ namespace D22.Editor
     {
         const string Root="Assets/D22";
         const string Scenes=Root+"/Scenes/";
-        public static readonly string[] GameScenes={"D22_Menu","D22_RecordShop","D22_Hutong","D22_LiveScan","D22_Performance","D22_Bootstrap","D22_Environment","D22_Lighting","D22_Gameplay"};
+        public static readonly string[] GameScenes={"D22_Menu","D22_RecordShop","D22_RecordShopScan","D22_Hutong","D22_HutongScan","D22_LiveScan","D22_Performance","D22_Bootstrap","D22_Environment","D22_Lighting","D22_Gameplay"};
         const BindingFlags Private=BindingFlags.Instance|BindingFlags.NonPublic;
         static readonly string[] ScanKeys={"recordshop","hutong","live","performance"};
-        static readonly string[] ScanScenes={"D22_RecordShop","D22_Hutong","D22_LiveScan","D22_Performance"};
+        static readonly string[] ScanScenes={"D22_RecordShopScan","D22_HutongScan","D22_LiveScan","D22_Performance"};
 
         [MenuItem("D22/Game/Import Scans From Converted PLY")]
         public static void ImportScans()

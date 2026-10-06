@@ -77,12 +77,12 @@ namespace D22.Editor
             serialized.ApplyModifiedPropertiesWithoutUndo();
         }
 
-        static Dictionary<string, Material> BuildMaterials(JObject data)
+        public static Dictionary<string, Material> BuildMaterials(JObject data, string materialFolder = Root + "/Materials")
         {
             var materials = new Dictionary<string, Material>();
             foreach (var item in data["materials"])
             {
-                string id = (string)item["id"], path = Root + "/Materials/" + id + ".mat";
+                string id = (string)item["id"], path = materialFolder + "/" + id + ".mat";
                 var material = AssetDatabase.LoadAssetAtPath<Material>(path);
                 if (!material) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(material, path); }
                 material.name = id;

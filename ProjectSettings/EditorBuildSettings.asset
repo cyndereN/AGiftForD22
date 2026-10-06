@@ -12,8 +12,14 @@ EditorBuildSettings:
     path: Assets/D22/Scenes/D22_RecordShop.unity
     guid: bbc05c04ada72403f9365ffa7a6a3944
   - enabled: 1
+    path: Assets/D22/Scenes/D22_RecordShopScan.unity
+    guid: bd5d98f3ca00b41aeba3ceef8b09bec5
+  - enabled: 1
     path: Assets/D22/Scenes/D22_Hutong.unity
     guid: 766673fe161d147319d72ba75ac08ea8
+  - enabled: 1
+    path: Assets/D22/Scenes/D22_HutongScan.unity
+    guid: af563ecbfa5974b71a8023b9d3ff8fec
   - enabled: 1
     path: Assets/D22/Scenes/D22_LiveScan.unity
     guid: d2e654cf3a1224ecab1450bb4981789b

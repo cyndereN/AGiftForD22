@@ -116,12 +116,13 @@ namespace D22
         {
             if (Spawned) return;
             Spawned = true;
-            cricketMark = Make(D22MarkKind.Cricket, new Vector3(-1.7f, -.55f, -1.15f), 1.35f);
-            grindMark = Make(D22MarkKind.Grind, new Vector3(1.85f, .45f, -4.3f), 1.45f);
-            pigeonHome = new Vector3(0, 2.7f, -5.8f);
+            var hutong = UnityEngine.Object.FindAnyObjectByType<D22HutongLighting>();
+            cricketMark = Make(D22MarkKind.Cricket, hutong ? hutong.cricketMark : new Vector3(-1.7f, -.55f, -1.15f), 1.35f);
+            grindMark = Make(D22MarkKind.Grind, hutong ? hutong.grindMark : new Vector3(1.85f, .45f, -4.3f), 1.45f);
+            pigeonHome = hutong ? hutong.pigeonMark : new Vector3(0, 2.7f, -5.8f);
             pigeonMark = Make(D22MarkKind.Pigeons, pigeonHome, 3.2f);
             var exit = UnityEngine.Object.FindAnyObjectByType<D22Exit>();
-            if (exit)
+            if (exit && !hutong)
             {
                 exit.radius = .85f;
                 exit.transform.position = new Vector3(0, .15f, -8.2f);

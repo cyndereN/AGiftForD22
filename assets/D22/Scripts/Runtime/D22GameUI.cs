@@ -125,8 +125,8 @@ namespace D22
 
         void ShowGallery()
         {
-            question = new D22Question { zh = "去哪儿", en = "", choices = new[] { new D22Choice { zh = "唱片店", en = "" }, new D22Choice { zh = "胡同", en = "" }, new D22Choice { zh = "D-22", en = "" }, new D22Choice { zh = "演出", en = "" } } };
-            choose = i => flow.LoadSpace(new[] { "D22_RecordShop", "D22_Hutong", "D22_LiveScan", "D22_Performance" }[i]);
+            question = new D22Question { zh = "去哪儿", en = "", choices = new[] { new D22Choice { zh = "唱片店", en = "" }, new D22Choice { zh = "胡同", en = "" }, new D22Choice { zh = "D-22", en = "" }, new D22Choice { zh = "演出", en = "" }, new D22Choice { zh = "唱片店扫描", en = "" }, new D22Choice { zh = "胡同扫描", en = "" } } };
+            choose = i => flow.LoadSpace(new[] { "D22_RecordShop", "D22_Hutong", "D22_LiveScan", "D22_Performance", "D22_RecordShopScan", "D22_HutongScan" }[i]);
             ShowChoices(question, choose);
         }
 

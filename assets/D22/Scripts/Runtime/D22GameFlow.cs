@@ -40,6 +40,9 @@ namespace D22
         public bool StageOpen => Stage != null && Stage.Open;
         bool blocked = true, bossMet, aimingBottle, doorHeard, hutongAsked;
         float cooldown;
+        D22RecordShop recordShop;
+        Vector3 shopEntry;
+        bool walked;
         GameObject bottle;
         AudioSource audioSource;
         AudioClip[] playlist;
@@ -176,6 +179,9 @@ namespace D22
             Chapter = scene;
             bottle = null;
             aimingBottle = false;
+            recordShop = FindAnyObjectByType<D22RecordShop>();
+            shopEntry = Camera.main ? Camera.main.transform.position : Vector3.zero;
+            walked = false;
             if (scene == "D22_Bootstrap")
             {
                 yield return new WaitUntil(() => Camera.main != null);
@@ -199,7 +205,14 @@ namespace D22
                 blocked = false;
                 UI.ShowHUD();
                 if (scene == "D22_RecordShop") { bossMet = false; Dialogue(story.recordShop, Resume); }
-                else if (scene == "D22_Hutong") { doorHeard = false; hutongAsked = false; Dialogue(story.hutong, Resume); }
+                else if (scene == "D22_Hutong")
+                {
+                    doorHeard = false;
+                    hutongAsked = false;
+                    var hutongLighting = FindAnyObjectByType<D22HutongLighting>();
+                    if (hutongLighting) hutongLighting.Apply(Mood == 2);
+                    Dialogue(story.hutong, Resume);
+                }
                 else if (scene == "D22_Performance") PlayChorus();
             }
             Loading = false;
@@ -384,13 +397,16 @@ namespace D22
             var camera = Camera.main;
             if (Chapter == "D22_RecordShop")
             {
-                if (!bossMet && camera.transform.position.z < -5)
+                walked |= Vector3.Distance(camera.transform.position, shopEntry) > 1.5f;
+                if (!recordShop && !bossMet && camera.transform.position.z < -5)
                 { bossMet = true; Dialogue(story.boss, () => { SpawnBottle(); Resume(); }); return; }
+                if (recordShop && !bossMet && recordShop.CanTalk(camera.transform) && k != null && k.eKey.wasPressedThisFrame)
+                { TryInteract(); return; }
                 aimingBottle = bottle && Vector3.Distance(camera.transform.position, bottle.transform.position) < 2 && Vector3.Dot(camera.transform.forward, (bottle.transform.position - camera.transform.position).normalized) > .86f;
                 if (aimingBottle && k != null && k.eKey.wasPressedThisFrame) { TryInteract(); return; }
             }
-            var exit = FindAnyObjectByType<D22Exit>();
-            bool atExit = Chapter != "D22_LiveScan" && exit && Vector3.Distance(camera.transform.position, exit.transform.position) < exit.radius;
+            var exit = NearestExit(camera.transform.position);
+            bool atExit = Chapter != "D22_LiveScan" && exit;
             if (Chapter == "D22_LiveScan" && Stage != null)
             {
                 if (!Stage.IntroPlayed && Stage.NearIntro(camera)) { MeetBand(); return; }
@@ -402,15 +418,18 @@ namespace D22
             { AskHutong(); return; }
             string huntHint = Hunt?.AimHint(camera);
             string stageHint = Chapter == "D22_LiveScan" ? Stage?.Hint(camera) : null;
+            string shopHint = recordShop
+                ? !walked ? "往柜台走走" : !bossMet ? (recordShop.CanTalk(camera.transform) ? "E 和店主说话" : "去柜台找店主")
+                : !HasDrink ? "柜台上有瓶酒" : Sips == 0 ? "1 喝酒" : "从侧门去胡同"
+                : !bossMet ? "往里走走" : !HasDrink ? "回头拿酒瓶" : "1 喝酒";
             string hint = aimingBottle ? "E 拿酒瓶"
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : Chapter == "D22_LiveScan" && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "已满" : "门")
-                : atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label))
-                : Chapter == "D22_RecordShop"
-                    ? (!bossMet ? "往里走走" : !HasDrink ? "回头拿酒瓶" : "1 喝酒")
+                : atExit ? (recordShop && Sips == 0 ? "先在柜台拿酒" : "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label)))
+                : Chapter == "D22_RecordShop" ? shopHint
                     : "";
             UI.UpdateHUD(hint, HasDrink, Sips, Abilities != null ? Abilities.CooldownLeft : Mathf.Max(0, cooldown - Time.unscaledTime));
             if (k != null && k.eKey.wasPressedThisFrame) TryInteract();
@@ -433,8 +452,14 @@ namespace D22
 
         public void TryInteract()
         {
-            if (blocked || Loading || AbilityOpen || HuntOpen || !Camera.main) return;
+            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
             var camera = Camera.main;
+            if (recordShop && !bossMet && recordShop.CanTalk(camera.transform))
+            {
+                bossMet = true;
+                Dialogue(story.boss, () => { SpawnBottle(); Resume(); }, "店主 / THE SHOPKEEPER");
+                return;
+            }
             if (bottle && Vector3.Distance(camera.transform.position, bottle.transform.position) < 2 && Vector3.Dot(camera.transform.forward, (bottle.transform.position - camera.transform.position).normalized) > .86f)
             {
                 Destroy(bottle);
@@ -446,8 +471,8 @@ namespace D22
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
             if (Chapter == "D22_LiveScan" && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
             if (Chapter == "D22_LiveScan") return;
-            var exit = FindAnyObjectByType<D22Exit>();
-            if (!exit || Vector3.Distance(camera.transform.position, exit.transform.position) >= exit.radius) return;
+            var exit = NearestExit(camera.transform.position);
+            if (!exit || recordShop && Sips == 0) return;
             if (Chapter == "D22_Hutong")
             {
                 if (Hunt != null && Hunt.Unlocked && Hunt.QuotaDone(Sips)) AskHutong();
@@ -456,6 +481,18 @@ namespace D22
             }
             if (exit.nextScene == "END") { blocked = true; UI.ShowEnding("这个名字，至今仍被大家口口相传。", () => LoadSpace("D22_Menu")); }
             else LoadSpace(exit.nextScene);
+        }
+
+        D22Exit NearestExit(Vector3 position)
+        {
+            D22Exit nearest = null;
+            float distance = float.MaxValue;
+            foreach (var exit in FindObjectsByType<D22Exit>(FindObjectsSortMode.None))
+            {
+                float candidate = Vector3.Distance(position, exit.transform.position);
+                if (candidate < exit.radius && candidate < distance) { nearest = exit; distance = candidate; }
+            }
+            return nearest;
         }
 
         void MeetDoor()
@@ -554,7 +591,19 @@ namespace D22
         void SpawnBottle()
         {
             if (HasDrink) return;
-            bottle = Instantiate(bottlePrefab, new Vector3(-.36f, -.68f, -1.72f), Quaternion.Euler(0, 160, 0));
+            var spawn = recordShop ? recordShop.bottleSpawn : null;
+            var pickupPrefab = recordShop && recordShop.bottlePrefab ? recordShop.bottlePrefab : bottlePrefab;
+            bottle = Instantiate(pickupPrefab, spawn ? spawn.position : new Vector3(-.36f, -.68f, -1.72f), spawn ? spawn.rotation : Quaternion.Euler(0, 160, 0));
+            if (spawn)
+            {
+                var renderers = bottle.GetComponentsInChildren<Renderer>();
+                if (renderers.Length > 0)
+                {
+                    var bounds = renderers[0].bounds;
+                    foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+                    bottle.transform.position += new Vector3(spawn.position.x - bounds.center.x, spawn.position.y - bounds.min.y, spawn.position.z - bounds.center.z);
+                }
+            }
             bottle.name = "Wine Pickup";
         }
 
