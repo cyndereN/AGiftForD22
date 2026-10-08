@@ -13,7 +13,7 @@ namespace D22.Editor
         {
             D22SceneBuilder.OpenWorkspace();
             D22SceneBuilder.Validate();
-            string output = Path.GetFullPath(Path.Combine(Application.dataPath, "../../../docs/previews"));
+            string output = Path.GetFullPath(Path.Combine(Application.dataPath, "../docs/previews"));
             Directory.CreateDirectory(output);
             CaptureView(output + "/unity-stage.png", new Vector3(.8f, 1.7f, 1), new Vector3(0, 1.8f, 5.1f));
             CaptureView(output + "/unity-entry.png", new Vector3(.6f, 1.8f, -2.5f), new Vector3(0, 1.9f, 4.8f));

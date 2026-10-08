@@ -91,10 +91,14 @@ namespace GaussianSplatting.Runtime
             m_CS = cs;
             if (cs)
             {
-                m_kernelInitDeviceRadixSort = cs.FindKernel("InitDeviceRadixSort");
-                m_kernelUpsweep = cs.FindKernel("Upsweep");
-                m_kernelScan = cs.FindKernel("Scan");
-                m_kernelDownsweep = cs.FindKernel("Downsweep");
+                if (cs.HasKernel("InitDeviceRadixSort") && cs.HasKernel("Upsweep") &&
+                    cs.HasKernel("Scan") && cs.HasKernel("Downsweep"))
+                {
+                    m_kernelInitDeviceRadixSort = cs.FindKernel("InitDeviceRadixSort");
+                    m_kernelUpsweep = cs.FindKernel("Upsweep");
+                    m_kernelScan = cs.FindKernel("Scan");
+                    m_kernelDownsweep = cs.FindKernel("Downsweep");
+                }
             }
 
             m_Valid = m_kernelInitDeviceRadixSort >= 0 &&

@@ -24,7 +24,7 @@ namespace D22.Editor
         [MenuItem("D22/Game/Import Scans From Converted PLY")]
         public static void ImportScans()
         {
-            string repo=Path.GetFullPath(Path.Combine(Application.dataPath,"../../.."));
+            string repo=Path.GetFullPath(Path.Combine(Application.dataPath,".."));
             foreach(string key in ScanKeys)
             {
                 string input=Path.Combine(repo,$"work/scans/scene_{key}.ply");
@@ -159,7 +159,7 @@ namespace D22.Editor
         static void Build(BuildTarget target,string relative)
         {
             if(!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.Standalone,target))throw new InvalidOperationException("Install the build module for "+target+" in Unity Hub.");
-            ConfigureBuildScenes();string repo=Path.GetFullPath(Path.Combine(Application.dataPath,"../../.."));string path=Path.Combine(repo,relative);Directory.CreateDirectory(Path.GetDirectoryName(path));
+            ConfigureBuildScenes();string repo=Path.GetFullPath(Path.Combine(Application.dataPath,".."));string path=Path.Combine(repo,relative);Directory.CreateDirectory(Path.GetDirectoryName(path));
             var report=BuildPipeline.BuildPlayer(EditorBuildSettings.scenes,path,target,BuildOptions.None);
             if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new InvalidOperationException("Build failed: "+report.summary.result);
             Debug.Log("D22_BUILD_SUCCESS "+report.summary.totalSize+" bytes "+path);
