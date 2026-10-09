@@ -25,6 +25,7 @@ namespace D22
         public D22Stage Stage { get; private set; }
         public D22Conductor Conductor { get; private set; }
         public string Chapter { get; private set; } = "D22_Menu";
+        bool IsLivehouse => Chapter == D22Bootstrap.SceneName || Chapter == "D22_LiveScan";
         public bool HasDrink { get; private set; }
         public int Sips { get; private set; }
         public int Mood { get; private set; } = 1;
@@ -145,13 +146,11 @@ namespace D22
                     break;
                 case "D22_Hutong":
                     GrantSkipped("cricket", "pigeon", "scissors");
-                    LoadSpace("D22_LiveScan");
+                    LoadSpace(D22Bootstrap.SceneName);
                     break;
+                case D22Bootstrap.SceneName:
                 case "D22_LiveScan":
                     GrantSkipped("guitar", "bass", "drums");
-                    LoadSpace("D22_Performance");
-                    break;
-                case "D22_Bootstrap":
                     LoadSpace("D22_Performance");
                     break;
                 case "D22_Performance":
@@ -184,13 +183,11 @@ namespace D22
             walked = false;
             if (scene == "D22_Bootstrap")
             {
-                yield return new WaitUntil(() => Camera.main != null);
-                var exit = new GameObject("Stage Exit").AddComponent<D22Exit>();
-                exit.transform.position = new Vector3(0, 1.8f, 4);
-                exit.radius = 2;
-                exit.nextScene = "D22_Performance";
-                exit.label = "演出开始 / HEAR THE SHOW";
+                var bootstrap = FindAnyObjectByType<D22Bootstrap>();
+                yield return new WaitUntil(() => bootstrap && bootstrap.Ready && Camera.main != null);
+                Stage?.Bind(bootstrap);
             }
+            else Stage?.Bind(null);
             yield return null;
             if (scene == "D22_Performance") PlayFinale();
             else if (scene == "D22_Hutong") HoldPlaylist();
@@ -334,14 +331,14 @@ namespace D22
         {
             cooldown = Time.unscaledTime + 3;
             Sips++;
-            if (Chapter == "D22_LiveScan") Stage?.NoteDrink();
+            if (IsLivehouse) Stage?.NoteDrink();
             if (Chapter == "D22_RecordShop")
             {
                 blocked = true;
                 D22Look.Unlock();
                 UI.ShowChoices(story.choice, i => { Mood = i; LoadSpace("D22_Hutong"); });
             }
-            else if (Chapter != "D22_Hutong" && Chapter != "D22_LiveScan" && Chapter != "D22_Performance" && Sips >= 5)
+            else if (Chapter != "D22_Hutong" && !IsLivehouse && Chapter != "D22_Performance" && Sips >= 5)
             {
                 blocked = true;
                 D22Look.Unlock();
@@ -385,7 +382,7 @@ namespace D22
             }
             Hunt?.Tick(Camera.main, audioSource.volume);
             Stage?.Tick();
-            if (!Loading && Chapter == "D22_LiveScan" && Stage != null && Stage.ShowReady)
+            if (!Loading && IsLivehouse && Stage != null && Stage.ShowReady)
             {
                 CloseStage();
                 CloseAbility();
@@ -406,8 +403,8 @@ namespace D22
                 if (aimingBottle && k != null && k.eKey.wasPressedThisFrame) { TryInteract(); return; }
             }
             var exit = NearestExit(camera.transform.position);
-            bool atExit = Chapter != "D22_LiveScan" && exit;
-            if (Chapter == "D22_LiveScan" && Stage != null)
+            bool atExit = !IsLivehouse && exit;
+            if (IsLivehouse && Stage != null)
             {
                 if (!Stage.IntroPlayed && Stage.NearIntro(camera)) { MeetBand(); return; }
                 if (Stage.TrioDone && !Stage.OnStagePlayed && Stage.NearStage(camera)) { StepOnStage(); return; }
@@ -417,14 +414,14 @@ namespace D22
             if (Chapter == "D22_Hutong" && atExit && Hunt != null && Hunt.Unlocked && Hunt.QuotaDone(Sips) && !hutongAsked)
             { AskHutong(); return; }
             string huntHint = Hunt?.AimHint(camera);
-            string stageHint = Chapter == "D22_LiveScan" ? Stage?.Hint(camera) : null;
+            string stageHint = IsLivehouse ? Stage?.Hint(camera) : null;
             string shopHint = recordShop
                 ? !walked ? "往柜台走走" : !bossMet ? (recordShop.CanTalk(camera.transform) ? "E 和店主说话" : "去柜台找店主")
                 : !HasDrink ? "柜台上有瓶酒" : Sips == 0 ? "1 喝酒" : "从侧门去胡同"
                 : !bossMet ? "往里走走" : !HasDrink ? "回头拿酒瓶" : "1 喝酒";
             string hint = aimingBottle ? "E 拿酒瓶"
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
-                : Chapter == "D22_LiveScan" && Stage != null && !Stage.IntroPlayed ? "往舞台走"
+                : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "已满" : "门")
@@ -469,8 +466,8 @@ namespace D22
                 return;
             }
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
-            if (Chapter == "D22_LiveScan" && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
-            if (Chapter == "D22_LiveScan") return;
+            if (IsLivehouse && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
+            if (IsLivehouse) return;
             var exit = NearestExit(camera.transform.position);
             if (!exit || recordShop && Sips == 0) return;
             if (Chapter == "D22_Hutong")
@@ -577,7 +574,7 @@ namespace D22
             UI.ShowChoices(story.hutongAsk, i =>
             {
                 Mood = i;
-                Dialogue(story.livehouse, () => LoadSpace("D22_LiveScan"));
+                Dialogue(story.livehouse, () => LoadSpace(D22Bootstrap.SceneName));
             });
         }
 

@@ -113,7 +113,7 @@ namespace D22.Editor
             if(index>0)
             {
                 var exit=new GameObject("Chapter Exit").AddComponent<D22Exit>();exit.transform.position=new Vector3(0,0,-3);exit.radius=1.7f;
-                exit.nextScene=index==1?"D22_LiveScan":index==2?"D22_Performance":"END";
+                exit.nextScene=index==1?D22Bootstrap.SceneName:index==2?"D22_Performance":"END";
                 exit.label=index==1?"门":index==2?"听演出":"离场";
             }
             EditorSceneManager.SaveScene(scene,path);

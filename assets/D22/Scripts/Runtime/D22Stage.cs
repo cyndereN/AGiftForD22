@@ -10,8 +10,8 @@ namespace D22
         public const int NeedDrum = 4, NeedGuitar = 3, NeedBass = 4;
         public const int ShowNeedDrink = 3, ShowNeedGrind = 3, ShowNeedGuitar = 5, ShowNeedBass = 3, ShowNeedDrum = 7;
         public const float BassWalk = 2.4f;
-        static readonly Vector3 IntroSpot = new Vector3(-1.1f, 0f, -9f);
-        static readonly Vector3 StageSpot = new Vector3(-1.1f, 0f, -20f);
+        static readonly Vector3 ScanIntroSpot = new Vector3(-1.1f, 0f, -9f);
+        static readonly Vector3 ScanStageSpot = new Vector3(-1.1f, 0f, -20f);
         static readonly Vector2[] Moles =
         {
             new Vector2(.22f, .58f),
@@ -24,6 +24,11 @@ namespace D22
         readonly bool[] swept = new bool[6];
         float strumX = -1;
         D22WorldMark drumMark, guitarMark, bassMark;
+        Vector3 introSpot = ScanIntroSpot, stageSpot = ScanStageSpot;
+        Vector3 drumSpot = new Vector3(-3.1f, .7f, -15.6f);
+        Vector3 guitarSpot = new Vector3(-1.1f, .95f, -16.4f);
+        Vector3 bassSpot = new Vector3(1.1f, .7f, -15.6f);
+        float introRadius = 8, stageRadius = 7;
         float moleLife, moleGap;
         int mole = -1;
         bool heardDrum, heardGuitar, heardBass, teachDrum, teachGuitar, teachBass;
@@ -60,6 +65,17 @@ namespace D22
 
         public D22Stage(D22GameFlow host) { flow = host; }
 
+        public void Bind(D22Bootstrap livehouse)
+        {
+            introSpot = livehouse ? livehouse.introSpot : ScanIntroSpot;
+            introRadius = livehouse ? livehouse.introRadius : 8;
+            stageSpot = livehouse ? livehouse.stageSpot : ScanStageSpot;
+            stageRadius = livehouse ? livehouse.stageRadius : 7;
+            drumSpot = livehouse ? livehouse.drumSpot : new Vector3(-3.1f, .7f, -15.6f);
+            guitarSpot = livehouse ? livehouse.guitarSpot : new Vector3(-1.1f, .95f, -16.4f);
+            bassSpot = livehouse ? livehouse.bassSpot : new Vector3(1.1f, .7f, -15.6f);
+        }
+
         public void Clear()
         {
             Close();
@@ -85,13 +101,13 @@ namespace D22
         {
             if (Spawned) return;
             Spawned = true;
-            drumMark = Make(D22MarkKind.Drum, new Vector3(-3.1f, .7f, -15.6f), 1.35f);
-            guitarMark = Make(D22MarkKind.Guitar, new Vector3(-1.1f, .95f, -16.4f), 1.35f);
-            bassMark = Make(D22MarkKind.Bass, new Vector3(1.1f, .7f, -15.6f), 1.35f);
+            drumMark = Make(D22MarkKind.Drum, drumSpot, 1.35f);
+            guitarMark = Make(D22MarkKind.Guitar, guitarSpot, 1.35f);
+            bassMark = Make(D22MarkKind.Bass, bassSpot, 1.35f);
         }
 
-        public bool NearIntro(Camera camera) => camera && Flat(camera.transform.position, IntroSpot) < 8f;
-        public bool NearStage(Camera camera) => camera && Flat(camera.transform.position, StageSpot) < 7f;
+        public bool NearIntro(Camera camera) => camera && Flat(camera.transform.position, introSpot) < introRadius;
+        public bool NearStage(Camera camera) => camera && Flat(camera.transform.position, stageSpot) < stageRadius;
 
         public void MarkOnStage() => OnStagePlayed = true;
         public void BeginEncore() => Encore = true;

@@ -148,6 +148,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281ad6d78a72e47238cac669b7dc063c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::D22.D22Bootstrap
+  introSpot: {x: 0, y: 0, z: 1}
+  introRadius: 2.2
+  stageSpot: {x: 0, y: 0, z: 2.8}
+  stageRadius: 1.4
+  drumSpot: {x: 0, y: 1, z: 3.9}
+  guitarSpot: {x: 1.5, y: 1, z: 3.5}
+  bassSpot: {x: -1.5, y: 1, z: 3.5}
 --- !u!4 &1310609018
 Transform:
   m_ObjectHideFlags: 0
