@@ -31,6 +31,7 @@ namespace D22.Editor
             AssetDatabase.Refresh();
             var data = JObject.Parse(File.ReadAllText(Art + "/Data/hutong-export.json"));
             var materials = D22SceneBuilder.BuildMaterials(data, Art + "/Materials");
+            TileGroundMaterial();
             foreach (string group in data["groups"].Values<string>())
             {
                 string path = Art + "/Models/HT_" + group + ".fbx";
@@ -146,6 +147,8 @@ namespace D22.Editor
             if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
             var scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
             SealPlayablePerimeter();
+            TileGroundMaterial();
+            AssetDatabase.SaveAssets();
             var player = GameObject.Find("Hutong Player");
             if (!player) throw new InvalidOperationException("Hutong Player is missing.");
             SetWalkArea(player);
@@ -180,6 +183,7 @@ namespace D22.Editor
             AddBoundary("North back", new Vector3(2.45f, 1.5f, 22.85f), new Vector3(16.4f, 3, .3f));
             AddBoundary("North end", new Vector3(12.8f, 1.5f, 26.15f), new Vector3(4.3f, 3, .3f));
             AddBoundary("East end", new Vector3(14.8f, 1.5f, 22.45f), new Vector3(.3f, 3, 7.7f));
+            AddBoundary("Livehouse door", new Vector3(5.5f, 1.05f, 19.44f), new Vector3(1.08f, 2.1f, .15f));
 
             // Visible masonry closes the two gaps where a player could see bare ground
             // behind the authored buildings, even before reaching a collision edge.
@@ -189,6 +193,37 @@ namespace D22.Editor
                 "Repair_render_scanned_PBR_064830ca");
             AddEndWall("North east corner return", new Vector3(14.7f, 1.43f, 25.65f), new Vector3(.34f, 2.86f, 1.1f),
                 "Old_lime_plaster_scanned_PBR_1016b979");
+            AddEndWall("South end wall", new Vector3(.45f, 1.42f, -6.1f), new Vector3(12.3f, 2.84f, .28f),
+                "South_end_wall_plaster");
+        }
+
+        static void TileGroundMaterial()
+        {
+            var material = AssetDatabase.LoadAssetAtPath<Material>(Art + "/Materials/Concrete_lane_scanned_PBR_1dccb5f3.mat");
+            if (!material) throw new InvalidOperationException("Missing hutong ground material.");
+            var scale = new Vector2(16, 20);
+            foreach (var property in new[] { "_BaseMap", "_MainTex", "_BumpMap", "_MetallicGlossMap" })
+                material.SetTextureScale(property, scale);
+            EditorUtility.SetDirty(material);
+        }
+
+        static Material SouthEndWallMaterial()
+        {
+            const string path = Art + "/Materials/South_end_wall_plaster.mat";
+            var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+            if (!material)
+            {
+                var source = AssetDatabase.LoadAssetAtPath<Material>(Art + "/Materials/Old_lime_plaster_scanned_PBR_1016b979.mat");
+                if (!source) throw new InvalidOperationException("Missing hutong masonry material.");
+                material = new Material(source) { name = "South_end_wall_plaster" };
+                AssetDatabase.CreateAsset(material, path);
+            }
+            foreach (var property in new[] { "_BaseMap", "_MainTex", "_BumpMap", "_MetallicGlossMap" })
+                material.SetTextureScale(property, new Vector2(3, 1));
+            material.EnableKeyword("_EMISSION");
+            material.SetColor("_EmissionColor", new Color(.28f, .29f, .30f));
+            EditorUtility.SetDirty(material);
+            return material;
         }
 
         static void AddBoundary(string name, Vector3 center, Vector3 size)
@@ -208,7 +243,9 @@ namespace D22.Editor
             wall.name="Hutong Closure / "+name;
             wall.transform.position=center;
             wall.transform.localScale=size;
-            var material=AssetDatabase.LoadAssetAtPath<Material>(Art+"/Materials/"+materialName+".mat");
+            var material=materialName=="South_end_wall_plaster"
+                ? SouthEndWallMaterial()
+                : AssetDatabase.LoadAssetAtPath<Material>(Art+"/Materials/"+materialName+".mat");
             if (!material) throw new InvalidOperationException("Missing hutong wall material: "+materialName);
             wall.GetComponent<MeshRenderer>().sharedMaterial=material;
             GameObjectUtility.SetStaticEditorFlags(wall, StaticEditorFlags.BatchingStatic | StaticEditorFlags.OccluderStatic | StaticEditorFlags.OccludeeStatic);
@@ -230,7 +267,7 @@ namespace D22.Editor
             var environment = GameObject.Find("Hutong V4 Environment");
             var importedGeometry = environment ? environment.GetComponentsInChildren<MeshRenderer>() : new MeshRenderer[0];
             bool geometry = expectedGeometry.All(id => importedGeometry.Any(r => r.name == id));
-            bool perimeter = walkArea && boundaries.Length == 9 && closures.Length == 3 &&
+            bool perimeter = walkArea && boundaries.Length == 10 && closures.Length == 4 &&
                              walkArea.Contains(new Vector3(0, 0, -2.7f)) &&
                              walkArea.Contains(new Vector3(5.5f, 0, 20.2f)) &&
                              walkArea.Contains(new Vector3(13.5f, 0, 24.6f)) &&
@@ -243,13 +280,17 @@ namespace D22.Editor
                 .OrderBy(h => h.distance).ToArray();
             bool floor = floorHits.Length > 0;
             float floorHeight = floor ? floorHits[0].point.y : float.NaN;
-            bool valid = geometry && floor && perimeter &&
+            var door = GameObject.Find("Hutong Boundary / Livehouse door");
+            bool doorBlocked = door && door.GetComponent<BoxCollider>() &&
+                               Physics.Raycast(new Vector3(5.5f, 1.2f, 18.2f), Vector3.forward, out var doorHit, 2) &&
+                               doorHit.collider.gameObject == door;
+            bool valid = geometry && floor && perimeter && doorBlocked &&
                          Mathf.Abs(floorHeight) < .3f &&
                          camera && camera.GetComponent<AudioListener>() && camera.GetComponentInParent<D22Walkthrough>() &&
                          exit && exit.nextScene == "D22_Bootstrap" &&
                          !Object.FindAnyObjectByType<GaussianSplatting.Runtime.GaussianSplatRenderer>();
             if (!valid)
-                throw new InvalidOperationException($"Hutong validation failed: geometry={geometry}, renderers={renderers.Length}, perimeter={perimeter}, boundaries={boundaries.Length}, closures={closures.Length}, floor={floor}, floorHeight={floorHeight:F3}, camera={camera}, exit={exit}");
+                throw new InvalidOperationException($"Hutong validation failed: geometry={geometry}, renderers={renderers.Length}, perimeter={perimeter}, doorBlocked={doorBlocked}, boundaries={boundaries.Length}, closures={closures.Length}, floor={floor}, floorHeight={floorHeight:F3}, camera={camera}, exit={exit}");
             Debug.Log($"D22_HUTONG_VALIDATION_PASS geometry={expectedGeometry.Count} renderers={renderers.Length} boundaries={boundaries.Length} closures={closures.Length} colliders={Object.FindObjectsByType<Collider>().Length} floor={floorHeight:F2} exit={exit.nextScene}");
         }
     }
