@@ -105,8 +105,6 @@ The noise has already pushed the feeling to its height. This mouthful. What do y
 
 - **再放大**
 - **Turn it up again**
-BGM：失真拉高，鼓点贴近耳畔，旋律几乎被噪音所覆盖；
-The mix: distortion pushed up, the drums against the ear, the tune almost buried in noise.
 相机：手持抖动感明显，视野在 58‑66 之间缓缓浮动，转向更为灵敏；
 The camera: a clear handheld shake, the view breathing between 58 and 66, the turn more quick.
 后处理：开启光晕，拉高对比度，色调偏向暖红，边缘色散，暗角收紧。
@@ -114,8 +112,6 @@ The picture: bloom on, contrast up, a warm red cast, color fringing at the edges
 
 - **按在这间屋子里**
 - **Hold it in this room**
-BGM：乐曲收敛，房间环境声响大过失真，低音沉稳，仿佛您依旧安坐在酒馆之中；
-The mix: the song dries out, the room louder than the distortion, the low end steady, as if you were still sitting in the bar.
 相机：抖动轻微，视野固定 60，转向节奏放缓，使用长镜头缓缓铺展画面；
 The camera: a light shake, the view held at 60, the turn slowed, a long take laying the picture out.
 后处理：画面适度锐化，下调对比度与饱和度，暗角宽而柔和，关闭光晕。
@@ -123,8 +119,6 @@ The picture: a little sharper, contrast and saturation down, a wide soft vignett
 
 - **把白天关掉**
 - **Switch the day off**
-BGM：鼓点向远处退去，混响增强，余下低频与电流的嗡鸣；
-The mix: the drums retreat, the reverb grows, what remains is low end and the hum of current.
 相机：大多时候保持静止，偶尔剧烈晃动后骤然定格，视野收至 52；
 The camera: still most of the time, then one hard shake and a sudden hold, the view pulled in to 52.
 后处理：降低画面亮度，保留对比度，色调清冷寡淡，暗角浓重。
@@ -204,8 +198,8 @@ There are two kinds of sound here. The pigeon whistle and the vendor's cry are m
 
 - **人为**
 - **Made by people**
-BGM：鸽哨与叫卖声前置，磨刀石的声响化作节拍，蛐蛐鸣响融入节奏，不再肆意鸣叫；
-The mix: pigeon whistle and the cry in front, the whetstone turned into a beat, the cricket folded into that beat, no longer calling as it pleases.
+BGM：失真拉高，鼓点贴近耳畔，旋律几乎被噪音所覆盖；
+The mix: distortion pushed up, the drums against the ear, the tune almost buried in noise.
 相机：带有刻意的手持抖动，视野收至 56，转向平稳，缓缓对准门、飞鸽、吆喝之人；
 The camera: a deliberate handheld shake, the view pulled to 56, the turn steady, slowly finding the door, the birds, the crier.
 后处理：边缘锐度提升，对比度略高，整体暖调，飞鸟带有淡淡光晕。
@@ -213,8 +207,8 @@ The picture: sharper edges, a little more contrast, a warm cast, a faint bloom o
 
 - **自然**
 - **Natural**
-BGM：振翅声、蛐蛐鸣唱居于前景，叫卖声退至胡同远处，没有固定节拍，随心作响；
-The mix: wings and the cricket in front, the cry fallen back down the hutong, no fixed beat, each sound as it comes.
+BGM：乐曲收敛，房间环境声响大过失真，低音沉稳，仿佛您依旧安坐在酒馆之中；
+The mix: the song dries out, the room louder than the distortion, the low end steady, as if you were still sitting in the bar.
 相机：几乎无抖动，视野放宽至 68，转向舒缓，天空与草丛一同收纳进画面；
 The camera: almost no shake, the view opened to 68, the turn unhurried, sky and grass held in the same frame.
 后处理：画面质感柔和，饱和度降低，草木绿意，暗角浅淡，关闭光晕。
@@ -222,8 +216,8 @@ The picture: soft, saturation down, a green of grass and leaves, a pale vignette
 
 - **都不喜欢**
 - **Neither**
-BGM：鸽哨、叫卖、蛐蛐声一同远去，余下墙壁与风声，偶尔一声异响转瞬消散；
-The mix: whistle, cry, and cricket all recede. Walls and wind remain. Now and then a stray sound, gone at once.
+BGM：鼓点向远处退去，混响增强，余下低频与电流的嗡鸣；
+The mix: the drums retreat, the reverb grows, what remains is low end and the hum of current.
 相机：细碎不停抖动，没有明确注视方向，视野固定 60；
 The camera: a fine shake that will not stop, no clear thing to look at, the view fixed at 60.
 后处理：色调偏向灰白，对比度硬朗，暗角收紧，画面清晰，却难言悦目。
@@ -275,6 +269,12 @@ The three instruments are in place. Please step onto this small stage.
 
 灯光亮起的那一刻，这间小屋，便快要承载不住奔涌的情绪。
 The moment the lights come up, this little room can barely hold the feeling rushing through it.
+
+### 二楼
+### The second floor
+
+恭喜您发现并来到了未解锁区域。未来将会有DJ台，允许您用收集来的声音创作并解谜。
+You have found your way into a room that is not open yet. There will be a DJ booth here, where the sounds you have gathered can be made into something, and used to puzzle a way through.
 
 ### 问
 ### The question

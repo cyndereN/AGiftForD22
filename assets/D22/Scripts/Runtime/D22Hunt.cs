@@ -24,6 +24,7 @@ namespace D22
         readonly List<D22Bird> birds = new();
         readonly List<D22Note> notes = new();
         D22WorldMark cricketMark, grindMark, pigeonMark;
+        D22PigeonFlock pigeons;
         Vector3 pigeonHome;
         AudioClip cricketSfx, pigeonSfx, grindSfx;
         float grindStroke, hopT, hopDur, hopArc, coverDelay, dropLeft;
@@ -57,6 +58,9 @@ namespace D22
         public float CdCricket { get; private set; }
         public float CdPigeon { get; private set; }
         public float CdGrind { get; private set; }
+        float bed = 1f;
+
+        public void SetBed(float scale) => bed = Mathf.Max(0f, scale);
 
         public D22Hunt(D22GameFlow host)
         {
@@ -109,6 +113,8 @@ namespace D22
             foreach (var m in marks) if (m) UnityEngine.Object.Destroy(m.gameObject);
             marks.Clear();
             cricketMark = grindMark = pigeonMark = null;
+            if (pigeons) pigeons.transform.root.gameObject.SetActive(false);
+            pigeons = null;
             Spawned = false;
         }
 
@@ -121,6 +127,12 @@ namespace D22
             grindMark = Make(D22MarkKind.Grind, hutong ? hutong.grindMark : new Vector3(1.85f, .45f, -4.3f), 1.45f);
             pigeonHome = hutong ? hutong.pigeonMark : new Vector3(0, 2.7f, -5.8f);
             pigeonMark = Make(D22MarkKind.Pigeons, pigeonHome, 3.2f);
+            var props = UnityEngine.Object.FindAnyObjectByType<D22HutongProps>(FindObjectsInactive.Include);
+            if (props)
+            {
+                props.Show();
+                pigeons = props.GetComponentInChildren<D22PigeonFlock>(true);
+            }
             var exit = UnityEngine.Object.FindAnyObjectByType<D22Exit>();
             if (exit && !hutong)
             {
@@ -259,8 +271,13 @@ namespace D22
             float dt = Time.unscaledDeltaTime;
             if (pigeonMark)
             {
-                float t = Time.unscaledTime;
-                pigeonMark.transform.position = pigeonHome + new Vector3(Mathf.Sin(t * .7f) * 2.1f, Mathf.Sin(t * .45f) * .35f, Mathf.Cos(t * .7f) * 1.3f);
+                if (pigeons)
+                    pigeonMark.transform.position = pigeons.Center;
+                else
+                {
+                    float t = Time.unscaledTime;
+                    pigeonMark.transform.position = pigeonHome + new Vector3(Mathf.Sin(t * .7f) * 2.1f, Mathf.Sin(t * .45f) * .35f, Mathf.Cos(t * .7f) * 1.3f);
+                }
             }
             UpdateNear(camera, volume);
             UpdateFlock();
@@ -311,7 +328,7 @@ namespace D22
                 return;
             }
             float d = Vector3.Distance(camera.transform.position, cricketMark.transform.position);
-            float vol = d > 8 ? 0 : Mathf.Clamp01(Mathf.Pow(1 - d / 8f, 1.15f)) * Mathf.Lerp(.7f, 1f, volume);
+            float vol = d > 8 ? 0 : Mathf.Clamp01(Mathf.Pow(1 - d / 8f, 1.15f)) * Mathf.Lerp(.7f, 1f, volume) * bed;
             near.volume = vol;
             if (vol > .02f)
             {
@@ -441,7 +458,7 @@ namespace D22
             if (!flock.isPlaying) flock.Play();
         }
 
-        float FlockVol() => Mathf.Lerp(.55f, .95f, flow.Volume);
+        float FlockVol() => Mathf.Lerp(.55f, .95f, flow.Volume) * bed;
 
         void StartGrind(bool fromStart)
         {
@@ -481,7 +498,7 @@ namespace D22
                 return;
             }
             float d = Vector3.Distance(camera.transform.position, grindMark.transform.position);
-            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume);
+            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume) * bed;
             grindLoop.volume = vol;
             if (vol > .02f)
             {

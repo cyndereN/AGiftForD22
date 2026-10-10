@@ -25,6 +25,7 @@ namespace D22
             var keyboard = Keyboard.current;
             if (keyboard == null || view == null) return;
             D22Look.ApplyYawPitch(transform, view, ref pitch, D22GameFlow.UiBlocksLook);
+            D22Feel.NotePose(view);
             float x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);
             float z = (keyboard.wKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed ? 1 : 0);
             var controller = GetComponent<CharacterController>();

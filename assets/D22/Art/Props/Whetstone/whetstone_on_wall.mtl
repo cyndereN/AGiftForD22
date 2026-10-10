@@ -1,0 +1,11 @@
+newmtl tripo_material_e10cfc67_248d_452f_a697_91eff1a7de78
+Kd 1.000000000 1.000000000 1.000000000
+d 1.000000000
+illum 2
+map_Kd whetstone_on_wall_basecolor.jpg
+Pr 1.000000000
+Pm 1.000000000
+map_Pr whetstone_on_wall_roughness.png
+map_Pm whetstone_on_wall_metallic.png
+norm whetstone_on_wall_normal.png
+
