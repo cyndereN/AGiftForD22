@@ -34,7 +34,7 @@ namespace D22
             if (mouse.leftButton.wasPressedThisFrame && !uiBlocks) Lock();
             if (mouse.rightButton.wasPressedThisFrame && !uiBlocks) Lock();
             if (!Locked && !(hold && !uiBlocks)) return false;
-            Vector2 delta = mouse.delta.ReadValue() * Sensitivity;
+            Vector2 delta = mouse.delta.ReadValue() * Sensitivity * D22Feel.Turn;
             if (delta.sqrMagnitude < .0001f) return false;
             degrees = new Vector2(delta.x, -delta.y);
             return true;

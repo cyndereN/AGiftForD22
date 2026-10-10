@@ -58,6 +58,9 @@ namespace D22
         public float CdCricket { get; private set; }
         public float CdPigeon { get; private set; }
         public float CdGrind { get; private set; }
+        float bed = 1f;
+
+        public void SetBed(float scale) => bed = Mathf.Max(0f, scale);
 
         public D22Hunt(D22GameFlow host)
         {
@@ -325,7 +328,7 @@ namespace D22
                 return;
             }
             float d = Vector3.Distance(camera.transform.position, cricketMark.transform.position);
-            float vol = d > 8 ? 0 : Mathf.Clamp01(Mathf.Pow(1 - d / 8f, 1.15f)) * Mathf.Lerp(.7f, 1f, volume);
+            float vol = d > 8 ? 0 : Mathf.Clamp01(Mathf.Pow(1 - d / 8f, 1.15f)) * Mathf.Lerp(.7f, 1f, volume) * bed;
             near.volume = vol;
             if (vol > .02f)
             {
@@ -455,7 +458,7 @@ namespace D22
             if (!flock.isPlaying) flock.Play();
         }
 
-        float FlockVol() => Mathf.Lerp(.55f, .95f, flow.Volume);
+        float FlockVol() => Mathf.Lerp(.55f, .95f, flow.Volume) * bed;
 
         void StartGrind(bool fromStart)
         {
@@ -495,7 +498,7 @@ namespace D22
                 return;
             }
             float d = Vector3.Distance(camera.transform.position, grindMark.transform.position);
-            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume);
+            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume) * bed;
             grindLoop.volume = vol;
             if (vol > .02f)
             {

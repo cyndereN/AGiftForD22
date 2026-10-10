@@ -236,6 +236,12 @@
       "en": "Kind to the players, and kind to the listeners, the name traveled. Bands kept coming. The crowd kept growing. Later, almost every night was full. At ten-thirty the door had to shut."
     }
   ],
+  "loft": [
+    {
+      "zh": "恭喜您发现并来到了未解锁区域。未来将会有DJ台，允许您用收集来的声音创作并解谜。",
+      "en": "You have found your way into a room that is not open yet. There will be a DJ booth here, where the sounds you have gathered can be made into something, and used to puzzle a way through."
+    }
+  ],
   "choice": {
     "zh": "噪音已然将情绪推至高点。喝下这一口，请问您希望带来怎样的感受？",
     "en": "The noise has already pushed the feeling to its height. This mouthful. What do you want it to do?",
