@@ -32,7 +32,6 @@ namespace D22.Editor
             EditorSettings.serializationMode = SerializationMode.ForceText;
             UnityEditor.VersionControlSettings.mode = "Visible Meta Files";
             PlayerSettings.companyName = "D22 Team";
-            PlayerSettings.productName = "D22 Livehouse";
             PlayerSettings.colorSpace = ColorSpace.Linear;
             ConfigurePipeline();
             var data = Data;
@@ -46,7 +45,10 @@ namespace D22.Editor
                 importer.SaveAndReimport();
             }
             BuildEnvironment(data);
+            BuildLivehouseGameplay();
             if (!File.Exists(Scenes + "D22_Lighting.unity")) BuildLighting(data);
+            else SyncManifestLights(data);
+            EnsureD22LightingProfile();
             // Gameplay is authored independently and never replaced on an art republish.
             if (!File.Exists(Scenes + "D22_Gameplay.unity")) BuildGameplay();
             if (!File.Exists(Scenes + "D22_Bootstrap.unity"))
@@ -154,7 +156,7 @@ namespace D22.Editor
                     if (sources.TryGetValue(renderer.gameObject.name, out var source) && group == "Architecture")
                     {
                         string name = ((string)source["source_name"]).ToLowerInvariant();
-                        bool solid = new[] { "floor", "deck", "stair", "wall", "pier", "riser", "fascia", "bearing", "tread" }.Any(name.Contains);
+                        bool solid = new[] { "floor", "deck", "stair", "wall", "pier", "riser", "fascia", "bearing", "tread", "slat", "backing", "return", "lintel", "jamb", "door /" }.Any(name.Contains);
                         if (solid && !name.Contains("brick") && !name.Contains("photo") && !name.Contains("notice"))
                             renderer.gameObject.AddComponent<MeshCollider>();
                     }
@@ -173,19 +175,7 @@ namespace D22.Editor
                 var obj = new GameObject((string)item["name"]);
                 obj.transform.position = Vec(item["position"]);
                 obj.transform.rotation = Quaternion.LookRotation(Vec(item["direction"]), Vector3.up);
-                var light = obj.AddComponent<Light>();
-                string type = (string)item["type"];
-                light.type = type == "SPOT" ? LightType.Spot : type == "AREA" ? LightType.Rectangle : LightType.Point;
-                light.color = Col(item["color"]).gamma;
-                light.range = ((string)item["name"]).StartsWith("L0") ? 9 : 5;
-                light.intensity = type == "SPOT" ? (float)item["power"] / 30f : type == "AREA" ? (float)item["power"] / 12f : (float)item["power"] / 2f;
-                light.bounceIntensity = 1.3f;
-                light.spotAngle = Mathf.Clamp((float)item["angle"],1,175);
-                light.innerSpotAngle = light.spotAngle * (1 - (float)item["blend"]*.65f);
-                light.areaSize = new Vector2((float)item["size"], (float)item["size_y"]);
-                light.shadowBias = .015f; light.shadowNormalBias = .035f; light.shadowNearPlane = .03f;
-                light.shadows = LightShadows.Soft;
-                light.lightmapBakeType = type == "AREA" || !((string)item["name"]).StartsWith("L0") ? LightmapBakeType.Baked : LightmapBakeType.Mixed;
+                ApplyManifestLight(obj.AddComponent<Light>(), item);
             }
             RenderSettings.skybox = null;
             RenderSettings.ambientMode = AmbientMode.Trilight;
@@ -229,6 +219,104 @@ namespace D22.Editor
             EditorSceneManager.SaveScene(scene,Scenes+"D22_Gameplay.unity");
         }
 
+        static void Boundary(string name,Vector3 position,Vector3 size)
+        {
+            var obj=GameObject.Find(name);
+            if(obj) Object.DestroyImmediate(obj);
+            obj=new GameObject(name);
+            obj.transform.position=position;
+            var box=obj.AddComponent<BoxCollider>();
+            box.size=size;box.isTrigger=false;
+        }
+
+        static void Exit(string name,Vector3 position,float radius,string nextScene,string label)
+        {
+            var obj=GameObject.Find(name);
+            if(!obj)obj=new GameObject(name);
+            obj.transform.position=position;
+            var exit=obj.GetComponent<D22Exit>();
+            if(!exit)exit=obj.AddComponent<D22Exit>();
+            exit.radius=radius;exit.nextScene=nextScene;exit.label=label;
+        }
+
+        static void BuildLivehouseGameplay()
+        {
+            var scene=EditorSceneManager.OpenScene(Scenes+"D22_Environment.unity",OpenSceneMode.Single);
+            // The visible side walls consist of many separate timber slats. Continuous
+            // colliders close their seams so a CharacterController cannot leave the room.
+            Boundary("Venue Safety / Left side wall",new Vector3(-3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
+            Boundary("Venue Safety / Right side wall",new Vector3(3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
+            Boundary("Venue Safety / Rear lower wall",new Vector3(0,1.33f,6.55f),new Vector3(6.4f,2.66f,.14f));
+            Boundary("Venue Safety / Entrance edge",new Vector3(0,1.25f,-6.52f),new Vector3(1.5f,2.5f,.16f));
+            Boundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.75f,7.49f),new Vector3(1.35f,2.2f,.16f));
+            EditorSceneManager.SaveScene(scene);
+
+            scene=EditorSceneManager.OpenScene(Scenes+"D22_Gameplay.unity",OpenSceneMode.Single);
+            Exit("Venue Entrance / Return to Hutong",new Vector3(0,1.55f,-6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Upper Exit / Return to Hutong",new Vector3(2.1f,3.95f,6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Stage Exit",new Vector3(0,1.8f,4),2f,"D22_Performance","演出开始 / HEAR THE SHOW");
+            EditorSceneManager.SaveScene(scene);
+        }
+
+        static void SyncManifestLights(JObject data)
+        {
+            var scene=EditorSceneManager.OpenScene(Scenes+"D22_Lighting.unity",OpenSceneMode.Single);
+            // Previous publishes kept a LightingDataAsset but no usable lightmaps.
+            // Clear its baked-light flags before reusing the existing Light objects.
+            Lightmapping.Clear();
+            Lightmapping.lightingDataAsset=null;
+            foreach(var item in data["lights"])
+            {
+                string name=(string)item["name"];
+                var obj=GameObject.Find(name);
+                if(name.StartsWith("Entry ") && obj){Object.DestroyImmediate(obj);obj=null;}
+                if(!obj)obj=new GameObject(name);
+                obj.transform.position=Vec(item["position"]);
+                obj.transform.rotation=Quaternion.LookRotation(Vec(item["direction"]),Vector3.up);
+                var light=obj.GetComponent<Light>();
+                if(!light)light=obj.AddComponent<Light>();
+                ApplyManifestLight(light,item);
+            }
+            EditorSceneManager.SaveScene(scene);
+        }
+
+        static void ApplyManifestLight(Light light, JToken item)
+        {
+            string name=(string)item["name"], sourceType=(string)item["type"];
+            bool area=sourceType=="AREA";
+            // URP does not render Rectangle lights in real time. The project currently
+            // has no baked lightmaps, so use a live approximation at the Blender pose.
+            light.type=sourceType=="SPOT" || area && !name.StartsWith("Photo warm pool")
+                ? LightType.Spot : LightType.Point;
+            light.color=Col(item["color"]).gamma;
+            light.range=name.StartsWith("L0")?9:name.StartsWith("Photo warm pool")?2.5f:5;
+            light.intensity=sourceType=="SPOT"?(float)item["power"]/30f
+                :area?(float)item["power"]/10f:(float)item["power"]/2f;
+            light.bounceIntensity=1.3f;
+            light.spotAngle=area?name.StartsWith("Bar task pool")?95f:110f
+                :Mathf.Clamp((float)item["angle"],1,175);
+            light.innerSpotAngle=light.spotAngle*(1-(float)item["blend"]*.65f);
+            light.shadowBias=.015f;light.shadowNormalBias=.035f;light.shadowNearPlane=.03f;
+            light.shadows=sourceType=="SPOT" && name.StartsWith("L0") || name.StartsWith("Bar task pool")
+                ?LightShadows.Soft:LightShadows.None;
+            light.lightmapBakeType=LightmapBakeType.Realtime;
+            var baking=light.bakingOutput;
+            baking.isBaked=false;
+            baking.lightmapBakeType=LightmapBakeType.Realtime;
+            light.bakingOutput=baking;
+        }
+
+        static void EnsureD22LightingProfile()
+        {
+            var profile=AssetDatabase.LoadAssetAtPath<VolumeProfile>(Root+"/Settings/D22Volume.asset");
+            if(!profile){profile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(profile,Root+"/Settings/D22Volume.asset");}
+            if(!profile.TryGet<Tonemapping>(out var tonemapping))tonemapping=profile.Add<Tonemapping>(true);
+            tonemapping.mode.Override(TonemappingMode.ACES);
+            if(!profile.TryGet<ColorAdjustments>(out var color))color=profile.Add<ColorAdjustments>(true);
+            color.postExposure.Override(.7f);
+            EditorUtility.SetDirty(profile);AssetDatabase.SaveAssets();
+        }
+
         [MenuItem("D22/Open Collaborative Workspace")]
         public static void OpenWorkspace()
         {
@@ -245,7 +333,8 @@ namespace D22.Editor
         {
             var meshes=Object.FindObjectsByType<MeshRenderer>();
             var missing=meshes.Where(r=>r.sharedMaterials.Any(m=>!m||!m.shader||m.shader.name.Contains("Error"))).Select(r=>r.name).ToArray();
-            var report=new JObject { ["unity_version"]=Application.unityVersion,["renderer_count"]=meshes.Length,["missing_materials"]=new JArray(missing),["lights"]=Object.FindObjectsByType<Light>().Length,["colliders"]=Object.FindObjectsByType<Collider>().Length,["lightmaps"]=LightmapSettings.lightmaps.Length,["scene_count"]=SceneManager.sceneCount };
+            var lights=Object.FindObjectsByType<Light>();
+            var report=new JObject { ["unity_version"]=Application.unityVersion,["renderer_count"]=meshes.Length,["missing_materials"]=new JArray(missing),["lights"]=lights.Length,["colliders"]=Object.FindObjectsByType<Collider>().Length,["lightmaps"]=LightmapSettings.lightmaps.Length,["scene_count"]=SceneManager.sceneCount };
             var sources=Data["objects"].ToDictionary(o=>(string)o["id"]);
             float maxError=0; int matched=0; var placementErrors=new JArray();
             foreach(var renderer in meshes)
@@ -265,10 +354,33 @@ namespace D22.Editor
             bool floor=floorHits.Length>0;
             var floorHit=floor?floorHits[0]:default;
             report["spawn_floor_hit"]=floor;report["spawn_floor_height_m"]=floor?floorHit.point.y:0;
+            var lightIssues=new JArray();
+            foreach(var source in Data["lights"])
+            {
+                string name=(string)source["name"];
+                var matches=lights.Where(l=>l.name==name).ToArray();
+                if(matches.Length!=1 || !matches[0].enabled || matches[0].lightmapBakeType!=LightmapBakeType.Realtime || matches[0].bakingOutput.isBaked || matches[0].type==LightType.Rectangle)
+                    lightIssues.Add(name);
+            }
+            report["source_light_count"]=Data["lights"].Count();
+            report["manifest_light_issues"]=lightIssues;
+            var boundaryFailures=new JArray();
+            for(float z=-5;z<=5;z+=5)
+            {
+                if(!HitsBoundary("Venue Safety / Left side wall",new Vector3(-2.5f,1.2f,z),Vector3.left,1.5f))boundaryFailures.Add("left at z="+z);
+                if(!HitsBoundary("Venue Safety / Right side wall",new Vector3(2.5f,1.2f,z),Vector3.right,1.5f))boundaryFailures.Add("right at z="+z);
+            }
+            if(!HitsBoundary("Venue Safety / Rear lower wall",new Vector3(0,1.2f,5.8f),Vector3.forward,1.5f))boundaryFailures.Add("rear");
+            if(!HitsBoundary("Venue Safety / Entrance edge",new Vector3(0,1.2f,-5.8f),Vector3.back,1.5f))boundaryFailures.Add("entrance");
+            if(!HitsBoundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.8f,6.8f),Vector3.forward,1.5f))boundaryFailures.Add("upper exit");
+            report["boundary_ray_failures"]=boundaryFailures;
             File.WriteAllText(Root+"/Validation/migration-report.json",report.ToString());
-            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !floor || Mathf.Abs(floorHit.point.y)>.3f)throw new InvalidOperationException("D22 migration validation failed: "+report);
+            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !floor || Mathf.Abs(floorHit.point.y)>.3f || lightIssues.Count>0 || boundaryFailures.Count>0)throw new InvalidOperationException("D22 migration validation failed: "+report);
             Debug.Log("D22_VALIDATION "+report.ToString(Newtonsoft.Json.Formatting.None));
         }
+
+        static bool HitsBoundary(string name,Vector3 origin,Vector3 direction,float distance)
+        { return Physics.RaycastAll(origin,direction,distance).Any(hit=>hit.collider.name==name && hit.collider.gameObject.scene.name=="D22_Environment"); }
 
         [MenuItem("D22/Bake Lighting")]
         public static void Bake()

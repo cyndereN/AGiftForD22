@@ -1,14 +1,17 @@
 {
   "unity_version": "6000.6.4f1",
-  "renderer_count": 1485,
+  "renderer_count": 1501,
   "missing_materials": [],
-  "lights": 47,
-  "colliders": 130,
-  "lightmaps": 3,
+  "lights": 49,
+  "colliders": 267,
+  "lightmaps": 0,
   "scene_count": 4,
-  "matched_source_objects": 1485,
+  "matched_source_objects": 1501,
   "max_object_center_error_m": 1.72338866E-06,
   "placement_errors": [],
   "spawn_floor_hit": true,
-  "spawn_floor_height_m": 0.0275921226
+  "spawn_floor_height_m": 0.0275921226,
+  "source_light_count": 49,
+  "manifest_light_issues": [],
+  "boundary_ray_failures": []
 }

@@ -3,7 +3,7 @@
   "source": "blender/source/D22_Balanced_Lighting_v18.blend",
   "source_units_m": 1.0,
   "coordinate_mapping": "Unity (x,y,z) = Blender (x,z,y); FBX converted by importer",
-  "geometry_count": 1485,
+  "geometry_count": 1501,
   "materials": [
     {
       "id": "Bar_menu_printed_surface_ba868757",
@@ -24,7 +24,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/bar-menu_png_17b77a74.png",
+      "base_map": "assets/D22/Art/Textures/bar-menu_png_17b77a74.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -51,7 +51,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/tape-note_png_d7a0af12.png",
+      "base_map": "assets/D22/Art/Textures/tape-note_png_d7a0af12.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -78,7 +78,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/notice_png_4bfc9159.png",
+      "base_map": "assets/D22/Art/Textures/notice_png_4bfc9159.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -105,7 +105,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/tape-note_png_d7a0af12.png",
+      "base_map": "assets/D22/Art/Textures/tape-note_png_d7a0af12.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -132,7 +132,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/notice_png_4bfc9159.png",
+      "base_map": "assets/D22/Art/Textures/notice_png_4bfc9159.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -240,11 +240,173 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/D-22-centered-stencil_png_e1f02ae5.png",
+      "base_map": "assets/D22/Art/Textures/D-22-centered-stencil_png_e1f02ae5.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
       "alpha_clip": true,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_brushed_brass_c1b5453a",
+      "source_name": "Entry vestibule / brushed brass",
+      "base_color": [
+        0.2800000011920929,
+        0.11999999731779099,
+        0.03500000014901161,
+        1.0
+      ],
+      "metallic": 0.6499999761581421,
+      "roughness": 0.30000001192092896,
+      "normal_scale": 1.0,
+      "emission": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_charcoal_glass_481ff15a",
+      "source_name": "Entry vestibule / charcoal glass",
+      "base_color": [
+        0.02500000037252903,
+        0.04500000178813934,
+        0.06499999761581421,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.2199999988079071,
+      "normal_scale": 1.0,
+      "emission": [
+        0.019999999552965164,
+        0.054999999701976776,
+        0.10000000149011612,
+        1.0
+      ],
+      "emission_strength": 0.3499999940395355,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_deep_red_paint_0dfcbff4",
+      "source_name": "Entry vestibule / deep red paint",
+      "base_color": [
+        0.1599999964237213,
+        0.014999999664723873,
+        0.017999999225139618,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6200000047683716,
+      "normal_scale": 1.0,
+      "emission": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_warm_lightbox_10d8a0b1",
+      "source_name": "Entry vestibule / warm lightbox",
+      "base_color": [
+        0.8999999761581421,
+        0.25999999046325684,
+        0.054999999701976776,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.3199999928474426,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        0.14000000059604645,
+        0.02500000037252903,
+        1.0
+      ],
+      "emission_strength": 3.5,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_warm_red_trim_29127397",
+      "source_name": "Entry vestibule / warm red trim",
+      "base_color": [
+        0.3799999952316284,
+        0.03500000014901161,
+        0.02500000037252903,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    },
+    {
+      "id": "Entry_vestibule_worn_floor_c15ed50b",
+      "source_name": "Entry vestibule / worn floor",
+      "base_color": [
+        0.07000000029802322,
+        0.054999999701976776,
+        0.05000000074505806,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.8199999928474426,
+      "normal_scale": 1.0,
+      "emission": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "emission_strength": 0.0,
+      "base_map": "",
+      "normal_map": "",
+      "metallic_map": "",
+      "emission_map": "",
+      "alpha_clip": false,
       "transparent": false,
       "notes": []
     },
@@ -267,7 +429,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/setlist_png_564c03eb.png",
+      "base_map": "assets/D22/Art/Textures/setlist_png_564c03eb.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -321,9 +483,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_001_d532886b.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_001_30b0027f.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_001_ba7590df_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_001_d532886b.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_001_30b0027f.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_001_ba7590df_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -348,9 +510,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_003_6e275656.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_003_b9865255.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_003_afe13760_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_003_6e275656.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_003_b9865255.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_003_afe13760_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -375,9 +537,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_004_80b58501.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_004_10ddba74.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_004_1cb8a17b_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_004_80b58501.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_004_10ddba74.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_004_1cb8a17b_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -402,9 +564,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_005_81e28d48.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_005_2df1b277.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_005_2fff5b5e_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_005_81e28d48.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_005_2df1b277.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_005_2fff5b5e_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -429,9 +591,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_006_ecbc9c4e.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_006_dcc356cf.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_006_54ba4c12_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_006_ecbc9c4e.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_006_dcc356cf.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_006_54ba4c12_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -456,9 +618,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_007_6eb71f0a.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_007_68c101f2.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_007_357a1d56_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_007_6eb71f0a.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_007_68c101f2.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_007_357a1d56_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -483,9 +645,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_008_261468fe.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_008_f7d58e34.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_008_49271704_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_008_261468fe.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_008_f7d58e34.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_008_49271704_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -510,9 +672,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_009_782f40f3.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_009_3ca7e920.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_009_ccdddb57_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_009_782f40f3.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_009_3ca7e920.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_009_ccdddb57_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -537,9 +699,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_010_67abf42f.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_010_0c4200d2.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_010_5e19e27e_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_010_67abf42f.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_010_0c4200d2.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_010_5e19e27e_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -564,9 +726,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_011_a4780931.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_011_adf6c766.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_011_f0febb9e_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_011_a4780931.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_011_adf6c766.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_011_f0febb9e_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -591,9 +753,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_012_222f29a3.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_012_20753a6b.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_012_21c0caac_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_012_222f29a3.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_012_20753a6b.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_012_21c0caac_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -618,9 +780,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_013_658a3879.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_013_fabd94c0.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_013_ea534a0b_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_013_658a3879.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_013_fabd94c0.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_013_ea534a0b_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -645,9 +807,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_014_75242ca9.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_014_38ae5c8b.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_014_b82291f8_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_014_75242ca9.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_014_38ae5c8b.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_014_b82291f8_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -672,9 +834,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_015_2a27f8de.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_015_e8658e9c.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_015_e3e01357_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_015_2a27f8de.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_015_e8658e9c.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_015_e3e01357_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -699,9 +861,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_016_af47aa41.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_016_7b8a029d.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_016_8ea1c26c_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_016_af47aa41.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_016_7b8a029d.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_016_8ea1c26c_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -726,9 +888,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_017_941cc9e0.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_017_c5d8a856.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_017_197876e6_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_017_941cc9e0.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_017_c5d8a856.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_017_197876e6_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -753,9 +915,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_018_8ab96613.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_018_16a2ed10.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_018_094295cf_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_018_8ab96613.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_018_16a2ed10.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_018_094295cf_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -780,9 +942,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_019_88b4dc37.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_019_a8301a96.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_019_3266f562_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_019_88b4dc37.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_019_a8301a96.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_019_3266f562_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -807,9 +969,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_020_a3c6dc7b.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_020_ece87ff7.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_020_9ec580d4_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_020_a3c6dc7b.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_020_ece87ff7.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_020_9ec580d4_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -834,9 +996,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_021_f999df91.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_021_7fb4ab5d.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_021_5a03ee8c_MetallicSmoothness.png",
+      "base_map": "assets/D22/Art/Textures/Image_0_021_f999df91.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_021_7fb4ab5d.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_021_5a03ee8c_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -861,10 +1023,10 @@
         1.0
       ],
       "emission_strength": 1.0,
-      "base_map": "Assets/D22/Art/Textures/Image_0_022_84b03744.jpg",
-      "normal_map": "Assets/D22/Art/Textures/Image_2_022_aec7746c.jpg",
-      "metallic_map": "Assets/D22/Art/Textures/Material_0_022_dfc57f45_MetallicSmoothness.png",
-      "emission_map": "Assets/D22/Art/Textures/Image_3_1083cbea.jpg",
+      "base_map": "assets/D22/Art/Textures/Image_0_022_84b03744.jpg",
+      "normal_map": "assets/D22/Art/Textures/Image_2_022_aec7746c.jpg",
+      "metallic_map": "assets/D22/Art/Textures/Material_0_022_dfc57f45_MetallicSmoothness.png",
+      "emission_map": "assets/D22/Art/Textures/Image_3_1083cbea.jpg",
       "alpha_clip": false,
       "transparent": false,
       "notes": []
@@ -888,7 +1050,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/setlist_png_564c03eb.png",
+      "base_map": "assets/D22/Art/Textures/setlist_png_564c03eb.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -915,7 +1077,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/notice_png_4bfc9159.png",
+      "base_map": "assets/D22/Art/Textures/notice_png_4bfc9159.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -942,7 +1104,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/setlist_png_564c03eb.png",
+      "base_map": "assets/D22/Art/Textures/setlist_png_564c03eb.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -969,7 +1131,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/notice_png_4bfc9159.png",
+      "base_map": "assets/D22/Art/Textures/notice_png_4bfc9159.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -996,7 +1158,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/setlist_png_564c03eb.png",
+      "base_map": "assets/D22/Art/Textures/setlist_png_564c03eb.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1023,7 +1185,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/notice_png_4bfc9159.png",
+      "base_map": "assets/D22/Art/Textures/notice_png_4bfc9159.png",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1050,7 +1212,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
+      "base_map": "assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1077,7 +1239,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
+      "base_map": "assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1104,7 +1266,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-2_jpg_f82724aa.jpg",
+      "base_map": "assets/D22/Art/Textures/band-2_jpg_f82724aa.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1131,7 +1293,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-3_jpg_8ec0f181.jpg",
+      "base_map": "assets/D22/Art/Textures/band-3_jpg_8ec0f181.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1158,7 +1320,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-4_jpg_5d2f607e.jpg",
+      "base_map": "assets/D22/Art/Textures/band-4_jpg_5d2f607e.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1185,7 +1347,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-5_jpg_658f06ed.jpg",
+      "base_map": "assets/D22/Art/Textures/band-5_jpg_658f06ed.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1212,7 +1374,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
+      "base_map": "assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1239,7 +1401,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
+      "base_map": "assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1266,7 +1428,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-2_jpg_f82724aa.jpg",
+      "base_map": "assets/D22/Art/Textures/band-2_jpg_f82724aa.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1293,7 +1455,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-3_jpg_8ec0f181.jpg",
+      "base_map": "assets/D22/Art/Textures/band-3_jpg_8ec0f181.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1320,7 +1482,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-4_jpg_5d2f607e.jpg",
+      "base_map": "assets/D22/Art/Textures/band-4_jpg_5d2f607e.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1347,7 +1509,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-5_jpg_658f06ed.jpg",
+      "base_map": "assets/D22/Art/Textures/band-5_jpg_658f06ed.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1374,7 +1536,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
+      "base_map": "assets/D22/Art/Textures/band-0_jpg_d8449ebc.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1401,7 +1563,7 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
+      "base_map": "assets/D22/Art/Textures/band-1_jpg_e6b0a988.jpg",
       "normal_map": "",
       "metallic_map": "",
       "emission_map": "",
@@ -1428,9 +1590,9 @@
         1.0
       ],
       "emission_strength": 0.0,
-      "base_map": "Assets/D22/Art/Textures/wood_floor_worn_Diffuse_neutral_jpg_baed4030.jpg",
+      "base_map": "assets/D22/Art/Textures/wood_floor_worn_Diffuse_neutral_jpg_baed4030.jpg",
       "normal_map": "",
-      "metallic_map": "Assets/D22/Art/Textures/Stage_scuffed_dark_planks_8133ab1d_MetallicSmoothness.png",
+      "metallic_map": "assets/D22/Art/Textures/Stage_scuffed_dark_planks_8133ab1d_MetallicSmoothness.png",
       "emission_map": "",
       "alpha_clip": false,
       "transparent": false,
@@ -5950,6 +6112,310 @@
       "polygons": 108,
       "materials": [
         "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_rear_wall_e94c3228",
+      "source_name": "Entry vestibule / rear wall",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.1749999523162842,
+        -7.690000057220459,
+        0.0
+      ],
+      "bounds_max": [
+        1.1749999523162842,
+        -7.549999713897705,
+        3.0999999046325684
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_deep_red_paint_0dfcbff4"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_rear_inset_441a182d",
+      "source_name": "Entry vestibule / rear inset",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.7400000095367432,
+        -7.547500133514404,
+        0.1549999713897705
+      ],
+      "bounds_max": [
+        0.7400000095367432,
+        -7.512500286102295,
+        2.4049999713897705
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_charcoal_glass_481ff15a"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_floor_47a767de",
+      "source_name": "Entry vestibule / floor",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.9750000238418579,
+        -7.575000286102295,
+        0.0
+      ],
+      "bounds_max": [
+        0.9750000238418579,
+        -6.525000095367432,
+        0.07000000029802322
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_worn_floor_c15ed50b"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_left_return_658d98b9",
+      "source_name": "Entry vestibule / left return",
+      "group": "Architecture",
+      "bounds_min": [
+        -1.0199999809265137,
+        -7.575000286102295,
+        0.0
+      ],
+      "bounds_max": [
+        -0.8999999761581421,
+        -6.525000095367432,
+        2.9000000953674316
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_warm_red_trim_29127397"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_right_return_15d37c64",
+      "source_name": "Entry vestibule / right return",
+      "group": "Architecture",
+      "bounds_min": [
+        0.8999999761581421,
+        -7.575000286102295,
+        0.0
+      ],
+      "bounds_max": [
+        1.0199999809265137,
+        -6.525000095367432,
+        2.9000000953674316
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_warm_red_trim_29127397"
+      ]
+    },
+    {
+      "id": "Entry_door_left_leaf_5502a179",
+      "source_name": "Entry door / left leaf",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.7625000476837158,
+        -6.615000247955322,
+        0.04499995708465576
+      ],
+      "bounds_max": [
+        -0.027500003576278687,
+        -6.525000095367432,
+        2.2950000762939453
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_warm_red_trim_29127397"
+      ]
+    },
+    {
+      "id": "Entry_door_right_leaf_8e63a898",
+      "source_name": "Entry door / right leaf",
+      "group": "Architecture",
+      "bounds_min": [
+        0.027500003576278687,
+        -6.615000247955322,
+        0.04499995708465576
+      ],
+      "bounds_max": [
+        0.7625000476837158,
+        -6.525000095367432,
+        2.2950000762939453
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_warm_red_trim_29127397"
+      ]
+    },
+    {
+      "id": "Entry_door_left_glass_4c0c1594",
+      "source_name": "Entry door / left glass",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.6700000166893005,
+        -6.527499675750732,
+        1.1399999856948853
+      ],
+      "bounds_max": [
+        -0.12000000476837158,
+        -6.502500057220459,
+        1.959999918937683
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_charcoal_glass_481ff15a"
+      ]
+    },
+    {
+      "id": "Entry_door_right_glass_8184b2b5",
+      "source_name": "Entry door / right glass",
+      "group": "Architecture",
+      "bounds_min": [
+        0.12000000476837158,
+        -6.527499675750732,
+        1.1399999856948853
+      ],
+      "bounds_max": [
+        0.6700000166893005,
+        -6.502500057220459,
+        1.959999918937683
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_charcoal_glass_481ff15a"
+      ]
+    },
+    {
+      "id": "Entry_door_left_handle_dc4f294c",
+      "source_name": "Entry door / left handle",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.10250000655651093,
+        -6.487500190734863,
+        0.9900000095367432
+      ],
+      "bounds_max": [
+        -0.04750000312924385,
+        -6.432499885559082,
+        1.1700000762939453
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "Entry_door_right_handle_b3491a24",
+      "source_name": "Entry door / right handle",
+      "group": "Architecture",
+      "bounds_min": [
+        0.04750000312924385,
+        -6.487500190734863,
+        0.9900000095367432
+      ],
+      "bounds_max": [
+        0.10250000655651093,
+        -6.432499885559082,
+        1.1700000762939453
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "Entry_door_left_jamb_c9cd0ebe",
+      "source_name": "Entry door / left jamb",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8400000333786011,
+        -6.62000036239624,
+        -0.03000009059906006
+      ],
+      "bounds_max": [
+        -0.7400000095367432,
+        -6.480000019073486,
+        2.3899998664855957
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "Entry_door_right_jamb_6b0dd3b1",
+      "source_name": "Entry door / right jamb",
+      "group": "Architecture",
+      "bounds_min": [
+        0.7400000095367432,
+        -6.62000036239624,
+        -0.03000009059906006
+      ],
+      "bounds_max": [
+        0.8400000333786011,
+        -6.480000019073486,
+        2.3899998664855957
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "Entry_door_header_52094f60",
+      "source_name": "Entry door / header",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8399999737739563,
+        -6.62000036239624,
+        2.320000171661377
+      ],
+      "bounds_max": [
+        0.8399999737739563,
+        -6.480000019073486,
+        2.440000057220459
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_D22_lightbox_d6105513",
+      "source_name": "Entry vestibule / D22 lightbox",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.4399999976158142,
+        -7.507499694824219,
+        2.190000057220459
+      ],
+      "bounds_max": [
+        0.4399999976158142,
+        -7.472499847412109,
+        2.369999885559082
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_warm_lightbox_10d8a0b1"
+      ]
+    },
+    {
+      "id": "Entry_vestibule_threshold_b92a3bba",
+      "source_name": "Entry vestibule / threshold",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.8600000143051147,
+        -6.899999618530273,
+        0.03999999910593033
+      ],
+      "bounds_max": [
+        0.8600000143051147,
+        -6.539999961853027,
+        0.11999999731779099
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
       ]
     },
     {
@@ -29942,6 +30408,58 @@
     }
   ],
   "lights": [
+    {
+      "name": "Entry vestibule practical",
+      "type": "POINT",
+      "position": [
+        0.0,
+        1.9500000476837158,
+        -7.159999847412109
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "color": [
+        1.0,
+        0.2800000011920929,
+        0.10000000149011612
+      ],
+      "power": 18.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 0.1,
+      "size_y": 0.1,
+      "radius": 0.1599999964237213,
+      "group": "00 LIGHTS / Editable illumination - expand groups"
+    },
+    {
+      "name": "Entry threshold fill",
+      "type": "POINT",
+      "position": [
+        0.0,
+        1.25,
+        -6.199999809265137
+      ],
+      "direction": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "color": [
+        1.0,
+        0.5799999833106995,
+        0.3199999928474426
+      ],
+      "power": 7.0,
+      "angle": 90.0,
+      "blend": 0.5,
+      "size": 0.1,
+      "size_y": 0.1,
+      "radius": 0.11999999731779099,
+      "group": "00 LIGHTS / Editable illumination - expand groups"
+    },
     {
       "name": "L01 / Stage PAR soft edge - 300W",
       "type": "SPOT",

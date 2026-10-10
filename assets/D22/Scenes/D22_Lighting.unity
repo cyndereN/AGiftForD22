@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000008, guid: 3d6e02940846c4157982756457833c1f, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: c4f391eb5b397465e8f686d0c8a677bd, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -146,21 +146,21 @@ Light:
   m_GameObject: {fileID: 42633263}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.8703449, b: 0.7083696, a: 1}
-  m_Intensity: 1.25
+  m_Intensity: 1.5
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -187,7 +187,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.24, y: 0.25}
   m_BounceIntensity: 1.3
@@ -281,13 +281,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -314,7 +314,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -400,21 +400,21 @@ Light:
   m_GameObject: {fileID: 180906369}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -441,7 +441,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -527,21 +527,21 @@ Light:
   m_GameObject: {fileID: 200665856}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -568,7 +568,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -627,133 +627,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1 &205467047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 205467049}
-  - component: {fileID: 205467048}
-  - component: {fileID: 205467050}
-  m_Layer: 0
-  m_Name: Entry cold exterior
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &205467048
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205467047}
-  m_Enabled: 1
-  serializedVersion: 13
-  m_Type: 3
-  m_Color: {r: 0.57487094, g: 0.71524084, b: 0.880825, a: 1}
-  m_Intensity: 10.416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
-  m_CookieSize2D: {x: 0.5, y: 0.5}
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.015
-    m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1.3, y: 2.3}
-  m_BounceIntensity: 1.3
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ForceVisible: 0
-  m_ShapeRadius: 0.025
-  m_ShadowAngle: 0
-  m_LightUnit: 1
-  m_LuxAtDistance: 1
-  m_EnableSpotReflector: 1
---- !u!4 &205467049
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205467047}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.052952472, y: 0.010621567, z: -0.00056326034, w: 0.9985404}
-  m_LocalPosition: {x: 0, y: 1.5, z: -6.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &205467050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205467047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_CustomShadowLayers: 0
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
-  m_SoftShadowQuality: 0
-  m_RenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_ShadowRenderingLayersMask:
-    serializedVersion: 0
-    m_Bits: 1
-  m_Version: 4
-  m_LightLayerMask: 1
-  m_ShadowLayerMask: 1
-  m_RenderingLayers: 1
-  m_ShadowRenderingLayers: 1
 --- !u!1 &289922824
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,21 +654,21 @@ Light:
   m_GameObject: {fileID: 289922824}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.9162735, b: 0.81525064, a: 1}
-  m_Intensity: 6.25
+  m_Intensity: 7.5
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -822,7 +695,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 2, y: 0.25}
   m_BounceIntensity: 1.3
@@ -916,13 +789,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -949,7 +822,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -1043,13 +916,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1076,7 +949,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -1135,6 +1008,103 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &388757060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388757062}
+  - component: {fileID: 388757061}
+  m_Layer: 0
+  m_Name: Entry vestibule practical
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &388757061
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388757060}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 2
+  m_Color: {r: 1, g: 0.56572837, b: 0.34919015, a: 1}
+  m_Intensity: 9
+  m_Range: 5
+  m_SpotAngle: 90
+  m_InnerSpotAngle: 60.75
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.015
+    m_NormalBias: 0.035
+    m_NearPlane: 0.03
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1.3
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &388757062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388757060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.95, z: -7.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &403876067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1146,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1203,7 +1173,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -1289,21 +1259,21 @@ Light:
   m_GameObject: {fileID: 454858695}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.9013064, b: 0.7673756, a: 1}
-  m_Intensity: 1.6666666
+  m_Intensity: 2
   m_Range: 9
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1330,7 +1300,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.35, y: 0.25}
   m_BounceIntensity: 1.3
@@ -1389,6 +1359,103 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &527805877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527805879}
+  - component: {fileID: 527805878}
+  m_Layer: 0
+  m_Name: Entry cold exterior
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &527805878
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527805877}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 0
+  m_Color: {r: 0.57487094, g: 0.71524084, b: 0.880825, a: 1}
+  m_Intensity: 12.5
+  m_Range: 5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.015
+    m_NormalBias: 0.035
+    m_NearPlane: 0.03
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1.3
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &527805879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527805877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.052952472, y: 0.010621567, z: -0.00056326034, w: 0.9985404}
+  m_LocalPosition: {x: 0, y: 1.5, z: -6.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537730941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,21 +1483,21 @@ Light:
   m_GameObject: {fileID: 537730941}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1457,7 +1524,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -1543,12 +1610,12 @@ Light:
   m_GameObject: {fileID: 553754390}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.85430574, b: 0.66518503, a: 1}
-  m_Intensity: 2.8333333
+  m_Intensity: 3.4
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 95
+  m_InnerSpotAngle: 64.125
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 2
@@ -1557,7 +1624,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1584,7 +1651,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.4, y: 0.25}
   m_BounceIntensity: 1.3
@@ -1684,7 +1751,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1711,7 +1778,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -1805,13 +1872,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1838,7 +1905,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -1938,7 +2005,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1965,7 +2032,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -2051,21 +2118,21 @@ Light:
   m_GameObject: {fileID: 653435288}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2092,7 +2159,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -2178,21 +2245,21 @@ Light:
   m_GameObject: {fileID: 659386584}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.9013064, b: 0.7673756, a: 1}
-  m_Intensity: 1.6666666
+  m_Intensity: 2
   m_Range: 9
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2219,7 +2286,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.35, y: 0.25}
   m_BounceIntensity: 1.3
@@ -2305,21 +2372,21 @@ Light:
   m_GameObject: {fileID: 743168491}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.8703449, b: 0.7083696, a: 1}
-  m_Intensity: 1.25
+  m_Intensity: 1.5
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2346,7 +2413,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.24, y: 0.25}
   m_BounceIntensity: 1.3
@@ -2432,12 +2499,12 @@ Light:
   m_GameObject: {fileID: 794713671}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.85430574, b: 0.66518503, a: 1}
-  m_Intensity: 2.8333333
+  m_Intensity: 3.4
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 95
+  m_InnerSpotAngle: 64.125
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 2
@@ -2446,7 +2513,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2473,7 +2540,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.4, y: 0.25}
   m_BounceIntensity: 1.3
@@ -2729,13 +2796,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2762,7 +2829,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -2848,21 +2915,21 @@ Light:
   m_GameObject: {fileID: 1114002932}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -2889,7 +2956,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -2983,13 +3050,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3016,7 +3083,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -3102,21 +3169,21 @@ Light:
   m_GameObject: {fileID: 1131005400}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.8703449, b: 0.7083696, a: 1}
-  m_Intensity: 1.25
+  m_Intensity: 1.5
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3143,7 +3210,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.24, y: 0.25}
   m_BounceIntensity: 1.3
@@ -3243,7 +3310,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3270,7 +3337,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -3356,21 +3423,21 @@ Light:
   m_GameObject: {fileID: 1233825497}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3397,7 +3464,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -3483,21 +3550,21 @@ Light:
   m_GameObject: {fileID: 1239453568}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3524,7 +3591,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -3618,13 +3685,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3651,7 +3718,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -3737,21 +3804,21 @@ Light:
   m_GameObject: {fileID: 1285770383}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3778,7 +3845,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -3913,21 +3980,21 @@ Light:
   m_GameObject: {fileID: 1411830304}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.8703449, b: 0.7083696, a: 1}
-  m_Intensity: 1.25
+  m_Intensity: 1.5
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -3954,7 +4021,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.24, y: 0.25}
   m_BounceIntensity: 1.3
@@ -4040,21 +4107,21 @@ Light:
   m_GameObject: {fileID: 1416042244}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4081,7 +4148,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -4181,7 +4248,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4208,7 +4275,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -4302,13 +4369,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4335,7 +4402,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -4421,21 +4488,21 @@ Light:
   m_GameObject: {fileID: 1552799601}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4462,7 +4529,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -4556,13 +4623,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4589,7 +4656,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -4683,13 +4750,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4716,7 +4783,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -4810,13 +4877,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4843,7 +4910,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -4929,12 +4996,12 @@ Light:
   m_GameObject: {fileID: 1616896470}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.85430574, b: 0.66518503, a: 1}
-  m_Intensity: 2.8333333
+  m_Intensity: 3.4
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 95
+  m_InnerSpotAngle: 64.125
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 2
@@ -4943,7 +5010,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -4970,7 +5037,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.4, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5056,21 +5123,21 @@ Light:
   m_GameObject: {fileID: 1690636332}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5097,7 +5164,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5191,13 +5258,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5224,7 +5291,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -5375,21 +5442,21 @@ Light:
   m_GameObject: {fileID: 1847254947}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.880825, b: 0.7287318, a: 1}
-  m_Intensity: 1.8333334
+  m_Intensity: 2.2
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5416,7 +5483,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.38, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5502,21 +5569,21 @@ Light:
   m_GameObject: {fileID: 1865538933}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5543,7 +5610,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5602,6 +5669,103 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1869483644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869483646}
+  - component: {fileID: 1869483645}
+  m_Layer: 0
+  m_Name: Entry threshold fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1869483645
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869483644}
+  m_Enabled: 1
+  serializedVersion: 13
+  m_Type: 2
+  m_Color: {r: 1, g: 0.7857769, b: 0.6012433, a: 1}
+  m_Intensity: 3.5
+  m_Range: 5
+  m_SpotAngle: 90
+  m_InnerSpotAngle: 60.75
+  m_CookieSize2D: {x: 0.5, y: 0.5}
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.015
+    m_NormalBias: 0.035
+    m_NearPlane: 0.03
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1.3
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShapeRadius: 0.025
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
+--- !u!4 &1869483646
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869483644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 1.25, z: -6.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909298434
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,21 +5793,21 @@ Light:
   m_GameObject: {fileID: 1909298434}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.8703449, b: 0.7083696, a: 1}
-  m_Intensity: 0.6666667
+  m_Intensity: 0.8
   m_Range: 9
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.089999996
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5670,7 +5834,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.36, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5756,21 +5920,21 @@ Light:
   m_GameObject: {fileID: 1964324078}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5797,7 +5961,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -5883,21 +6047,21 @@ Light:
   m_GameObject: {fileID: 2038759706}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 0.865042, b: 0.70141065, a: 1}
-  m_Intensity: 0.5416667
-  m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_Intensity: 0.65
+  m_Range: 2.5
+  m_SpotAngle: 110
+  m_InnerSpotAngle: 74.25
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -5924,7 +6088,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.11, y: 0.25}
   m_BounceIntensity: 1.3
@@ -6010,12 +6174,12 @@ Light:
   m_GameObject: {fileID: 2067197393}
   m_Enabled: 1
   serializedVersion: 13
-  m_Type: 3
+  m_Type: 0
   m_Color: {r: 1, g: 0.85430574, b: 0.66518503, a: 1}
-  m_Intensity: 2.8333333
+  m_Intensity: 3.4
   m_Range: 5
-  m_SpotAngle: 90
-  m_InnerSpotAngle: 60.75
+  m_SpotAngle: 95
+  m_InnerSpotAngle: 64.125
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
     m_Type: 2
@@ -6024,7 +6188,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -6051,7 +6215,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.4, y: 0.25}
   m_BounceIntensity: 1.3
@@ -6145,13 +6309,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -6178,7 +6342,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -6272,13 +6436,13 @@ Light:
   m_InnerSpotAngle: 60.75
   m_CookieSize2D: {x: 0.5, y: 0.5}
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.015
     m_NormalBias: 0.035
-    m_NearPlane: 0.049999997
+    m_NearPlane: 0.03
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -6305,7 +6469,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 0.1, y: 0.1}
   m_BounceIntensity: 1.3
@@ -6408,7 +6572,6 @@ SceneRoots:
   - {fileID: 1411830306}
   - {fileID: 2067197395}
   - {fileID: 1131005402}
-  - {fileID: 205467049}
   - {fileID: 289922826}
   - {fileID: 1847254949}
   - {fileID: 580755610}
@@ -6418,3 +6581,6 @@ SceneRoots:
   - {fileID: 1812455581}
   - {fileID: 812341790}
   - {fileID: 1310609018}
+  - {fileID: 388757062}
+  - {fileID: 1869483646}
+  - {fileID: 527805879}

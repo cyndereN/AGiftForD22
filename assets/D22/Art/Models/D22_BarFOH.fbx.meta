@@ -52,6 +52,36 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_brushed_brass_c1b5453a
+    second: {fileID: 2100000, guid: ae1b18c8380e0498ba6b5f5a115c5a9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_charcoal_glass_481ff15a
+    second: {fileID: 2100000, guid: 2b6d5a0cb4bce48c9914b7ca51280288, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_deep_red_paint_0dfcbff4
+    second: {fileID: 2100000, guid: 5ddfe4b013c3a4999836949173343266, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_warm_lightbox_10d8a0b1
+    second: {fileID: 2100000, guid: e27c4316f28e64a47ac0453a2a6645f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_warm_red_trim_29127397
+    second: {fileID: 2100000, guid: 7d66a390306d247b28e287e2893258f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Entry_vestibule_worn_floor_c15ed50b
+    second: {fileID: 2100000, guid: 767699e18c60a404aaa10b093ec29c79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: FOH_running_order_printed_surface_dba01f49
     second: {fileID: 2100000, guid: 51b118bd41593405ea48063df2ac4c77, type: 2}
   - first:
