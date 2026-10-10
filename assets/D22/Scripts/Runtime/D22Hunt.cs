@@ -24,6 +24,7 @@ namespace D22
         readonly List<D22Bird> birds = new();
         readonly List<D22Note> notes = new();
         D22WorldMark cricketMark, grindMark, pigeonMark;
+        D22PigeonFlock pigeons;
         Vector3 pigeonHome;
         AudioClip cricketSfx, pigeonSfx, grindSfx;
         float grindStroke, hopT, hopDur, hopArc, coverDelay, dropLeft;
@@ -109,6 +110,8 @@ namespace D22
             foreach (var m in marks) if (m) UnityEngine.Object.Destroy(m.gameObject);
             marks.Clear();
             cricketMark = grindMark = pigeonMark = null;
+            if (pigeons) pigeons.transform.root.gameObject.SetActive(false);
+            pigeons = null;
             Spawned = false;
         }
 
@@ -121,6 +124,12 @@ namespace D22
             grindMark = Make(D22MarkKind.Grind, hutong ? hutong.grindMark : new Vector3(1.85f, .45f, -4.3f), 1.45f);
             pigeonHome = hutong ? hutong.pigeonMark : new Vector3(0, 2.7f, -5.8f);
             pigeonMark = Make(D22MarkKind.Pigeons, pigeonHome, 3.2f);
+            var props = UnityEngine.Object.FindAnyObjectByType<D22HutongProps>(FindObjectsInactive.Include);
+            if (props)
+            {
+                props.Show();
+                pigeons = props.GetComponentInChildren<D22PigeonFlock>(true);
+            }
             var exit = UnityEngine.Object.FindAnyObjectByType<D22Exit>();
             if (exit && !hutong)
             {
@@ -259,8 +268,13 @@ namespace D22
             float dt = Time.unscaledDeltaTime;
             if (pigeonMark)
             {
-                float t = Time.unscaledTime;
-                pigeonMark.transform.position = pigeonHome + new Vector3(Mathf.Sin(t * .7f) * 2.1f, Mathf.Sin(t * .45f) * .35f, Mathf.Cos(t * .7f) * 1.3f);
+                if (pigeons)
+                    pigeonMark.transform.position = pigeons.Center;
+                else
+                {
+                    float t = Time.unscaledTime;
+                    pigeonMark.transform.position = pigeonHome + new Vector3(Mathf.Sin(t * .7f) * 2.1f, Mathf.Sin(t * .45f) * .35f, Mathf.Cos(t * .7f) * 1.3f);
+                }
             }
             UpdateNear(camera, volume);
             UpdateFlock();
