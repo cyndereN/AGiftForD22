@@ -99,6 +99,9 @@ namespace D22.Editor
                 material.SetFloat("_Cull", 0); // Source contains thin paper and imported single-sided surfaces.
                 material.enableInstancing = true;
                 SetTexture(material, "_BaseMap", (string)item["base_map"]);
+                // URP keeps _MainTex as a compatibility alias. Keep it in sync so
+                // Unity does not rewrite every generated material on the next import.
+                material.SetTexture("_MainTex", material.GetTexture("_BaseMap"));
                 string normal = (string)item["normal_map"];
                 if (!string.IsNullOrEmpty(normal))
                 {
