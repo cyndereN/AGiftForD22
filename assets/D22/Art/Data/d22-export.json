@@ -3,7 +3,7 @@
   "source": "blender/source/D22_Balanced_Lighting_v18.blend",
   "source_units_m": 1.0,
   "coordinate_mapping": "Unity (x,y,z) = Blender (x,z,y); FBX converted by importer",
-  "geometry_count": 1501,
+  "geometry_count": 1513,
   "materials": [
     {
       "id": "Bar_menu_printed_surface_ba868757",
@@ -27134,6 +27134,234 @@
       "polygons": 6,
       "materials": [
         "v12_Continuous_red_paint_-_unlit_albedo_eaa2e5c8"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_closed_leaf_fd8533b4",
+      "source_name": "v19 / Upper RIGHT exit door / closed leaf",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6349998712539673,
+        6.46999979019165,
+        2.680000066757202
+      ],
+      "bounds_max": [
+        2.56499981880188,
+        6.559999942779541,
+        4.570000171661377
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_deep_red_paint_0dfcbff4"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_left_stile_4b34ff57",
+      "source_name": "v19 / Upper RIGHT exit door / left stile",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6475000381469727,
+        6.443999767303467,
+        2.680000066757202
+      ],
+      "bounds_max": [
+        1.7425000667572021,
+        6.4679999351501465,
+        4.570000171661377
+      ],
+      "polygons": 6,
+      "materials": [
+        "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_right_stile_443997b3",
+      "source_name": "v19 / Upper RIGHT exit door / right stile",
+      "group": "Architecture",
+      "bounds_min": [
+        2.4575002193450928,
+        6.443999767303467,
+        2.680000066757202
+      ],
+      "bounds_max": [
+        2.552500009536743,
+        6.4679999351501465,
+        4.570000171661377
+      ],
+      "polygons": 6,
+      "materials": [
+        "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_top_rail_cae0f4d0",
+      "source_name": "v19 / Upper RIGHT exit door / top rail",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6499998569488525,
+        6.443999767303467,
+        4.460000038146973
+      ],
+      "bounds_max": [
+        2.549999952316284,
+        6.4679999351501465,
+        4.569999694824219
+      ],
+      "polygons": 6,
+      "materials": [
+        "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_bottom_rail_26539661",
+      "source_name": "v19 / Upper RIGHT exit door / bottom rail",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6499998569488525,
+        6.443999767303467,
+        2.679999828338623
+      ],
+      "bounds_max": [
+        2.549999952316284,
+        6.4679999351501465,
+        2.7899999618530273
+      ],
+      "polygons": 6,
+      "materials": [
+        "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_middle_rail_b002d346",
+      "source_name": "v19 / Upper RIGHT exit door / middle rail",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6699998378753662,
+        6.443999767303467,
+        3.5925002098083496
+      ],
+      "bounds_max": [
+        2.5299999713897705,
+        6.4679999351501465,
+        3.6675000190734863
+      ],
+      "polygons": 6,
+      "materials": [
+        "Black_painted_steel_01974be2"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_upper_panel_33e19cbf",
+      "source_name": "v19 / Upper RIGHT exit door / upper panel",
+      "group": "Architecture",
+      "bounds_min": [
+        1.7649998664855957,
+        6.426499843597412,
+        3.7250001430511475
+      ],
+      "bounds_max": [
+        2.434999942779541,
+        6.447499752044678,
+        4.414999961853027
+      ],
+      "polygons": 6,
+      "materials": [
+        "v12_Continuous_red_paint_-_unlit_albedo_eaa2e5c8"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_lower_panel_10c96d50",
+      "source_name": "v19 / Upper RIGHT exit door / lower panel",
+      "group": "Architecture",
+      "bounds_min": [
+        1.7649998664855957,
+        6.426499843597412,
+        2.825000047683716
+      ],
+      "bounds_max": [
+        2.434999942779541,
+        6.447499752044678,
+        3.515000104904175
+      ],
+      "polygons": 6,
+      "materials": [
+        "v12_Continuous_red_paint_-_unlit_albedo_eaa2e5c8"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_latch_plate_211e0fe4",
+      "source_name": "v19 / Upper RIGHT exit door / latch plate",
+      "group": "Architecture",
+      "bounds_min": [
+        2.3999998569488525,
+        6.415999889373779,
+        3.5149998664855957
+      ],
+      "bounds_max": [
+        2.490000009536743,
+        6.427999973297119,
+        3.7249999046325684
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_brass_knob_48723268",
+      "source_name": "v19 / Upper RIGHT exit door / brass knob",
+      "group": "Architecture",
+      "bounds_min": [
+        2.4029998779296875,
+        6.352499961853027,
+        3.5779998302459717
+      ],
+      "bounds_max": [
+        2.486999988555908,
+        6.427499771118164,
+        3.6619999408721924
+      ],
+      "polygons": 18,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_upper_hinge_da825a72",
+      "source_name": "v19 / Upper RIGHT exit door / upper hinge",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6299999952316284,
+        6.427500247955322,
+        4.215000152587891
+      ],
+      "bounds_max": [
+        1.656000018119812,
+        6.4644999504089355,
+        4.345000267028809
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
+      ]
+    },
+    {
+      "id": "v19_Upper_RIGHT_exit_door_lower_hinge_de0e7761",
+      "source_name": "v19 / Upper RIGHT exit door / lower hinge",
+      "group": "Architecture",
+      "bounds_min": [
+        1.6299999952316284,
+        6.427500247955322,
+        2.9149999618530273
+      ],
+      "bounds_max": [
+        1.656000018119812,
+        6.4644999504089355,
+        3.0450000762939453
+      ],
+      "polygons": 6,
+      "materials": [
+        "Entry_vestibule_brushed_brass_c1b5453a"
       ]
     },
     {

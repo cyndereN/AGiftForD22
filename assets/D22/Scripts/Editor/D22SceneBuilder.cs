@@ -117,7 +117,12 @@ namespace D22.Editor
                 if ((float)item["emission_strength"] > 0)
                 {
                     material.EnableKeyword("_EMISSION");
-                    material.SetColor("_EmissionColor", Col(item["emission"]) * (float)item["emission_strength"]);
+                    // Blender's Cycles emission values are scene-linear. URP's
+                    // post stack receives those values after ACES and Bloom, so
+                    // the visible lamp glass needs a display calibration instead
+                    // of carrying the raw source wattage into the frame.
+                    float emissionScale = EmissionCalibration(id);
+                    material.SetColor("_EmissionColor", Col(item["emission"]) * (float)item["emission_strength"] * emissionScale);
                     SetTexture(material, "_EmissionMap", (string)item["emission_map"]);
                     material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
                 }
@@ -250,6 +255,10 @@ namespace D22.Editor
             Boundary("Venue Safety / Left side wall",new Vector3(-3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
             Boundary("Venue Safety / Right side wall",new Vector3(3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
             Boundary("Venue Safety / Rear lower wall",new Vector3(0,1.33f,6.55f),new Vector3(6.4f,2.66f,.14f));
+            // Seal the entire upper rear wall, including the closed exit door.
+            // The far landing edge alone lets a player step through the doorway
+            // and walk around the short return walls into the unloaded area.
+            Boundary("Venue Safety / Upper rear wall",new Vector3(0,3.755f,6.55f),new Vector3(6.4f,2.19f,.2f));
             Boundary("Venue Safety / Entrance edge",new Vector3(0,1.25f,-6.52f),new Vector3(1.5f,2.5f,.16f));
             Boundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.75f,7.49f),new Vector3(1.35f,2.2f,.16f));
             EditorSceneManager.SaveScene(scene);
@@ -295,6 +304,12 @@ namespace D22.Editor
             light.range=name.StartsWith("L0")?9:name.StartsWith("Photo warm pool")?2.5f:5;
             light.intensity=sourceType=="SPOT"?(float)item["power"]/30f
                 :area?(float)item["power"]/10f:(float)item["power"]/2f;
+            // Keep the visible drum heads and brass readable under URP's ACES
+            // exposure. Blender's stage watts map too strongly to Unity's
+            // real-time spot units, especially with multiple stage fixtures.
+            if(name.Contains("Stage PAR") && sourceType=="SPOT") light.intensity*=.62f;
+            else if(name.StartsWith("Bar task pool")) light.intensity*=.65f;
+            else if(name.StartsWith("Bottle shelf wash")) light.intensity*=.7f;
             light.bounceIntensity=1.3f;
             light.spotAngle=area?name.StartsWith("Bar task pool")?95f:110f
                 :Mathf.Clamp((float)item["angle"],1,175);
@@ -309,14 +324,44 @@ namespace D22.Editor
             light.bakingOutput=baking;
         }
 
+        static float EmissionCalibration(string id)
+        {
+            if (id == "v17_Visible_warm_PAR_glass_dcbed81e") return .24f;
+            if (id == "v17_Visible_blue_PAR_glass_e3e8768d") return .3f;
+            if (id == "Gallery_lamp_warm_lens_90ef0773") return .28f;
+            if (id == "Entry_vestibule_warm_lightbox_10d8a0b1") return .4f;
+            if (id == "Material_0_022_dfc57f45") return .3f;
+            return 1f;
+        }
+
+        static void ConfigureD22VolumeProfile(VolumeProfile profile)
+        {
+            var tonemapping=GetOrAddVolumeComponent<Tonemapping>(profile);
+            tonemapping.mode.Override(TonemappingMode.ACES);
+            var color=GetOrAddVolumeComponent<ColorAdjustments>(profile);
+            color.postExposure.Override(.7f);
+            var bloom=GetOrAddVolumeComponent<Bloom>(profile);
+            bloom.intensity.Override(.08f);
+            bloom.threshold.Override(1.45f);
+            bloom.scatter.Override(.65f);
+            bloom.clamp.Override(4f);
+            bloom.tint.Override(new Color(1f,.94f,.86f));
+            bloom.highQualityFiltering.Override(true);
+        }
+
+        static T GetOrAddVolumeComponent<T>(VolumeProfile profile) where T : VolumeComponent
+        {
+            if(profile.TryGet<T>(out var component)) return component;
+            component=profile.Add<T>(true);
+            AssetDatabase.AddObjectToAsset(component,profile);
+            return component;
+        }
+
         static void EnsureD22LightingProfile()
         {
             var profile=AssetDatabase.LoadAssetAtPath<VolumeProfile>(Root+"/Settings/D22Volume.asset");
             if(!profile){profile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(profile,Root+"/Settings/D22Volume.asset");}
-            if(!profile.TryGet<Tonemapping>(out var tonemapping))tonemapping=profile.Add<Tonemapping>(true);
-            tonemapping.mode.Override(TonemappingMode.ACES);
-            if(!profile.TryGet<ColorAdjustments>(out var color))color=profile.Add<ColorAdjustments>(true);
-            color.postExposure.Override(.7f);
+            ConfigureD22VolumeProfile(profile);
             EditorUtility.SetDirty(profile);AssetDatabase.SaveAssets();
         }
 
@@ -351,6 +396,10 @@ namespace D22.Editor
             }
             report["matched_source_objects"]=matched;
             report["max_object_center_error_m"]=maxError;report["placement_errors"]=placementErrors;
+            var upperDoorSource=sources.Values.SingleOrDefault(o=>((string)o["source_name"]).Contains("Upper RIGHT exit door / closed leaf"));
+            var upperDoor=upperDoorSource==null?null:meshes.FirstOrDefault(r=>r.name==(string)upperDoorSource["id"]);
+            bool upperDoorVisibleAndSolid=upperDoor && upperDoor.enabled && upperDoor.GetComponent<MeshCollider>();
+            report["upper_exit_door_visible_and_solid"]=upperDoorVisibleAndSolid;
             Physics.SyncTransforms();
             var floorHits=Physics.RaycastAll(new Vector3(.6f,1,-2.5f),Vector3.down,2)
                 .Where(h=>h.collider.gameObject.scene.name=="D22_Environment").OrderBy(h=>h.distance).ToArray();
@@ -374,11 +423,15 @@ namespace D22.Editor
                 if(!HitsBoundary("Venue Safety / Right side wall",new Vector3(2.5f,1.2f,z),Vector3.right,1.5f))boundaryFailures.Add("right at z="+z);
             }
             if(!HitsBoundary("Venue Safety / Rear lower wall",new Vector3(0,1.2f,5.8f),Vector3.forward,1.5f))boundaryFailures.Add("rear");
+            foreach(float x in new[]{-2.8f,0f,1.4f,2.1f,2.8f})
+                foreach(float y in new[]{3.0f,3.8f,4.45f})
+                    if(!HitsBoundary("Venue Safety / Upper rear wall",new Vector3(x,y,6.1f),Vector3.forward,.9f))
+                        boundaryFailures.Add("upper rear x="+x+" y="+y);
             if(!HitsBoundary("Venue Safety / Entrance edge",new Vector3(0,1.2f,-5.8f),Vector3.back,1.5f))boundaryFailures.Add("entrance");
             if(!HitsBoundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.8f,6.8f),Vector3.forward,1.5f))boundaryFailures.Add("upper exit");
             report["boundary_ray_failures"]=boundaryFailures;
             File.WriteAllText(Root+"/Validation/migration-report.json",report.ToString());
-            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !floor || Mathf.Abs(floorHit.point.y)>.3f || lightIssues.Count>0 || boundaryFailures.Count>0)throw new InvalidOperationException("D22 migration validation failed: "+report);
+            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !upperDoorVisibleAndSolid || !floor || Mathf.Abs(floorHit.point.y)>.3f || lightIssues.Count>0 || boundaryFailures.Count>0)throw new InvalidOperationException("D22 migration validation failed: "+report);
             Debug.Log("D22_VALIDATION "+report.ToString(Newtonsoft.Json.Formatting.None));
         }
 

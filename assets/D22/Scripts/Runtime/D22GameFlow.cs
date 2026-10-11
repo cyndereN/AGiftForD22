@@ -409,7 +409,9 @@ namespace D22
                 if (aimingBottle && k != null && k.eKey.wasPressedThisFrame) { TryInteract(); return; }
             }
             var exit = NearestExit(camera.transform.position);
-            bool atExit = !IsLivehouse && exit;
+            // The two return doors remain usable in the livehouse. The stage
+            // marker has its own story gate and must not bypass it.
+            bool atExit = exit && (!IsLivehouse || exit.nextScene == "D22_Hutong");
             if (IsLivehouse && Stage != null)
             {
                 if (!Stage.IntroPlayed && Stage.NearIntro(camera)) { MeetBand(); return; }
@@ -427,6 +429,7 @@ namespace D22
                 : !HasDrink ? "柜台上有瓶酒" : Sips == 0 ? "1 喝酒" : "从侧门去胡同"
                 : !bossMet ? "往里走走" : !HasDrink ? "回头拿酒瓶" : "1 喝酒";
             string hint = aimingBottle ? "E 拿酒瓶"
+                : IsLivehouse && atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "出去" : ShortLabel(exit.label))
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
@@ -478,8 +481,8 @@ namespace D22
             }
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
             if (IsLivehouse && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
-            if (IsLivehouse) return;
             var exit = NearestExit(camera.transform.position);
+            if (IsLivehouse && (!exit || exit.nextScene != "D22_Hutong")) return;
             if (!exit || recordShop && Sips == 0) return;
             if (Chapter == "D22_Hutong")
             {
@@ -796,8 +799,14 @@ namespace D22
             vignette.intensity.Override(look.vignette);
             vignette.smoothness.Override(look.vignetteSoft);
             var bloom = moodProfile.Add<Bloom>(true);
-            bloom.intensity.Override(look.bloom);
-            bloom.threshold.Override(look.bloomAt);
+            // Keep story mood Bloom subordinate to the calibrated Livehouse
+            // lighting. The old values (.7 intensity / .75 threshold) turned
+            // every drum and bar lamp into a large white halo in URP.
+            bloom.intensity.Override(Mathf.Min(look.bloom, .12f));
+            bloom.threshold.Override(Mathf.Max(look.bloomAt, 1.45f));
+            bloom.scatter.Override(.65f);
+            bloom.clamp.Override(4f);
+            bloom.highQualityFiltering.Override(true);
             var chroma = moodProfile.Add<ChromaticAberration>(true);
             chroma.intensity.Override(look.chroma);
             if (look.mix == 0)
