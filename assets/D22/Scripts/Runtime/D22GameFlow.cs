@@ -415,7 +415,7 @@ namespace D22
             if (IsLivehouse && Stage != null)
             {
                 if (!Stage.IntroPlayed && Stage.NearIntro(camera)) { MeetBand(); return; }
-                if (Stage.TrioDone && !Stage.OnStagePlayed && Stage.NearStage(camera)) { StepOnStage(); return; }
+                if (Stage.BandReady && !Stage.OnStagePlayed && Stage.NearStage(camera)) { StepOnStage(); return; }
                 if (!loftHeard && InLoft(camera.transform.position)) { MeetLoft(); return; }
             }
             if (Chapter == "D22_Hutong" && !doorHeard && atExit)

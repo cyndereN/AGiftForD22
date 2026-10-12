@@ -35,15 +35,22 @@ namespace D22
         float creditY, creditHold;
         bool creditDone;
         public bool InCredits => mode == ScreenMode.Credits;
+        public bool Developer { get; set; }
         const float Width = 1440, Height = 900;
         const float Slot = 72, SlotGap = 10;
         public string CurrentScreen => mode.ToString();
-        public bool OffersLevelSkip => mode != ScreenMode.Menu && mode != ScreenMode.Loading && mode != ScreenMode.Ending;
+        public bool OffersLevelSkip => Developer && mode != ScreenMode.Menu && mode != ScreenMode.Loading && mode != ScreenMode.Ending;
         public int PlacedPieces => placed;
         public bool BlocksLook { get; private set; }
 
         public void Initialize(D22GameFlow f, Font uiFont, Texture2D p, Texture2D c)
-        { flow = f; font = uiFont; poster = p; cover = c; }
+        {
+            flow = f;
+            font = uiFont;
+            poster = p;
+            cover = c;
+            Developer = Debug.isDebugBuild;
+        }
 
         void OnDestroy()
         {
@@ -120,7 +127,17 @@ namespace D22
             GUI.Label(new Rect(90, 160, 650, 180), "A Gift\nfor D-22", new GUIStyle(title) { fontSize = 72 });
             Fill(new Rect(95, 360, 70, 4), new Color(.75f, .18f, .1f));
             if (Button(new Rect(95, 520, 360, 64), "开始")) flow.Begin();
-            if (Button(new Rect(95, 604, 360, 52), "漫游")) ShowGallery();
+            if (Button(new Rect(95, 604, 360, 52), "退出")) Quit();
+            if (Developer && Button(new Rect(95, 672, 360, 52), "漫游")) ShowGallery();
+        }
+
+        static void Quit()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
 
         void ShowGallery()
@@ -135,8 +152,11 @@ namespace D22
             GUI.Label(new Rect(100, 250, 560, 360), Shown(lines[line].zh), body);
             GUI.Label(new Rect(780, 250, 560, 360), Shown(lines[line].en), new GUIStyle(body) { fontSize = 24 });
             Fill(new Rect(720, 260, 1, 280), new Color(.6f, .5f, .4f, .3f));
-            if (Button(new Rect(690, 745, 290, 65), "跳过")) done?.Invoke();
-            if (typed && Button(new Rect(1030, 745, 310, 65), "继续")) AdvanceDialogue();
+            if (!typed)
+            {
+                if (Button(new Rect(1030, 745, 310, 65), "跳过")) typed = true;
+            }
+            else if (Button(new Rect(1030, 745, 310, 65), "继续")) AdvanceDialogue();
         }
 
         public void AdvanceDialogue()
@@ -205,6 +225,8 @@ namespace D22
         {
             GUI.Label(new Rect(120, 90, 1200, 80), "暂停", title);
             flow.ReducedMotion = GUI.Toggle(new Rect(120, 280, 800, 50), flow.ReducedMotion, " 减少晃动", button);
+            if (Debug.isDebugBuild)
+                Developer = GUI.Toggle(new Rect(120, 200, 800, 50), Developer, " 开发者模式", button);
             GUI.Label(new Rect(120, 380, 900, 40), "音量", small);
             flow.Volume = GUI.HorizontalSlider(new Rect(120, 440, 800, 35), flow.Volume, 0, 1);
             if (Button(new Rect(120, 560, 420, 70), "继续")) done?.Invoke();
@@ -214,8 +236,11 @@ namespace D22
         void Ending()
         {
             GUI.Label(new Rect(130, 220, 1180, 230), Shown(note), title);
-            if (Button(new Rect(520, 660, 240, 70), "跳过")) done?.Invoke();
-            if (typed && Button(new Rect(130, 660, 360, 70), "菜单")) done?.Invoke();
+            if (!typed)
+            {
+                if (Button(new Rect(520, 660, 240, 70), "跳过")) typed = true;
+            }
+            else if (Button(new Rect(520, 660, 360, 70), "菜单")) done?.Invoke();
         }
 
         void HUD()

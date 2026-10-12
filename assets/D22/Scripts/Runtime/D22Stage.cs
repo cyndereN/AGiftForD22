@@ -54,6 +54,10 @@ namespace D22
         public bool DoneGuitar { get; private set; }
         public bool DoneBass { get; private set; }
         public bool TrioDone => DoneDrum && DoneGuitar && DoneBass;
+        public bool BandReady => flow.Abilities != null
+            && flow.Abilities.Learned("guitar")
+            && flow.Abilities.Learned("bass")
+            && flow.Abilities.Learned("drums");
         public int DrumHits { get; private set; }
         public int GuitarSweeps { get; private set; }
         public int BassHolds { get; private set; }
@@ -125,7 +129,7 @@ namespace D22
             if (aim == D22MarkKind.Drum) return DoneDrum ? "鼓" : "E 鼓";
             if (aim == D22MarkKind.Guitar) return DoneGuitar ? "吉他" : "E 吉他";
             if (aim == D22MarkKind.Bass) return DoneBass ? "贝斯" : "E 贝斯";
-            if (TrioDone && !OnStagePlayed) return "上台";
+            if (BandReady && !OnStagePlayed) return "站上舞台";
             return null;
         }
 
