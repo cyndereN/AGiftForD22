@@ -39,10 +39,6 @@
   ],
   "recordShop": [
     {
-      "zh": "您可以使用 WASD 移动，点击画面即可转动视角。",
-      "en": "Use WASD to move. Click the picture to turn your view."
-    },
-    {
       "zh": "唱片店，就是用来淘音乐的空间。黑胶唱片与 CD 整齐码放在格子之中，您抽出一张，就可以聆听它。",
       "en": "A record shop is a room for hunting down music. Vinyl and CDs stand in the bins. Pull one out, and you can listen."
     },
@@ -59,8 +55,8 @@
       "en": "Fusheng is older. It opened near Ping'anli in 2002 and moved to Bingjiaokou Hutong in 2018. The shelves hold Cui Jian, Tang Dynasty, Black Panther, and Dou Wei."
     },
     {
-      "zh": "您此刻身处的，正是这样一间小店，不妨四处走走看一看。",
-      "en": "You are in a shop like that now. Walk around and have a look."
+      "zh": "您此刻身处的，正是这样一间小店，不妨 WASD 四处走走看一看。",
+      "en": "You are in a shop like that now. Walk around using WASD and have a look."
     }
   ],
   "hutong": [
@@ -71,20 +67,16 @@
   ],
   "door": [
     {
-      "zh": "已满。",
-      "en": "Full."
+      "zh": "门上别着一张便条。",
+      "en": "A note is pinned to the door."
     },
     {
-      "zh": "部分 Livehouse 会开放即兴 jam，乐器就位，空位尚存，任何人都可以上前参与合奏。",
-      "en": "Some livehouses open the floor for a jam. The instruments are set, a seat is free, and anyone can step in and play along."
+      "zh": "您来到的，是 D22 的最后一天。",
+      "en": "This is D22's last day."
     },
     {
-      "zh": "也有些场地在邀约乐手登台，并非人人都可上场。他们需要对应乐器的演奏者：吉他、鼓、贝斯，匹配到位，门才会为您敞开。",
-      "en": "Other rooms are inviting players onstage. Not everyone may go up. They need the player of one instrument: guitar, drums, bass. Match it, and the door opens."
-    },
-    {
-      "zh": "若想要入场，既需要些许音乐素养，也需要一份胆量。",
-      "en": "To get in, you need a little musical sense, and some nerve."
+      "zh": "想进这扇门，请先在胡同里把声音收集齐：蛐蛐、磨刀石、鸽哨。",
+      "en": "To come through, first gather the sounds in the hutong: the cricket, the whetstone, the pigeon whistle."
     }
   ],
   "pigeonTalk": [
@@ -265,8 +257,16 @@
   },
   "band": [
     {
-      "zh": "组建一支乐队，先要备齐三样乐器：鼓、吉他、贝斯。主唱可以后续加入。三者不全，那依旧只算是排练。",
-      "en": "To start a band, first gather three instruments: drums, guitar, bass. The singer can come later. Without all three, it is still only a rehearsal."
+      "zh": "组建一支乐队，先要把三件收集齐：鼓、吉他、贝斯。它们都在这间屋子里。",
+      "en": "To start the band, first gather the three: drums, guitar, bass. They are all in this room."
+    },
+    {
+      "zh": "部分 Livehouse 会开放即兴 jam，乐器就位，空位尚存，任何人都可以上前参与合奏。",
+      "en": "Some livehouses open the floor for a jam. The instruments are set, a seat is free, and anyone can step in and play along."
+    },
+    {
+      "zh": "齐了，我们一起 jam。",
+      "en": "When the three are together, we jam."
     }
   ],
   "drumTalk": [
@@ -307,6 +307,14 @@
     {
       "zh": "灯光亮起的那一刻，这间小屋，便快要承载不住奔涌的情绪。",
       "en": "The moment the lights come up, this little room can barely hold the feeling rushing through it."
+    },
+    {
+      "zh": "D22 要关门了。今夜过后，这间屋子便不再开门。",
+      "en": "D22 is closing. After tonight, this room does not open again."
+    },
+    {
+      "zh": "这将是我们与 D22 一同创作的最后一首歌。请把它唱完。",
+      "en": "This is the last song we will make with D22. Please sing it through."
     }
   ],
   "chorus": [

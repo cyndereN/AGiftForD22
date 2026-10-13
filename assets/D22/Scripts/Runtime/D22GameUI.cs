@@ -142,7 +142,20 @@ namespace D22
 
         void ShowGallery()
         {
-            question = new D22Question { zh = "去哪儿", en = "", choices = new[] { new D22Choice { zh = "唱片店", en = "" }, new D22Choice { zh = "胡同", en = "" }, new D22Choice { zh = "D-22", en = "" }, new D22Choice { zh = "演出", en = "" }, new D22Choice { zh = "唱片店扫描", en = "" }, new D22Choice { zh = "胡同扫描", en = "" } } };
+            question = new D22Question
+            {
+                zh = "去哪儿",
+                en = "Where to",
+                choices = new[]
+                {
+                    new D22Choice { zh = "唱片店", en = "Record shop" },
+                    new D22Choice { zh = "胡同", en = "Hutong" },
+                    new D22Choice { zh = "D-22", en = "D-22" },
+                    new D22Choice { zh = "演出", en = "The show" },
+                    new D22Choice { zh = "唱片店扫描", en = "Record shop scan" },
+                    new D22Choice { zh = "胡同扫描", en = "Hutong scan" }
+                }
+            };
             choose = i => flow.LoadSpace(new[] { "D22_RecordShop", "D22_Hutong", D22Bootstrap.SceneName, "D22_Performance", "D22_RecordShopScan", "D22_HutongScan" }[i]);
             ShowChoices(question, choose);
         }
@@ -207,8 +220,22 @@ namespace D22
                 if (Button(new Rect(1030, 745, 310, 65), "跳过")) typed = true;
                 return;
             }
-            for (int i = 0; i < question.choices.Length; i++)
-                if (Button(new Rect(180, 280 + i * 92, 1080, 72), question.choices[i].zh)) Choose(i);
+            int n = question.choices.Length;
+            float h = n > 3 ? 62f : 84f;
+            float step = h + (n > 3 ? 8f : 14f);
+            var zhStyle = new GUIStyle(body) { fontSize = n > 3 ? 22 : 26, alignment = TextAnchor.MiddleLeft };
+            var enStyle = new GUIStyle(small) { fontSize = n > 3 ? 16 : 20, alignment = TextAnchor.MiddleRight };
+            for (int i = 0; i < n; i++)
+            {
+                var choice = question.choices[i];
+                var rect = new Rect(180, 262 + i * step, 1080, h);
+                string en = choice == null ? "" : choice.en;
+                bool both = choice != null && !string.IsNullOrEmpty(en) && en != choice.zh;
+                if (GUI.Button(rect, both ? "" : choice?.zh ?? "", button)) Choose(i);
+                if (!both) continue;
+                GUI.Label(new Rect(rect.x + 28, rect.y, rect.width * .46f, rect.height), choice.zh, zhStyle);
+                GUI.Label(new Rect(rect.x + rect.width * .46f, rect.y, rect.width * .5f - 20, rect.height), en, enStyle);
+            }
         }
 
         public void Choose(int i)
@@ -265,12 +292,27 @@ namespace D22
             if (info != null)
             {
                 GUI.Label(new Rect(frame.x + 18, frame.y + 12, 280, 28), info.title, small);
-                GUI.Label(new Rect(frame.x, frame.yMax - 42, frame.width, 28), info.caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+                GUI.Label(new Rect(frame.x, frame.yMax - 62, frame.width, 48), info.caption + "\n" + AbilityCaptionEn(info.id), new GUIStyle(small) { alignment = TextAnchor.MiddleCenter, wordWrap = true });
             }
             if (Button(new Rect(frame.xMax - 44, frame.y + 8, 36, 36), "×")) { flow.CloseAbility(); return; }
-            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 108);
+            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 128);
             DrawAbilityBody(book, inner);
             HandleAbilityPointer(book, frame, inner);
+        }
+
+        static string AbilityCaptionEn(string id)
+        {
+            switch (id)
+            {
+                case "drink": return "Tap to pour";
+                case "cricket": return "Tap to call";
+                case "pigeon": return "Drag to circle";
+                case "scissors": return "Push it back and forth";
+                case "guitar": return "Pluck or strum";
+                case "bass": return "Hold and pluck";
+                case "drums": return "Tap to hit";
+                default: return "";
+            }
         }
 
         void DrawAbilityBody(D22Abilities book, Rect inner)
@@ -511,13 +553,15 @@ namespace D22
             Fill(frame, new Color(.08f, .075f, .07f, .98f));
             FrameBorder(frame);
             string titleText = hunt.Game == "cricket" ? "蛐蛐" : hunt.Game == "pigeon" ? "鸽哨" : "磨刀";
-            string caption = hunt.Game == "cricket" ? "点下去，框落下"
-                : hunt.Game == "pigeon" ? "点鸽子出音符"
-                : "拖刀过石";
+            bool pigeon = hunt.Game == "pigeon";
+            string caption = hunt.Game == "cricket" ? "点下去，框落下\nClick, and the box falls"
+                : pigeon ? "点鸽子出音符\nTap a pigeon, a note appears\n点击音符以收集\nClick the note to collect it"
+                : "拖刀过石\nDraw the knife across the stone";
             GUI.Label(new Rect(frame.x + 18, frame.y + 12, 280, 28), titleText, small);
-            GUI.Label(new Rect(frame.x, frame.yMax - 42, frame.width, 28), caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+            float captionH = pigeon ? 84f : 48f;
+            GUI.Label(new Rect(frame.x, frame.yMax - captionH - 14f, frame.width, captionH), caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter, wordWrap = true });
             if (Button(new Rect(frame.xMax - 44, frame.y + 8, 36, 36), "×")) { flow.CloseHunt(); return; }
-            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 108);
+            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - (pigeon ? 164f : 128f));
             if (hunt.Game == "cricket") DrawCatch(hunt, inner);
             else if (hunt.Game == "pigeon") DrawPigeonGame(hunt, inner);
             else DrawGrindGame(hunt, inner);
@@ -533,13 +577,13 @@ namespace D22
             Fill(frame, new Color(.08f, .075f, .07f, .98f));
             FrameBorder(frame);
             string titleText = stage.Game == "drums" ? "鼓" : stage.Game == "guitar" ? "吉他" : "贝斯";
-            string caption = stage.Game == "drums" ? "点鼓"
-                : stage.Game == "guitar" ? "扫过六根弦"
-                : "按住走到头";
+            string caption = stage.Game == "drums" ? "点鼓\nTap the drums"
+                : stage.Game == "guitar" ? "扫过六根弦\nSweep the six strings"
+                : "按住走到头\nHold it and carry it to the end";
             GUI.Label(new Rect(frame.x + 18, frame.y + 12, 280, 28), titleText, small);
-            GUI.Label(new Rect(frame.x, frame.yMax - 42, frame.width, 28), caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+            GUI.Label(new Rect(frame.x, frame.yMax - 62, frame.width, 48), caption, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter, wordWrap = true });
             if (Button(new Rect(frame.xMax - 44, frame.y + 8, 36, 36), "×")) { flow.CloseStage(); return; }
-            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 108);
+            Rect inner = new Rect(frame.x + 28, frame.y + 52, frame.width - 56, frame.height - 128);
             if (stage.Game == "drums") DrawDrumGame(stage, inner);
             else if (stage.Game == "guitar") DrawGuitarGame(stage, inner);
             else DrawBassGame(stage, inner);

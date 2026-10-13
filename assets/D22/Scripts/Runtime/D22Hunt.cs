@@ -26,7 +26,9 @@ namespace D22
         D22WorldMark cricketMark, grindMark, pigeonMark;
         D22PigeonFlock pigeons;
         Vector3 pigeonHome;
-        AudioClip cricketSfx, pigeonSfx, grindSfx;
+        AudioClip cricketSfx, pigeonSfx, grindSfx, touchSfx;
+        AudioClip[] whistles;
+        float nextTouch;
         float grindStroke, hopT, hopDur, hopArc, coverDelay, dropLeft;
         int grindHits;
         Vector2 hopFrom, hopTo, lastKnife, trap;
@@ -93,6 +95,17 @@ namespace D22
                 StartFlock(false);
                 StartGrind(false);
             }
+        }
+
+        public void SetTouch(AudioClip clip)
+        {
+            touchSfx = clip ? clip : touchSfx ? touchSfx : D22Sfx.Touch();
+        }
+
+        public void SetWhistles(AudioClip[] clips)
+        {
+            if (clips != null && clips.Length > 0) whistles = clips;
+            else if (whistles == null || whistles.Length == 0) whistles = D22Sfx.Whistles();
         }
 
         public void Reset()
@@ -345,12 +358,24 @@ namespace D22
             else if (Game == "pigeon" && down) ClickPigeon(n);
             else if (Game == "grind")
             {
-                if (down) { knifeHeld = true; Knife = n; lastKnife = n; grindStroke = 0; }
+                if (down)
+                {
+                    knifeHeld = true;
+                    Knife = n;
+                    lastKnife = n;
+                    grindStroke = 0;
+                    if (OnStone(n)) PlayTouch(true);
+                }
                 else if (drag && knifeHeld)
                 {
                     Knife = n;
-                    bool onStone = n.y > .28f && n.y < .8f && n.x > .08f && n.x < .92f;
-                    if (onStone) grindStroke += Vector2.Distance(n, lastKnife);
+                    bool onStone = OnStone(n);
+                    float moved = Vector2.Distance(n, lastKnife);
+                    if (onStone)
+                    {
+                        grindStroke += moved;
+                        if (moved > .003f) PlayTouch(false);
+                    }
                     lastKnife = n;
                     if (grindStroke > .42f)
                     {
@@ -411,6 +436,7 @@ namespace D22
                 {
                     notes.RemoveAt(i);
                     Pigeon++;
+                    PlayWhistle();
                     if (Grant("pigeon")) flow.CloseHunt();
                     return;
                 }
@@ -488,8 +514,7 @@ namespace D22
             grindLoop.loop = true;
             if (Open && Game == "grind")
             {
-                grindLoop.volume = 1f;
-                if (!grindLoop.isPlaying) grindLoop.Play();
+                if (grindLoop.isPlaying) grindLoop.Stop();
                 return;
             }
             if (!Spawned || grindMark == null || camera == null)
@@ -518,6 +543,28 @@ namespace D22
         }
 
         public string Tally(int sips) => Quota(sips);
+
+        static bool OnStone(Vector2 n) => n.y > .28f && n.y < .8f && n.x > .08f && n.x < .92f;
+
+        void PlayTouch(bool force)
+        {
+            if (!touchSfx) touchSfx = D22Sfx.Touch();
+            if (!force && Time.unscaledTime < nextTouch) return;
+            nextTouch = Time.unscaledTime + .09f;
+            oneshot.pitch = UnityEngine.Random.Range(.94f, 1.08f);
+            oneshot.volume = 1f;
+            oneshot.PlayOneShot(touchSfx);
+        }
+
+        void PlayWhistle()
+        {
+            if (whistles == null || whistles.Length == 0) whistles = D22Sfx.Whistles();
+            var clip = whistles[UnityEngine.Random.Range(0, whistles.Length)];
+            if (!clip) return;
+            oneshot.pitch = UnityEngine.Random.Range(.96f, 1.06f);
+            oneshot.volume = 1f;
+            oneshot.PlayOneShot(clip);
+        }
 
         static AudioClip MakeChirp()
         {

@@ -131,16 +131,24 @@ namespace D22.Editor
             flow.storyAsset=AssetDatabase.LoadAssetAtPath<TextAsset>(Root+"/Story/story.json");flow.uiFont=AssetDatabase.LoadAssetAtPath<Font>(Root+"/UI/Fonts/NotoSansSC.ttf");flow.poster=AssetDatabase.LoadAssetAtPath<Texture2D>(Root+"/UI/poster.png");flow.cover=AssetDatabase.LoadAssetAtPath<Texture2D>(Root+"/UI/d22.png");
             flow.music=AssetDatabase.FindAssets("t:AudioClip",new[]{Root+"/Audio"}).Select(AssetDatabase.GUIDToAssetPath).OrderBy(p=>p,StringComparer.Ordinal).Select(AssetDatabase.LoadAssetAtPath<AudioClip>).ToArray();
             flow.bottlePrefab=AssetDatabase.LoadAssetAtPath<GameObject>(Root+"/Prefabs/WinePickup.prefab");
+            var whistles=new System.Collections.Generic.List<AudioClip>();
             foreach(var guid in AssetDatabase.FindAssets("t:AudioClip",new[]{Root+"/Music",Root+"/Audio"}))
             {
                 string path=AssetDatabase.GUIDToAssetPath(guid);
                 var clip=AssetDatabase.LoadAssetAtPath<AudioClip>(path);
                 if(!clip)continue;
                 string name=clip.name.ToLowerInvariant();
-                if(name.Contains("beer"))flow.beerClip=clip;
-                if(name.Contains("cricket"))flow.cricketClip=clip;
-                if(name.Contains("pigeon"))flow.pigeonClip=clip;
-                if(name.Contains("knife")||name.Contains("grind")||name.Contains("scissor"))flow.grindClip=clip;
+                if(name.Contains("whistle"))whistles.Add(clip);
+                else if(name.Contains("touch"))flow.touchClip=clip;
+                else if(name.Contains("beer"))flow.beerClip=clip;
+                else if(name.Contains("cricket"))flow.cricketClip=clip;
+                else if(name.Contains("pigeon"))flow.pigeonClip=clip;
+                else if(name.Contains("knife")||name.Contains("grind")||name.Contains("scissor"))flow.grindClip=clip;
+            }
+            if(whistles.Count>0)
+            {
+                whistles.Sort((a,b)=>string.Compare(a.name,b.name,System.StringComparison.Ordinal));
+                flow.whistleClips=whistles.ToArray();
             }
             EditorSceneManager.SaveScene(scene,Scenes+"D22_Menu.unity");
         }

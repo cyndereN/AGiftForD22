@@ -40,16 +40,24 @@ namespace D22.Editor
             {
                 var flow = D22GameFlow.Instance;
                 if (!flow) return;
+                var whistles = new System.Collections.Generic.List<AudioClip>();
                 foreach (var guid in AssetDatabase.FindAssets("t:AudioClip", new[] { "Assets/D22/Music", "Assets/D22/Audio" }))
                 {
                     string path = AssetDatabase.GUIDToAssetPath(guid);
                     var clip = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
                     if (!clip) continue;
                     string name = clip.name.ToLowerInvariant();
-                    if (name.Contains("beer")) flow.beerClip = clip;
-                    if (name.Contains("cricket")) flow.cricketClip = clip;
-                    if (name.Contains("pigeon")) flow.pigeonClip = clip;
-                    if (name.Contains("knife") || name.Contains("grind") || name.Contains("scissor")) flow.grindClip = clip;
+                    if (name.Contains("whistle")) whistles.Add(clip);
+                    else if (name.Contains("touch")) flow.touchClip = clip;
+                    else if (name.Contains("beer")) flow.beerClip = clip;
+                    else if (name.Contains("cricket")) flow.cricketClip = clip;
+                    else if (name.Contains("pigeon")) flow.pigeonClip = clip;
+                    else if (name.Contains("knife") || name.Contains("grind") || name.Contains("scissor")) flow.grindClip = clip;
+                }
+                if (whistles.Count > 0)
+                {
+                    whistles.Sort((a, b) => string.Compare(a.name, b.name, System.StringComparison.Ordinal));
+                    flow.whistleClips = whistles.ToArray();
                 }
                 flow.BindSfx();
             };

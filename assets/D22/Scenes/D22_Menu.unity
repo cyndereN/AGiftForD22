@@ -303,7 +303,14 @@ MonoBehaviour:
   beerClip: {fileID: 0}
   cricketClip: {fileID: 0}
   pigeonClip: {fileID: 0}
-  grindClip: {fileID: 8300000, guid: 9022ec0990e1c5f49a8e4838d23acc4f, type: 3}
+  grindClip: {fileID: 8300000, guid: 7a3e9c1b5d284f6e8c0a1b2d3e4f5061, type: 3}
+  touchClip: {fileID: 8300000, guid: a7c1e9b24d6f4a0e8b3c5d17f9a24011, type: 3}
+  whistleClips:
+  - {fileID: 8300000, guid: b8d2f0c35e704b1f9c4d6e280ab35122, type: 3}
+  - {fileID: 8300000, guid: c9e301d46f814c209d5e7f391bc46233, type: 3}
+  - {fileID: 8300000, guid: d0f412e570925d31ae6f804a2cd57344, type: 3}
+  - {fileID: 8300000, guid: e10523f681a36e42bf70915b3de68455, type: 3}
+  - {fileID: 8300000, guid: f216340792b47f53c081a26c4ef79566, type: 3}
   bottlePrefab: {fileID: 8347389621288403890, guid: be19b32bbb037404ba8054a80067fe0f, type: 3}
 --- !u!4 &2133578839
 Transform:

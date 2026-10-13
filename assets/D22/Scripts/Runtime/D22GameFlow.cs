@@ -17,7 +17,8 @@ namespace D22
         public Font uiFont;
         public Texture2D poster, cover;
         public AudioClip[] music;
-        public AudioClip beerClip, cricketClip, pigeonClip, grindClip;
+        public AudioClip beerClip, cricketClip, pigeonClip, grindClip, touchClip;
+        public AudioClip[] whistleClips;
         public GameObject bottlePrefab;
         public D22GameUI UI { get; private set; }
         public D22Abilities Abilities { get; private set; }
@@ -90,7 +91,10 @@ namespace D22
         {
             Abilities?.SetBeer(beerClip);
             Abilities?.SetKnife(grindClip);
+            Abilities?.SetTouch(touchClip);
             Hunt?.SetClips(cricketClip, pigeonClip, grindClip);
+            Hunt?.SetTouch(touchClip);
+            Hunt?.SetWhistles(whistleClips);
         }
 
         void Start()
@@ -434,7 +438,7 @@ namespace D22
                 : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
-                : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "已满" : "门")
+                : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "收集声音" : "门")
                 : atExit ? (recordShop && Sips == 0 ? "先在柜台拿酒" : "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label)))
                 : Chapter == "D22_RecordShop" ? shopHint
                     : "";
@@ -445,6 +449,7 @@ namespace D22
         void LateUpdate()
         {
             if (Loading || !Camera.main) return;
+            D22Feel.SetTipsy(Sips >= 2);
             bool moving = !blocked && !AbilityOpen && !HuntOpen && !StageOpen && (Conductor == null || !Conductor.Running);
             if (!presenting && !moving) return;
             D22Feel.Apply(Camera.main, ReducedMotion);
@@ -510,7 +515,7 @@ namespace D22
         {
             if (doorHeard || story.door == null || story.door.Length == 0) return;
             doorHeard = true;
-            Dialogue(story.door, () => { Hunt?.AfterDoor(); Resume(); });
+            Dialogue(story.door, () => { Hunt?.AfterDoor(); Resume(); }, "便条");
         }
 
         void MeetBand()

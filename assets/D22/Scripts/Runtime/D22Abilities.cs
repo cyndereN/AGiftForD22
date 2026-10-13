@@ -33,7 +33,8 @@ namespace D22
         readonly Transform bottlePreview;
         readonly Camera bottleCam;
         readonly AudioClip pourClip, cricketClip, pigeonLoop, scrapeLoop;
-        AudioClip knifeClip;
+        AudioClip knifeClip, touchClip;
+        float nextTouch;
         readonly AudioClip[] guitarClips = new AudioClip[6];
         readonly AudioClip[] bassClips = new AudioClip[4];
         readonly AudioClip[] drumClips = new AudioClip[3];
@@ -170,6 +171,12 @@ namespace D22
             if (clip) knifeClip = clip;
         }
 
+        public void SetTouch(AudioClip clip)
+        {
+            if (clip) touchClip = clip;
+            else if (!touchClip) touchClip = D22Sfx.Touch();
+        }
+
         public void SetBeer(AudioClip beer)
         {
             if (beer) pourSfx = beer;
@@ -259,6 +266,7 @@ namespace D22
             else if (OpenId == "guitar") Strum(n, n);
             else if (OpenId == "bass") HoldBass(n);
             else if (OpenId == "drums") HitDrum(n);
+            else if (OpenId == "scissors") PlayTouch(true);
         }
 
         public void PointerDrag(Vector2 n)
@@ -346,7 +354,7 @@ namespace D22
         {
             ScissorsX = Mathf.Clamp01(n.x);
             ScissorsSpark = Mathf.Clamp01(Mathf.Abs(n.x - prevPointer.x) * 14);
-            EnsureLoop(knifeClip ? knifeClip : scrapeLoop, Mathf.Lerp(.85f, 1.2f, ScissorsX));
+            if (ScissorsSpark > .04f) PlayTouch(false);
         }
 
         void Strum(Vector2 from, Vector2 to)
@@ -409,6 +417,16 @@ namespace D22
                 case "bass": PlayBass(UnityEngine.Random.Range(0, bassClips.Length)); break;
                 case "drums": PlayDrum(UnityEngine.Random.Range(0, drumClips.Length)); break;
             }
+        }
+
+        void PlayTouch(bool force)
+        {
+            if (!touchClip) touchClip = D22Sfx.Touch();
+            if (!force && Time.unscaledTime < nextTouch) return;
+            nextTouch = Time.unscaledTime + .09f;
+            bandShot.pitch = UnityEngine.Random.Range(.94f, 1.08f);
+            bandShot.volume = 1f;
+            bandShot.PlayOneShot(touchClip);
         }
 
         void Play(AudioClip clip, float pitch = 1)

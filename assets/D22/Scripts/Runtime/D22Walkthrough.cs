@@ -24,6 +24,7 @@ namespace D22
             if (view == null && Camera.main) view = Camera.main.transform;
             var keyboard = Keyboard.current;
             if (keyboard == null || view == null) return;
+            D22Feel.Release(view);
             D22Look.ApplyYawPitch(transform, view, ref pitch, D22GameFlow.UiBlocksLook);
             D22Feel.NotePose(view);
             float x = (keyboard.dKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed ? 1 : 0);

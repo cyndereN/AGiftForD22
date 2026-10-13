@@ -19,6 +19,7 @@ namespace D22
             }
             var k = Keyboard.current;
             if (k == null) return;
+            D22Feel.Release(transform);
             D22Look.ApplyFree(transform, ref yaw, ref pitch, D22GameFlow.UiBlocksLook);
             D22Feel.NotePose(transform);
             Vector3 input = new Vector3((k.dKey.isPressed ? 1 : 0) - (k.aKey.isPressed ? 1 : 0), 0, (k.wKey.isPressed ? 1 : 0) - (k.sKey.isPressed ? 1 : 0));
