@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 746ca80277e0f4308ae17977a3d0ccf7
+ModelImporter:
+  serializedVersion: 24600
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: A01-Amplifier__Material_0_003_128e507c
+    second: {fileID: 2100000, guid: 5a3ec35e588724b5c883683be6b25b6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: B02-TileFloor__Material_0_9682a7d6
+    second: {fileID: 2100000, guid: 598931e609cfe4238b5b03a01d50595c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: B07-GalleryFrame__Material_0_7c27aa42
+    second: {fileID: 2100000, guid: 389a03cfb2b3c4e7d891c9c59cce6628, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: B10-Zines__Material_0_b52156e2
+    second: {fileID: 2100000, guid: 75ee86522c8f643e2b59f26e52320e2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_cash_8b60c06a
+    second: {fileID: 2100000, guid: d1e0a3e1725b44740a59bf984123687f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_demo_18815e8d
+    second: {fileID: 2100000, guid: 006c0295745004446967a11634ccf06f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_electronic_6760148b
+    second: {fileID: 2100000, guid: 479dbf3fe1f884788bbb2589a8948dc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_jazz_0c20f9be
+    second: {fileID: 2100000, guid: 84d73e6caa53a48a68ddbf6947c05382, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_new_274a5adb
+    second: {fileID: 2100000, guid: 92b90b944a7cc4aac82fbb0d5c5682a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_open_6b208d57
+    second: {fileID: 2100000, guid: 386a9180dba8c45f0b447d92a1d56a6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_rock_538cbcd2
+    second: {fileID: 2100000, guid: 7a96e2d3d07944187b830b36cb23aafb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_rock_wall_188f93c9
+    second: {fileID: 2100000, guid: 30403df2935254ecf9b2c0c91e7ebb8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_soul_98ffe33e
+    second: {fileID: 2100000, guid: 93a29aa7f191d4a9fb4b3d11ab62c108, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_staff_96b7f3f0
+    second: {fileID: 2100000, guid: d52f7bc3bdcd345e89966ae58f96cc72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_used35_2b8b6f2f
+    second: {fileID: 2100000, guid: 4e4105f40fd7a454f98e46639a041620, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Category_ink_used_c77aebca
+    second: {fileID: 2100000, guid: e78918b2c120c4926a67fe232b35dff5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ceiling_tint_61820491
+    second: {fileID: 2100000, guid: debc70ff21d7d4d839f1ed8f281edb04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meshy_band_photo_1_07cc3988
+    second: {fileID: 2100000, guid: 850a85243b0854824be13c1e596139ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meshy_band_photo_3_3ab4bde6
+    second: {fileID: 2100000, guid: 42c54244ba5cb48b49cbda891e438fd5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meshy_band_photo_4_b4df8c62
+    second: {fileID: 2100000, guid: 354d339a6223b4281bf34add1b251c54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meshy_band_photo_5_0c47845c
+    second: {fileID: 2100000, guid: 8e39af6712b32496f8e25601b5afe749, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: P06-Guitar__Material_0_254fd206
+    second: {fileID: 2100000, guid: 8620e5c4835354329a5eeed03e1a6c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS201-RecordBin__Material_0_a612d591
+    second: {fileID: 2100000, guid: f7ab64e708ff14721bd91e6684f1d10e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS202-CDTower__Material_0_042fff73
+    second: {fileID: 2100000, guid: f9484e176526f40779cf96b5ae729f15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS203-CashDesk__Material_0_f48d6881
+    second: {fileID: 2100000, guid: 71de7bc74c7c24620978ce1d1ae8de6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS204-Turntable__Material_0_c6458bf2
+    second: {fileID: 2100000, guid: 85594e8d2054144109876c589ebb8b50, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS205-DeskFan__Material_0_e52ede52
+    second: {fileID: 2100000, guid: d572f0274e70e4aab85bc935b2d3abdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS206-DeskLamp__Material_0_b3d0b906
+    second: {fileID: 2100000, guid: aa4485939e4094573a8823264c2e9b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS207-Thermos__Material_0_4193388f
+    second: {fileID: 2100000, guid: 538f965e5aaaf4eb2a06315028111595, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS208-Pothos__Material_0_beca8afb
+    second: {fileID: 2100000, guid: 86dcca089f79143018affb7df56dcb01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS209-ListeningDesk__Material_0_1ddbab40
+    second: {fileID: 2100000, guid: 13e9093e984c14b4d84bcd738355360f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS210-ListeningChair__Material_0_1983b524
+    second: {fileID: 2100000, guid: 7692d3b6791034a5f9f2db7407c33526, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS211-HifiSpeaker__Material_0_d258b227
+    second: {fileID: 2100000, guid: 7bde0852e753c424589011191782b195, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS212-CassetteStereo__Material_0_6770d21d
+    second: {fileID: 2100000, guid: 03a3990b254124fb796a0cb41b5e9fd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS213-TapeCrate__Material_0_47558b67
+    second: {fileID: 2100000, guid: 8ee32ded7c7414cbda4d061e65b1da76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS301-HutongWallPanel__Material_0_f598ff36
+    second: {fileID: 2100000, guid: 3593ee14b103e47dbbb79722094db9ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS302-HutongWindowBay__Material_0_a1f1d37d
+    second: {fileID: 2100000, guid: e7615fe5a6c6544deb765fdf5b331ce8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS303-RedTimberDoor__Material_0_c943f250
+    second: {fileID: 2100000, guid: 9af8d3e0ab4884c2a8dd9ed96614e948, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS306-CeilingBeamFluorescent__Material_0_aacebd34
+    second: {fileID: 2100000, guid: db52874a238674c76afaed6b39e7b5a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS310-PlasterOnly__Material_0_1fe22825
+    second: {fileID: 2100000, guid: 8c804b1e1fe7d4b8d98128732be0dd62, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS401-FaceOutLPDisplay__Material_0_c26cfc7d
+    second: {fileID: 2100000, guid: 82e0d131bbab7449980b444710fc270c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS402-VinylAlbum__Material_0_2dc269cb
+    second: {fileID: 2100000, guid: c5c52adef229247deb21ddeed58f3833, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS403-UsedRecordCrate__Material_0_d2981a7c
+    second: {fileID: 2100000, guid: 9a3b2453a1eae44ebbf3725530f9fc78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS404-CategoryCard__Material_0_8abad61c
+    second: {fileID: 2100000, guid: 274358e28f62b4c188558ae803bc062a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS405-CashierWorkKit__Material_0_360a9b5c
+    second: {fileID: 2100000, guid: c09be4a9a16dd4aef9839ac0f0f0f379, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS406-UsedLPCarton__Material_0_6ed53e67
+    second: {fileID: 2100000, guid: 1919686d5a8f94fd2aa709ebeab7e2c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS407-VinylJazz__Material_0_10aeceb3
+    second: {fileID: 2100000, guid: c9df9425f79b04c5390c0b1a7c52abc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RS408-VinylBlue__Material_0_c13d18aa
+    second: {fileID: 2100000, guid: 129deba25c76746d6836830870632d66, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+    searchTexturesGlobally: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    preBakeConvexCollisionMesh: 0
+    preBakeTriangleCollisionMesh: 0
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    importUVs: -1
+    importVertexColors: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 8
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+    calculateBlendshapeNormalsDeltaFromImportedNormals: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2389 @@
+{
+  "version": 3,
+  "scene": "D22_RecordShop_v3_MeshyOnly",
+  "dimensions_m": [
+    4.3,
+    8.2,
+    2.85
+  ],
+  "assets": [
+    {
+      "label": "Floor 0_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        0.5125,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        1.5374999999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        2.5625,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        3.5874999999999995,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        4.6125,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        5.6375,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        6.6625,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 0_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -1.6125,
+        7.687499999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        -1.0699999332427979,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        0.5125,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        1.5374999999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        2.5625,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        3.5874999999999995,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        4.6125,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        5.6375,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        6.6625,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 1_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        -0.5375000000000001,
+        7.687499999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -1.0800000429153442,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        0.004999995231628418,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        0.5125,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        1.5374999999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        2.5625,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        3.5874999999999995,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        4.6125,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        5.6375,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        6.6625,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 2_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0.5374999999999999,
+        7.687499999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        -0.004999995231628418,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        1.0800000429153442,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_0",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        0.5125,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        -0.004999995231628418,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        1.0299999713897705,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_1",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        1.5374999999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        1.0199999809265137,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        2.055000066757202,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_2",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        2.5625,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        2.0450000762939453,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        3.0799999237060547,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_3",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        3.5874999999999995,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        3.070000171661377,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        4.105000019073486,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_4",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        4.6125,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        4.095000267028809,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        5.130000114440918,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_5",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        5.6375,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        5.119999885559082,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        6.154999732971191,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_6",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        6.6625,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        6.144999980926514,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        7.179999828338623,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Floor 3_7",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        1.6124999999999996,
+        7.687499999999999,
+        -0.085
+      ],
+      "bounds_min": [
+        1.0699999332427979,
+        7.170000076293945,
+        -0.08500000089406967
+      ],
+      "bounds_max": [
+        2.1549999713897705,
+        8.204999923706055,
+        -3.725290298461914e-09
+      ],
+      "collision": false
+    },
+    {
+      "label": "Ceiling",
+      "source": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        4.1,
+        2.85
+      ],
+      "bounds_min": [
+        -2.299999952316284,
+        -0.15000009536743164,
+        2.8499999046325684
+      ],
+      "bounds_max": [
+        2.299999952316284,
+        8.350000381469727,
+        2.940000057220459
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall -1_0",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        1.025,
+        0
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        -0.014999994076788425,
+        0.0
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        2.065000057220459,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall -1_0",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        1.025,
+        0.92
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        -0.014999994076788425,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        2.065000057220459,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall -1_1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        3.0749999999999997,
+        0
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        2.0350000858306885,
+        0.0
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        4.115000247955322,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall -1_1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        3.0749999999999997,
+        0.92
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        2.0350000858306885,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        4.115000247955322,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall -1_2",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        5.125,
+        0
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        4.085000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        6.164999961853027,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall -1_2",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        5.125,
+        0.92
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        4.085000038146973,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        6.164999961853027,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall -1_3",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        7.174999999999999,
+        0
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        6.135000228881836,
+        0.0
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        8.21500015258789,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall -1_3",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -2.22,
+        7.174999999999999,
+        0.92
+      ],
+      "bounds_min": [
+        -2.330000162124634,
+        6.135000228881836,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -2.109999895095825,
+        8.21500015258789,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall 1_0",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        1.025,
+        0
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        -0.014999994076788425,
+        0.0
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        2.065000057220459,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall 1_0",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        1.025,
+        0.92
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        -0.014999994076788425,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        2.065000057220459,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall 1_1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        3.0749999999999997,
+        0
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        2.0350000858306885,
+        0.0
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        4.115000247955322,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall 1_1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        3.0749999999999997,
+        0.92
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        2.0350000858306885,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        4.115000247955322,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall 1_2",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        5.125,
+        0
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        4.085000038146973,
+        0.0
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        6.164999961853027,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall 1_2",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        5.125,
+        0.92
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        4.085000038146973,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        6.164999961853027,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Lower wall 1_3",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        7.174999999999999,
+        0
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        6.135000228881836,
+        0.0
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        8.21500015258789,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Upper wall 1_3",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        2.22,
+        7.174999999999999,
+        0.92
+      ],
+      "bounds_min": [
+        2.109999895095825,
+        6.135000228881836,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.330000162124634,
+        8.21500015258789,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back lower 0",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        -1.44,
+        8.28,
+        0
+      ],
+      "bounds_min": [
+        -2.180000066757202,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        -0.7000001072883606,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back upper 0",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        -1.44,
+        8.28,
+        0.92
+      ],
+      "bounds_min": [
+        -2.180000066757202,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        -0.7000001072883606,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back lower 1",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        8.28,
+        0
+      ],
+      "bounds_min": [
+        -0.7399999499320984,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        0.7399999499320984,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back upper 1",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        8.28,
+        0.92
+      ],
+      "bounds_min": [
+        -0.7399999499320984,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        0.7399999499320984,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back lower 2",
+      "source": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "group": "Architecture",
+      "position": [
+        1.44,
+        8.28,
+        0
+      ],
+      "bounds_min": [
+        0.7000001072883606,
+        8.169999122619629,
+        0.0
+      ],
+      "bounds_max": [
+        2.180000066757202,
+        8.389999389648438,
+        0.9199999570846558
+      ],
+      "collision": false
+    },
+    {
+      "label": "Back upper 2",
+      "source": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "group": "Architecture",
+      "position": [
+        1.44,
+        8.28,
+        0.92
+      ],
+      "bounds_min": [
+        0.7000001072883606,
+        8.169999122619629,
+        0.9200000166893005
+      ],
+      "bounds_max": [
+        2.180000066757202,
+        8.389999389648438,
+        2.8499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Door to hutong",
+      "source": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "group": "Architecture",
+      "position": [
+        1.48,
+        8.02,
+        0
+      ],
+      "bounds_min": [
+        1.0150001049041748,
+        7.940000534057617,
+        0.0
+      ],
+      "bounds_max": [
+        1.9450000524520874,
+        8.100000381469727,
+        2.1399998664855957
+      ],
+      "collision": false
+    },
+    {
+      "label": "Front window",
+      "source": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+      "group": "Architecture",
+      "position": [
+        -1.03,
+        -0.13,
+        0.38
+      ],
+      "bounds_min": [
+        -1.8550000190734863,
+        -0.25500011444091797,
+        0.3799999952316284
+      ],
+      "bounds_max": [
+        -0.20499984920024872,
+        -0.004999877884984016,
+        2.500000238418579
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left window",
+      "source": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+      "group": "Architecture",
+      "position": [
+        -2.08,
+        1.55,
+        0.76
+      ],
+      "bounds_min": [
+        -2.184999942779541,
+        0.6999998688697815,
+        0.7600000500679016
+      ],
+      "bounds_max": [
+        -1.9749997854232788,
+        2.4000000953674316,
+        2.380000114440918
+      ],
+      "collision": false
+    },
+    {
+      "label": "Beam light 0",
+      "source": "assets/recordshop/v3/meshy/RS306-CeilingBeamFluorescent.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        1.8,
+        2.65
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        1.6799999475479126,
+        2.6500000953674316
+      ],
+      "bounds_max": [
+        2.1549997329711914,
+        1.9199999570846558,
+        2.81000018119812
+      ],
+      "collision": false
+    },
+    {
+      "label": "Beam light 1",
+      "source": "assets/recordshop/v3/meshy/RS306-CeilingBeamFluorescent.glb",
+      "group": "Architecture",
+      "position": [
+        0,
+        5.7,
+        2.65
+      ],
+      "bounds_min": [
+        -2.1549999713897705,
+        5.579999923706055,
+        2.6500000953674316
+      ],
+      "bounds_max": [
+        2.1549997329711914,
+        5.820000171661377,
+        2.81000018119812
+      ],
+      "collision": false
+    },
+    {
+      "label": "New arrivals island",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "Furniture",
+      "position": [
+        -0.12,
+        2.06,
+        0
+      ],
+      "bounds_min": [
+        -0.5995066165924072,
+        1.733548641204834,
+        0.0
+      ],
+      "bounds_max": [
+        0.35950660705566406,
+        2.386451244354248,
+        0.8899999856948853
+      ],
+      "collision": true
+    },
+    {
+      "label": "Front browsing bin",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "Furniture",
+      "position": [
+        -1.36,
+        2.02,
+        0
+      ],
+      "bounds_min": [
+        -1.7100001573562622,
+        1.4449999332427979,
+        0.0
+      ],
+      "bounds_max": [
+        -1.0099999904632568,
+        2.5950000286102295,
+        1.0399999618530273
+      ],
+      "collision": true
+    },
+    {
+      "label": "Mid browsing bin",
+      "source": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "group": "Furniture",
+      "position": [
+        -1.36,
+        3.77,
+        0
+      ],
+      "bounds_min": [
+        -1.7286819219589233,
+        3.218083143234253,
+        0.0
+      ],
+      "bounds_max": [
+        -0.9913181662559509,
+        4.3219170570373535,
+        1.0199999809265137
+      ],
+      "collision": true
+    },
+    {
+      "label": "CD wall 5.5",
+      "source": "assets/recordshop/v2/meshy/RS202-CDTower.glb",
+      "group": "Furniture",
+      "position": [
+        -1.98,
+        5.5,
+        0
+      ],
+      "bounds_min": [
+        -2.104158878326416,
+        4.961271286010742,
+        0.0
+      ],
+      "bounds_max": [
+        -1.855841040611267,
+        6.038728713989258,
+        2.059999942779541
+      ],
+      "collision": true
+    },
+    {
+      "label": "CD wall 6.63",
+      "source": "assets/recordshop/v2/meshy/RS202-CDTower.glb",
+      "group": "Furniture",
+      "position": [
+        -1.98,
+        6.63,
+        0
+      ],
+      "bounds_min": [
+        -2.094515562057495,
+        6.133114814758301,
+        0.0
+      ],
+      "bounds_max": [
+        -1.8654844760894775,
+        7.126885890960693,
+        1.899999976158142
+      ],
+      "collision": true
+    },
+    {
+      "label": "Right shelves",
+      "source": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "group": "Furniture",
+      "position": [
+        1.95,
+        1.93,
+        0
+      ],
+      "bounds_min": [
+        1.7599998712539673,
+        1.1050000190734863,
+        0.0
+      ],
+      "bounds_max": [
+        2.140000104904175,
+        2.754999876022339,
+        1.940000057220459
+      ],
+      "collision": true
+    },
+    {
+      "label": "Rear cashier counter",
+      "source": "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+      "group": "Furniture",
+      "position": [
+        -0.62,
+        7.13,
+        0
+      ],
+      "bounds_min": [
+        -1.4449999332427979,
+        6.755000114440918,
+        0.0
+      ],
+      "bounds_max": [
+        0.20499998331069946,
+        7.505000114440918,
+        0.9399999976158142
+      ],
+      "collision": true
+    },
+    {
+      "label": "Cashier cassette stereo",
+      "source": "assets/recordshop/v3/retextured/RS212-CassetteStereo.glb",
+      "group": "Audio",
+      "position": [
+        -0.76,
+        7.13,
+        0.9399999976158142
+      ],
+      "bounds_min": [
+        -1.0,
+        7.025439739227295,
+        0.9399999976158142
+      ],
+      "bounds_max": [
+        -0.5199999809265137,
+        7.234560489654541,
+        1.2254226207733154
+      ],
+      "collision": false
+    },
+    {
+      "label": "Counter thermos",
+      "source": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+      "group": "Clutter",
+      "position": [
+        -1.23,
+        7.12,
+        0.9399999976158142
+      ],
+      "bounds_min": [
+        -1.292884111404419,
+        7.072587966918945,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        -1.1671159267425537,
+        7.167412281036377,
+        1.25
+      ],
+      "collision": false
+    },
+    {
+      "label": "Cashier lower shelf crate",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        -0.89,
+        7.13,
+        0.16
+      ],
+      "bounds_min": [
+        -1.1299999952316284,
+        6.9686994552612305,
+        0.1599999964237213
+      ],
+      "bounds_max": [
+        -0.6499999761581421,
+        7.2913007736206055,
+        0.452003538608551
+      ],
+      "collision": false
+    },
+    {
+      "label": "Cashier lower shelf zines",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        -0.28,
+        7.07,
+        0.16
+      ],
+      "bounds_min": [
+        -0.48298633098602295,
+        6.877636432647705,
+        0.1599999964237213
+      ],
+      "bounds_max": [
+        -0.07701364159584045,
+        7.262363910675049,
+        0.32066404819488525
+      ],
+      "collision": false
+    },
+    {
+      "label": "Counter fanzines",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        -0.12,
+        7.02,
+        0.9399999976158142
+      ],
+      "bounds_min": [
+        -0.28009501099586487,
+        6.8688063621521,
+        0.940000057220459
+      ],
+      "bounds_max": [
+        0.040095005184412,
+        7.171193599700928,
+        1.069423794746399
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening desk",
+      "source": "assets/recordshop/v3/retextured/RS209-ListeningDesk.glb",
+      "group": "Furniture",
+      "position": [
+        1.73,
+        4.79,
+        0
+      ],
+      "bounds_min": [
+        1.3649998903274536,
+        3.8550000190734863,
+        0.0
+      ],
+      "bounds_max": [
+        2.0950000286102295,
+        5.725000381469727,
+        0.7899999618530273
+      ],
+      "collision": true
+    },
+    {
+      "label": "Turntable",
+      "source": "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+      "group": "Audio",
+      "position": [
+        1.63,
+        4.76,
+        0.7899999618530273
+      ],
+      "bounds_min": [
+        1.4469162225723267,
+        4.505000114440918,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        1.8130836486816406,
+        5.015000343322754,
+        0.9519215822219849
+      ],
+      "collision": false
+    },
+    {
+      "label": "Near speaker",
+      "source": "assets/recordshop/v3/retextured/RS211-HifiSpeaker.glb",
+      "group": "Audio",
+      "position": [
+        1.77,
+        4.13,
+        0.7899999618530273
+      ],
+      "bounds_min": [
+        1.6684015989303589,
+        4.024505138397217,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        1.8715983629226685,
+        4.235494613647461,
+        1.1299999952316284
+      ],
+      "collision": false
+    },
+    {
+      "label": "Far speaker",
+      "source": "assets/recordshop/v3/retextured/RS211-HifiSpeaker.glb",
+      "group": "Audio",
+      "position": [
+        1.77,
+        5.48,
+        0.7899999618530273
+      ],
+      "bounds_min": [
+        1.6665418148040771,
+        5.372734546661377,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        1.8734580278396606,
+        5.587265968322754,
+        1.1299999952316284
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening lamp",
+      "source": "assets/recordshop/v2/meshy/RS206-DeskLamp.glb",
+      "group": "Clutter",
+      "position": [
+        1.98,
+        5.09,
+        0.7899999618530273
+      ],
+      "bounds_min": [
+        1.8739134073257446,
+        4.972912311553955,
+        0.7899999618530273
+      ],
+      "bounds_max": [
+        2.0860867500305176,
+        5.207087993621826,
+        1.1999999284744263
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening chair",
+      "source": "assets/recordshop/v3/retextured/RS210-ListeningChair.glb",
+      "group": "Furniture",
+      "position": [
+        0.91,
+        4.92,
+        0
+      ],
+      "bounds_min": [
+        0.47206613421440125,
+        4.507152557373047,
+        0.0
+      ],
+      "bounds_max": [
+        1.3479340076446533,
+        5.332847595214844,
+        0.8399999737739563
+      ],
+      "collision": true
+    },
+    {
+      "label": "Entry cassette crate",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        -1.63,
+        0.77,
+        0
+      ],
+      "bounds_min": [
+        -1.868972659111023,
+        0.5970736145973206,
+        0.0
+      ],
+      "bounds_max": [
+        -1.3910272121429443,
+        0.9429263472557068,
+        0.2737533450126648
+      ],
+      "collision": false
+    },
+    {
+      "label": "Under table crate",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.72,
+        5.23,
+        0
+      ],
+      "bounds_min": [
+        1.516058087348938,
+        5.089643955230713,
+        0.0
+      ],
+      "bounds_max": [
+        1.923941969871521,
+        5.370355606079102,
+        0.24333631992340088
+      ],
+      "collision": false
+    },
+    {
+      "label": "Counter plant",
+      "source": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "group": "Clutter",
+      "position": [
+        -1.3,
+        7.4,
+        0.9399999976158142
+      ],
+      "bounds_min": [
+        -1.428496241569519,
+        7.271476745605469,
+        0.9399999380111694
+      ],
+      "bounds_max": [
+        -1.1715036630630493,
+        7.5285234451293945,
+        1.3599998950958252
+      ],
+      "collision": false
+    },
+    {
+      "label": "Counter fan",
+      "source": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+      "group": "Clutter",
+      "position": [
+        -0.28,
+        7.43,
+        0.9399999976158142
+      ],
+      "bounds_min": [
+        -0.4652346670627594,
+        7.20179557800293,
+        0.9399999380111694
+      ],
+      "bounds_max": [
+        -0.09476537257432938,
+        7.658204555511475,
+        1.2799999713897705
+      ],
+      "collision": false
+    },
+    {
+      "label": "Red guitar on stand",
+      "source": "assets/d22/meshy/P06-Guitar.glb",
+      "group": "Audio",
+      "position": [
+        1.65,
+        6.55,
+        0
+      ],
+      "bounds_min": [
+        1.44676673412323,
+        6.363855361938477,
+        0.0
+      ],
+      "bounds_max": [
+        1.8532330989837646,
+        6.73614501953125,
+        1.0399999618530273
+      ],
+      "collision": true
+    },
+    {
+      "label": "Small guitar amp",
+      "source": "assets/d22/meshy/A01-Amplifier.glb",
+      "group": "Audio",
+      "position": [
+        1.5,
+        7.14,
+        0
+      ],
+      "bounds_min": [
+        1.225498914718628,
+        6.936854362487793,
+        0.0
+      ],
+      "bounds_max": [
+        1.774501085281372,
+        7.343145370483398,
+        0.45841801166534424
+      ],
+      "collision": true
+    },
+    {
+      "label": "Zines near bins",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        -1.6,
+        2.82,
+        0
+      ],
+      "bounds_min": [
+        -1.8158057928085327,
+        2.613325595855713,
+        0.0
+      ],
+      "bounds_max": [
+        -1.384194254875183,
+        3.0266740322113037,
+        0.16066405177116394
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf crate 0_0",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.89,
+        1.36,
+        0.1
+      ],
+      "bounds_min": [
+        1.7992684841156006,
+        1.225000023841858,
+        0.10000000149011612
+      ],
+      "bounds_max": [
+        1.9807316064834595,
+        1.4950000047683716,
+        0.2642520070075989
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf zines 0_1",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        1.89,
+        1.94,
+        0.1
+      ],
+      "bounds_min": [
+        1.7519657611846924,
+        1.8087562322616577,
+        0.09999999403953552
+      ],
+      "bounds_max": [
+        2.028034210205078,
+        2.0712435245513916,
+        0.20710936188697815
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf crate 0_2",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.89,
+        2.5,
+        0.1
+      ],
+      "bounds_min": [
+        1.7992684841156006,
+        2.364999771118164,
+        0.10000000149011612
+      ],
+      "bounds_max": [
+        1.9807316064834595,
+        2.634999990463257,
+        0.2642520070075989
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf zines 1_0",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        1.89,
+        1.36,
+        0.72
+      ],
+      "bounds_min": [
+        1.7519657611846924,
+        1.228756308555603,
+        0.7200000286102295
+      ],
+      "bounds_max": [
+        2.028034210205078,
+        1.491243600845337,
+        0.8271093964576721
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf crate 1_1",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.89,
+        1.94,
+        0.72
+      ],
+      "bounds_min": [
+        1.7992684841156006,
+        1.8050000667572021,
+        0.7200000286102295
+      ],
+      "bounds_max": [
+        1.9807316064834595,
+        2.075000047683716,
+        0.8842520117759705
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf zines 1_2",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        1.89,
+        2.5,
+        0.72
+      ],
+      "bounds_min": [
+        1.7519657611846924,
+        2.3687562942504883,
+        0.7200000286102295
+      ],
+      "bounds_max": [
+        2.028034210205078,
+        2.6312437057495117,
+        0.8271093964576721
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf crate 2_0",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.89,
+        1.36,
+        1.32
+      ],
+      "bounds_min": [
+        1.7992684841156006,
+        1.225000023841858,
+        1.3200000524520874
+      ],
+      "bounds_max": [
+        1.9807316064834595,
+        1.4950000047683716,
+        1.4842520952224731
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf zines 2_1",
+      "source": "assets/d22/v9/meshy/B10-Zines.glb",
+      "group": "Paper",
+      "position": [
+        1.89,
+        1.94,
+        1.32
+      ],
+      "bounds_min": [
+        1.7519657611846924,
+        1.8087562322616577,
+        1.3200000524520874
+      ],
+      "bounds_max": [
+        2.028034210205078,
+        2.0712435245513916,
+        1.4271094799041748
+      ],
+      "collision": false
+    },
+    {
+      "label": "Shelf crate 2_2",
+      "source": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "group": "Clutter",
+      "position": [
+        1.89,
+        2.5,
+        1.32
+      ],
+      "bounds_min": [
+        1.7992684841156006,
+        2.364999771118164,
+        1.3200000524520874
+      ],
+      "bounds_max": [
+        1.9807316064834595,
+        2.634999990463257,
+        1.4842520952224731
+      ],
+      "collision": false
+    },
+    {
+      "label": "Rear band photo 0",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        -1.6,
+        8.045,
+        1.5
+      ],
+      "bounds_min": [
+        -1.8119921684265137,
+        8.034947395324707,
+        1.5
+      ],
+      "bounds_max": [
+        -1.3880078792572021,
+        8.055052757263184,
+        2.0399999618530273
+      ],
+      "collision": false
+    },
+    {
+      "label": "Rear band photo 1",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        -0.97,
+        8.045,
+        1.76
+      ],
+      "bounds_min": [
+        -1.2605077028274536,
+        8.031224250793457,
+        1.7600001096725464
+      ],
+      "bounds_max": [
+        -0.6794922351837158,
+        8.058775901794434,
+        2.5
+      ],
+      "collision": false
+    },
+    {
+      "label": "Rear band photo 2",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        -0.28,
+        8.045,
+        1.42
+      ],
+      "bounds_min": [
+        -0.5116209983825684,
+        8.034016609191895,
+        1.4199999570846558
+      ],
+      "bounds_max": [
+        -0.04837898910045624,
+        8.055983543395996,
+        2.009999990463257
+      ],
+      "collision": false
+    },
+    {
+      "label": "Rear band photo 3",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        0.37,
+        8.045,
+        1.87
+      ],
+      "bounds_min": [
+        0.16193367540836334,
+        8.035133361816406,
+        1.8700000047683716
+      ],
+      "bounds_max": [
+        0.578066349029541,
+        8.054866790771484,
+        2.4000000953674316
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening band photo 0",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        2.075,
+        3.17,
+        1.3
+      ],
+      "bounds_min": [
+        2.063458204269409,
+        2.9266018867492676,
+        1.2999999523162842
+      ],
+      "bounds_max": [
+        2.0865421295166016,
+        3.413398504257202,
+        1.9199998378753662
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening band photo 1",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        2.075,
+        3.65,
+        2.03
+      ],
+      "bounds_min": [
+        2.0660643577575684,
+        3.4615626335144043,
+        2.0299999713897705
+      ],
+      "bounds_max": [
+        2.0839357376098633,
+        3.838437557220459,
+        2.509999990463257
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening band photo 2",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        2.075,
+        4.32,
+        1.55
+      ],
+      "bounds_min": [
+        2.0601072311401367,
+        4.0059380531311035,
+        1.5499999523162842
+      ],
+      "bounds_max": [
+        2.089892864227295,
+        4.634062767028809,
+        2.3499999046325684
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening band photo 3",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        2.075,
+        5.28,
+        1.4
+      ],
+      "bounds_min": [
+        2.061596632003784,
+        4.997344017028809,
+        1.399999976158142
+      ],
+      "bounds_max": [
+        2.0884037017822266,
+        5.562656402587891,
+        2.119999885559082
+      ],
+      "collision": false
+    },
+    {
+      "label": "Listening band photo 4",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        2.075,
+        5.94,
+        2.05
+      ],
+      "bounds_min": [
+        2.065692186355591,
+        5.743710994720459,
+        2.049999952316284
+      ],
+      "bounds_max": [
+        2.08430814743042,
+        6.136289119720459,
+        2.549999952316284
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left band photo 0",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        -2.06,
+        2.8,
+        1.5
+      ],
+      "bounds_min": [
+        -2.073031187057495,
+        2.525195360183716,
+        1.5
+      ],
+      "bounds_max": [
+        -2.046968698501587,
+        3.0748045444488525,
+        2.200000047683716
+      ],
+      "collision": false
+    },
+    {
+      "label": "Left band photo 1",
+      "source": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "group": "Paper",
+      "position": [
+        -2.06,
+        4.3,
+        1.6
+      ],
+      "bounds_min": [
+        -2.0713558197021484,
+        4.060527801513672,
+        1.5999999046325684
+      ],
+      "bounds_max": [
+        -2.0486443042755127,
+        4.539473056793213,
+        2.2100000381469727
+      ],
+      "collision": false
+    }
+  ],
+  "sources": [
+    {
+      "path": "assets/d22/meshy/A01-Amplifier.glb",
+      "sha256": "73582506153039be55bfcbc685b446fa25b8beffd56540298244f7588ab3424f"
+    },
+    {
+      "path": "assets/d22/meshy/P06-Guitar.glb",
+      "sha256": "d8cf8d1692b495de5e2d89981b18aeb71d40cc03601ea7f87e8f7dc951101fb3"
+    },
+    {
+      "path": "assets/d22/v9/meshy/B02-TileFloor.glb",
+      "sha256": "9f10c1325f9cc8ee40cdf3ba6e7d73214a14fcecf8f4f15aaa02e1563472e8da"
+    },
+    {
+      "path": "assets/d22/v9/meshy/B07-GalleryFrame.glb",
+      "sha256": "e423072fe8ebccbd7166659459e6f22b2043b003bcb2307ce70f4ebf534a653d"
+    },
+    {
+      "path": "assets/d22/v9/meshy/B10-Zines.glb",
+      "sha256": "50d173361878ca44e9b15d1e6cf92cab756887a47b2c037ba52c055d25c968d0"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS201-RecordBin.glb",
+      "sha256": "63fce8124716104d0e8b9b7a61e2eea9976a839e05ed79ad8b52077c6149abb9"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS202-CDTower.glb",
+      "sha256": "c41a9f17eb34a9e38b9e2b844fcd19357425253073a7c1a0b98005cd45700fc9"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS203-CashDesk.glb",
+      "sha256": "4cf2e3ccb2fd5b681c705d337052054ae284591bc5874005560201df6721bd22"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS204-Turntable.glb",
+      "sha256": "23515bfd2c237fd4ea48d9370c230eca12a8cfd551a26ba52393259326b6b0a1"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS205-DeskFan.glb",
+      "sha256": "115a7974be85bbd69eba521af821026916345c15f5d1514cadcc3ff7a6de25ce"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS206-DeskLamp.glb",
+      "sha256": "36447df0d790028846f4641d4299066c1ff42bbd30416ce4cc173fa1d0003281"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+      "sha256": "d3a614fdb31a69c8133d816adf4af2489bea4ecd9d9de8a27a1404a848a61b22"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+      "sha256": "4a4bbbbe23cf2b6b1203c4ea8db17bdf6ae0df8775bdd8d1a3a55a42ea7bfe01"
+    },
+    {
+      "path": "assets/recordshop/v2/meshy/RS213-TapeCrate.glb",
+      "sha256": "d4298163dfb612facec493ff74b3418ef3edb27701ad9c66b76f9ab02389a49e"
+    },
+    {
+      "path": "assets/recordshop/v3/meshy/RS306-CeilingBeamFluorescent.glb",
+      "sha256": "f19a203f868efa797064a7594058389b26cf164f829fc65c3d1cf9c9392da044"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS209-ListeningDesk.glb",
+      "sha256": "8a356b0db5c84ee266944105e89c5b70b532b2390fa8105fff1416993c776db4"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS210-ListeningChair.glb",
+      "sha256": "0b3b07ea9beb1ca86063646419c40766a83347bbc57c72b516fa5684fef3db30"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS211-HifiSpeaker.glb",
+      "sha256": "32951dfa2a49d0cd43e6bdc2abef3b90c4d5a42e07e98c52bbf26bd6f7f788b1"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS212-CassetteStereo.glb",
+      "sha256": "c5e191614b897bf6dc7f5ed8471bb6a6070931095b4b4f8ed60d6c81139e47c4"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS301-HutongWallPanel.glb",
+      "sha256": "f0a71172de064e21b8b55946b4a7cbb81fe1e5ae9320578133b161ed5af57c36"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS302-HutongWindowBay.glb",
+      "sha256": "ddbd8c3aa2ec08fc4068a621814b6a0f8d69dbaa9f7162c0fff5dc87814067db"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS303-RedTimberDoor.glb",
+      "sha256": "ee64dea88446b361ccbd4e08f56bea533f48fc4539bded82bdec17485fdb8e4c"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS304-LPWallShelf.glb",
+      "sha256": "b6cdd46c802c97368f85cab03e7f97c43b27e99e6760a73079166604bc52ccd4"
+    },
+    {
+      "path": "assets/recordshop/v3/retextured/RS310-PlasterOnly.glb",
+      "sha256": "4df1289dc1b8b46944e4d7d582d179d9d9c8dabfc126095cd5407c9f3d19df14"
+    }
+  ],
+  "camera_views": [
+    {
+      "name": "Entry",
+      "position": [
+        0.6200000047683716,
+        0.550000011920929,
+        1.5299999713897705
+      ],
+      "direction": [
+        -0.13208748400211334,
+        0.9906559586524963,
+        -0.033965326845645905
+      ],
+      "lens": 25.0
+    },
+    {
+      "name": "Listening",
+      "position": [
+        -0.3799999952316284,
+        3.630000114440918,
+        1.4800000190734863
+      ],
+      "direction": [
+        0.8454844355583191,
+        0.49808233976364136,
+        -0.19253584742546082
+      ],
+      "lens": 33.0
+    },
+    {
+      "name": "Cashier",
+      "position": [
+        0.5,
+        5.519999980926514,
+        1.5099999904632568
+      ],
+      "direction": [
+        -0.5699571967124939,
+        0.8149389624595642,
+        -0.1049920842051506
+      ],
+      "lens": 32.0
+    }
+  ],
+  "rule": "All visible geometry imported from Meshy GLB assets. No authored primitives.",
+  "visitor_route_xy": [
+    [
+      0.62,
+      0.55
+    ],
+    [
+      0.96,
+      2.06
+    ],
+    [
+      0.23,
+      3.2
+    ],
+    [
+      -0.15,
+      5.35
+    ],
+    [
+      0.45,
+      6.45
+    ],
+    [
+      0.65,
+      7.65
+    ],
+    [
+      1.4,
+      7.75
+    ]
+  ]
+}

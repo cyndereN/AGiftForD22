@@ -1,0 +1,453 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using Newtonsoft.Json.Linq;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
+using Object = UnityEngine.Object;
+
+namespace D22.Editor
+{
+    public static class D22SceneBuilder
+    {
+        const string Root = "Assets/D22";
+        const string Scenes = Root + "/Scenes/";
+        static readonly string[] SceneNames = { "D22_Bootstrap", "D22_Environment", "D22_Lighting", "D22_Gameplay" };
+        static JObject Data => JObject.Parse(File.ReadAllText(Root + "/Art/Data/d22-export.json"));
+        static Vector3 Vec(JToken a) => new Vector3((float)a[0], (float)a[1], (float)a[2]);
+        static Color Col(JToken a) => new Color((float)a[0], (float)a[1], (float)a[2], a.Count() > 3 ? (float)a[3] : 1);
+
+        [MenuItem("D22/Publish/Update Art From Blender")]
+        public static void Build()
+        {
+            if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            foreach (var folder in new[] { "Materials", "Prefabs", "Scenes", "Settings", "Validation" })
+                Directory.CreateDirectory(Root + "/" + folder);
+            AssetDatabase.Refresh();
+            EditorSettings.serializationMode = SerializationMode.ForceText;
+            UnityEditor.VersionControlSettings.mode = "Visible Meta Files";
+            PlayerSettings.companyName = "D22 Team";
+            PlayerSettings.colorSpace = ColorSpace.Linear;
+            ConfigurePipeline();
+            var data = Data;
+            var materials = BuildMaterials(data);
+            foreach (string group in data["groups"].Values<string>())
+            {
+                string path = Root + "/Art/Models/D22_" + group + ".fbx";
+                var importer = (ModelImporter)AssetImporter.GetAtPath(path);
+                foreach (var pair in materials)
+                    importer.AddRemap(new AssetImporter.SourceAssetIdentifier(typeof(Material), pair.Key), pair.Value);
+                importer.SaveAndReimport();
+            }
+            BuildEnvironment(data);
+            BuildLivehouseGameplay();
+            if (!File.Exists(Scenes + "D22_Lighting.unity")) BuildLighting(data);
+            else SyncManifestLights(data);
+            EnsureD22LightingProfile();
+            // Gameplay is authored independently and never replaced on an art republish.
+            if (!File.Exists(Scenes + "D22_Gameplay.unity")) BuildGameplay();
+            if (!File.Exists(Scenes + "D22_Bootstrap.unity"))
+            {
+                var boot = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+                new GameObject("D22 Scene Loader").AddComponent<D22Bootstrap>();
+                EditorSceneManager.SaveScene(boot, Scenes + "D22_Bootstrap.unity");
+            }
+            D22ProjectSetup.ConfigureBuildScenes();
+            AssetDatabase.SaveAssets();
+            OpenWorkspace();
+            Validate();
+            Debug.Log("D22_PUBLISH_COMPLETE");
+        }
+
+        static void ConfigurePipeline()
+        {
+            var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>("Assets/Settings/PC_RPAsset.asset");
+            GraphicsSettings.defaultRenderPipeline = pipeline;
+            QualitySettings.renderPipeline = pipeline;
+            pipeline.shadowDistance = 22;
+            pipeline.maxAdditionalLightsCount = 8;
+            pipeline.additionalLightsShadowmapResolution = 4096;
+            EditorUtility.SetDirty(pipeline);
+            var renderer = AssetDatabase.LoadAssetAtPath<UniversalRendererData>("Assets/Settings/PC_Renderer.asset");
+            var serialized = new SerializedObject(renderer);
+            serialized.FindProperty("m_RenderingMode").intValue = 2; // Forward+ in URP 17.6
+            serialized.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+        public static Dictionary<string, Material> BuildMaterials(JObject data, string materialFolder = Root + "/Materials")
+        {
+            var materials = new Dictionary<string, Material>();
+            foreach (var item in data["materials"])
+            {
+                string id = (string)item["id"], path = materialFolder + "/" + id + ".mat";
+                var material = AssetDatabase.LoadAssetAtPath<Material>(path);
+                if (!material) { material = new Material(Shader.Find("Universal Render Pipeline/Lit")); AssetDatabase.CreateAsset(material, path); }
+                material.name = id;
+                material.shaderKeywords = Array.Empty<string>();
+                foreach (string property in new[] { "_BaseMap", "_BumpMap", "_MetallicGlossMap", "_EmissionMap" }) material.SetTexture(property, null);
+                material.SetFloat("_Surface", 0); material.SetFloat("_ZWrite", 1); material.SetFloat("_AlphaClip", 0);
+                material.SetFloat("_SrcBlend", (float)BlendMode.One); material.SetFloat("_DstBlend", (float)BlendMode.Zero); material.renderQueue = -1;
+                material.SetColor("_EmissionColor", Color.black); material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.EmissiveIsBlack;
+                material.SetColor("_BaseColor", Col(item["base_color"]).gamma);
+                material.SetFloat("_Metallic", (float)item["metallic"]);
+                material.SetFloat("_Smoothness", 1 - (float)item["roughness"]);
+                material.SetFloat("_Cull", 0); // Source contains thin paper and imported single-sided surfaces.
+                material.enableInstancing = true;
+                SetTexture(material, "_BaseMap", (string)item["base_map"]);
+                // URP keeps _MainTex as a compatibility alias. Keep it in sync so
+                // Unity does not rewrite every generated material on the next import.
+                material.SetTexture("_MainTex", material.GetTexture("_BaseMap"));
+                string normal = (string)item["normal_map"];
+                if (!string.IsNullOrEmpty(normal))
+                {
+                    var importer = (TextureImporter)AssetImporter.GetAtPath(normal);
+                    if (importer.textureType != TextureImporterType.NormalMap)
+                    { importer.textureType = TextureImporterType.NormalMap; importer.sRGBTexture = false; importer.SaveAndReimport(); }
+                    SetTexture(material, "_BumpMap", normal); material.EnableKeyword("_NORMALMAP");
+                    material.SetFloat("_BumpScale", (float)item["normal_scale"]);
+                }
+                string metallic = (string)item["metallic_map"];
+                if (!string.IsNullOrEmpty(metallic))
+                { SetTexture(material, "_MetallicGlossMap", metallic); material.EnableKeyword("_METALLICSPECGLOSSMAP"); material.SetFloat("_Smoothness", 1); }
+                if ((float)item["emission_strength"] > 0)
+                {
+                    material.EnableKeyword("_EMISSION");
+                    // Blender's Cycles emission values are scene-linear. URP's
+                    // post stack receives those values after ACES and Bloom, so
+                    // the visible lamp glass needs a display calibration instead
+                    // of carrying the raw source wattage into the frame.
+                    float emissionScale = EmissionCalibration(id);
+                    material.SetColor("_EmissionColor", Col(item["emission"]) * (float)item["emission_strength"] * emissionScale);
+                    SetTexture(material, "_EmissionMap", (string)item["emission_map"]);
+                    material.globalIlluminationFlags = MaterialGlobalIlluminationFlags.BakedEmissive;
+                }
+                if ((bool)item["alpha_clip"])
+                { material.SetFloat("_AlphaClip", 1); material.SetFloat("_Cutoff", .45f); material.EnableKeyword("_ALPHATEST_ON"); material.renderQueue = 2450; }
+                if ((bool)item["transparent"])
+                {
+                    material.SetFloat("_Surface", 1); material.SetFloat("_ZWrite", 0);
+                    material.SetFloat("_SrcBlend", (float)BlendMode.SrcAlpha); material.SetFloat("_DstBlend", (float)BlendMode.OneMinusSrcAlpha);
+                    material.EnableKeyword("_SURFACE_TYPE_TRANSPARENT"); material.renderQueue = 3000;
+                    Color c=material.GetColor("_BaseColor"); c.a=.26f; material.SetColor("_BaseColor",c);
+                }
+                EditorUtility.SetDirty(material); materials.Add(id, material);
+            }
+            AssetDatabase.SaveAssets();
+            return materials;
+        }
+
+        static void SetTexture(Material material, string property, string path)
+        { if (!string.IsNullOrEmpty(path)) material.SetTexture(property, AssetDatabase.LoadAssetAtPath<Texture2D>(path)); }
+
+        static void BuildEnvironment(JObject data)
+        {
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+            var sources = data["objects"].ToDictionary(o => (string)o["id"]);
+            foreach (string group in data["groups"].Values<string>())
+            {
+                var model = AssetDatabase.LoadAssetAtPath<GameObject>(Root + "/Art/Models/D22_" + group + ".fbx");
+                if (!model) throw new InvalidOperationException("Missing model: " + group);
+                var instance = (GameObject)PrefabUtility.InstantiatePrefab(model);
+                instance.name = "D22_" + group;
+                // Blender -Z-forward FBX imports with X/Z reversed; align to the light manifest.
+                instance.transform.rotation = Quaternion.Euler(0, 180, 0) * instance.transform.rotation;
+                foreach (var renderer in instance.GetComponentsInChildren<MeshRenderer>())
+                {
+                    GameObjectUtility.SetStaticEditorFlags(renderer.gameObject, StaticEditorFlags.ContributeGI | StaticEditorFlags.BatchingStatic | StaticEditorFlags.OccluderStatic | StaticEditorFlags.OccludeeStatic);
+                    renderer.receiveGI = ReceiveGI.Lightmaps;
+                    renderer.scaleInLightmap = group == "Architecture" ? .7f : .35f;
+                    if (sources.TryGetValue(renderer.gameObject.name, out var source) && group == "Architecture")
+                    {
+                        string name = ((string)source["source_name"]).ToLowerInvariant();
+                        bool solid = new[] { "floor", "deck", "stair", "wall", "pier", "riser", "fascia", "bearing", "tread", "slat", "backing", "return", "lintel", "jamb", "door /" }.Any(name.Contains);
+                        if (solid && !name.Contains("brick") && !name.Contains("photo") && !name.Contains("notice"))
+                            renderer.gameObject.AddComponent<MeshCollider>();
+                    }
+                }
+                string prefabPath = Root + "/Prefabs/D22_" + group + ".prefab";
+                PrefabUtility.SaveAsPrefabAssetAndConnect(instance, prefabPath, InteractionMode.AutomatedAction);
+            }
+            EditorSceneManager.SaveScene(scene, Scenes + "D22_Environment.unity");
+        }
+
+        static void BuildLighting(JObject data)
+        {
+            var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
+            foreach (var item in data["lights"])
+            {
+                var obj = new GameObject((string)item["name"]);
+                obj.transform.position = Vec(item["position"]);
+                obj.transform.rotation = Quaternion.LookRotation(Vec(item["direction"]), Vector3.up);
+                ApplyManifestLight(obj.AddComponent<Light>(), item);
+            }
+            RenderSettings.skybox = null;
+            RenderSettings.ambientMode = AmbientMode.Trilight;
+            RenderSettings.ambientSkyColor = new Color(.09f,.095f,.11f);
+            RenderSettings.ambientEquatorColor = new Color(.06f,.045f,.035f);
+            RenderSettings.ambientGroundColor = new Color(.025f,.022f,.02f);
+            RenderSettings.ambientIntensity = 1;
+            var settings = new LightingSettings { name = "D22 Lighting Settings", bakedGI = true, realtimeGI = false, lightmapResolution = 12, lightmapMaxSize = 2048, indirectSampleCount = 64, directSampleCount = 32, environmentSampleCount = 32, maxBounces = 3 };
+            settings.mixedBakeMode = MixedLightingMode.IndirectOnly;
+            settings.lightmapper = LightingSettings.Lightmapper.UnityComputeGPU;
+            string settingsPath = Root + "/Settings/D22Lighting.asset";
+            if (File.Exists(settingsPath)) { var old = AssetDatabase.LoadAssetAtPath<LightingSettings>(settingsPath); EditorUtility.CopySerialized(settings,old); Object.DestroyImmediate(settings); settings=old; }
+            else AssetDatabase.CreateAsset(settings, settingsPath);
+            Lightmapping.lightingSettings = settings;
+            var probe = new GameObject("D22 Room Reflections").AddComponent<ReflectionProbe>();
+            probe.transform.position = new Vector3(0,2,0); probe.size = new Vector3(8,6,15); probe.boxProjection = true; probe.resolution=128; probe.mode=ReflectionProbeMode.Baked;
+            var probes = new GameObject("D22 Walkable Light Probes").AddComponent<LightProbeGroup>();
+            var positions = new List<Vector3>();
+            for (float z=-5;z<=6;z+=1.5f) for(float x=-2.5f;x<=2.5f;x+=1.25f) foreach(float y in new[]{.5f,1.7f,3.3f}) positions.Add(new Vector3(x,y,z));
+            probes.probePositions=positions.ToArray();
+            var profile = AssetDatabase.LoadAssetAtPath<VolumeProfile>(Root+"/Settings/D22Volume.asset");
+            if (!profile) { profile=ScriptableObject.CreateInstance<VolumeProfile>(); AssetDatabase.CreateAsset(profile,Root+"/Settings/D22Volume.asset"); }
+            if(!profile.TryGet<Tonemapping>(out var tonemapping)) tonemapping=profile.Add<Tonemapping>();
+            tonemapping.mode.Override(TonemappingMode.ACES);
+            if(!profile.TryGet<ColorAdjustments>(out var color)) color=profile.Add<ColorAdjustments>();
+            color.postExposure.Override(.7f);
+            var volume = new GameObject("D22 Color Grade").AddComponent<Volume>();volume.isGlobal=true;volume.sharedProfile=profile;
+            EditorUtility.SetDirty(profile);
+            EditorSceneManager.SaveScene(scene, Scenes+"D22_Lighting.unity");
+        }
+
+        static void BuildGameplay()
+        {
+            var scene=EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
+            var player=new GameObject("Walkthrough Player");player.transform.position=new Vector3(.6f,.2f,-2.5f);
+            var controller=player.AddComponent<CharacterController>();controller.height=1.75f;controller.radius=.24f;controller.center=new Vector3(0,.9f,0);controller.stepOffset=.22f;controller.skinWidth=.025f;
+            var cameraObject=new GameObject("Main Camera");cameraObject.tag="MainCamera";cameraObject.transform.SetParent(player.transform,false);cameraObject.transform.localPosition=new Vector3(0,1.6f,0);
+            var camera=cameraObject.AddComponent<Camera>();camera.nearClipPlane=.05f;camera.farClipPlane=80;camera.fieldOfView=65;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.025f,.025f,.03f);
+            cameraObject.AddComponent<AudioListener>();cameraObject.AddComponent<UniversalAdditionalCameraData>().renderPostProcessing=true;
+            player.AddComponent<D22Walkthrough>().SetView(cameraObject.transform);
+            EditorSceneManager.SaveScene(scene,Scenes+"D22_Gameplay.unity");
+        }
+
+        static void Boundary(string name,Vector3 position,Vector3 size)
+        {
+            var obj=GameObject.Find(name);
+            if(obj) Object.DestroyImmediate(obj);
+            obj=new GameObject(name);
+            obj.transform.position=position;
+            var box=obj.AddComponent<BoxCollider>();
+            box.size=size;box.isTrigger=false;
+        }
+
+        static void Exit(string name,Vector3 position,float radius,string nextScene,string label)
+        {
+            var obj=GameObject.Find(name);
+            if(!obj)obj=new GameObject(name);
+            obj.transform.position=position;
+            var exit=obj.GetComponent<D22Exit>();
+            if(!exit)exit=obj.AddComponent<D22Exit>();
+            exit.radius=radius;exit.nextScene=nextScene;exit.label=label;
+        }
+
+        static void BuildLivehouseGameplay()
+        {
+            var scene=EditorSceneManager.OpenScene(Scenes+"D22_Environment.unity",OpenSceneMode.Single);
+            // The visible side walls consist of many separate timber slats. Continuous
+            // colliders close their seams so a CharacterController cannot leave the room.
+            Boundary("Venue Safety / Left side wall",new Vector3(-3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
+            Boundary("Venue Safety / Right side wall",new Vector3(3.27f,2.425f,0),new Vector3(.14f,4.85f,13.2f));
+            Boundary("Venue Safety / Rear lower wall",new Vector3(0,1.33f,6.55f),new Vector3(6.4f,2.66f,.14f));
+            // Seal the entire upper rear wall, including the closed exit door.
+            // The far landing edge alone lets a player step through the doorway
+            // and walk around the short return walls into the unloaded area.
+            Boundary("Venue Safety / Upper rear wall",new Vector3(0,3.755f,6.55f),new Vector3(6.4f,2.19f,.2f));
+            Boundary("Venue Safety / Entrance edge",new Vector3(0,1.25f,-6.52f),new Vector3(1.5f,2.5f,.16f));
+            Boundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.75f,7.49f),new Vector3(1.35f,2.2f,.16f));
+            EditorSceneManager.SaveScene(scene);
+
+            scene=EditorSceneManager.OpenScene(Scenes+"D22_Gameplay.unity",OpenSceneMode.Single);
+            Exit("Venue Entrance / Return to Hutong",new Vector3(0,1.55f,-6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Upper Exit / Return to Hutong",new Vector3(2.1f,3.95f,6.08f),1.1f,"D22_Hutong","回到胡同 / RETURN TO HUTONG");
+            Exit("Stage Exit",new Vector3(0,1.8f,4),2f,"D22_Performance","演出开始 / HEAR THE SHOW");
+            EditorSceneManager.SaveScene(scene);
+        }
+
+        static void SyncManifestLights(JObject data)
+        {
+            var scene=EditorSceneManager.OpenScene(Scenes+"D22_Lighting.unity",OpenSceneMode.Single);
+            // Previous publishes kept a LightingDataAsset but no usable lightmaps.
+            // Clear its baked-light flags before reusing the existing Light objects.
+            Lightmapping.Clear();
+            Lightmapping.lightingDataAsset=null;
+            foreach(var item in data["lights"])
+            {
+                string name=(string)item["name"];
+                var obj=GameObject.Find(name);
+                if(name.StartsWith("Entry ") && obj){Object.DestroyImmediate(obj);obj=null;}
+                if(!obj)obj=new GameObject(name);
+                obj.transform.position=Vec(item["position"]);
+                obj.transform.rotation=Quaternion.LookRotation(Vec(item["direction"]),Vector3.up);
+                var light=obj.GetComponent<Light>();
+                if(!light)light=obj.AddComponent<Light>();
+                ApplyManifestLight(light,item);
+            }
+            EditorSceneManager.SaveScene(scene);
+        }
+
+        static void ApplyManifestLight(Light light, JToken item)
+        {
+            string name=(string)item["name"], sourceType=(string)item["type"];
+            bool area=sourceType=="AREA";
+            // URP does not render Rectangle lights in real time. The project currently
+            // has no baked lightmaps, so use a live approximation at the Blender pose.
+            light.type=sourceType=="SPOT" || area && !name.StartsWith("Photo warm pool")
+                ? LightType.Spot : LightType.Point;
+            light.color=Col(item["color"]).gamma;
+            light.range=name.StartsWith("L0")?9:name.StartsWith("Photo warm pool")?2.5f:5;
+            light.intensity=sourceType=="SPOT"?(float)item["power"]/30f
+                :area?(float)item["power"]/10f:(float)item["power"]/2f;
+            // Keep the visible drum heads and brass readable under URP's ACES
+            // exposure. Blender's stage watts map too strongly to Unity's
+            // real-time spot units, especially with multiple stage fixtures.
+            if(name.Contains("Stage PAR") && sourceType=="SPOT") light.intensity*=.62f;
+            else if(name.StartsWith("Bar task pool")) light.intensity*=.65f;
+            else if(name.StartsWith("Bottle shelf wash")) light.intensity*=.7f;
+            light.bounceIntensity=1.3f;
+            light.spotAngle=area?name.StartsWith("Bar task pool")?95f:110f
+                :Mathf.Clamp((float)item["angle"],1,175);
+            light.innerSpotAngle=light.spotAngle*(1-(float)item["blend"]*.65f);
+            light.shadowBias=.015f;light.shadowNormalBias=.035f;light.shadowNearPlane=.03f;
+            light.shadows=sourceType=="SPOT" && name.StartsWith("L0") || name.StartsWith("Bar task pool")
+                ?LightShadows.Soft:LightShadows.None;
+            light.lightmapBakeType=LightmapBakeType.Realtime;
+            var baking=light.bakingOutput;
+            baking.isBaked=false;
+            baking.lightmapBakeType=LightmapBakeType.Realtime;
+            light.bakingOutput=baking;
+        }
+
+        static float EmissionCalibration(string id)
+        {
+            if (id == "v17_Visible_warm_PAR_glass_dcbed81e") return .24f;
+            if (id == "v17_Visible_blue_PAR_glass_e3e8768d") return .3f;
+            if (id == "Gallery_lamp_warm_lens_90ef0773") return .28f;
+            if (id == "Entry_vestibule_warm_lightbox_10d8a0b1") return .4f;
+            if (id == "Material_0_022_dfc57f45") return .3f;
+            return 1f;
+        }
+
+        static void ConfigureD22VolumeProfile(VolumeProfile profile)
+        {
+            var tonemapping=GetOrAddVolumeComponent<Tonemapping>(profile);
+            tonemapping.mode.Override(TonemappingMode.ACES);
+            var color=GetOrAddVolumeComponent<ColorAdjustments>(profile);
+            color.postExposure.Override(.7f);
+            var bloom=GetOrAddVolumeComponent<Bloom>(profile);
+            bloom.intensity.Override(.08f);
+            bloom.threshold.Override(1.45f);
+            bloom.scatter.Override(.65f);
+            bloom.clamp.Override(4f);
+            bloom.tint.Override(new Color(1f,.94f,.86f));
+            bloom.highQualityFiltering.Override(true);
+        }
+
+        static T GetOrAddVolumeComponent<T>(VolumeProfile profile) where T : VolumeComponent
+        {
+            if(profile.TryGet<T>(out var component)) return component;
+            component=profile.Add<T>(true);
+            AssetDatabase.AddObjectToAsset(component,profile);
+            return component;
+        }
+
+        static void EnsureD22LightingProfile()
+        {
+            var profile=AssetDatabase.LoadAssetAtPath<VolumeProfile>(Root+"/Settings/D22Volume.asset");
+            if(!profile){profile=ScriptableObject.CreateInstance<VolumeProfile>();AssetDatabase.CreateAsset(profile,Root+"/Settings/D22Volume.asset");}
+            ConfigureD22VolumeProfile(profile);
+            EditorUtility.SetDirty(profile);AssetDatabase.SaveAssets();
+        }
+
+        [MenuItem("D22/Open Collaborative Workspace")]
+        public static void OpenWorkspace()
+        {
+            if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            EditorSceneManager.OpenScene(Scenes+"D22_Bootstrap.unity",OpenSceneMode.Single);
+            foreach(string name in SceneNames.Skip(1))EditorSceneManager.OpenScene(Scenes+name+".unity",OpenSceneMode.Additive);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("D22_Lighting"));
+            EditorSceneManager.SaveOpenScenes();
+            if(SceneView.lastActiveSceneView)SceneView.lastActiveSceneView.LookAt(new Vector3(0,1.8f,3),Quaternion.Euler(8,0,0),9);
+        }
+
+        [MenuItem("D22/Validate Published Scene")]
+        public static void Validate()
+        {
+            var meshes=Object.FindObjectsByType<MeshRenderer>();
+            var missing=meshes.Where(r=>r.sharedMaterials.Any(m=>!m||!m.shader||m.shader.name.Contains("Error"))).Select(r=>r.name).ToArray();
+            var lights=Object.FindObjectsByType<Light>();
+            var report=new JObject { ["unity_version"]=Application.unityVersion,["renderer_count"]=meshes.Length,["missing_materials"]=new JArray(missing),["lights"]=lights.Length,["colliders"]=Object.FindObjectsByType<Collider>().Length,["lightmaps"]=LightmapSettings.lightmaps.Length,["scene_count"]=SceneManager.sceneCount };
+            var sources=Data["objects"].ToDictionary(o=>(string)o["id"]);
+            float maxError=0; int matched=0; var placementErrors=new JArray();
+            foreach(var renderer in meshes)
+            {
+                if(!sources.TryGetValue(renderer.name,out var source))continue;
+                matched++;
+                Vector3 b=(Vec(source["bounds_min"])+Vec(source["bounds_max"]))*.5f;
+                Vector3 expected=new Vector3(b.x,b.z,b.y);
+                float error=Vector3.Distance(expected,renderer.bounds.center);maxError=Mathf.Max(maxError,error);
+                if(error>.08f && placementErrors.Count<12)placementErrors.Add(new JObject { ["object"]=renderer.name,["error_m"]=error,["expected"]=new JArray(expected.x,expected.y,expected.z),["actual"]=new JArray(renderer.bounds.center.x,renderer.bounds.center.y,renderer.bounds.center.z) });
+            }
+            report["matched_source_objects"]=matched;
+            report["max_object_center_error_m"]=maxError;report["placement_errors"]=placementErrors;
+            var upperDoorSource=sources.Values.SingleOrDefault(o=>((string)o["source_name"]).Contains("Upper RIGHT exit door / closed leaf"));
+            var upperDoor=upperDoorSource==null?null:meshes.FirstOrDefault(r=>r.name==(string)upperDoorSource["id"]);
+            bool upperDoorVisibleAndSolid=upperDoor && upperDoor.enabled && upperDoor.GetComponent<MeshCollider>();
+            report["upper_exit_door_visible_and_solid"]=upperDoorVisibleAndSolid;
+            Physics.SyncTransforms();
+            var floorHits=Physics.RaycastAll(new Vector3(.6f,1,-2.5f),Vector3.down,2)
+                .Where(h=>h.collider.gameObject.scene.name=="D22_Environment").OrderBy(h=>h.distance).ToArray();
+            bool floor=floorHits.Length>0;
+            var floorHit=floor?floorHits[0]:default;
+            report["spawn_floor_hit"]=floor;report["spawn_floor_height_m"]=floor?floorHit.point.y:0;
+            var lightIssues=new JArray();
+            foreach(var source in Data["lights"])
+            {
+                string name=(string)source["name"];
+                var matches=lights.Where(l=>l.name==name).ToArray();
+                if(matches.Length!=1 || !matches[0].enabled || matches[0].lightmapBakeType!=LightmapBakeType.Realtime || matches[0].bakingOutput.isBaked || matches[0].type==LightType.Rectangle)
+                    lightIssues.Add(name);
+            }
+            report["source_light_count"]=Data["lights"].Count();
+            report["manifest_light_issues"]=lightIssues;
+            var boundaryFailures=new JArray();
+            for(float z=-5;z<=5;z+=5)
+            {
+                if(!HitsBoundary("Venue Safety / Left side wall",new Vector3(-2.5f,1.2f,z),Vector3.left,1.5f))boundaryFailures.Add("left at z="+z);
+                if(!HitsBoundary("Venue Safety / Right side wall",new Vector3(2.5f,1.2f,z),Vector3.right,1.5f))boundaryFailures.Add("right at z="+z);
+            }
+            if(!HitsBoundary("Venue Safety / Rear lower wall",new Vector3(0,1.2f,5.8f),Vector3.forward,1.5f))boundaryFailures.Add("rear");
+            foreach(float x in new[]{-2.8f,0f,1.4f,2.1f,2.8f})
+                foreach(float y in new[]{3.0f,3.8f,4.45f})
+                    if(!HitsBoundary("Venue Safety / Upper rear wall",new Vector3(x,y,6.1f),Vector3.forward,.9f))
+                        boundaryFailures.Add("upper rear x="+x+" y="+y);
+            if(!HitsBoundary("Venue Safety / Entrance edge",new Vector3(0,1.2f,-5.8f),Vector3.back,1.5f))boundaryFailures.Add("entrance");
+            if(!HitsBoundary("Venue Safety / Upper exit edge",new Vector3(2.1f,3.8f,6.8f),Vector3.forward,1.5f))boundaryFailures.Add("upper exit");
+            report["boundary_ray_failures"]=boundaryFailures;
+            File.WriteAllText(Root+"/Validation/migration-report.json",report.ToString());
+            if(missing.Length>0 || meshes.Length!= (int)Data["geometry_count"] || matched!=sources.Count || placementErrors.Count>0 || !upperDoorVisibleAndSolid || !floor || Mathf.Abs(floorHit.point.y)>.3f || lightIssues.Count>0 || boundaryFailures.Count>0)throw new InvalidOperationException("D22 migration validation failed: "+report);
+            Debug.Log("D22_VALIDATION "+report.ToString(Newtonsoft.Json.Formatting.None));
+        }
+
+        static bool HitsBoundary(string name,Vector3 origin,Vector3 direction,float distance)
+        { return Physics.RaycastAll(origin,direction,distance).Any(hit=>hit.collider.name==name && hit.collider.gameObject.scene.name=="D22_Environment"); }
+
+        [MenuItem("D22/Bake Lighting")]
+        public static void Bake()
+        { OpenWorkspace(); Lightmapping.Bake(); EditorSceneManager.SaveOpenScenes(); AssetDatabase.SaveAssets(); Validate(); }
+
+        [MenuItem("D22/Publish/Reset Lighting From Blender")]
+        public static void ResetLighting()
+        {
+            if(!Application.isBatchMode && !EditorUtility.DisplayDialog("Reset D22 lighting", "This replaces Unity lighting edits with the Blender export. Commit or back up lighting changes first.", "Reset", "Cancel"))return;
+            if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
+            BuildLighting(Data);AssetDatabase.SaveAssets();OpenWorkspace();
+        }
+    }
+}

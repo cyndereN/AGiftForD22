@@ -1,0 +1,34 @@
+[
+  {
+    "path": "assets/hutong/meshy-v4/HT401-AirConditioner.glb",
+    "sha256": "1dec9ecf4b64fe6960b443ad72818c7a15e672ef943884e0399f4284b3eb8ed7"
+  },
+  {
+    "path": "assets/hutong/meshy-v4/HT402-ElectricMeter.glb",
+    "sha256": "15570ad9445513aadf9a17db86b4cd58abc1b9245db9c97c650e24293548c349"
+  },
+  {
+    "path": "assets/hutong/meshy-v4/HT403-LowTimberStool.glb",
+    "sha256": "0e9c3942c872609c14f6b6823a31e4819a69897e2dcfe0d9b21175315cd927ca"
+  },
+  {
+    "path": "assets/hutong/meshy-v4/HT404-WashBucket.glb",
+    "sha256": "ffeb7de4eb9005477373fb0a723e7fab740da6178fcebc9ab4de1e3b488012bb"
+  },
+  {
+    "path": "assets/hutong/meshy/HT003-OldBicycle.glb",
+    "sha256": "e1ab6c0e21b3be5acbe618e6fdb4fa94c94576f77182db4f25cf3c1d202b6e4f"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS207-Thermos.glb",
+    "sha256": "d3a614fdb31a69c8133d816adf4af2489bea4ecd9d9de8a27a1404a848a61b22"
+  },
+  {
+    "path": "assets/recordshop/v2/meshy/RS208-Pothos.glb",
+    "sha256": "4a4bbbbe23cf2b6b1203c4ea8db17bdf6ae0df8775bdd8d1a3a55a42ea7bfe01"
+  },
+  {
+    "path": "assets/recordshop/v4/meshy/RS406-UsedLPCarton.glb",
+    "sha256": "3cb4d7e2586ab84a1e8d5491d570d258dbf56c613944e989ca189c8067cd382d"
+  }
+]

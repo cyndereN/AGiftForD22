@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "source": "blender/source/D22_RecordShop_MeshyBottle.blend",
+  "source_units_m": 1.0,
+  "coordinate_mapping": "Unity (x,y,z) = Blender (x,z,y); FBX converted by importer",
+  "geometry_count": 1,
+  "materials": [
+    {
+      "id": "RS311_Material_0_d8714cf6",
+      "source_name": "RS311_Material_0",
+      "base_color": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.5,
+      "normal_scale": 1.0,
+      "emission": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "emission_strength": 1.0,
+      "base_map": "Assets/D22/Art/RecordShopV3/Wine/Textures/Image_0_297551ae.jpg",
+      "normal_map": "Assets/D22/Art/RecordShopV3/Wine/Textures/Image_2_96abf7c7.jpg",
+      "metallic_map": "Assets/D22/Art/RecordShopV3/Wine/Textures/RS311_Material_0_d8714cf6_MetallicSmoothness.png",
+      "emission_map": "Assets/D22/Art/RecordShopV3/Wine/Textures/Image_3_1083cbea.jpg",
+      "alpha_clip": false,
+      "transparent": false,
+      "notes": []
+    }
+  ],
+  "objects": [
+    {
+      "id": "MeshyBeerBottle_0_6ec44537",
+      "source_name": "MeshyBeerBottle_0",
+      "group": "Architecture",
+      "bounds_min": [
+        -0.03314236178994179,
+        -0.0331135019659996,
+        0.0
+      ],
+      "bounds_max": [
+        0.03314236178994179,
+        0.0331135019659996,
+        0.28999999165534973
+      ],
+      "polygons": 6116,
+      "materials": [
+        "RS311_Material_0_d8714cf6"
+      ]
+    }
+  ],
+  "lights": [],
+  "groups": [
+    "Architecture"
+  ],
+  "approximation_notes": [
+    "Procedural micro-bump and Blender transmission require Unity shader equivalents.",
+    "Light placement and color are preserved; intensity is calibrated for URP, not numerically copied between renderers."
+  ]
+}

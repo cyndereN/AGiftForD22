@@ -1,0 +1,11 @@
+newmtl tripo_material_3790f77c_f8a1_4b76_a3d8_d3f7b5ef7525
+Kd 1.000000000 1.000000000 1.000000000
+d 1.000000000
+illum 2
+map_Kd bass_basecolor.jpg
+Pr 1.000000000
+Pm 1.000000000
+map_Pr bass_roughness.png
+map_Pm bass_metallic.png
+norm bass_normal.png
+

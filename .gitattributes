@@ -1,0 +1,14 @@
+# New environment art uses LFS; existing dev/game binaries retain their format.
+blender/source/*.blend filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/Hutong/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/Hutong/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/Hutong/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShop/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShop/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShop/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV3/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV3/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV3/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV4/**/*.fbx filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV4/**/*.png filter=lfs diff=lfs merge=lfs -text
+assets/D22/Art/RecordShopV4/**/*.jpg filter=lfs diff=lfs merge=lfs -text

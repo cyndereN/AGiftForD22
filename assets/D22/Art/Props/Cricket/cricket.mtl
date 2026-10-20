@@ -1,0 +1,11 @@
+newmtl tripo_material_3046b555_4717_4943_ad0d_469c7a9cadd3
+Kd 1.000000000 1.000000000 1.000000000
+d 1.000000000
+illum 2
+map_Kd cricket_basecolor.jpg
+Pr 1.000000000
+Pm 1.000000000
+map_Pr cricket_roughness.png
+map_Pm cricket_metallic.png
+norm cricket_normal.png
+
