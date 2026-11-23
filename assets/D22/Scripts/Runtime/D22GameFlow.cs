@@ -39,9 +39,10 @@ namespace D22
         public bool AbilityOpen => Abilities != null && Abilities.Open;
         public bool HuntOpen => Hunt != null && Hunt.Open;
         public bool StageOpen => Stage != null && Stage.Open;
-        bool blocked = true, bossMet, aimingBottle, doorHeard, hutongAsked, loftHeard;
+        bool blocked = true, bossMet, doorHeard, hutongAsked, loftHeard;
         float cooldown;
         D22RecordShop recordShop;
+        D22PhantomShop phantom;
         Vector3 shopEntry;
         bool walked;
         GameObject bottle;
@@ -84,6 +85,8 @@ namespace D22
             Hunt = new D22Hunt(this);
             Stage = new D22Stage(this);
             Conductor = new D22Conductor();
+            phantom = gameObject.AddComponent<D22PhantomShop>();
+            phantom.Bind(this);
             BindSfx();
         }
 
@@ -184,8 +187,8 @@ namespace D22
             UI.ShowLoading();
             yield return SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
             Chapter = scene;
+            phantom?.OnChapter(scene);
             bottle = null;
-            aimingBottle = false;
             recordShop = FindAnyObjectByType<D22RecordShop>();
             shopEntry = Camera.main ? Camera.main.transform.position : Vector3.zero;
             walked = false;
@@ -283,6 +286,14 @@ namespace D22
         public void NoteWalk()
         {
             if (Abilities.Learn("walk")) UI.PlayLearnFly("walk");
+        }
+
+        public void GrantRecorded(string id)
+        {
+            if (id == "drink") HasDrink = true;
+            if (Abilities != null && Abilities.Learn(id) && UI != null) UI.PlayLearnFly(id);
+            if (id == "drink" && story != null && story.wine != null && story.wine.Length > 0)
+                Dialogue(story.wine, Resume);
         }
 
         public void RequestDrink() => ToggleAbility("drink");
@@ -401,16 +412,15 @@ namespace D22
                 return;
             }
             if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
+            if (k != null && k.vKey.wasPressedThisFrame && Chapter == "D22_RecordShop") phantom?.Toggle();
             var camera = Camera.main;
             if (Chapter == "D22_RecordShop")
             {
                 walked |= Vector3.Distance(camera.transform.position, shopEntry) > 1.5f;
                 if (!recordShop && !bossMet && camera.transform.position.z < -5)
                 { bossMet = true; Dialogue(story.boss, () => { SpawnBottle(); Resume(); }); return; }
-                if (recordShop && !bossMet && recordShop.CanTalk(camera.transform) && k != null && k.eKey.wasPressedThisFrame)
+                if (recordShop && phantom != null && phantom.Active && !bossMet && recordShop.CanTalk(camera.transform) && k != null && k.eKey.wasPressedThisFrame)
                 { TryInteract(); return; }
-                aimingBottle = bottle && Vector3.Distance(camera.transform.position, bottle.transform.position) < 2 && Vector3.Dot(camera.transform.forward, (bottle.transform.position - camera.transform.position).normalized) > .86f;
-                if (aimingBottle && k != null && k.eKey.wasPressedThisFrame) { TryInteract(); return; }
             }
             var exit = NearestExit(camera.transform.position);
             // The two return doors remain usable in the livehouse. The stage
@@ -428,19 +438,27 @@ namespace D22
             { AskHutong(); return; }
             string huntHint = Hunt?.AimHint(camera);
             string stageHint = IsLivehouse ? Stage?.Hint(camera) : null;
-            string shopHint = recordShop
-                ? !walked ? "往柜台走走" : !bossMet ? (recordShop.CanTalk(camera.transform) ? "E 和店主说话" : "去柜台找店主")
-                : !HasDrink ? "柜台上有瓶酒" : Sips == 0 ? "1 喝酒" : "从侧门去胡同"
-                : !bossMet ? "往里走走" : !HasDrink ? "回头拿酒瓶" : "1 喝酒";
-            string hint = aimingBottle ? "E 拿酒瓶"
+            string shopHint;
+            if (recordShop)
+            {
+                if (!bossMet)
+                    shopHint = phantom != null && phantom.Active
+                        ? (recordShop.CanTalk(camera.transform) ? "E 和店主说话" : "找店主")
+                        : "V 暗影";
+                else if (phantom != null && !phantom.Recorded)
+                    shopHint = !phantom.Active ? "V 暗影"
+                        : phantom.Aiming ? "按住 R，录 3 秒" : "顺着电波找酒";
+                else shopHint = Sips == 0 ? "1 喝酒" : "E 走进胡同";
+            }
+            else shopHint = !bossMet ? "往里走走" : Sips == 0 ? "1 喝酒" : "往前走";
+            string hint = Chapter == "D22_RecordShop" ? shopHint
                 : IsLivehouse && atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "出去" : ShortLabel(exit.label))
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "收集声音" : "门")
-                : atExit ? (recordShop && Sips == 0 ? "先在柜台拿酒" : "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label)))
-                : Chapter == "D22_RecordShop" ? shopHint
+                : atExit ? (recordShop && Sips == 0 ? "1 喝酒" : "E " + (string.IsNullOrEmpty(exit.label) ? "进去" : ShortLabel(exit.label)))
                     : "";
             UI.UpdateHUD(hint, HasDrink, Sips, Abilities != null ? Abilities.CooldownLeft : Mathf.Max(0, cooldown - Time.unscaledTime));
             if (k != null && k.eKey.wasPressedThisFrame) TryInteract();
@@ -470,18 +488,10 @@ namespace D22
         {
             if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
             var camera = Camera.main;
-            if (recordShop && !bossMet && recordShop.CanTalk(camera.transform))
+            if (recordShop && phantom != null && phantom.Active && !bossMet && recordShop.CanTalk(camera.transform))
             {
                 bossMet = true;
                 Dialogue(story.boss, () => { SpawnBottle(); Resume(); }, "店主 / THE SHOPKEEPER");
-                return;
-            }
-            if (bottle && Vector3.Distance(camera.transform.position, bottle.transform.position) < 2 && Vector3.Dot(camera.transform.forward, (bottle.transform.position - camera.transform.position).normalized) > .86f)
-            {
-                Destroy(bottle);
-                HasDrink = true;
-                if (Abilities.Learn("drink")) UI.PlayLearnFly("drink");
-                Dialogue(story.wine, Resume);
                 return;
             }
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
@@ -685,6 +695,7 @@ namespace D22
                 }
             }
             bottle.name = "Wine Pickup";
+            phantom?.AttachBottle(bottle);
         }
 
         void BuildPlaylist()
