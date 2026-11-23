@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
@@ -12,18 +13,29 @@ namespace D22
         public const float RecordSeconds = 3f;
 
         public bool Active { get; private set; }
-        public bool Recorded { get; private set; }
         public bool Aiming { get; private set; }
         public float Record01 { get; private set; }
 
+        sealed class Signal
+        {
+            public string id;
+            public GameObject body;
+            public Transform beacon;
+            public LineRenderer[] rings;
+            public float[] phase;
+            public AudioSource voice;
+            public AudioClip clip;
+            public bool recorded;
+            public float aimRange = 3.2f;
+            public float hearRange = 8f;
+        }
+
         D22GameFlow flow;
+        readonly List<Signal> signals = new();
         GameObject figures;
-        GameObject bottleObject;
-        Transform beacon;
         Volume shadowGrade;
         VolumeProfile shadowProfile;
-        LineRenderer[] rings;
-        float[] ringPhase;
+        string aimId;
         GameObject recorder;
         Material shade;
         Material signal;
@@ -31,48 +43,93 @@ namespace D22
         float capturedFlash;
         const int Segments = 40;
 
-        public bool SourceShown => bottleObject && (Active || Recorded);
-        public bool WavesShown => bottleObject && Active && !Recorded;
-        public bool BeaconLive => WavesShown && !Recorded;
+        public bool Recorded => IsRecorded("drink");
+        public bool HasPending
+        {
+            get
+            {
+                foreach (var signal in signals)
+                    if (signal.body && !signal.recorded) return true;
+                return false;
+            }
+        }
+
+        public bool IsRecorded(string id)
+        {
+            foreach (var signal in signals)
+                if (signal.id == id) return signal.recorded;
+            return false;
+        }
+
+        public string PendingHint()
+        {
+            if (flow == null || !HasPending) return null;
+            if (flow.Chapter != "D22_Hutong" && flow.Chapter != "D22_Bootstrap" && flow.Chapter != "D22_LiveScan") return null;
+            if (!Active) return "V 暗影";
+            return Aiming ? "按住 R，录 3 秒" : "顺着电波找声音";
+        }
 
         public void Bind(D22GameFlow host) => flow = host;
+
+        bool InField => flow != null && (flow.Chapter == "D22_RecordShop" || flow.Chapter == "D22_Hutong" || flow.Chapter == "D22_Bootstrap" || flow.Chapter == "D22_LiveScan");
 
         public void OnChapter(string scene)
         {
             Active = false;
-            Recorded = false;
             Record01 = 0f;
             Aiming = false;
+            aimId = null;
             capturedFlash = 0f;
-            bottleObject = null;
-            beacon = null;
-            rings = null;
+            signals.Clear();
             if (figures) Destroy(figures);
             figures = null;
             ApplySight();
-            if (scene == "D22_RecordShop") BuildFigures();
-            ShowRecorder(scene == "D22_RecordShop");
+            if (scene == "D22_RecordShop") BuildShopFigures();
+            else if (scene == "D22_Hutong") BuildHutongFigures();
+            else if (scene == "D22_LiveScan") BuildLivehouseFigures(new Vector3(-3.1f, .7f, -15.6f), new Vector3(-1.1f, .95f, -16.4f), new Vector3(1.1f, .7f, -15.6f), null);
+            ShowRecorder(InField);
+        }
+
+        public void PlaceLivehouse(D22Bootstrap live)
+        {
+            if (!live) return;
+            if (figures) Destroy(figures);
+            figures = null;
+            BuildLivehouseFigures(live.drumSpot, live.guitarSpot, live.bassSpot, live.transform);
+            ApplySight();
         }
 
         public void Toggle()
         {
-            if (flow == null || flow.Chapter != "D22_RecordShop" || flow.Loading || D22GameFlow.InputBlocked) return;
+            if (!InField || flow.Loading || D22GameFlow.InputBlocked) return;
             Active = !Active;
             ApplySight();
         }
 
         public void AttachBottle(GameObject bottle)
         {
-            if (!bottle) return;
-            bottleObject = bottle;
-            var go = new GameObject("Drink Signal");
-            go.transform.SetParent(bottle.transform, false);
-            go.transform.localPosition = new Vector3(0f, 0.16f, 0f);
-            beacon = go.transform;
-            rings = new LineRenderer[3];
-            ringPhase = new float[3];
+            AttachSource("drink", bottle, null, 3.2f, 8f, Vector3.zero, 0.16f);
+        }
+
+        public void AttachSource(string id, GameObject body, AudioClip clip, float aimRange, float hearRange, Vector3 fallback, float beaconHeight)
+        {
+            if (!body) body = MakeProp(id, fallback);
+            var source = new Signal
+            {
+                id = id,
+                body = body,
+                clip = clip,
+                aimRange = aimRange,
+                hearRange = hearRange
+            };
+            var go = new GameObject(id + " Signal");
+            go.transform.SetParent(body.transform, false);
+            go.transform.localPosition = new Vector3(0f, beaconHeight, 0f);
+            source.beacon = go.transform;
+            source.rings = new LineRenderer[3];
+            source.phase = new float[3];
             var mat = SignalMaterial();
-            for (int i = 0; i < rings.Length; i++)
+            for (int i = 0; i < source.rings.Length; i++)
             {
                 var ring = new GameObject("Ring");
                 ring.transform.SetParent(go.transform, false);
@@ -86,9 +143,19 @@ namespace D22
                 line.receiveShadows = false;
                 line.sharedMaterial = mat;
                 line.textureMode = LineTextureMode.Stretch;
-                rings[i] = line;
-                ringPhase[i] = i / 3f;
+                source.rings[i] = line;
+                source.phase[i] = i / 3f;
             }
+            source.voice = go.AddComponent<AudioSource>();
+            source.voice.playOnAwake = false;
+            source.voice.loop = true;
+            source.voice.spatialBlend = 1f;
+            source.voice.dopplerLevel = 0f;
+            source.voice.rolloffMode = AudioRolloffMode.Linear;
+            source.voice.minDistance = 0.6f;
+            source.voice.maxDistance = hearRange;
+            source.voice.volume = 0.9f;
+            signals.Add(source);
             ApplySight();
         }
 
@@ -108,16 +175,20 @@ namespace D22
 
         void OnGUI()
         {
-            if (flow == null || flow.Loading || flow.Chapter != "D22_RecordShop") return;
+            if (!InField || flow.Loading) return;
             Matrix4x4 matrix = GUI.matrix;
             GUI.matrix = Matrix4x4.identity;
-            if (WavesShown && beacon && Camera.main) DrawBeaconMarker(Camera.main);
-            if (Record01 > 0.001f && !Recorded) DrawRec();
+            if (Active && Camera.main)
+            {
+                foreach (var source in signals)
+                    if (source.beacon && !source.recorded) DrawBeaconMarker(Camera.main, source.beacon);
+            }
+            if (Record01 > 0.001f && Aiming) DrawRec();
             else if (capturedFlash > 0f) DrawCaptured();
             GUI.matrix = matrix;
         }
 
-        void BuildFigures()
+        void BuildShopFigures()
         {
             var shop = FindAnyObjectByType<D22RecordShop>();
             if (!shop || !shop.shopkeeper) return;
@@ -130,6 +201,72 @@ namespace D22
             Figure("Customer Far", boss + new Vector3(0.85f, 0f, -3.05f), 1.58f, false, new Color(0.015f, 0.016f, 0.02f, 0.9f), -30f);
             figures.SetActive(false);
         }
+
+        void BuildHutongFigures()
+        {
+            var hutong = FindAnyObjectByType<D22HutongLighting>();
+            if (!hutong) return;
+            figures = new GameObject("Phantom Figures");
+            figures.transform.SetParent(hutong.transform, true);
+            Vector3 cricket = Grounded(hutong.cricketMark);
+            Vector3 stone = Grounded(hutong.grindMark);
+            Figure("Resident", cricket + new Vector3(1.2f, 1.55f, 0.4f), 1.68f, false, new Color(0.05f, 0.04f, 0.045f, 0.92f), 40f);
+            Figure("Resident Sitting", stone + new Vector3(-0.9f, 1.35f, 0.5f), 1.55f, true, new Color(0.03f, 0.025f, 0.03f, 0.92f), -20f);
+            Figure("Resident Far", Vector3.Lerp(cricket, stone, 0.45f) + new Vector3(0.4f, 1.6f, -1.6f), 1.62f, false, new Color(0.02f, 0.02f, 0.028f, 0.9f), 110f);
+            figures.SetActive(false);
+        }
+
+        void BuildLivehouseFigures(Vector3 drum, Vector3 guitar, Vector3 bass, Transform parent)
+        {
+            figures = new GameObject("Phantom Figures");
+            if (parent) figures.transform.SetParent(parent, true);
+            Figure("Player", new Vector3(drum.x - 1.5f, 1.65f, drum.z + 1.4f), 1.72f, false, new Color(0.06f, 0.04f, 0.045f, 0.94f), 160f);
+            Figure("Player Sitting", new Vector3(guitar.x + 0.2f, 1.4f, guitar.z + 1.8f), 1.58f, true, new Color(0.03f, 0.025f, 0.03f, 0.92f), 10f);
+            Figure("Player Far", new Vector3(bass.x + 1.3f, 1.62f, bass.z + 1.1f), 1.66f, false, new Color(0.02f, 0.02f, 0.03f, 0.9f), -30f);
+            figures.SetActive(false);
+        }
+
+        GameObject MakeProp(string id, Vector3 pos)
+        {
+            var root = new GameObject(id);
+            root.transform.position = pos;
+            if (id == "drums")
+            {
+                Prop(root.transform, PrimitiveType.Cylinder, new Vector3(0f, 0.28f, 0.15f), new Vector3(0.7f, 0.28f, 0.7f), Quaternion.identity, new Color(0.12f, 0.07f, 0.05f, 1f));
+                Prop(root.transform, PrimitiveType.Cylinder, new Vector3(-0.28f, 0.55f, -0.05f), new Vector3(0.32f, 0.16f, 0.32f), Quaternion.identity, new Color(0.16f, 0.09f, 0.06f, 1f));
+                Prop(root.transform, PrimitiveType.Cylinder, new Vector3(0.3f, 0.58f, -0.02f), new Vector3(0.28f, 0.14f, 0.28f), Quaternion.identity, new Color(0.18f, 0.1f, 0.07f, 1f));
+                Prop(root.transform, PrimitiveType.Cylinder, new Vector3(0.42f, 0.82f, 0f), new Vector3(0.34f, 0.02f, 0.34f), Quaternion.identity, new Color(0.55f, 0.5f, 0.42f, 1f));
+            }
+            else if (id == "guitar" || id == "bass")
+            {
+                bool bass = id == "bass";
+                var wood = bass ? new Color(0.1f, 0.08f, 0.07f, 1f) : new Color(0.42f, 0.24f, 0.12f, 1f);
+                Prop(root.transform, PrimitiveType.Cube, new Vector3(0f, bass ? 0.55f : 0.62f, 0f), bass ? new Vector3(0.22f, 0.4f, 0.07f) : new Vector3(0.32f, 0.42f, 0.07f), Quaternion.identity, wood);
+                Prop(root.transform, PrimitiveType.Cube, new Vector3(0f, bass ? 1.15f : 1.12f, 0f), bass ? new Vector3(0.05f, 0.7f, 0.04f) : new Vector3(0.055f, 0.55f, 0.04f), Quaternion.identity, new Color(0.2f, 0.14f, 0.09f, 1f));
+            }
+            else
+            {
+                Prop(root.transform, PrimitiveType.Cube, new Vector3(0f, 0.16f, 0f), Vector3.one * 0.28f, Quaternion.identity, new Color(0.28f, 0.24f, 0.2f, 1f));
+            }
+            return root;
+        }
+
+        void Prop(Transform parent, PrimitiveType shape, Vector3 localPos, Vector3 scale, Quaternion rotation, Color color)
+        {
+            var go = GameObject.CreatePrimitive(shape);
+            go.transform.SetParent(parent, false);
+            go.transform.localPosition = localPos;
+            go.transform.localRotation = rotation;
+            go.transform.localScale = scale;
+            var collider = go.GetComponent<Collider>();
+            if (collider) Destroy(collider);
+            var renderer = go.GetComponent<Renderer>();
+            renderer.sharedMaterial = ShadeMaterial(color);
+            renderer.shadowCastingMode = ShadowCastingMode.Off;
+            renderer.receiveShadows = false;
+        }
+
+        static Vector3 Grounded(Vector3 mark) => new Vector3(mark.x, 0f, mark.z);
 
         void Figure(string name, Vector3 head, float height, bool sitting, Color color, float yaw)
         {
@@ -171,22 +308,26 @@ namespace D22
 
         void AnimateRings()
         {
-            if (rings == null || !WavesShown) return;
-            for (int i = 0; i < rings.Length; i++)
+            if (!Active) return;
+            foreach (var source in signals)
             {
-                var line = rings[i];
-                if (!line) continue;
-                ringPhase[i] = Mathf.Repeat(ringPhase[i] + Time.deltaTime * 0.33f, 1f);
-                float u = ringPhase[i];
-                float radius = Mathf.Lerp(0.06f, 1.45f, u);
-                float alpha = (1f - u) * 0.9f;
-                var color = new Color(0.72f, 0.93f, 1f, alpha);
-                line.startColor = color;
-                line.endColor = color;
-                for (int p = 0; p < Segments; p++)
+                if (source.recorded || source.rings == null) continue;
+                for (int i = 0; i < source.rings.Length; i++)
                 {
-                    float a = p / (float)Segments * Mathf.PI * 2f;
-                    line.SetPosition(p, new Vector3(Mathf.Cos(a) * radius, 0f, Mathf.Sin(a) * radius));
+                    var line = source.rings[i];
+                    if (!line) continue;
+                    source.phase[i] = Mathf.Repeat(source.phase[i] + Time.deltaTime * 0.33f, 1f);
+                    float u = source.phase[i];
+                    float radius = Mathf.Lerp(0.06f, 1.45f, u);
+                    float alpha = (1f - u) * 0.9f;
+                    var color = new Color(0.72f, 0.93f, 1f, alpha);
+                    line.startColor = color;
+                    line.endColor = color;
+                    for (int p = 0; p < Segments; p++)
+                    {
+                        float a = p / (float)Segments * Mathf.PI * 2f;
+                        line.SetPosition(p, new Vector3(Mathf.Cos(a) * radius, 0f, Mathf.Sin(a) * radius));
+                    }
                 }
             }
         }
@@ -194,23 +335,47 @@ namespace D22
         void TickRecord()
         {
             Aiming = false;
-            if (Recorded || !BeaconLive || D22GameFlow.InputBlocked || !Camera.main) 
+            if (!Active || D22GameFlow.InputBlocked || !Camera.main)
             {
                 Record01 = 0f;
+                aimId = null;
+                if (D22GameFlow.InputBlocked)
+                {
+                    foreach (var source in signals)
+                        if (source.voice && source.voice.isPlaying) source.voice.Stop();
+                }
                 return;
             }
             Transform cam = Camera.main.transform;
-            Vector3 to = beacon.position - cam.position;
-            float dist = to.magnitude;
-            Aiming = dist < 3.2f && dist > 0.2f && Vector3.Dot(cam.forward, to / dist) > 0.78f;
-            bool holding = Aiming && Keyboard.current != null && Keyboard.current.rKey.isPressed;
+            Signal best = null;
+            float bestDist = float.MaxValue;
+            foreach (var source in signals)
+            {
+                if (source.recorded || !source.beacon) continue;
+                Vector3 to = source.beacon.position - cam.position;
+                float dist = to.magnitude;
+                if (dist < 0.2f || dist > source.aimRange) continue;
+                if (Vector3.Dot(cam.forward, to / dist) <= 0.78f) continue;
+                if (dist >= bestDist) continue;
+                best = source;
+                bestDist = dist;
+            }
+            if (best == null || best.id != aimId)
+            {
+                Record01 = 0f;
+                aimId = best != null ? best.id : null;
+            }
+            Aiming = best != null;
+            if (!Aiming) return;
+            bool holding = Keyboard.current != null && Keyboard.current.rKey.isPressed;
             Record01 = holding ? Mathf.Min(1f, Record01 + Time.deltaTime / RecordSeconds) : 0f;
             if (Record01 < 1f) return;
-            Recorded = true;
+            best.recorded = true;
             Record01 = 1f;
             capturedFlash = 1.6f;
+            aimId = null;
             ApplySight();
-            flow?.GrantRecorded("drink");
+            flow?.GrantRecorded(best.id);
         }
 
         void ShowRecorder(bool on)
@@ -245,7 +410,7 @@ namespace D22
             return root;
         }
 
-        void DrawBeaconMarker(Camera cam)
+        void DrawBeaconMarker(Camera cam, Transform beacon)
         {
             Vector3 sp = cam.WorldToScreenPoint(beacon.position);
             var center = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
@@ -357,11 +522,33 @@ namespace D22
         void ApplySight()
         {
             EnsureGrade();
-            bool here = Active && flow != null && flow.Chapter == "D22_RecordShop";
+            bool here = Active && InField;
             shadowGrade.weight = here ? 1f : 0f;
             if (figures) figures.SetActive(here);
-            if (bottleObject) bottleObject.SetActive(SourceShown);
-            if (beacon) beacon.gameObject.SetActive(WavesShown);
+            foreach (var source in signals)
+            {
+                bool shown = source.body && (here || source.recorded);
+                bool waves = here && !source.recorded;
+                if (source.body) source.body.SetActive(shown);
+                if (source.beacon) source.beacon.gameObject.SetActive(waves);
+                SyncSourceVoice(source, waves);
+            }
+            flow?.SetShadowMusic(here);
+        }
+
+        void SyncSourceVoice(Signal source, bool waves)
+        {
+            if (source.voice == null || flow == null) return;
+            AudioClip clip = source.clip ? source.clip : source.id == "drink" ? flow.beerClip : null;
+            bool play = waves && clip && !D22GameFlow.InputBlocked;
+            if (!play)
+            {
+                if (source.voice.isPlaying) source.voice.Stop();
+                return;
+            }
+            if (source.voice.clip != clip) source.voice.clip = clip;
+            source.voice.maxDistance = source.hearRange;
+            if (!source.voice.isPlaying) source.voice.Play();
         }
 
         void EnsureGrade()

@@ -90,11 +90,6 @@ namespace D22
             pigeonSfx = pigeon;
             grindSfx = grind;
             if (near.clip != cricketSfx) near.clip = cricketSfx;
-            if (Spawned)
-            {
-                StartFlock(false);
-                StartGrind(false);
-            }
         }
 
         public void SetTouch(AudioClip clip)
@@ -140,7 +135,17 @@ namespace D22
             grindMark = Make(D22MarkKind.Grind, hutong ? hutong.grindMark : new Vector3(1.85f, .45f, -4.3f), 1.45f);
             pigeonHome = hutong ? hutong.pigeonMark : new Vector3(0, 2.7f, -5.8f);
             pigeonMark = Make(D22MarkKind.Pigeons, pigeonHome, 3.2f);
-            var props = UnityEngine.Object.FindAnyObjectByType<D22HutongProps>(FindObjectsInactive.Include);
+            D22HutongProps props = null;
+            var propSets = UnityEngine.Object.FindObjectsByType<D22HutongProps>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var candidate in propSets)
+            {
+                if (FindNamed(candidate.transform, "Cricket") || candidate.GetComponentInChildren<D22PigeonFlock>(true))
+                {
+                    props = candidate;
+                    break;
+                }
+            }
+            if (!props && propSets.Length > 0) props = propSets[0];
             if (props)
             {
                 props.Show();
@@ -152,8 +157,38 @@ namespace D22
                 exit.radius = .85f;
                 exit.transform.position = new Vector3(0, .15f, -8.2f);
             }
-            StartFlock(true);
-            StartGrind(true);
+            BindFieldSources(props);
+        }
+
+        void BindFieldSources(D22HutongProps props)
+        {
+            Transform cricket = props ? FindNamed(props.transform, "Cricket") : null;
+            Transform stone = props ? FindNamed(props.transform, "Whetstone") : null;
+            Vector3 cricketPos = cricketMark ? cricketMark.transform.position : Vector3.zero;
+            Vector3 stonePos = grindMark ? grindMark.transform.position : Vector3.zero;
+            Vector3 flockPos = pigeonMark ? pigeonMark.transform.position : pigeonHome;
+            flow.AttachRecordSource("cricket", cricket ? cricket.gameObject : null, cricketSfx, 3.2f, 8f, cricketPos, 0.2f);
+            flow.AttachRecordSource("scissors", stone ? stone.gameObject : null, grindSfx, 3.2f, 8f, stonePos, 0.2f);
+            flow.AttachRecordSource("pigeon", pigeons ? pigeons.gameObject : null, pigeonSfx, 12f, 16f, flockPos, 0f);
+        }
+
+        static Transform FindNamed(Transform root, string name)
+        {
+            if (!root) return null;
+            if (root.name == name) return root;
+            for (int i = 0; i < root.childCount; i++)
+            {
+                var hit = FindNamed(root.GetChild(i), name);
+                if (hit) return hit;
+            }
+            return null;
+        }
+
+        public void MarkHeard(string id)
+        {
+            if (id == "cricket") heardCricket = true;
+            else if (id == "pigeon") heardPigeon = true;
+            else if (id == "scissors" || id == "grind") heardGrind = true;
         }
 
         D22WorldMark Make(D22MarkKind kind, Vector3 pos, float radius)
@@ -222,12 +257,12 @@ namespace D22
         {
             if (!Spawned || camera == null) return null;
             var aim = Aim(camera);
-            if (aim == D22MarkKind.Cricket)
-                return Cd(CdCricket, flow.Abilities != null && flow.Abilities.Learned("cricket") ? "2 蛐蛐" : "E 蛐蛐");
-            if (aim == D22MarkKind.Grind)
-                return Cd(CdGrind, flow.Abilities != null && flow.Abilities.Learned("scissors") ? "4 磨刀" : "E 磨刀");
-            if (aim == D22MarkKind.Pigeons)
-                return Cd(CdPigeon, flow.Abilities != null && flow.Abilities.Learned("pigeon") ? "3 鸽子" : "E 鸽子");
+            if (aim == D22MarkKind.Cricket && Learned("cricket"))
+                return Cd(CdCricket, "2 蛐蛐");
+            if (aim == D22MarkKind.Grind && Learned("scissors"))
+                return Cd(CdGrind, "4 磨刀");
+            if (aim == D22MarkKind.Pigeons && Learned("pigeon"))
+                return Cd(CdPigeon, "3 鸽子");
             return null;
         }
 
@@ -258,6 +293,9 @@ namespace D22
         public bool Interact(Camera camera, Action<D22Line[], Action> talk, D22Story story)
         {
             var aim = Aim(camera);
+            if (aim == D22MarkKind.Cricket && !Learned("cricket")) return false;
+            if (aim == D22MarkKind.Pigeons && !Learned("pigeon")) return false;
+            if (aim == D22MarkKind.Grind && !Learned("scissors")) return false;
             if (aim == D22MarkKind.Cricket)
             {
                 if (!heardCricket) { heardCricket = true; talk(story.cricketTalk, () => { flow.ResumeHunt("cricket"); }); }
@@ -332,23 +370,11 @@ namespace D22
             }
         }
 
+        bool Learned(string id) => flow.Abilities != null && flow.Abilities.Learned(id);
+
         void UpdateNear(Camera camera, float volume)
         {
-            if (!cricketMark || camera == null || cricketSfx == null || (Open && Game == "cricket"))
-            {
-                near.volume = 0;
-                if (near.isPlaying) near.Stop();
-                return;
-            }
-            float d = Vector3.Distance(camera.transform.position, cricketMark.transform.position);
-            float vol = d > 8 ? 0 : Mathf.Clamp01(Mathf.Pow(1 - d / 8f, 1.15f)) * Mathf.Lerp(.7f, 1f, volume) * bed;
-            near.volume = vol;
-            if (vol > .02f)
-            {
-                if (near.clip != cricketSfx) near.clip = cricketSfx;
-                if (!near.isPlaying) near.Play();
-            }
-            else if (near.isPlaying) near.Stop();
+            if (near.isPlaying) near.Stop();
         }
 
         public void Pointer(Vector2 n, bool down, bool drag, bool up)
@@ -455,15 +481,6 @@ namespace D22
             }
         }
 
-        void StartFlock(bool fromStart)
-        {
-            if (!pigeonSfx || !Spawned) return;
-            if (flock.clip != pigeonSfx) flock.clip = pigeonSfx;
-            flock.loop = true;
-            flock.volume = FlockVol();
-            if (!flock.isPlaying || fromStart) flock.Play();
-        }
-
         void PlayPigeon()
         {
             if (!pigeonSfx) return;
@@ -474,25 +491,7 @@ namespace D22
 
         void UpdateFlock()
         {
-            if (!Spawned || !pigeonSfx)
-            {
-                if (flock.isPlaying) flock.Stop();
-                return;
-            }
-            if (flock.clip != pigeonSfx) flock.clip = pigeonSfx;
-            flock.volume = Open && Game == "pigeon" ? 0 : FlockVol();
-            if (!flock.isPlaying) flock.Play();
-        }
-
-        float FlockVol() => Mathf.Lerp(.55f, .95f, flow.Volume) * bed;
-
-        void StartGrind(bool fromStart)
-        {
-            if (!grindSfx || !Spawned) return;
-            if (grindLoop.clip != grindSfx) grindLoop.clip = grindSfx;
-            grindLoop.loop = true;
-            grindLoop.volume = FlockVol();
-            if (!grindLoop.isPlaying || fromStart) grindLoop.Play();
+            if (flock.isPlaying) flock.Stop();
         }
 
         void PlayGrind()
@@ -505,31 +504,7 @@ namespace D22
 
         void UpdateGrindLoop(Camera camera)
         {
-            if (!grindSfx)
-            {
-                if (grindLoop.isPlaying) grindLoop.Stop();
-                return;
-            }
-            if (grindLoop.clip != grindSfx) grindLoop.clip = grindSfx;
-            grindLoop.loop = true;
-            if (Open && Game == "grind")
-            {
-                if (grindLoop.isPlaying) grindLoop.Stop();
-                return;
-            }
-            if (!Spawned || grindMark == null || camera == null)
-            {
-                if (grindLoop.isPlaying) grindLoop.Stop();
-                return;
-            }
-            float d = Vector3.Distance(camera.transform.position, grindMark.transform.position);
-            float vol = d > 8f ? 0 : Mathf.Clamp01(Mathf.Pow(1f - d / 8f, 1.15f)) * Mathf.Lerp(.75f, 1f, flow.Volume) * bed;
-            grindLoop.volume = vol;
-            if (vol > .02f)
-            {
-                if (!grindLoop.isPlaying) grindLoop.Play();
-            }
-            else if (grindLoop.isPlaying) grindLoop.Stop();
+            if (grindLoop.isPlaying) grindLoop.Stop();
         }
 
         bool Grant(string abilityId)
