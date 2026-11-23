@@ -53,6 +53,8 @@ namespace D22
         bool onFinale, heardPlaylist, playlistHeld;
         float musicLevel = .35f;
         float bedGain = 1f;
+        float shadowBed = 1f;
+        const float ShadowMusic = 0.25f;
         AudioSource hum;
         AudioLowPassFilter lowPass;
         AudioDistortionFilter distortion;
@@ -197,11 +199,11 @@ namespace D22
                 var bootstrap = FindAnyObjectByType<D22Bootstrap>();
                 yield return new WaitUntil(() => bootstrap && bootstrap.Ready && Camera.main != null);
                 Stage?.Bind(bootstrap);
+                phantom?.PlaceLivehouse(bootstrap);
             }
             else Stage?.Bind(null);
             yield return null;
             if (scene == "D22_Performance") PlayFinale();
-            else if (scene == "D22_Hutong") HoldPlaylist();
             else EnsurePlaylist();
             if (scene == "D22_Menu")
             {
@@ -291,9 +293,19 @@ namespace D22
         public void GrantRecorded(string id)
         {
             if (id == "drink") HasDrink = true;
-            if (Abilities != null && Abilities.Learn(id) && UI != null) UI.PlayLearnFly(id);
-            if (id == "drink" && story != null && story.wine != null && story.wine.Length > 0)
-                Dialogue(story.wine, Resume);
+            Hunt?.MarkHeard(id);
+            Stage?.MarkHeard(id);
+            bool fresh = Abilities != null && Abilities.Learn(id);
+            if (fresh && UI != null) UI.PlayLearnFly(id);
+            D22Line[] lines = id == "drink" ? story?.wine
+                : id == "cricket" ? story?.cricketTalk
+                : id == "pigeon" ? story?.pigeonTalk
+                : id == "scissors" ? story?.grindTalk
+                : id == "guitar" ? story?.guitarTalk
+                : id == "bass" ? story?.bassTalk
+                : id == "drums" ? story?.drumTalk
+                : null;
+            if (fresh && lines != null && lines.Length > 0) Dialogue(lines, Resume);
         }
 
         public void RequestDrink() => ToggleAbility("drink");
@@ -412,7 +424,7 @@ namespace D22
                 return;
             }
             if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
-            if (k != null && k.vKey.wasPressedThisFrame && Chapter == "D22_RecordShop") phantom?.Toggle();
+            if (k != null && k.vKey.wasPressedThisFrame) phantom?.Toggle();
             var camera = Camera.main;
             if (Chapter == "D22_RecordShop")
             {
@@ -438,6 +450,7 @@ namespace D22
             { AskHutong(); return; }
             string huntHint = Hunt?.AimHint(camera);
             string stageHint = IsLivehouse ? Stage?.Hint(camera) : null;
+            string fieldHint = Chapter == "D22_Hutong" || IsLivehouse ? phantom?.PendingHint() : null;
             string shopHint;
             if (recordShop)
             {
@@ -455,6 +468,7 @@ namespace D22
                 : IsLivehouse && atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "出去" : ShortLabel(exit.label))
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
+                : !string.IsNullOrEmpty(fieldHint) ? fieldHint
                 : !string.IsNullOrEmpty(huntHint) ? huntHint
                 : Chapter == "D22_Hutong" && Hunt != null && Hunt.Unlocked && !Hunt.QuotaDone(Sips) ? Hunt.Quota(Sips)
                 : Chapter == "D22_Hutong" && atExit ? (doorHeard ? "收集声音" : "门")
@@ -698,6 +712,11 @@ namespace D22
             phantom?.AttachBottle(bottle);
         }
 
+        public void AttachRecordSource(string id, GameObject body, AudioClip clip, float aimRange, float hearRange, Vector3 fallback, float beaconHeight)
+        {
+            phantom?.AttachSource(id, body, clip, aimRange, hearRange, fallback, beaconHeight);
+        }
+
         void BuildPlaylist()
         {
             var songs = new System.Collections.Generic.List<AudioClip>();
@@ -887,9 +906,15 @@ namespace D22
             if (moodVolume) moodVolume.weight = D22Feel.Active == D22Feel.Kind.None ? 0f : moodVolume.weight;
         }
 
+        public void SetShadowMusic(bool ducked)
+        {
+            shadowBed = ducked ? ShadowMusic : 1f;
+            ApplyMusicLevel();
+        }
+
         void ApplyMusicLevel()
         {
-            if (audioSource) audioSource.volume = musicLevel * bedGain;
+            if (audioSource) audioSource.volume = musicLevel * bedGain * shadowBed;
         }
 
         void EnsureHum()

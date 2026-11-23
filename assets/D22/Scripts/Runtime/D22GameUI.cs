@@ -274,8 +274,6 @@ namespace D22
         {
             DrawChrome();
             DrawSlots();
-            DrawWorldMarks();
-            DrawStageMarks();
             Fill(new Rect(718, 448, 4, 4), new Color(1, 1, 1, .6f));
         }
 
@@ -486,59 +484,6 @@ namespace D22
             Fill(box, book.WalkHot ? new Color(.42f, .36f, .28f, .9f) : new Color(.07f, .08f, .07f, .82f));
             FrameBorder(box, book.WalkHot ? Color.white : new Color(.96f, .94f, .9f, .85f));
             GUI.Label(box, "走", mark);
-        }
-
-        void DrawWorldMarks()
-        {
-            var hunt = flow.Hunt;
-            var cam = Camera.main;
-            if (hunt == null || !hunt.Spawned || cam == null) return;
-            foreach (var spot in hunt.Marks)
-            {
-                if (!spot) continue;
-                if (spot.kind == D22MarkKind.Pigeons)
-                {
-                    float t = Time.unscaledTime;
-                    for (int i = 0; i < 5; i++)
-                    {
-                        float a = t * .85f + i * 1.25f;
-                        Vector3 p = spot.transform.position + new Vector3(Mathf.Sin(a) * .95f, Mathf.Sin(a * 1.6f) * .28f, Mathf.Cos(a) * .7f);
-                        DrawWorldMark(cam, p, "鸽", new Color(.12f, .16f, .2f, .7f));
-                    }
-                }
-                else
-                {
-                    string label = spot.kind == D22MarkKind.Cricket ? "蛐" : "磨";
-                    var tint = spot.kind == D22MarkKind.Cricket ? new Color(.12f, .2f, .08f, .72f) : new Color(.2f, .14f, .08f, .72f);
-                    DrawWorldMark(cam, spot.transform.position, label, tint);
-                }
-            }
-        }
-
-        void DrawWorldMark(Camera cam, Vector3 world, string label, Color tint)
-        {
-            Vector3 vp = cam.WorldToViewportPoint(world);
-            if (vp.z < .15f || vp.x < -.08f || vp.x > 1.08f || vp.y < -.08f || vp.y > 1.08f) return;
-            var box = new Rect(vp.x * Width - 32, (1 - vp.y) * Height - 32, 64, 64);
-            Fill(box, tint);
-            FrameBorder(box);
-            GUI.Label(box, label, mark);
-        }
-
-        void DrawStageMarks()
-        {
-            var stage = flow.Stage;
-            var cam = Camera.main;
-            if (stage == null || !stage.Spawned || cam == null) return;
-            foreach (var spot in stage.Marks)
-            {
-                if (!spot) continue;
-                string label = spot.kind == D22MarkKind.Drum ? "鼓" : spot.kind == D22MarkKind.Guitar ? "吉" : "贝";
-                var tint = spot.kind == D22MarkKind.Drum ? new Color(.28f, .1f, .08f, .78f)
-                    : spot.kind == D22MarkKind.Guitar ? new Color(.28f, .18f, .08f, .78f)
-                    : new Color(.1f, .14f, .24f, .78f);
-                DrawWorldMark(cam, spot.transform.position, label, tint);
-            }
         }
 
         void Minigame()

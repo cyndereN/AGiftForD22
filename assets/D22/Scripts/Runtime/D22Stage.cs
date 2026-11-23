@@ -101,6 +101,15 @@ namespace D22
 
         public void MarkIntro() => IntroPlayed = true;
 
+        public void MarkHeard(string id)
+        {
+            if (id == "drums") heardDrum = true;
+            else if (id == "guitar") heardGuitar = true;
+            else if (id == "bass") heardBass = true;
+        }
+
+        bool Learned(string id) => flow.Abilities != null && flow.Abilities.Learned(id);
+
         public void Spawn()
         {
             if (Spawned) return;
@@ -108,6 +117,9 @@ namespace D22
             drumMark = Make(D22MarkKind.Drum, drumSpot, 1.35f);
             guitarMark = Make(D22MarkKind.Guitar, guitarSpot, 1.35f);
             bassMark = Make(D22MarkKind.Bass, bassSpot, 1.35f);
+            flow.AttachRecordSource("drums", null, flow.Abilities?.FieldLoop("drums"), 3.6f, 10f, drumSpot, 0.55f);
+            flow.AttachRecordSource("guitar", null, flow.Abilities?.FieldLoop("guitar"), 3.6f, 10f, guitarSpot, 0.7f);
+            flow.AttachRecordSource("bass", null, flow.Abilities?.FieldLoop("bass"), 3.6f, 10f, bassSpot, 0.7f);
         }
 
         public bool NearIntro(Camera camera) => camera && Flat(camera.transform.position, introSpot) < introRadius;
@@ -126,9 +138,9 @@ namespace D22
             if (!Spawned || camera == null) return null;
             var aim = Aim(camera);
             if (Encore && !ShowReady) return ShowQuota();
-            if (aim == D22MarkKind.Drum) return DoneDrum ? "鼓" : "E 鼓";
-            if (aim == D22MarkKind.Guitar) return DoneGuitar ? "吉他" : "E 吉他";
-            if (aim == D22MarkKind.Bass) return DoneBass ? "贝斯" : "E 贝斯";
+            if (aim == D22MarkKind.Drum && Learned("drums")) return DoneDrum ? "鼓" : "7 鼓";
+            if (aim == D22MarkKind.Guitar && Learned("guitar")) return DoneGuitar ? "吉他" : "5 吉他";
+            if (aim == D22MarkKind.Bass && Learned("bass")) return DoneBass ? "贝斯" : "6 贝斯";
             if (BandReady && !OnStagePlayed) return "站上舞台";
             return null;
         }
@@ -137,6 +149,9 @@ namespace D22
         {
             if (!Spawned || Open) return false;
             var aim = Aim(camera);
+            if (aim == D22MarkKind.Drum && !Learned("drums")) return false;
+            if (aim == D22MarkKind.Guitar && !Learned("guitar")) return false;
+            if (aim == D22MarkKind.Bass && !Learned("bass")) return false;
             if (aim == D22MarkKind.Drum)
             {
                 OpenTalk("鼓", ref heardDrum, story.drumTalk, "drums", talk);

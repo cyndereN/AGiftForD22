@@ -390,6 +390,14 @@ namespace D22
             PlayDrum(pad);
         }
 
+        public AudioClip FieldLoop(string id)
+        {
+            if (id == "guitar" && guitarClips.Length > 0) return guitarClips[2];
+            if (id == "bass" && bassClips.Length > 0) return bassClips[1];
+            if (id == "drums" && drumClips.Length > 0) return drumClips[0];
+            return null;
+        }
+
         public void PlayGuitar(int i)
         {
             if (i >= 0 && i < guitarClips.Length) PlayBand(guitarClips[i]);
