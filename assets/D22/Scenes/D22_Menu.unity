@@ -300,9 +300,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: efe8b1512df6d478b87d31791a4c8a66, type: 3}
   - {fileID: 8300000, guid: faabbebd2b61c4ec3b527e092b532678, type: 3}
   - {fileID: 8300000, guid: 43b28db894e8d42cd888ec1dc3da6c60, type: 3}
-  beerClip: {fileID: 0}
-  cricketClip: {fileID: 0}
-  pigeonClip: {fileID: 0}
+  beerClip: {fileID: 8300000, guid: 7e4c91a2b0d84f6aa15c3e8f92b14670, type: 3}
+  cricketClip: {fileID: 8300000, guid: 2f8a16c4d9e047b3a7c51e0d38b9248f, type: 3}
+  pigeonClip: {fileID: 8300000, guid: bf6d7166bafa43a48830edc9723a0560, type: 3}
   grindClip: {fileID: 8300000, guid: 7a3e9c1b5d284f6e8c0a1b2d3e4f5061, type: 3}
   touchClip: {fileID: 8300000, guid: a7c1e9b24d6f4a0e8b3c5d17f9a24011, type: 3}
   whistleClips:

@@ -14,7 +14,7 @@ namespace D22.Editor
     public static class D22RecordShopV4Builder
     {
         const string Art = "Assets/D22/Art/RecordShopV4";
-        const string ScenePath = "Assets/D22/Scenes/D22_RecordShopV4.unity";
+        const string ScenePath = "Assets/D22/Scenes/D22_RecordShop.unity";
         static Vector3 V(JToken v) => new Vector3((float)v[0],(float)v[1],(float)v[2]);
         static Vector3 FromBlender(JToken v) { var p=V(v);return new Vector3(p.x,p.z,p.y); }
 
@@ -94,9 +94,6 @@ namespace D22.Editor
             anchors.bottlePrefab=BuildMeshyBottle();
             var exit=Point("Door to hutong",FromBlender(layout["story_anchors"]["exit"])).gameObject.AddComponent<D22Exit>();exit.nextScene="D22_Hutong";exit.radius=1;exit.label="走进胡同 / ENTER HUTONG";
             EditorSceneManager.SaveScene(scene,ScenePath);
-            string original="Assets/D22/Scenes/D22_RecordShop.unity", backup="Assets/D22/Scenes/D22_RecordShop_PreV4.unity";
-            if(File.Exists(original)&&!File.Exists(backup)) AssetDatabase.CopyAsset(original,backup);
-            EditorSceneManager.SaveScene(scene,original,true);
             AssetDatabase.SaveAssets();D22ProjectSetup.ConfigureBuildScenes();
             Selection.activeGameObject=environment;
             Debug.Log("D22_RECORDSHOP_V4_PUBLISHED "+environment.GetComponentsInChildren<Renderer>().Length+" Meshy renderers");
