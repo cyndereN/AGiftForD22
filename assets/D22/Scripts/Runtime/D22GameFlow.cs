@@ -11,7 +11,7 @@ namespace D22
     public sealed class D22GameFlow : MonoBehaviour
     {
         public static D22GameFlow Instance { get; private set; }
-        public static bool InputBlocked => Instance && (Instance.blocked || Instance.AbilityOpen || Instance.HuntOpen || Instance.StageOpen);
+        public static bool InputBlocked => Instance && (Instance.blocked || Instance.AbilityOpen || Instance.HuntOpen || Instance.StageOpen || Instance.MixerOpen);
         public static bool UiBlocksLook => Instance && Instance.UI && Instance.UI.BlocksLook;
         public TextAsset storyAsset;
         public Font uiFont;
@@ -39,10 +39,13 @@ namespace D22
         public bool AbilityOpen => Abilities != null && Abilities.Open;
         public bool HuntOpen => Hunt != null && Hunt.Open;
         public bool StageOpen => Stage != null && Stage.Open;
+        public bool MixerOpen => mixer != null && mixer.Open;
+        public D22LoftMixer Mixer => mixer;
         bool blocked = true, bossMet, doorHeard, hutongAsked, loftHeard;
         float cooldown;
         D22RecordShop recordShop;
         D22PhantomShop phantom;
+        D22LoftMixer mixer;
         Vector3 shopEntry;
         bool walked;
         GameObject bottle;
@@ -54,6 +57,7 @@ namespace D22
         float musicLevel = .35f;
         float bedGain = 1f;
         float shadowBed = 1f;
+        float mixerBed = 1f;
         const float ShadowMusic = 0.25f;
         AudioSource hum;
         AudioLowPassFilter lowPass;
@@ -62,7 +66,6 @@ namespace D22
         D22Story story;
         Volume moodVolume;
         VolumeProfile moodProfile;
-        bool presenting;
 
         void Awake()
         {
@@ -89,6 +92,8 @@ namespace D22
             Conductor = new D22Conductor();
             phantom = gameObject.AddComponent<D22PhantomShop>();
             phantom.Bind(this);
+            mixer = gameObject.AddComponent<D22LoftMixer>();
+            mixer.Bind(this);
             BindSfx();
         }
 
@@ -123,6 +128,7 @@ namespace D22
             doorHeard = false;
             hutongAsked = false;
             loftHeard = false;
+            mixer?.ResetLevels();
             D22Feel.Clear();
             cooldown = 0;
             Hunt?.Reset();
@@ -186,8 +192,14 @@ namespace D22
             Hunt?.ClearMarks();
             Stage?.Clear();
             D22Look.Unlock();
-            UI.ShowLoading();
-            yield return SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
+            mixer?.Hide();
+            UI.ShowLoading(scene == D22Bootstrap.SceneName ? "正在准备 Livehouse" : "加载中");
+            var opened = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
+            while (opened != null && !opened.isDone)
+            {
+                UI.SetLoadProgress(Mathf.Clamp01(opened.progress / 0.9f) * (scene == D22Bootstrap.SceneName ? 0.2f : 1f));
+                yield return null;
+            }
             Chapter = scene;
             phantom?.OnChapter(scene);
             bottle = null;
@@ -197,9 +209,16 @@ namespace D22
             if (scene == "D22_Bootstrap")
             {
                 var bootstrap = FindAnyObjectByType<D22Bootstrap>();
-                yield return new WaitUntil(() => bootstrap && bootstrap.Ready && Camera.main != null);
+                while (!bootstrap || !bootstrap.Ready || !Camera.main)
+                {
+                    UI.SetLoadProgress(0.2f + (bootstrap ? bootstrap.Progress : 0f) * 0.8f);
+                    yield return null;
+                }
+                UI.SetLoadProgress(1f);
+                yield return null;
                 Stage?.Bind(bootstrap);
                 phantom?.PlaceLivehouse(bootstrap);
+                mixer?.Show();
             }
             else Stage?.Bind(null);
             yield return null;
@@ -238,6 +257,7 @@ namespace D22
 
         public void Dialogue(D22Line[] lines, Action after, string title = "D-22")
         {
+            if (MixerOpen) mixer.ClosePanel();
             CloseAbility();
             CloseHunt();
             D22Look.Unlock();
@@ -365,12 +385,7 @@ namespace D22
             cooldown = Time.unscaledTime + 3;
             Sips++;
             if (IsLivehouse) Stage?.NoteDrink();
-            if (Chapter == "D22_RecordShop")
-            {
-                blocked = true;
-                D22Look.Unlock();
-                UI.ShowChoices(story.choice, i => { D22Feel.SetDrink(i); SetupMood(); LoadSpace("D22_Hutong"); });
-            }
+            if (Chapter == "D22_RecordShop") LoadSpace("D22_Hutong");
             else if (Chapter != "D22_Hutong" && !IsLivehouse && Chapter != "D22_Performance" && Sips >= 5)
             {
                 blocked = true;
@@ -402,12 +417,13 @@ namespace D22
             if (UI != null && UI.InCredits) return;
             if (k != null && k.escapeKey.wasPressedThisFrame)
             {
+                if (MixerOpen && !blocked) { mixer.ClosePanel(); return; }
                 if (StageOpen && !blocked) { CloseStage(); return; }
                 if (HuntOpen && !blocked) { CloseHunt(); return; }
                 if (AbilityOpen && !blocked) { CloseAbility(); return; }
                 if (!blocked) Pause();
             }
-            if (!blocked && !Loading && !HuntOpen && !AbilityOpen && k != null) HandleAbilityKeys(k);
+            if (!blocked && !Loading && !HuntOpen && !AbilityOpen && !MixerOpen && k != null) HandleAbilityKeys(k);
             if (Abilities != null)
             {
                 Abilities.SetVolume(Volume);
@@ -423,7 +439,7 @@ namespace D22
                 LoadSpace("D22_Performance");
                 return;
             }
-            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
+            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || MixerOpen || !Camera.main) return;
             if (k != null && k.vKey.wasPressedThisFrame) phantom?.Toggle();
             var camera = Camera.main;
             if (Chapter == "D22_RecordShop")
@@ -451,6 +467,7 @@ namespace D22
             string huntHint = Hunt?.AimHint(camera);
             string stageHint = IsLivehouse ? Stage?.Hint(camera) : null;
             string fieldHint = Chapter == "D22_Hutong" || IsLivehouse ? phantom?.PendingHint() : null;
+            string mixHint = IsLivehouse && mixer != null && mixer.Near(camera) ? "E 混音" : null;
             string shopHint;
             if (recordShop)
             {
@@ -466,6 +483,7 @@ namespace D22
             else shopHint = !bossMet ? "往里走走" : Sips == 0 ? "1 喝酒" : "往前走";
             string hint = Chapter == "D22_RecordShop" ? shopHint
                 : IsLivehouse && atExit ? "E " + (string.IsNullOrEmpty(exit.label) ? "出去" : ShortLabel(exit.label))
+                : !string.IsNullOrEmpty(mixHint) ? mixHint
                 : !string.IsNullOrEmpty(stageHint) ? stageHint
                 : IsLivehouse && Stage != null && !Stage.IntroPlayed ? "往舞台走"
                 : !string.IsNullOrEmpty(fieldHint) ? fieldHint
@@ -482,8 +500,8 @@ namespace D22
         {
             if (Loading || !Camera.main) return;
             D22Feel.SetTipsy(Sips >= 2);
-            bool moving = !blocked && !AbilityOpen && !HuntOpen && !StageOpen && (Conductor == null || !Conductor.Running);
-            if (!presenting && !moving) return;
+            bool moving = !blocked && !AbilityOpen && !HuntOpen && !StageOpen && !MixerOpen && (Conductor == null || !Conductor.Running);
+            if (!moving) return;
             D22Feel.Apply(Camera.main, ReducedMotion);
         }
 
@@ -500,7 +518,7 @@ namespace D22
 
         public void TryInteract()
         {
-            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || !Camera.main) return;
+            if (blocked || Loading || AbilityOpen || HuntOpen || StageOpen || MixerOpen || !Camera.main) return;
             var camera = Camera.main;
             if (recordShop && phantom != null && phantom.Active && !bossMet && recordShop.CanTalk(camera.transform))
             {
@@ -509,6 +527,7 @@ namespace D22
                 return;
             }
             if (Hunt != null && Hunt.Spawned && Hunt.Interact(camera, (lines, after) => Dialogue(lines, after), story)) return;
+            if (IsLivehouse && mixer != null && mixer.Near(camera)) { mixer.OpenPanel(); return; }
             if (IsLivehouse && Stage != null && Stage.Interact(camera, (title, lines, after) => Dialogue(lines, after, title), story)) return;
             var exit = NearestExit(camera.transform.position);
             if (IsLivehouse && (!exit || exit.nextScene != "D22_Hutong")) return;
@@ -621,68 +640,15 @@ namespace D22
 
         void AskHutong()
         {
-            if (hutongAsked || story.hutongAsk == null) return;
+            if (hutongAsked) return;
             hutongAsked = true;
             CloseAbility();
             CloseHunt();
             D22Look.Unlock();
             blocked = true;
-            UI.ShowChoices(story.hutongAsk, i =>
-            {
-                D22Feel.SetLane(i);
-                SetupMood();
-                StartCoroutine(PresentLane());
-            });
-        }
-
-        IEnumerator PresentLane()
-        {
-            presenting = true;
-            UI.ShowHUD();
-            if (D22Feel.Active == D22Feel.Kind.Made) yield return Glance();
-            else
-            {
-                float t = 0f;
-                while (t < 2.2f && !Loading)
-                {
-                    t += Time.deltaTime;
-                    yield return null;
-                }
-            }
-            presenting = false;
-            if (Loading) yield break;
-            Dialogue(story.livehouse, () => LoadSpace(D22Bootstrap.SceneName));
-        }
-
-        IEnumerator Glance()
-        {
-            var camera = Camera.main;
-            if (!camera) yield break;
-            var targets = new System.Collections.Generic.List<Vector3>();
-            var exit = FindAnyObjectByType<D22Exit>();
-            if (exit) targets.Add(exit.transform.position + Vector3.up * 1.3f);
-            var flock = FindAnyObjectByType<D22PigeonFlock>();
-            var hutong = FindAnyObjectByType<D22HutongLighting>();
-            if (flock) targets.Add(flock.Center);
-            else if (hutong) targets.Add(hutong.pigeonMark);
-            if (hutong) targets.Add(hutong.grindMark + Vector3.up * 1.2f);
-            foreach (var target in targets)
-            {
-                if (Loading || !camera) yield break;
-                Vector3 dir = target - camera.transform.position;
-                if (dir.sqrMagnitude < .04f) continue;
-                var from = D22Feel.Pose(camera.transform);
-                var to = Quaternion.LookRotation(dir);
-                float t = 0f;
-                const float slice = 2.5f;
-                while (t < slice && !Loading)
-                {
-                    t += Time.deltaTime;
-                    camera.transform.rotation = Quaternion.Slerp(from, to, Mathf.SmoothStep(0f, 1f, t / slice));
-                    D22Feel.NotePose(camera.transform);
-                    yield return null;
-                }
-            }
+            if (story.livehouse != null && story.livehouse.Length > 0)
+                Dialogue(story.livehouse, () => LoadSpace(D22Bootstrap.SceneName));
+            else LoadSpace(D22Bootstrap.SceneName);
         }
 
         static string ShortLabel(string label)
@@ -912,9 +878,15 @@ namespace D22
             ApplyMusicLevel();
         }
 
+        public void SetMixerBed(bool on)
+        {
+            mixerBed = on ? 1f : 0f;
+            ApplyMusicLevel();
+        }
+
         void ApplyMusicLevel()
         {
-            if (audioSource) audioSource.volume = musicLevel * bedGain * shadowBed;
+            if (audioSource) audioSource.volume = musicLevel * bedGain * shadowBed * mixerBed;
         }
 
         void EnsureHum()

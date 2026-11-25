@@ -230,8 +230,8 @@
   ],
   "loft": [
     {
-      "zh": "恭喜您发现并来到了未解锁区域。未来将会有DJ台，允许您用收集来的声音创作并解谜。",
-      "en": "You have found your way into a room that is not open yet. There will be a DJ booth here, where the sounds you have gathered can be made into something, and used to puzzle a way through."
+      "zh": "二楼是混音台。打开之后背景音乐会停。选四个声音放进去，八拍循环演奏。",
+      "en": "The loft is the mixer. The bed stops while it is open. Choose four sounds. They play as an eight-step loop."
     }
   ],
   "choice": {
