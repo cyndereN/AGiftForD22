@@ -7,7 +7,7 @@ namespace D22
     // A resolution-independent prototype UI. All story text and art come from project assets.
     public sealed class D22GameUI : MonoBehaviour
     {
-        enum ScreenMode { Menu, Puzzle, Dialogue, Choices, Drink, Pause, Ending, HUD, Loading, Ability, Minigame, Conduct, Credits }
+        enum ScreenMode { Menu, Puzzle, Dialogue, Choices, Drink, Pause, Ending, HUD, Loading, Ability, Minigame, Conduct, Credits, Mixer }
         ScreenMode mode = ScreenMode.Menu;
         D22GameFlow flow;
         Font font;
@@ -18,8 +18,9 @@ namespace D22
         D22Question question;
         Action done, back, pourAction;
         Action<int> choose;
-        string heading, hint, note;
-        int line, placed, sips, drag = -1;
+        string heading, hint, note, loadLabel = "加载中";
+        float loadProgress;
+        int line, placed, sips, drag = -1, mixSlide = -1, mixArm;
         float pour, cooldown, typeT;
         bool hasDrink, pouring, typed;
         string typeZh = "", typeEn = "";
@@ -104,6 +105,8 @@ namespace D22
                 case ScreenMode.Minigame: Minigame(); break;
                 case ScreenMode.Conduct: DrawConduct(); break;
                 case ScreenMode.Credits: DrawCredits(); break;
+                case ScreenMode.Loading: DrawLoading(); break;
+                case ScreenMode.Mixer: DrawMixer(); break;
                 default: GUI.Label(new Rect(100, 360, 1200, 120), "…", title); break;
             }
             if (OffersLevelSkip && Button(SkipRect(), "跳过关卡")) flow.SkipChapter();
@@ -860,6 +863,7 @@ namespace D22
 
         bool PointerBlocks(Vector2 m)
         {
+            if (mode == ScreenMode.Mixer) return true;
             if (mode == ScreenMode.Ability && AbilityFrame().Contains(m)) return true;
             if (MenuRect().Contains(m)) return true;
             if (OffersLevelSkip && SkipRect().Contains(m)) return true;
@@ -879,8 +883,146 @@ namespace D22
         }
 
         public void ShowMenu() => mode = ScreenMode.Menu;
-        public void ShowLoading() => mode = ScreenMode.Loading;
+        public void ShowLoading(string label = "加载中")
+        {
+            loadLabel = string.IsNullOrEmpty(label) ? "加载中" : label;
+            loadProgress = 0f;
+            mode = ScreenMode.Loading;
+        }
+
+        public void SetLoadProgress(float value) => loadProgress = Mathf.Clamp01(value);
+
+        void DrawLoading()
+        {
+            Fill(new Rect(-Width, -Height, Width * 3, Height * 3), new Color(.02f, .018f, .016f, 1f));
+            var label = new GUIStyle(title) { alignment = TextAnchor.MiddleCenter, fontSize = 42 };
+            GUI.Label(new Rect(220, 360, 1000, 64), loadLabel, label);
+            var track = new Rect(420, 470, 600, 8);
+            Fill(track, new Color(1f, 1f, 1f, .16f));
+            Fill(new Rect(track.x, track.y, track.width * loadProgress, track.height), new Color(.95f, .91f, .83f, .95f));
+        }
         public void ShowHUD() { mode = ScreenMode.HUD; abilityHeld = false; }
+        public void ShowMixer() { mode = ScreenMode.Mixer; abilityHeld = false; mixSlide = -1; mixArm = 0; }
+
+        static Rect MixChip(int index, int count)
+        {
+            const float w = 112f, gap = 10f;
+            float row = count * w + Mathf.Max(0, count - 1) * gap;
+            return new Rect((Width - row) * 0.5f + index * (w + gap), 58f, w, 36f);
+        }
+
+        static Rect MixCard(int index) => new Rect(150f, 112f + index * 164f, 1140f, 156f);
+
+        static Rect MixStep(Rect card, int step) => new Rect(card.x + 18f + step * 42f, card.y + 46f, 34f, 28f);
+
+        static Rect MixMute(Rect card) => new Rect(card.xMax - 96f, card.y + 10f, 80f, 28f);
+
+        static bool MixOnSliders(Rect card, Vector2 mouse) => new Rect(card.x, card.y + 82f, card.width, 70f).Contains(mouse);
+
+        void DrawMixer()
+        {
+            var sub = new GUIStyle(small) { alignment = TextAnchor.MiddleCenter };
+            var nameStyle = new GUIStyle(small) { fontSize = 22, alignment = TextAnchor.MiddleLeft };
+            var chipStyle = new GUIStyle(small) { fontSize = 18, alignment = TextAnchor.MiddleCenter };
+            var tiny = new GUIStyle(small) { fontSize = 15, alignment = TextAnchor.MiddleLeft };
+            var orange = new Color(.93f, .48f, .32f, 1f);
+            GUI.Label(new Rect(160, 18, 1120, 28), "选四个声音放进去。八拍循环。背景音乐先停着。", sub);
+            var mixer = flow != null ? flow.Mixer : null;
+            int count = mixer != null ? mixer.Count : 0;
+            var ev = Event.current;
+            if (mixer != null && ev != null && ev.type == EventType.MouseDown && ev.button == 0)
+            {
+                for (int i = 0; i < count; i++)
+                    if (MixChip(i, count).Contains(ev.mousePosition))
+                    {
+                        mixer.Place(mixArm, mixer.IdAt(i));
+                        if (mixer.TrackOn(mixArm))
+                            for (int slot = 0; slot < D22LoftMixer.Tracks; slot++)
+                                if (!mixer.TrackOn(slot)) { mixArm = slot; break; }
+                        ev.Use();
+                        break;
+                    }
+                if (ev.type == EventType.MouseDown)
+                    for (int i = 0; i < D22LoftMixer.Tracks; i++)
+                    {
+                        var card = MixCard(i);
+                        if (!card.Contains(ev.mousePosition) || MixOnSliders(card, ev.mousePosition)) continue;
+                        mixArm = i;
+                        if (MixMute(card).Contains(ev.mousePosition)) mixer.ToggleMute(i);
+                        else
+                            for (int s = 0; s < D22LoftMixer.Steps; s++)
+                                if (MixStep(card, s).Contains(ev.mousePosition)) { mixer.ToggleStep(i, s); break; }
+                        ev.Use();
+                        break;
+                    }
+            }
+            if (count == 0)
+                GUI.Label(new Rect(160, 58, 1120, 36), "还没有录到声音。", new GUIStyle(body) { alignment = TextAnchor.MiddleCenter, fontSize = 24 });
+            for (int i = 0; i < count; i++)
+            {
+                var chip = MixChip(i, count);
+                bool seated = mixer.Seated(mixer.IdAt(i));
+                Fill(chip, seated ? orange : new Color(.22f, .2f, .18f, 1f));
+                var ink = new GUIStyle(chipStyle);
+                ink.normal.textColor = seated ? new Color(.12f, .08f, .06f) : new Color(.95f, .91f, .83f);
+                GUI.Label(chip, mixer.Label(i), ink);
+            }
+            if (mixer == null) return;
+            for (int i = 0; i < D22LoftMixer.Tracks; i++)
+            {
+                var card = MixCard(i);
+                bool armed = i == mixArm;
+                Fill(card, new Color(.1f, .09f, .085f, .96f));
+                if (armed) Fill(new Rect(card.x, card.y, 4f, card.height), orange);
+                GUI.Label(new Rect(card.x + 18f, card.y + 8f, 420f, 32f), mixer.TrackText(i), nameStyle);
+                var mute = MixMute(card);
+                bool muted = mixer.Muted(i);
+                Fill(mute, muted ? orange : new Color(.2f, .18f, .17f, 1f));
+                var muteInk = new GUIStyle(tiny) { alignment = TextAnchor.MiddleCenter };
+                muteInk.normal.textColor = muted ? new Color(.12f, .08f, .06f) : new Color(.95f, .91f, .83f);
+                GUI.Label(mute, "Mute", muteInk);
+                for (int s = 0; s < D22LoftMixer.Steps; s++)
+                {
+                    var step = MixStep(card, s);
+                    bool lit = mixer.StepOn(i, s);
+                    bool now = mixer.Sequencing && mixer.Playhead == s;
+                    Fill(step, lit ? orange : new Color(.2f, .18f, .17f, 1f));
+                    if (now) FrameBorder(step, new Color(.95f, .91f, .83f, .95f));
+                }
+                float level = Knob(new Rect(card.x + 18f, card.y + 86f, 520f, 26f), "Level", mixer.Level(i), i * 4, orange, tiny);
+                float drive = Knob(new Rect(card.x + 560f, card.y + 86f, 520f, 26f), "Drive", mixer.Drive(i), i * 4 + 1, orange, tiny);
+                float room = Knob(new Rect(card.x + 18f, card.y + 118f, 520f, 26f), "Room", mixer.Room(i), i * 4 + 2, orange, tiny);
+                float tone = Knob(new Rect(card.x + 560f, card.y + 118f, 520f, 26f), "Tone", mixer.Tone(i), i * 4 + 3, orange, tiny);
+                if (!Mathf.Approximately(level, mixer.Level(i))) mixer.SetLevel(i, level);
+                if (!Mathf.Approximately(drive, mixer.Drive(i))) mixer.SetDrive(i, drive);
+                if (!Mathf.Approximately(room, mixer.Room(i))) mixer.SetRoom(i, room);
+                if (!Mathf.Approximately(tone, mixer.Tone(i))) mixer.SetTone(i, tone);
+            }
+            if (Button(new Rect(570, 790, 300, 48), "离开")) flow.Mixer?.ClosePanel();
+        }
+
+        float Knob(Rect row, string caption, float value, int id, Color orange, GUIStyle tiny)
+        {
+            GUI.Label(new Rect(row.x, row.y, 72f, row.height), caption, tiny);
+            var track = new Rect(row.x + 78f, row.center.y - 3f, row.width - 92f, 6f);
+            var ev = Event.current;
+            bool hot = mixSlide == id;
+            if (ev != null && ev.button == 0 && (ev.type == EventType.MouseDown || ev.type == EventType.MouseDrag))
+            {
+                bool hit = ev.type == EventType.MouseDown && track.Contains(ev.mousePosition);
+                if (hit) mixSlide = id;
+                if (mixSlide == id && (hit || ev.type == EventType.MouseDrag))
+                {
+                    value = Mathf.Clamp01((ev.mousePosition.x - track.x) / track.width);
+                    ev.Use();
+                }
+            }
+            if (ev != null && ev.type == EventType.MouseUp && hot) mixSlide = -1;
+            Fill(track, new Color(.28f, .26f, .24f, 1f));
+            Fill(new Rect(track.x, track.y, track.width * value, track.height), orange);
+            Fill(new Rect(track.x + track.width * value - 7f, track.center.y - 7f, 14f, 14f), orange);
+            return value;
+        }
         public void UpdateHUD(string h, bool has, int s, float cd) { hint = h; hasDrink = has; sips = s; cooldown = cd; }
         public void ShowDialogue(string titleText, D22Line[] l, Action a)
         {
