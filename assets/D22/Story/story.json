@@ -317,6 +317,14 @@
       "en": "This is the last song we will make with D22. Please sing it through."
     }
   ],
+  "finaleAsk": {
+    "zh": "台上这一首，用哪一版？",
+    "en": "Which version plays from here?",
+    "choices": [
+      { "zh": "中南海", "en": "Zhongnanhai" },
+      { "zh": "自己排的", "en": "The one you arranged" }
+    ]
+  },
   "chorus": [
     {
       "zh": "灯光落在您的脸上，恍惚间台下仿佛汇聚万人，可您依旧是您。",

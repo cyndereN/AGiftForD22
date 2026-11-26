@@ -53,7 +53,9 @@ namespace D22
         AudioClip[] playlist;
         AudioClip finaleClip;
         int playlistIndex = -1;
-        bool onFinale, heardPlaylist, playlistHeld;
+        bool onFinale, heardPlaylist, playlistHeld, finaleChoice, ownFinale;
+        readonly string[] performIds = new string[8];
+        int performCount;
         float musicLevel = .35f;
         float bedGain = 1f;
         float shadowBed = 1f;
@@ -128,6 +130,8 @@ namespace D22
             doorHeard = false;
             hutongAsked = false;
             loftHeard = false;
+            finaleChoice = false;
+            ownFinale = false;
             mixer?.ResetLevels();
             D22Feel.Clear();
             cooldown = 0;
@@ -152,6 +156,9 @@ namespace D22
         {
             if (Loading || UI == null || !UI.OffersLevelSkip) return;
             Conductor?.End();
+            finaleChoice = false;
+            ownFinale = false;
+            mixer?.StopBed();
             CloseAbility();
             CloseHunt();
             CloseStage();
@@ -186,6 +193,8 @@ namespace D22
         {
             Loading = true;
             blocked = true;
+            finaleChoice = false;
+            ownFinale = false;
             Conductor?.End();
             CloseAbility();
             CloseHunt();
@@ -222,8 +231,16 @@ namespace D22
             }
             else Stage?.Bind(null);
             yield return null;
-            if (scene == "D22_Performance") PlayFinale();
-            else EnsurePlaylist();
+            bool choosingSong = scene == "D22_Performance" && mixer != null && mixer.HasScore;
+            finaleChoice = choosingSong;
+            if (choosingSong)
+            {
+                onFinale = true;
+                heardPlaylist = false;
+                playlistHeld = true;
+                if (audioSource.isPlaying) audioSource.Stop();
+            }
+            else if (scene != "D22_Performance") EnsurePlaylist();
             if (scene == "D22_Menu")
             {
                 D22Feel.Clear();
@@ -244,7 +261,7 @@ namespace D22
                     if (hutongLighting) hutongLighting.Apply(D22Feel.Dusk);
                     Dialogue(story.hutong, Resume);
                 }
-                else if (scene == "D22_Performance") PlayChorus();
+                else if (scene == "D22_Performance") OfferFinale();
             }
             Loading = false;
         }
@@ -414,6 +431,17 @@ namespace D22
                 else if (played >= 0) Abilities?.TapSlot(played);
                 return;
             }
+            if (mixer != null && mixer.BedOn)
+            {
+                bool conduct = mixer.Conducting;
+                ReadPerformIds(conduct && mixer.Holes ? k : null);
+                bool done = mixer.TickSong(Time.unscaledDeltaTime, performIds, performCount);
+                if (conduct)
+                {
+                    if (done) FinishSong();
+                    return;
+                }
+            }
             if (UI != null && UI.InCredits) return;
             if (k != null && k.escapeKey.wasPressedThisFrame)
             {
@@ -500,7 +528,7 @@ namespace D22
         {
             if (Loading || !Camera.main) return;
             D22Feel.SetTipsy(Sips >= 2);
-            bool moving = !blocked && !AbilityOpen && !HuntOpen && !StageOpen && !MixerOpen && (Conductor == null || !Conductor.Running);
+            bool moving = !blocked && !AbilityOpen && !HuntOpen && !StageOpen && !MixerOpen && (Conductor == null || !Conductor.Running) && (mixer == null || !mixer.Conducting);
             if (!moving) return;
             D22Feel.Apply(Camera.main, ReducedMotion);
         }
@@ -589,6 +617,40 @@ namespace D22
             Dialogue(story.stage, () => { Stage.BeginEncore(); Resume(); }, "舞台");
         }
 
+        void OfferFinale()
+        {
+            if (finaleChoice && story.finaleAsk != null && story.finaleAsk.choices != null && story.finaleAsk.choices.Length >= 2)
+            {
+                blocked = true;
+                D22Look.Unlock();
+                UI.ShowChoices(story.finaleAsk, PickFinale);
+                return;
+            }
+            finaleChoice = false;
+            PlayFinale();
+            PlayChorus();
+        }
+
+        void PickFinale(int index)
+        {
+            finaleChoice = false;
+            if (index == 1) PlayOwnFinale();
+            else PlayFinale();
+            PlayChorus();
+        }
+
+        void PlayOwnFinale()
+        {
+            ownFinale = true;
+            finaleChoice = false;
+            heardPlaylist = false;
+            onFinale = true;
+            playlistHeld = true;
+            audioSource.Stop();
+            audioSource.clip = null;
+            mixer.StartBed();
+        }
+
         void PlayChorus()
         {
             if (story.chorus == null || story.chorusAsk == null) { BeginSong(); return; }
@@ -609,6 +671,17 @@ namespace D22
             CloseHunt();
             CloseStage();
             D22Look.Unlock();
+            if (ownFinale && mixer != null && mixer.HasScore)
+            {
+                mixer.StartPerformance(D22LoftMixer.PerformLoops);
+                if (mixer.Conducting)
+                {
+                    UI.ShowConduct();
+                    return;
+                }
+            }
+            ownFinale = false;
+            if (audioSource.clip != finaleClip || !audioSource.isPlaying) PlayFinale();
             Conductor.Begin();
             UI.ShowConduct();
         }
@@ -636,6 +709,19 @@ namespace D22
             if (k.digit6Key.wasPressedThisFrame || k.numpad6Key.wasPressedThisFrame) return 5;
             if (k.digit7Key.wasPressedThisFrame || k.numpad7Key.wasPressedThisFrame) return 6;
             return -1;
+        }
+
+        void ReadPerformIds(Keyboard k)
+        {
+            performCount = 0;
+            if (k == null) return;
+            if (k.digit1Key.wasPressedThisFrame || k.numpad1Key.wasPressedThisFrame) performIds[performCount++] = "drink";
+            if (k.digit2Key.wasPressedThisFrame || k.numpad2Key.wasPressedThisFrame) performIds[performCount++] = "cricket";
+            if (k.digit3Key.wasPressedThisFrame || k.numpad3Key.wasPressedThisFrame) performIds[performCount++] = "pigeon";
+            if (k.digit4Key.wasPressedThisFrame || k.numpad4Key.wasPressedThisFrame) performIds[performCount++] = "scissors";
+            if (k.digit5Key.wasPressedThisFrame || k.numpad5Key.wasPressedThisFrame) performIds[performCount++] = "guitar";
+            if (k.digit6Key.wasPressedThisFrame || k.numpad6Key.wasPressedThisFrame) performIds[performCount++] = "bass";
+            if (k.digit7Key.wasPressedThisFrame || k.numpad7Key.wasPressedThisFrame) performIds[performCount++] = "drums";
         }
 
         void AskHutong()
@@ -741,6 +827,8 @@ namespace D22
 
         void PlayFinale()
         {
+            ownFinale = false;
+            mixer?.StopBed();
             if (!finaleClip)
             {
                 EnsurePlaylist();
@@ -835,6 +923,12 @@ namespace D22
             distortion.distortionLevel = distort;
             lowPass.cutoffFrequency = cutoff;
             reverb.reverbPreset = room;
+            if (finaleChoice)
+            {
+                if (audioSource.isPlaying) audioSource.Stop();
+                if (hum && hum.isPlaying) hum.Stop();
+                return;
+            }
             playlistHeld = false;
             if (audioSource.clip == null || audioSource.clip == finaleClip)
             {

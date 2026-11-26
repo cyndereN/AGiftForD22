@@ -9,7 +9,7 @@ namespace D22
     {
         public D22Line[] intro, recordShop, hutong, door, boss, wine, cricketTalk, pigeonTalk, grindTalk, livehouse;
         public D22Line[] band, drumTalk, guitarTalk, bassTalk, stage, chorus, remembered, finishSong, unsure, aftersong, credits, loft;
-        public D22Question chorusAsk;
+        public D22Question chorusAsk, finaleAsk;
         public D22Question choice, hutongAsk;
         public D22AbilityCopy[] abilities;
     }

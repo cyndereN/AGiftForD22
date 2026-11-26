@@ -704,6 +704,12 @@ namespace D22
 
         void DrawConduct()
         {
+            var arranged = flow.Mixer;
+            if (arranged != null && arranged.Conducting)
+            {
+                DrawOwnConduct(arranged);
+                return;
+            }
             var song = flow.Conductor;
             if (song == null) return;
             Fill(new Rect(0, 0, Width, Height), new Color(0, 0, 0, .34f));
@@ -737,6 +743,54 @@ namespace D22
             GUI.Label(new Rect(c.x - 180, c.y - 78, 360, 84), info.key, keyStyleBig);
             GUI.Label(new Rect(c.x - 220, c.y + 6, 440, 40), info.title, new GUIStyle(body) { alignment = TextAnchor.MiddleCenter });
             GUI.Label(new Rect(180, 760, Width - 360, 36), "到拍子上，按 2 3 4 5 6 7", new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
+        }
+
+        void DrawOwnConduct(D22LoftMixer mix)
+        {
+            Fill(new Rect(0, 0, Width, Height), new Color(0, 0, 0, .34f));
+            Vector2 c = new Vector2(Width * .5f, Height * .44f);
+            const float radius = 214;
+            FillDisc(c, radius + 28, new Color(0, 0, 0, .62f));
+            var ring = mix.SongFlash > .05f ? Color.white : new Color(.95f, .9f, .8f, .7f);
+            for (int i = 0; i < 80; i++)
+            {
+                Vector2 p = OnRing(c, i / 80f * 360f, radius);
+                Fill(new Rect(p.x - 2.5f, p.y - 2.5f, 5, 5), ring);
+            }
+            int due = 0;
+            for (int b = 0; b < D22LoftMixer.Steps; b++)
+            {
+                bool on = mix.ChartStep(b);
+                bool now = mix.SongStep == b;
+                float s = now ? 12f + mix.SongPulse * 10f : on ? 9f : 5f;
+                Vector2 p = OnRing(c, b * (360f / D22LoftMixer.Steps), radius);
+                var color = now ? Color.white : on ? new Color(.95f, .9f, .8f, .95f) : new Color(.95f, .9f, .8f, .28f);
+                Fill(new Rect(p.x - s * .5f, p.y - s * .5f, s, s), color);
+            }
+            for (int i = 0; i < D22LoftMixer.Tracks; i++) if (mix.Due(i)) due++;
+            if (!mix.Holes)
+                GUI.Label(new Rect(c.x - 220, c.y - 28, 440, 56), "先听这一圈", new GUIStyle(title) { alignment = TextAnchor.MiddleCenter, fontSize = 42 });
+            else if (due == 0)
+                GUI.Label(new Rect(c.x - 220, c.y - 28, 440, 56), "空拍", new GUIStyle(body) { alignment = TextAnchor.MiddleCenter });
+            else
+            {
+                float gap = due > 2 ? 150f : 220f;
+                float x = c.x - (due - 1) * gap * .5f;
+                int shown = 0;
+                var keyStyleBig = new GUIStyle(title) { alignment = TextAnchor.MiddleCenter, fontSize = due > 2 ? 48 : 72 };
+                for (int i = 0; i < D22LoftMixer.Tracks; i++)
+                {
+                    if (!mix.Due(i)) continue;
+                    var info = D22Abilities.Info(mix.SongId(i));
+                    if (info == null) continue;
+                    float at = x + shown * gap;
+                    GUI.Label(new Rect(at - 90, c.y - 78, 180, 84), info.key, keyStyleBig);
+                    GUI.Label(new Rect(at - 90, c.y + 6, 180, 40), info.title, new GUIStyle(body) { alignment = TextAnchor.MiddleCenter });
+                    shown++;
+                }
+            }
+            string hint = mix.Holes ? "这一声扣给你，按对应的数字键" : "下一圈每拍只扣掉一声";
+            GUI.Label(new Rect(180, 760, Width - 360, 36), hint, new GUIStyle(small) { alignment = TextAnchor.MiddleCenter });
         }
 
         void DrawCredits()

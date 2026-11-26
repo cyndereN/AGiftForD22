@@ -5,10 +5,12 @@ namespace D22
 {
     // Four collected sounds, each on an eight-step loop. Level, drive, room
     // and tone are the mix. The room's bed is silent while the desk is open.
+    // The same loop can close the night: one lap intact, then one voice drops out of each step.
     public sealed class D22LoftMixer : MonoBehaviour
     {
         public const int Tracks = 4;
         public const int Steps = 8;
+        public const int PerformLoops = 8;
         const float StepSeconds = 0.5f;
 
         public bool Open { get; private set; }
@@ -38,9 +40,21 @@ namespace D22
             public AudioLowPassFilter toneFx;
             public Transform cap;
             public bool owed;
+            public bool booth;
             public float heardDrive = -1f;
             public float heardRoom = -1f;
             public float heardTone = -1f;
+        }
+
+        sealed class Score
+        {
+            public string id;
+            public bool mute;
+            public float level = 0.82f;
+            public float drive = 0.12f;
+            public float room = 0.28f;
+            public float tone = 0.75f;
+            public readonly bool[] steps = new bool[Steps];
         }
 
         readonly struct Wanted
@@ -59,19 +73,182 @@ namespace D22
         readonly List<Piece> library = new();
         readonly Dictionary<EntityId, AudioClip> beats = new();
         Lane[] lanes;
+        Lane[] song;
+        Score[] score;
         GameObject root;
         Material dark, panel, cream;
         float clock;
         int playhead = -1;
+        float songClock;
+        int songHead = -1;
+        int songLoops;
+        int listenLeft;
+        float songFlash;
+        bool finaleBed;
+        bool dropHits;
+        bool conducting;
+        int hole = -1;
+        readonly bool[] songHit = new bool[Tracks];
+
+        public bool HasScore
+        {
+            get
+            {
+                if (score == null) return false;
+                for (int i = 0; i < score.Length; i++)
+                {
+                    var lane = score[i];
+                    if (lane == null || lane.mute || string.IsNullOrEmpty(lane.id)) continue;
+                    for (int s = 0; s < Steps; s++) if (lane.steps[s]) return true;
+                }
+                return false;
+            }
+        }
+
+        public bool BedOn => finaleBed;
+        public bool Conducting => conducting;
+        public bool Holes => conducting && dropHits;
+        public int SongStep => songHead < 0 ? 0 : songHead;
+        public float SongPulse => finaleBed ? 1f - Mathf.Clamp01(songClock / StepSeconds) : 0f;
+        public float SongFlash => songFlash;
 
         public void Bind(D22GameFlow host) => flow = host;
 
         public void ResetLevels()
         {
+            StopBed();
+            score = null;
             clock = 0f;
             playhead = -1;
             if (lanes == null) return;
             for (int i = 0; i < Tracks; i++) Clear(i);
+        }
+
+        public string SongId(int track)
+        {
+            if (song == null || track < 0 || track >= Tracks) return null;
+            return song[track].id;
+        }
+
+        public bool Due(int track)
+        {
+            if (!Holes || song == null || track < 0 || track >= Tracks || track != hole) return false;
+            return OnStep(song[track]) && !songHit[track];
+        }
+
+        public bool ChartStep(int step)
+        {
+            if (song == null || step < 0 || step >= Steps) return false;
+            for (int i = 0; i < Tracks; i++)
+            {
+                var lane = song[i];
+                if (lane.mute || string.IsNullOrEmpty(lane.id) || !lane.steps[step]) continue;
+                if (Find(lane.id) != null) return true;
+            }
+            return false;
+        }
+
+        public void StartBed()
+        {
+            if (!HasScore || lanes != null) return;
+            MountSong();
+            conducting = false;
+            dropHits = false;
+            listenLeft = 0;
+            songLoops = 0;
+            songClock = 0f;
+            songHead = 0;
+            songFlash = 0f;
+            StrikeStep();
+        }
+
+        public void StartPerformance(int loops)
+        {
+            if (!HasScore || lanes != null) return;
+            MountSong();
+            conducting = true;
+            songClock = 0f;
+            songHead = 0;
+            songFlash = 0f;
+            int total = Mathf.Max(1, loops);
+            if (total == 1)
+            {
+                listenLeft = 0;
+                dropHits = true;
+                songLoops = 1;
+                StrikeExceptHole();
+                return;
+            }
+            listenLeft = 1;
+            dropHits = false;
+            songLoops = total - 1;
+            StrikeStep();
+        }
+
+        public void StopBed()
+        {
+            ReleaseBed();
+            if (song == null) return;
+            for (int i = 0; i < Tracks; i++)
+            {
+                songHit[i] = false;
+                song[i].owed = false;
+                if (song[i].source == null) continue;
+                song[i].source.Stop();
+                song[i].source.clip = null;
+            }
+        }
+
+        void ReleaseBed()
+        {
+            finaleBed = false;
+            conducting = false;
+            dropHits = false;
+            listenLeft = 0;
+            songHead = -1;
+            songLoops = 0;
+            songClock = 0f;
+            hole = -1;
+        }
+
+        public bool TickSong(float dt, string[] pressed, int pressedCount)
+        {
+            if (!finaleBed || song == null) return false;
+            for (int i = 0; i < library.Count; i++) EnsureBeat(library[i]);
+            for (int i = 0; i < Tracks; i++)
+            {
+                ApplyLane(song[i]);
+                if (i != hole && song[i].owed && OnStep(song[i]) && Hit(song[i])) song[i].owed = false;
+            }
+            songFlash = Mathf.MoveTowards(songFlash, 0f, dt * 2.4f);
+            songClock += dt;
+            while (songClock >= StepSeconds)
+            {
+                songClock -= StepSeconds;
+                int next = songHead < 0 ? 0 : (songHead + 1) % Steps;
+                if (songHead >= 0 && next == 0)
+                {
+                    if (listenLeft > 0)
+                    {
+                        listenLeft--;
+                        dropHits = listenLeft == 0;
+                    }
+                    else if (conducting)
+                    {
+                        songLoops--;
+                        if (songLoops <= 0)
+                        {
+                            ReleaseBed();
+                            return true;
+                        }
+                    }
+                }
+                songHead = next;
+                if (dropHits) StrikeExceptHole();
+                else StrikeStep();
+            }
+            if (dropHits && pressedCount > 0) Take(pressed, pressedCount);
+            return false;
         }
 
         public string Label(int index) => library[index].label;
@@ -212,13 +389,19 @@ namespace D22
             lamp.shadows = LightShadows.None;
             EnsureLanes();
             Refresh();
+            RestoreScore();
         }
 
         public void Hide()
         {
+            Capture();
+            StopBed();
             bool wasOpen = Open;
             Open = false;
             if (wasOpen) flow?.SetMixerBed(true);
+            if (lanes != null)
+                for (int i = 0; i < Tracks; i++)
+                    if (lanes[i].source) lanes[i].source.Stop();
             library.Clear();
             foreach (var beat in beats.Values) if (beat) Destroy(beat);
             beats.Clear();
@@ -340,6 +523,14 @@ namespace D22
         {
             if (!root || flow == null) return;
             if (lanes == null) EnsureLanes();
+            FillLibrary();
+            for (int i = 0; i < Tracks; i++)
+                if (!string.IsNullOrEmpty(lanes[i].id) && Find(lanes[i].id) == null) Clear(i);
+        }
+
+        void FillLibrary()
+        {
+            if (flow == null) return;
             var wanted = Collect();
             library.Clear();
             foreach (var item in wanted)
@@ -347,8 +538,175 @@ namespace D22
                 if (item.clip && item.clip.loadState == AudioDataLoadState.Unloaded) item.clip.LoadAudioData();
                 library.Add(new Piece { id = item.id, label = item.label, clip = item.clip });
             }
+        }
+
+        void Capture()
+        {
+            if (lanes == null) return;
+            if (score == null)
+            {
+                score = new Score[Tracks];
+                for (int i = 0; i < Tracks; i++) score[i] = new Score();
+            }
             for (int i = 0; i < Tracks; i++)
-                if (!string.IsNullOrEmpty(lanes[i].id) && Find(lanes[i].id) == null) Clear(i);
+            {
+                var lane = lanes[i];
+                var kept = score[i];
+                kept.id = lane.id;
+                kept.mute = lane.mute;
+                kept.level = lane.level;
+                kept.drive = lane.drive;
+                kept.room = lane.room;
+                kept.tone = lane.tone;
+                for (int s = 0; s < Steps; s++) kept.steps[s] = lane.steps[s];
+            }
+        }
+
+        void RestoreScore()
+        {
+            if (score == null || lanes == null) return;
+            bool any = false;
+            for (int i = 0; i < Tracks; i++)
+            {
+                var kept = score[i];
+                var lane = lanes[i];
+                if (kept == null || string.IsNullOrEmpty(kept.id) || Find(kept.id) == null)
+                {
+                    Clear(i);
+                    continue;
+                }
+                lane.id = kept.id;
+                lane.mute = kept.mute;
+                lane.level = kept.level;
+                lane.drive = lane.drive;
+                lane.room = kept.room;
+                lane.tone = kept.tone;
+                lane.owed = false;
+                lane.heardDrive = lane.heardRoom = lane.heardTone = -1f;
+                for (int s = 0; s < Steps; s++) lane.steps[s] = kept.steps[s];
+                if (!lane.mute && lane.steps[0]) lane.owed = true;
+                if (!lane.mute)
+                    for (int s = 0; s < Steps; s++) if (lane.steps[s]) any = true;
+            }
+            playhead = any ? 0 : -1;
+            clock = 0f;
+        }
+
+        void MountSong()
+        {
+            FillLibrary();
+            EnsureSong();
+            for (int i = 0; i < Tracks; i++)
+            {
+                var lane = song[i];
+                var kept = score != null && i < score.Length ? score[i] : null;
+                lane.owed = false;
+                lane.heardDrive = lane.heardRoom = lane.heardTone = -1f;
+                songHit[i] = false;
+                if (kept == null || string.IsNullOrEmpty(kept.id) || Find(kept.id) == null)
+                {
+                    lane.id = null;
+                    lane.mute = false;
+                    for (int s = 0; s < Steps; s++) lane.steps[s] = false;
+                    continue;
+                }
+                lane.id = kept.id;
+                lane.mute = kept.mute;
+                lane.level = kept.level;
+                lane.drive = kept.drive;
+                lane.room = kept.room;
+                lane.tone = kept.tone;
+                for (int s = 0; s < Steps; s++) lane.steps[s] = kept.steps[s];
+            }
+            finaleBed = true;
+            for (int i = 0; i < library.Count; i++) EnsureBeat(library[i]);
+        }
+
+        void EnsureSong()
+        {
+            if (song != null) return;
+            song = new Lane[Tracks];
+            for (int i = 0; i < Tracks; i++)
+            {
+                var lane = new Lane { booth = true };
+                var sourceGo = new GameObject("Finale " + (i + 1));
+                sourceGo.transform.SetParent(transform, false);
+                var source = sourceGo.AddComponent<AudioSource>();
+                source.playOnAwake = false;
+                source.loop = false;
+                source.spatialBlend = 0f;
+                source.dopplerLevel = 0f;
+                lane.source = source;
+                lane.driveFx = sourceGo.AddComponent<AudioDistortionFilter>();
+                lane.driveFx.enabled = false;
+                lane.roomFx = sourceGo.AddComponent<AudioReverbFilter>();
+                lane.roomFx.reverbPreset = AudioReverbPreset.User;
+                lane.roomFx.enabled = false;
+                lane.toneFx = sourceGo.AddComponent<AudioLowPassFilter>();
+                lane.toneFx.enabled = false;
+                song[i] = lane;
+            }
+        }
+
+        bool OnStep(Lane lane)
+        {
+            if (lane == null || songHead < 0 || songHead >= Steps) return false;
+            if (string.IsNullOrEmpty(lane.id) || lane.mute || !lane.steps[songHead]) return false;
+            return Find(lane.id) != null;
+        }
+
+        void StrikeStep()
+        {
+            hole = -1;
+            for (int i = 0; i < Tracks; i++) PlayOrStop(i, true);
+        }
+
+        void StrikeExceptHole()
+        {
+            hole = PickHole();
+            for (int i = 0; i < Tracks; i++) PlayOrStop(i, i != hole);
+        }
+
+        int PickHole()
+        {
+            int count = 0;
+            for (int i = 0; i < Tracks; i++) if (OnStep(song[i])) count++;
+            if (count == 0) return -1;
+            int pick = songHead % count;
+            for (int i = 0; i < Tracks; i++)
+            {
+                if (!OnStep(song[i])) continue;
+                if (pick == 0) return i;
+                pick--;
+            }
+            return -1;
+        }
+
+        void PlayOrStop(int track, bool play)
+        {
+            var lane = song[track];
+            songHit[track] = false;
+            if (!play || !OnStep(lane))
+            {
+                lane.owed = false;
+                if (lane.source && lane.source.isPlaying) lane.source.Stop();
+                return;
+            }
+            if (!Hit(lane)) lane.owed = true;
+        }
+
+        void Take(string[] ids, int count)
+        {
+            if (hole < 0 || songHit[hole] || !OnStep(song[hole])) return;
+            string id = song[hole].id;
+            for (int n = 0; n < count; n++)
+            {
+                if (ids[n] != id) continue;
+                if (!Hit(song[hole])) return;
+                songHit[hole] = true;
+                songFlash = 1f;
+                return;
+            }
         }
 
         List<Wanted> Collect()
@@ -481,7 +839,7 @@ namespace D22
             var piece = Find(lane.id);
             bool on = piece != null && piece.clip;
             if (lane.cap) lane.cap.localPosition = new Vector3(0f, on ? Mathf.Lerp(0.02f, 0.2f, lane.level) : 0.02f, 0f);
-            bool monitor = Open;
+            bool monitor = lane.booth || Open;
             lane.source.spatialBlend = monitor ? 0f : 1f;
             float master = flow != null ? flow.Volume : 0.35f;
             lane.source.volume = on && !lane.mute ? lane.level * Mathf.Clamp(master * (monitor ? 2.4f : 2.2f), 0f, 1f) : 0f;
